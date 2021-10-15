@@ -72,10 +72,12 @@
   }
   header
   {
-      background-color:#aedddd;
+      background-color:#aedddd7c;
 
   }
-
+  hr.solid {
+    border-top: 3px solid rgb(70, 69, 69);
+  }
 
 
 
