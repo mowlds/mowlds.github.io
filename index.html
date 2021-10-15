@@ -1,5 +1,7 @@
 <!DOCTYPE html>
     <head>
+
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +14,33 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/html5-boilerplate.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <style>
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  
+}
+        .column {
+            padding: 10px;
+            
+          }
+          
+          /* Left and right column */
+          .column.side {
+             -webkit-flex: 1;
+             -ms-flex: 1;
+             flex: 1;
+          }
+          
+          /* Middle column */
+          .column.middle {
+            -webkit-flex: 2;
+            -ms-flex: 2;
+            flex: 2;
+          }
+        </style>
     </head>
 
     <body>
@@ -29,13 +58,25 @@
                   <li><a href="about.html">Teams</a></li>
                   <li><a href="about.html">Ethics Statement</a></li>
                   <li><a href="about.html">Headsgone Podcast</a></li>
-                  <li><a href="about.html">Karun's Korner</a></li>
-                  <li><a href="about.html">SGL</a></li>
+                  <li><a href="about.html">Karun's Corner</a></li>
+                  <li><a href="about.html">Serious Golfing League</a></li>
                </ul>
             </nav>
          </header>
 
-         <img src="images\DP.gif" alt="DP">
+      
+        <div class="row">
+            <div class="column side" style="background-color:rgb(236, 233, 192);"><h3>Latest News</h3>
+            
+                <img src="images\DP.gif" alt="DP"></div>
+            
+            <div class="column middle" style="background-color:#bbb;"><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p><p>Column</p></div>
+            <div class="column side" style="background-color:#ccc;">Column</div>
+          </div>
+          
+          <div class="footer">
+            <p>Footer</p>
+          </div>
 
 
 
