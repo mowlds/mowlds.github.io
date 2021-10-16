@@ -80,7 +80,9 @@
   body{
   font-family: 'Open Sans', sans-serif;
   }
-
+  html, body{
+    background-color: #c3ccc3;
+  }
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
    ========================================================================== */
