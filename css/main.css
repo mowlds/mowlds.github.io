@@ -57,6 +57,7 @@
   }
   .block{
     display: block;
+    text-decoration: none;
   }
   a {
     color:inherit;
@@ -66,13 +67,21 @@
     color: rgb(61, 33, 33);
   }
   article{
-    border: solid;
-    box-shadow:3px 3px 1.5px rgb(61, 33, 33);
+        box-shadow:3px 3px 1.5px rgb(61, 33, 33);
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.253);
     
   }
-    
+  h4{
+    text-decoration: none;
+  }
+  #header-right {
+    float: right;
+    text-align: center;
+}
+header{
+  width:100%;
+}
 
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
