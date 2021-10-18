@@ -1,68 +1,33 @@
 /* ==========================================================================
    Your custom CSS styles
    ========================================================================== */
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  
-  .active {
-    background-color: #4CAF50;
-  }
- ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 2px 8px;
-    overflow: hidden;
-    background-color: #333;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  
-  .active {
-    background-color: #4CAF50;
-  }
+.topnav {
+  overflow: hidden;
+  background-color: rgb(37, 21, 21);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topnav a:hover {
+  background-color: rgb(61, 33, 33);
+  color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
 
   .center {
     display: block;
@@ -74,7 +39,9 @@
   {
     background: radial-gradient(ellipse at top, #91c2b7, transparent),
             radial-gradient(ellipse at bottom, #ecd052, transparent);
-  }
+            }
+
+
   hr.solid {
     border-top: 3px solid rgb(70, 69, 69);
   }
