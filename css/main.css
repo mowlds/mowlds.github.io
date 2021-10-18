@@ -44,10 +44,10 @@
 
 
   hr.solid {
-    border-top: 3px solid rgb(70, 69, 69);
+    border-top: 3px solid rgb(61, 33, 33);
   }
   hr.dashed{
-    border-top: 3px dashed rgb(70, 69, 69);
+    border-top: 3px dashed rgb(61, 33, 33);
   }
   body{
   font-family: 'exo';
@@ -65,6 +65,14 @@
   a:hover{
     color: rgb(61, 33, 33);
   }
+  article{
+    border: solid;
+    box-shadow:3px 3px 1.5px rgb(61, 33, 33);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.253);
+    
+  }
+    
 
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
