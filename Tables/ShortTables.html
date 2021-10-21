@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Short Tables</title>
+    <meta name="description" content="">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+
+
+    <style>
+        body {
+            background-image: url('images/champstrophy.jpg');
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+            font-family: 'exo';
+            color: white;
+        }
+
+        .raceinfo {
+            text-align: center;
+            padding-top: 10px;
+            margin-left: 150px;
+            margin-right: 150px;
+            background-color: rgba(61, 33, 33, 0.5);
+            border-radius: 15px 50px;
+            border-style: outset;
+        }
+
+
+        h2 {
+            padding-bottom: 5px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        table#timeline {
+            table-layout: fixed;
+            width: 100%;
+            border-radius: 10px;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            border: 2px solid rgb(255, 255, 255);
+
+
+
+        }
+
+        table#timeline th {
+            border-bottom: 2px solid rgb(255, 255, 255);
+            background-color: rgba(211, 114, 114, 0.5);
+            border-radius: 12px;
+            width: 35px;
+;
+        }
+
+        table#timeline td {
+            background-color: rgba(211, 114, 114, 0.5);
+            padding-top: 4px;
+            border-radius: 12px;
+            width: 35px;
+            padding-bottom: 4px;
+        }
+
+        table#timeline caption {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-style: italic;
+            border-top: 2px solid rgb(255, 255, 255);
+            border-left: 2px solid rgb(255, 255, 255);
+            border-right: 2px solid white;
+
+        }
+
+        table#timeline tr:nth-child(2) {
+            font-weight: bold;
+        }
+
+        table#timeline col:nth-child(even) {
+            background-color: rgba(211, 114, 114, 0.5);
+        }
+
+
+        .timeline {
+            text-align: center;
+            background-color: rgba(61, 33, 33, 0.5);
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-top: 40px;
+
+        }
+
+        table#champtable {
+            table-layout: fixed;
+            width: 90%;
+            border: 3px outset white;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        table#champtable th {
+            border-bottom: 2px rgb(255, 255, 255) solid;
+            background-color: rgba(211, 114, 114, 0.5);
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        table#champtable td {
+            background-color: rgba(211, 114, 114, 0.5);
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+        }
+
+        table#champtable caption {
+            background-color: rgba(61, 33, 33, 0.5);
+            font-style: italic;
+            font-size: 18pt;
+            border-top: 2px solid rgb(255, 255, 255);
+            border-left: 2px solid rgb(255, 255, 255);
+            border-right: 2px solid white;
+            padding-bottom: 5px;
+            padding-top: 5px;
+
+        }
+
+        table#champtable tr:nth-child(even) {
+            background-color: rgba(255, 139, 139, 0.5)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="raceinfo">
+        <img src="images/SRL.png" height="50px">
+        <H1>F1 2021 Season 1</H1>
+        <h2>Championship Tables</h2>
+    </div>
+
+
+    <div class="timeline">
+        <table id="timeline">
+            <caption style="font-weight: bolder;">WIN TIMELINE</caption>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+                <th>15</th>
+                <th>16</th>
+                <th>17</th>
+                <th>18</th>
+                <th>19</th>
+                <th>20</th>
+                <th>21</th>
+                <th>22</th>
+
+            </tr>
+            <tr>
+                <td>BAH</td>
+                <td>CHN</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>Tony</td>
+                <td>Myles</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="champtable">
+                <table id="champtable">
+                    <caption style="font-weight: bolder ;">CONSTRUCTORS CHAMPIONSHIP</caption>
+                    <tr>
+                        <th>Position</th>
+                        <th>Team</th>
+                        <th>Points</th>
+                        <th>Wins</th>
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td>1:23.132</td>
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Team Ecosse</td>
+                        <td>Wiggins</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Team Ecosse</td>
+                        <td>Frankie</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="column">
+            <div class="champtable">
+                <table id="champtable">
+                    <caption style="font-weight: bolder ;">DRIVERS CHAMPIONSHIP</caption>
+                    <tr>
+                        <th>Position</th>
+                        <th>Team</th>
+                        <th>Driver</th>
+                        <th>Points</th>
+                        <th>Wins</th>
+                        <th>Fastest Laps</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td>212</td>
+                        <td>8</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>TonRy Racing</td>
+                        <td>Ry</td>
+                        <td></td>
+                        <td></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>TonRy Racing</td>
+                        <td>Tony</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
