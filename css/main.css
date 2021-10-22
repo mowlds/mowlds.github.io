@@ -141,10 +141,14 @@
 box-shadow: 5px 5px 10px grey;
 margin-left: 20px;
 margin-right: 20px;
+background-color: rgba(139, 4, 4, 0.199);
 
 }
+.h2wiki{
+  margin-left: 20px;
+  padding-top: 15px;
 
-
+}
 
 
 .wiki{
