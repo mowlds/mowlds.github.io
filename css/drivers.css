@@ -76,6 +76,7 @@ header
                 background-color: rgba(34, 61, 33, 0.5);
                 border-radius: 15px 50px;
                 border-style: outset;
+                margin-left: 40px;
               }
           
               .column.middle {
@@ -86,6 +87,7 @@ header
                 border-radius: 15px 50px;
                 border-style: outset;
                 margin-left: 40px;
+                margin-right: 40px;
                 }
 
               .biotable{
