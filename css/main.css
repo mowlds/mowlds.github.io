@@ -142,9 +142,52 @@
   justify-content: space-evenly;
   background-color: rgba(139, 4, 4, 0.199);
   text-align: left;
+  padding-top: 40px;
 }
 ul.wikilist{
 list-style-type: none;
+}
+
+.driverrecords{
+  text-align: center;
+
+}
+img.bio{border: 3px solid rgb(0, 0, 0);
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+
+}
+table#driverrecords{
+margin-top: 10px;
+table-layout: fixed;
+width: 100%;
+text-align: center;
+border: 3px outset white;
+border-collapse: collapse;
+margin-bottom: 10px;
+margin-top: 40px;
+margin-left: auto;
+margin-right: auto;
+}
+
+table#driverrecords caption {
+padding-bottom: 10px;
+padding-top: 10px;
+font-style: italic;
+text-align: center;
+background-color: rgba(255, 139, 139, 0.5);
+border: 3px outset white;
+}
+table#driverrecords tr{
+padding-top: 2px;
+padding-bottom: 2px;
+text-align: center;
+}
+
+table#driverrecords tr:nth-child(even) {
+  background-color: rgba(255, 139, 139, 0.5)
 }
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
