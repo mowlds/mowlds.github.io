@@ -40,6 +40,55 @@
     margin-right: auto;
     width: auto;
   }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: rgb(37, 21, 21);
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(61, 33, 33);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(61, 33, 33);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(37, 21, 21);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
   header
   {
     background: radial-gradient(ellipse at top, #91c2b7, transparent),
@@ -88,7 +137,15 @@
 .raceresults{
   background-image: ("images\bahrain.jpg")
 }
-
+.wiki{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(139, 4, 4, 0.199);
+  text-align: left;
+}
+ul.wikilist{
+list-style-type: none;
+}
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
    ========================================================================== */
