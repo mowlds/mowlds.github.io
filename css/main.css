@@ -1,7 +1,11 @@
 /* ==========================================================================
    Your custom CSS styles
    ========================================================================== */
-.topnav {
+   * {
+    font-family: 'exo';
+}
+
+   .topnav {
   overflow: hidden;
   background-color: rgb(37, 21, 21);
 }
@@ -40,6 +44,7 @@
   {
     background: radial-gradient(ellipse at top, #91c2b7, transparent),
             radial-gradient(ellipse at bottom, #ecd052, transparent);
+            
             }
 
 
@@ -70,6 +75,7 @@
         box-shadow:3px 3px 1.5px rgb(61, 33, 33);
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 15px 50px;
     
   }
   h4{

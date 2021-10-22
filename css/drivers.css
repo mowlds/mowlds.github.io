@@ -1,0 +1,178 @@
+* {
+    font-family: 'exo';
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(37, 21, 21);
+  }
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+.topnav a:hover {
+    background-color: rgb(61, 33, 33);
+    color: rgb(255, 255, 255);
+  }
+  
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+.topnav-right {
+    float: right;
+    background-color: rgb(145, 86, 86)
+  }
+  
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     width: auto;
+    }
+header
+    {
+    background: radial-gradient(ellipse at top, #91c2b7, transparent),
+              radial-gradient(ellipse at bottom, #ecd052, transparent);
+    padding-top: 10px;
+     }
+
+.driverinfo {
+     text-align: center;
+                padding-top: 10px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                margin-left: 150px;
+                margin-right: 150px;
+                background-color: rgba(34, 61, 33, 0.5);
+                border-radius: 15px 50px;
+                border-style: outset;
+            }
+    h2{
+        text-align: center;
+
+            }
+            .row {
+                display: -webkit-flex;
+                display: flex;
+          
+              }
+            .column {
+                padding: 10px;
+          
+              }
+          
+              .column.side {
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                background-color: rgba(34, 61, 33, 0.5);
+                border-radius: 15px 50px;
+                border-style: outset;
+              }
+          
+              .column.middle {
+                -webkit-flex: 2;
+                -ms-flex: 2;
+                flex: 2;
+                background-color: rgba(34, 61, 33, 0.5);
+                border-radius: 15px 50px;
+                border-style: outset;
+                margin-left: 40px;
+                }
+
+              .biotable{
+                  text-align: center;
+
+              }
+              img.bio{border: 3px solid rgb(0, 0, 0);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10px;
+                
+            }
+            table#biotable{
+                margin-top: 10px;
+                table-layout: fixed;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            table#biotable caption {
+                padding-bottom: 10px;
+                padding-top: 10px;
+                font-style: italic;
+            }
+            table#biotable tr{
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+            table#drivertimeline {
+                table-layout: fixed;
+                width: 98%;
+                border-radius: 10px;
+                border-collapse: collapse;
+                margin-bottom: 40px;
+                margin-left: 5px;
+                margin-right: 5px;
+                border: 2px solid rgb(255, 255, 255);
+    
+    
+    
+            }
+    
+            table#drivertimeline th {
+                border-bottom: 2px solid rgb(255, 255, 255);
+                background-color: rgba(114, 211, 122, 0.5);
+                border-radius: 12px;
+                width: 35px;
+    ;
+            }
+    
+            table#drivertimeline td {
+                background-color: rgba(114, 211, 122, 0.5);
+                padding-top: 4px;
+                border-radius: 12px;
+                width: 35px;
+                padding-bottom: 4px;
+            }
+    
+            table#drivertimeline caption {
+                padding-bottom: 10px;
+                padding-top: 10px;
+                font-style: italic;
+                border-top: 2px solid rgb(255, 255, 255);
+                border-left: 2px solid rgb(255, 255, 255);
+                border-right: 2px solid white;
+    
+            }
+    
+            table#drivertimeline tr:nth-child(2) {
+                font-weight: bold;
+            }
+    
+            table#drivertimeline col:nth-child(even) {
+                background-color: rgba(114, 211, 119, 0.5);
+            }
+    
+    
+            .drivertimeline {
+                text-align: center;
+                background-color: rgba(34, 61, 33, 0.5);
+                margin-right: 20px;
+                margin-left: 20px;
+                margin-top: 40px;
+                border-radius: 15px 50px;
+                border-style: outset;
+    
+            }
+            h2.drivertimeline{padding-top: 20px;}
