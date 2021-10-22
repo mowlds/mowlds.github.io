@@ -154,9 +154,7 @@ background-color: rgba(139, 4, 4, 0.199);
 .wiki{
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(139, 4, 4, 0.199);
   text-align: left;
-  padding-top: 40px;
   
 
 }
@@ -176,7 +174,6 @@ margin-top: 10px;
 
 }
 table#driverrecords{
-margin-top: 10px;
 table-layout: fixed;
 width: 100%;
 text-align: center;
