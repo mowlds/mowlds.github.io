@@ -41,8 +41,7 @@ header
     {
     background: radial-gradient(ellipse at top, #91c2b7, transparent),
               radial-gradient(ellipse at bottom, #ecd052, transparent);
-    padding-top: 10px;
-     }
+         }
 
 .driverinfo {
      text-align: center;
