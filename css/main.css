@@ -154,11 +154,17 @@ background-color: rgba(139, 4, 4, 0.199);
 .wiki{
   display: flex;
   text-align: left;
-  
 
 }
+.wikia{
+  display: flex;
+  text-align: left;
+}
+
+
 ul.wikilist{
 list-style-type: none;
+width: 60px;
 }
 
 .driverrecords{
