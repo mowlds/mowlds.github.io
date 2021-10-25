@@ -108,6 +108,43 @@
 
 
 
+
+    <script>
+        function sortTable() {
+          var table, rows, switching, i, x, y, shouldSwitch;
+          table = document.getElementById("myTable");
+          switching = true;
+          /*Make a loop that will continue until
+          no switching has been done:*/
+          while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.rows;
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+              //start by saying there should be no switching:
+              shouldSwitch = false;
+              /*Get the two elements you want to compare,
+              one from current row and one from the next:*/
+              x = rows[i].getElementsByTagName("TD")[0];
+              y = rows[i + 1].getElementsByTagName("TD")[0];
+              //check if the two rows should switch place:
+              if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            }
+            if (shouldSwitch) {
+              /*If a switch has been marked, make the switch
+              and mark that a switch has been done:*/
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+            }
+          }
+        }
+        </script>
     <div class="supergrid">
         <table id="supergrid">
             <caption style="font-weight: bolder ;">DRIVERS CHAMPIONSHIP</caption>
@@ -136,8 +173,7 @@
                 <th></th>
                 <th></th>
                 <th></th>
-                <th></th>
-                <th></th>
+
 
             </tr>
             <tr>
@@ -151,58 +187,55 @@
                 <td>MON</td>
                 <td>AZE</td>
                 <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>BAH</td>
-                <td>ESP</td>
-                <td>MON</td>
-                <td>AZE</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
-                <td>CAN</td>
+                <td>FRA</td>
+                <td>AUT</td>
+                <td>GBR</td>
+                <td>HUN</td>
+                <td>NED</td>
+                <td>RUS</td>
+                <td>CHI</td>
+                <td>SIN</td>
+                <td>JAP</td>
+                <td>USA</td>
+                <td>MEX</td>
+                <td>BRA</td>
+                <td>AUS</td>
+                <td>ABU</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Nick</td>
+                <td>Team Breeze</td>
+                <td>307</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>1</td>
+                <td>11</td>
+                <td>2</td>
+                <td>1</td>
+                <td>DNF</td>
+                <td>2</td>
+                <td>8</td>
+                <td>3</td>
+                <td>1</td>
+                <td>13</td>
+                <td>2</td>
+                <td>2</td>
+                <td>DNF</td>
+                <td>3</td>
+                <td>3</td>
+                <td>6</td>
+                <td></td>
+                <td></td>
+
 
             </tr>
             <tr>
                 <td>1</td>
                 <td>Wiggins</td>
                 <td>Team Ecosse</td>
-                <td>30</td>
-                <td>-5</td>
-                <td>5</td>
-                <td>6</td>
-                <td>11</td>
-                <td>DNF</td>
-                <td>15</td>
-                <td>5</td>
-                <td>6</td>
-                <td>11</td>
-                <td>DNF</td>
-                <td>15</td>
-                <td>5</td>
-                <td>6</td>
-                <td>11</td>
-                <td>DNF</td>
-                <td>15</td>
-                <td>5</td>
-                <td>6</td>
-                <td>11</td>
-                <td>DNF</td>
-                <td>15</td>
-                <td>15</td>
-
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Wiggins</td>
-                <td>Team Ecosse</td>
-                <td>30</td>
+                <td>308</td>
                 <td>-5</td>
                 <td>5</td>
                 <td>6</td>
