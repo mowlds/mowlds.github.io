@@ -219,6 +219,38 @@ table#driverrecords tr:nth-child(even) {
   padding-left: 20px;
   padding-top: 5px;
 }
+table#shortcalendar{
+  table-layout:fixed;
+  width:100%;
+  text-align: center;
+  border: 3px outset white;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: 40px;
+  }
+  
+  table#shortcalendar caption {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-style: italic;
+  text-align: center;
+  background-color: rgba(255, 139, 139, 0.5);
+  border: 3px outset white;
+  }
+  table#shortcalendar tr{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  }
+  
+  table#shortcalendar tr:nth-child(even) {
+    background-color: rgba(255, 139, 139, 0.5)
+  }
+
+
+
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
    ========================================================================== */
