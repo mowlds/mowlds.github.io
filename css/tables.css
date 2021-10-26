@@ -301,8 +301,6 @@ table#supergrid tr:nth-child(even) {
     display: block;
   }
 
-
-
   header
   {
     background: radial-gradient(ellipse at top, #91c2b7, transparent),
@@ -310,3 +308,8 @@ table#supergrid tr:nth-child(even) {
             padding-top: 10px;
             
             }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+              }
