@@ -19,7 +19,7 @@
   background-color: rgba(139, 4, 4, 0.199);
   box-shadow:10px 10px 5px grey;
   text-align: center;
-  margin: 2%;
+  margin: 1%;
    
 }
 
@@ -29,7 +29,7 @@
   flex: 2;
   background-color: rgba(139, 4, 4, 0.199);
   box-shadow:10px 10px 5px grey;
-  margin-right: 2%;
+  margin: 1%;
 }
 
 
@@ -333,7 +333,13 @@ margin-left: 1%;
      float: none;
      text-align: left;
      }
+     .column.side {
+       margin: 2%;
     }
+    .column.middle{
+      margin:2%
+    }
+  }
 
 
 
