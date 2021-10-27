@@ -11,14 +11,19 @@
 }
 
 .column {
-  padding: 10px;
-
+padding:10px;
 }
 
 .column.side {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  border-left: 10px solid #e3e9e3; 
+  border-top: 10px solid #e3e9e3; 
+  background-color: rgba(139, 4, 4, 0.199);
+  box-shadow:10px 10px 5px grey;
+  text-align: center;
+  margin-right: 1%;
  
 }
 
