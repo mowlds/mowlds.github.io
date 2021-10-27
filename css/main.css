@@ -491,7 +491,6 @@ table#supergrid tr:nth-child(even) {
 
               table#calendar {
                 table-layout: fixed;
-                width: 60%;
                 max-width: 90%;
                 border: 3px outset white;
                 border-collapse: collapse;
@@ -513,8 +512,7 @@ table#supergrid tr:nth-child(even) {
             
             table#calendar td {
                 background-color: rgba(211, 114, 114, 0.5);
-                padding-top: 3px;
-                padding-bottom: 3px;
+                padding: 5px;
                 text-align: center;
                 font-size: 10pt;
                
