@@ -148,7 +148,7 @@
   .block{
     display: block;
     text-decoration: none;
-    padding: 1%;
+    padding: 3%;
     
   }
   a {
@@ -161,8 +161,8 @@
   article{
         box-shadow:3px 3px 1.5px rgb(61, 33, 33);
     background-color: rgba(255, 255, 255, 0.253);
-    border-radius: 15px 50px;
-    padding: 1%;
+    border-radius: 1% 1%;
+    padding: 3%;
     
   }
   h4{
