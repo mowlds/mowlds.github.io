@@ -4,6 +4,7 @@
    * {
     font-family: 'exo';
 }
+
 .row {
   display: -webkit-flex;
   display: flex;
@@ -148,6 +149,7 @@
     display: block;
     text-decoration: none;
     padding: 1%;
+    
   }
   a {
     color:inherit;
@@ -248,12 +250,12 @@ table#driverrecords tr:nth-child(even) {
   background-color: rgba(255, 139, 139, 0.5)
 }
 .news{
-  padding-left: 20px;
+  padding-left: 2%;
 }
 
 .newsimage{
-  padding-left: 20px;
-  padding-top: 5px;
+padding-top: 2%;
+padding-left: 2%;
 }
 table#shortcalendar{
   table-layout:fixed;
