@@ -294,6 +294,263 @@ margin-left: 1%;
     display: none;
   }
 
+  .raceinfo {
+    text-align: center;
+    margin-top: 2pc;
+    margin-left: 5pc;
+    margin-right: 5pc;
+    padding-bottom: 1pc;
+    background-color: rgba(61, 33, 33, 0.5);
+    border-radius: 15px 50px;
+    border-style: outset;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+table#timeline {
+    table-layout: fixed;
+    width: 100%;
+    border-radius: 10px;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border: 2px solid rgb(255, 255, 255);
+
+
+
+}
+
+table#timeline th {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: rgba(211, 114, 114, 0.5);
+    border-radius: 12px;
+    width: 35px;
+;
+}
+
+table#timeline td {
+    background-color: rgba(211, 114, 114, 0.5);
+    padding-top: 4px;
+    border-radius: 12px;
+    width: 35px;
+    padding-bottom: 4px;
+}
+
+table#timeline caption {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-style: italic;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid white;
+
+}
+
+table#timeline tr:nth-child(2) {
+    font-weight: bold;
+}
+
+table#timeline col:nth-child(even) {
+    background-color: rgba(211, 114, 114, 0.5);
+}
+
+
+.timeline {
+    text-align: center;
+    background-color: rgba(61, 33, 33, 0.5);
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 40px;
+
+}
+
+table#champtable {
+    table-layout: fixed;
+    width: 90%;
+    border: 3px outset white;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+table#champtable th {
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    background-color: rgba(211, 114, 114, 0.5);
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+table#champtable td {
+    background-color: rgba(211, 114, 114, 0.5);
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+table#champtable caption {
+    background-color: rgba(61, 33, 33, 0.5);
+    font-style: italic;
+    font-size: 18pt;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+
+table#champtable tr:nth-child(even) {
+    background-color: rgba(255, 139, 139, 0.5)
+}
+
+
+.raceinfo {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: rgba(61, 33, 33, 0.5);
+    border-radius: 15px 50px;
+    border-style: outset;
+}
+
+
+h2 {
+    padding-bottom: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+table#supergrid {
+    table-layout: auto;
+    width: 100%;
+    border: 3px outset white;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-size: 8pt;
+
+
+}
+
+table#supergrid th {
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    background-color: rgba(211, 114, 114, 0.5);
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 12pt;
+}
+
+table#supergrid td {
+    background-color: rgba(211, 114, 114, 0.5);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    font-size: 10pt;
+    border-left: 1px solid white;
+
+}
+
+table#supergrid caption {
+    background-color: rgba(61, 33, 33, 0.5);
+    font-style: italic;
+    font-size: 18pt;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+
+table#supergrid tr:nth-child(even) {
+    background-color: rgba(255, 139, 139, 0.5)
+}
+* {
+    font-family: 'exo';
+}
+
+
+              table#calendar {
+                table-layout: fixed;
+                width: 60%;
+                border: 3px outset white;
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2pc;
+       
+            
+            }
+            
+            table#calendar th {
+                border-bottom: 2px rgb(255, 255, 255) solid;
+                background-color: rgba(211, 114, 114, 0.5);
+                padding-bottom: 2px;
+                padding-top: 2px;
+                text-align: center;
+                font-size: 12pt;
+            }
+            
+            table#calendar td {
+                background-color: rgba(211, 114, 114, 0.5);
+                padding-top: 3px;
+                padding-bottom: 3px;
+                text-align: center;
+                font-size: 10pt;
+               
+            
+            }
+            
+            table#calendar caption {
+                background-color: rgba(61, 33, 33, 0.5);
+                font-style: italic;
+                font-size: 18pt;
+                border-top: 2px solid rgb(255, 255, 255);
+                border-left: 2px solid rgb(255, 255, 255);
+                border-right: 2px solid white;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            
+            }
+            
+            table#calendar tr:nth-child(even) {
+                background-color: rgba(255, 139, 139, 0.5)
+            }
+            .calendar {
+                text-align: center;
+            
+            }
+
 
 
 /* ==========================================================================
