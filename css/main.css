@@ -339,20 +339,6 @@ margin-left: 1%;
     .column.middle{
       margin:2%
     }
-    .topnav.responsive .dropdown-content {
-      position: absolute;
-      background-color: rgb(61, 33, 33);
-
-    }
-    
-    .dropdown-content a {
-      float: none;
-      color: rgb(255, 255, 255);
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
   }
 
 
