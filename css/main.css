@@ -294,18 +294,32 @@ margin-left: 1%;
   table#shortcalendar tr:nth-child(even) {
     background-color: rgba(255, 139, 139, 0.5)
   }
-  @media screen and ( max-width: 500px ) { 
-    .row { flex-direction: column; }
-  }
+
 
 
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
    ========================================================================== */
 
-@media only screen and (max-width: 480px) {
-    /* insert styles here */
-}
+   @media screen and ( max-width: 500px ) { 
+    .row { flex-direction: column; }
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+    }
 
 
 
