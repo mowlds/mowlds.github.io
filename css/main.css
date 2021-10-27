@@ -7,6 +7,7 @@
 .row {
   display: -webkit-flex;
   display: flex;
+  width: 100%;
 
 }
 
@@ -24,7 +25,7 @@ padding:10px;
   box-shadow:10px 10px 5px grey;
   text-align: center;
   margin-right: 1%;
- 
+   
 }
 
 .column.middle {
@@ -35,6 +36,7 @@ padding:10px;
   border-left: 10px solid #e3e9e3; 
   border-top: 10px solid #e3e9e3; 
   box-shadow:10px 10px 5px grey;
+  margin-right: 1%;
 }
 
 
