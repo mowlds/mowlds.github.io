@@ -370,6 +370,7 @@ table#timeline col:nth-child(even) {
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 40px;
+    margin-bottom: 2pc;
 
 }
 
@@ -420,9 +421,14 @@ table#champtable tr:nth-child(even) {
 
 .column {
     float: left;
-    width: 50%;
     padding: 10px;
     text-align: center;
+
+}
+.columntable {
+  float: left;
+  width: 50%;
+  text-align: center;
 
 }
 
