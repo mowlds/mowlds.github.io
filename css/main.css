@@ -266,7 +266,7 @@ table#shortcalendar{
   width:85%;
   text-align: center;
   align-content: center;
-  border: 3px outset black;
+  border: 3px solid rgb(61, 33, 33);
   border-collapse: collapse;
   font-weight: bold;
   box-shadow:10px 10px 5px grey;
@@ -281,7 +281,7 @@ table#shortcalendar{
   font-style: italic;
   text-align: center;
   background-color: rgba(255, 139, 139, 0.5);
-  border: 3px outset black;
+
   }
   table#shortcalendar tr{
   padding-top: 2px;
@@ -292,10 +292,7 @@ table#shortcalendar{
   table#shortcalendar tr:nth-child(even) {
     background-color: rgba(255, 139, 139, 0.5)
   }
-.shortcalendar{
-  align-content: center;
-  text-align: center;
-}
+
 
 
 /* ==========================================================================
