@@ -338,12 +338,12 @@ margin-left: 1%;
       display:contents;
       text-align: left;
   }
-  .topnav.responsive .dropbtn{
+  .topnav.responsive .dropdown .dropbtn{
     float: none;
      display:contents;
      text-align: left;
  }
- .topnav.responsive .dropdown-content{
+ .topnav.responsive .dropdown .dropbtn .dropdown-content{
   float: none;
    display:contents;
    text-align: left;
