@@ -419,7 +419,13 @@ table#champtable tr:nth-child(even) {
     box-sizing: border-box;
 }
 
-.columntable {
+.columntable1 {
+  float: left;
+  width: 50%;
+  text-align: center;
+
+}
+.columntable2 {
   float: left;
   width: 50%;
   text-align: center;
