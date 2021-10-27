@@ -343,6 +343,11 @@ margin-left: 1%;
      display:contents;
      text-align: left;
  }
+ .topnav.responsive .dropdown-content{
+  float: none;
+   display:contents;
+   text-align: left;
+}
 }
 
 
