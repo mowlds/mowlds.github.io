@@ -336,16 +336,8 @@ margin-left: 1%;
      .topnav.responsive .dropdown{
      float: none;
      text-align: left;
-  }
-  .topnav.responsive .dropdown .dropbtn{
-    float: none;
-     text-align: left;
- }
- .topnav.responsive .dropdown .dropbtn .dropdown-content{
-  float: none;
-   text-align: left;
-}
-}
+     }
+    }
 
 
 
