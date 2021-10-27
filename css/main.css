@@ -340,12 +340,9 @@ margin-left: 1%;
       margin:2%
     }
     .topnav.responsive .dropdown-content {
-      display: none;
       position: absolute;
       background-color: rgb(61, 33, 33);
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+
     }
     
     .dropdown-content a {
