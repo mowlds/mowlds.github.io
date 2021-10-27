@@ -4,6 +4,34 @@
    * {
     font-family: 'exo';
 }
+.row {
+  display: -webkit-flex;
+  display: flex;
+
+}
+
+.column {
+  padding: 10px;
+
+}
+
+.column.side {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+ 
+}
+
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  background-color: rgba(139, 4, 4, 0.199);
+  border-left: 10px solid #e3e9e3; 
+  border-top: 10px solid #e3e9e3; 
+  box-shadow:10px 10px 5px grey;
+}
+
 
    .topnav {
   overflow: hidden;
@@ -221,14 +249,15 @@ table#driverrecords tr:nth-child(even) {
 }
 table#shortcalendar{
   table-layout:fixed;
-  width:100%;
+  width:85%;
   text-align: center;
-  border: 3px outset white;
+  border: 3px outset black;
   border-collapse: collapse;
   margin-bottom: 10px;
   margin-left: 20px;
-  margin-right: 20px;
-  padding-right: 40px;
+  font-weight: bold;
+  box-shadow:10px 10px 5px grey;
+
   }
   
   table#shortcalendar caption {
@@ -237,7 +266,7 @@ table#shortcalendar{
   font-style: italic;
   text-align: center;
   background-color: rgba(255, 139, 139, 0.5);
-  border: 3px outset white;
+  border: 3px outset black;
   }
   table#shortcalendar tr{
   padding-top: 2px;
