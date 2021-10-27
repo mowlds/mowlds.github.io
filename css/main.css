@@ -375,27 +375,25 @@ table#timeline col:nth-child(even) {
 
 table#champtable {
     table-layout: fixed;
-    width: 90%;
+    max-width: 90%;
+    min-width: 70%;
     border: 3px outset white;
     border-collapse: collapse;
-    margin-bottom: 10px;
-    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
 
 }
 
 table#champtable th {
     border-bottom: 2px rgb(255, 255, 255) solid;
     background-color: rgba(211, 114, 114, 0.5);
-    padding-bottom: 5px;
-    padding-top: 5px;
+padding: 10px;
 }
 
 table#champtable td {
     background-color: rgba(211, 114, 114, 0.5);
-    padding-top: 5px;
-    padding-bottom: 5px;
+padding: 10px;
 
 }
 
@@ -415,10 +413,6 @@ table#champtable tr:nth-child(even) {
     background-color: rgba(255, 139, 139, 0.5)
 }
 
-
-h2 {
-    padding-bottom: 5px;
-}
 
 * {
     box-sizing: border-box;
