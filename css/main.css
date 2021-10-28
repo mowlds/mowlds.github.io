@@ -621,6 +621,7 @@ table#supergrid tr:nth-child(even) {
    @media screen and ( max-width: 500px ) { 
     .row { flex-direction: column; }
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+    .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .topnav a:not(:first-child) {display: none;}
     .topnav div:not(:first-child) {display: none;}
     .topnav a.icon {
