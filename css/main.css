@@ -557,7 +557,8 @@ table#supergrid tr:nth-child(even) {
           }
           table#raceresults {
             table-layout: fixed;
-            width: 90%;
+            max-width: 80%;
+            min-width: 60%;
             border: 3px outset white;
             border-collapse: collapse;
             margin-left: auto;
@@ -570,11 +571,13 @@ table#supergrid tr:nth-child(even) {
             border-bottom: 2px rgb(255, 255, 255) solid;
             background-color: rgba(211, 114, 114, 0.5);
             padding: 10px;
+            width: max-content
         }
 
         table#raceresults td {
             background-color: rgba(211, 114, 114, 0.5);
             padding: 10px;
+            width: max-content
 
         }
 
