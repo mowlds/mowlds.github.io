@@ -419,19 +419,12 @@ table#champtable tr:nth-child(even) {
     box-sizing: border-box;
 }
 
-.columntable1 {
+.columntable{
   float: left;
   width: 50%;
   text-align: center;
 
 }
-.columntable2 {
-  float: left;
-  width: 50%;
-  text-align: center;
-
-}
-
 .row:after {
     content: "";
     display: table;
@@ -584,12 +577,6 @@ table#supergrid tr:nth-child(even) {
     .column.middle{
       margin:2%
     }
-    .columntable1{
-    width: 0%;
-    }
-    .columntable2{
-      width: 0%;
-      }
   }
 
 
