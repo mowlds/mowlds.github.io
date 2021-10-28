@@ -371,6 +371,7 @@ table#timeline col:nth-child(even) {
     margin-left: 20px;
     margin-top: 40px;
     margin-bottom: 2pc;
+  overflow-x: auto;
 
 }
 
