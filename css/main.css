@@ -186,8 +186,8 @@ background-color: rgba(139, 4, 4, 0.199);
 
 
 .wiki{
-  display: flex;
   text-align: left;
+  padding-bottom: 5%;
 
 }
 .wikia{
@@ -198,12 +198,20 @@ background-color: rgba(139, 4, 4, 0.199);
 
 ul.wikilist{
 list-style-type: none;
-width: 30pc;
 padding-top: 5px;
 }
 
+
+ul.wikilist > li{
+  display:inline-block;
+}
+
+
 li{
-  padding-top: 2px;
+  display: inline;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid grey;
 }
 
 .driverrecords{
@@ -219,12 +227,12 @@ margin-top: 10px;
 }
 table#driverrecords{
 table-layout: fixed;
-width: 90%;
+width: 30%;
 text-align: center;
 border: 3px outset white;
 border-collapse: collapse;
-margin-bottom: 10px;
-margin-left:auto;
+margin-bottom: 20px;
+margin-left: 2%;
 margin-right:auto;
 }
 
