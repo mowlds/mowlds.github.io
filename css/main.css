@@ -544,6 +544,7 @@ table#supergrid tr:nth-child(even) {
             .calendar {
                 text-align: center;
                 padding-bottom: 5%;
+                overflow-x: auto;
             
             }
 
@@ -633,6 +634,7 @@ table#supergrid tr:nth-child(even) {
     .timeline {display: none;}
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+    table#calendar caption th td {font-size: 6pt;}
     .topnav a:not(:first-child) {display: none;}
     .topnav div:not(:first-child) {display: none;}
     .topnav a.icon {
