@@ -531,11 +531,11 @@ table#supergrid tr:nth-child(even) {
             }
 
             .racewinner {
-              background-color: rgba(61, 33, 33, 0.5);
+              
               border-radius: 15px 50px;
-              width: 80%;
               margin-left: auto;
               margin-right: auto;
+              max-width: 80%;
             
   
           }
@@ -543,7 +543,8 @@ table#supergrid tr:nth-child(even) {
           h2.racewinner {
               padding-top: 5px;
               border-style: outset;
-  
+              background-color: rgba(61, 33, 33, 0.5);
+
           }
   
           h3.racewinner {
@@ -559,10 +560,9 @@ table#supergrid tr:nth-child(even) {
             width: 90%;
             border: 3px outset white;
             border-collapse: collapse;
-            margin-bottom: 10px;
-            margin-top: 40px;
             margin-left: auto;
             margin-right: auto;
+            padding: 5px;
 
         }
 
@@ -599,8 +599,10 @@ table#supergrid tr:nth-child(even) {
           float: left;
           width: 50%;
           text-align: center;
-          padding-bottom: 5%;
           padding-top: 3%;
+        }
+        .raceresults{
+          overflow-x:auto;
         }
 
 
