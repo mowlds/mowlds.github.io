@@ -633,6 +633,9 @@ table#supergrid tr:nth-child(even) {
     .row { flex-direction: column; }
     .timeline {display: none;}
     .calendar {font-size: 6pt;}
+    table#calendar td {font-size: 6pt;}
+    table#calendar th {font-size: 7pt;}
+    table#calendar caption {font-size: 8pt;}
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .topnav a:not(:first-child) {display: none;}
