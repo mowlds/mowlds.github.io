@@ -376,8 +376,8 @@ table#timeline col:nth-child(even) {
 
 table#champtable {
     table-layout: fixed;
-    max-width: 90%;
-    min-width: 70%;
+    max-width: 80%;
+    min-width: 60%;
     border: 3px outset white;
     border-collapse: collapse;
     margin-left: auto;
@@ -423,6 +423,7 @@ table#champtable tr:nth-child(even) {
   float: left;
   width: 50%;
   text-align: center;
+  padding-bottom: 2%;
 
 }
 .row:after {
