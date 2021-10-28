@@ -174,15 +174,14 @@ padding-left: 5%;
 }
 .wikiparent{
 box-shadow: 5px 5px 10px grey;
-margin-left: 20px;
-margin-right: 20px;
+margin-left: 2pc;
+margin-right: 2pc;
 background-color: rgba(139, 4, 4, 0.199);
 
 }
 .h2wiki{
-  margin-left: 20px;
-  padding-top: 20px;
-
+  margin-left: 2pc;
+  padding-top: 2pc;
 }
 
 
@@ -199,7 +198,7 @@ background-color: rgba(139, 4, 4, 0.199);
 
 ul.wikilist{
 list-style-type: none;
-width: 60px;
+width: 30pc;
 padding-top: 5px;
 }
 
@@ -613,6 +612,7 @@ table#supergrid tr:nth-child(even) {
 
    @media screen and ( max-width: 500px ) { 
     .row { flex-direction: column; }
+    .wiki { flex-direction: column; }
     .topnav a:not(:first-child) {display: none;}
     .topnav div:not(:first-child) {display: none;}
     .topnav a.icon {
