@@ -108,6 +108,7 @@ table.golflive{
     border-radius: 12px;
     font-size: 10pt;
     width: 135px;
+    border: 1px solid black;
 }
 
 table.golflive tr{
@@ -123,12 +124,14 @@ table.golflive th{
 table.golflive td{
     background-color: rgb(180, 162, 162);
     padding: 5px;
+    
 }
 table.golfunplayed{
     border-collapse: collapse;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 10pt;
     width: 135px;
+    padding: 2px;
 }
 
 table.golfunplayed tr{
