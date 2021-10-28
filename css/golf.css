@@ -196,6 +196,7 @@ table.golfunplayed td{
               html,
               body {
                 height: 100%;
+                display: grid;
               }
               
               ul {
