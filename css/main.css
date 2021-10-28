@@ -628,7 +628,7 @@ table#supergrid tr:nth-child(even) {
       float: right;
       display: block;
     }
-    table#driverrecords { flex-direction: column; width: 75%; margin-left: auto; margin-right: auto;}
+    table#driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
   }
 
     @media screen and ( max-width: 500px ) { 
