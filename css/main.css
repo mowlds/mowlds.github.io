@@ -584,9 +584,12 @@ table#supergrid tr:nth-child(even) {
     .column.middle{
       margin:2%
     }
-    .columntable{
-      margin:2%
+    .columntable1{
+    width: 0%;
     }
+    .columntable2{
+      width: 0%;
+      }
   }
 
 
