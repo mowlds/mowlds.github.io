@@ -331,8 +331,8 @@ table#timeline {
     border-radius: 10px;
     border-collapse: collapse;
     border: 2px solid rgb(255, 255, 255);
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
     align-content: center;
@@ -624,6 +624,7 @@ table#supergrid tr:nth-child(even) {
 
    @media screen and ( max-width: 500px ) { 
     .row { flex-direction: column; }
+    table#timeline {width: 100%;}
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .topnav a:not(:first-child) {display: none;}
