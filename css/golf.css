@@ -104,15 +104,16 @@
               }
 
 table.golflive{
-    border-collapse: collapse;
-    border-radius: 12px;
+    border-collapse: separate !important;
+    border-radius: 10px;
     font-size: 10pt;
     width: 135px;
-    border: 1px solid black;
+    border: 3px solid rgb(78, 1, 1);
 }
 
 table.golflive tr{
     padding: 10px;
+    border-radius: 10px;
   
 }
 
@@ -120,22 +121,25 @@ table.golflive th{
     background-color: rgb(78, 1, 1);
     color: white;
     padding: 10px;
+    border-radius: 10px;
 }
 table.golflive td{
     background-color: rgb(180, 162, 162);
     padding: 5px;
+    border-radius: 10px;
     
 }
 table.golfunplayed{
-    border-collapse: collapse;
+    border-collapse: separate !important;
     border-radius: 10px;
     font-size: 10pt;
     width: 135px;
-    padding: 2px;
+    border: 3px solid rgb(18, 14, 34)
 }
 
 table.golfunplayed tr{
     padding: 10px;
+    border-radius: 10px;
   
 }
 
@@ -143,10 +147,12 @@ table.golfunplayed th{
     background-color: rgb(9, 1, 78);
     color: white;
     padding: 10px;
+    border-radius: 10px;
 }
 table.golfunplayed td{
     background-color: rgb(163, 162, 180);
     padding: 5px;
+    border-radius: 10px;
 }
 
 
