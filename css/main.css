@@ -323,7 +323,6 @@ table#timeline {
     width: 100%;
     border-radius: 10px;
     border-collapse: collapse;
-    margin-bottom: 10px;
     border: 2px solid rgb(255, 255, 255);
 
 
@@ -341,7 +340,6 @@ table#timeline td {
     background-color: rgba(211, 114, 114, 0.5);
     padding-top: 4px;
     border-radius: 12px;
-    padding-bottom: 4px;
 }
 
 table#timeline caption {
@@ -366,7 +364,6 @@ table#timeline col:nth-child(even) {
 .timeline {
     text-align: center;
     background-color: rgba(61, 33, 33, 0.5);
-    max-width: 90%;
     margin-left:auto;
     margin-right:auto;
     margin-top: 5pc;
