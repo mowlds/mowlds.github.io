@@ -327,10 +327,17 @@ margin-left: 1%;
 
 table#timeline {
     table-layout: fixed;
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
     border-collapse: collapse;
     border: 2px solid rgb(255, 255, 255);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    text-align: center;
+    
 }
 
 table#timeline th {
@@ -338,7 +345,6 @@ table#timeline th {
     background-color: rgba(211, 114, 114, 0.5);
     border-radius: 12px;
     min-width: 35px;
-    width: max-content
     
 ;
 }
@@ -348,7 +354,7 @@ table#timeline td {
     padding-top: 4px;
     border-radius: 12px;
     min-width: 35px;
-    width: max-content;
+
 }
 
 table#timeline caption {
@@ -358,6 +364,7 @@ table#timeline caption {
     border-top: 2px solid rgb(255, 255, 255);
     border-left: 2px solid rgb(255, 255, 255);
     border-right: 2px solid white;
+    background-color: rgba(61, 33, 33, 0.5);
 
 }
 
@@ -372,13 +379,6 @@ table#timeline col:nth-child(even) {
 
 .timeline {
   overflow-x:auto;
-    text-align: center;
-    background-color: rgba(61, 33, 33, 0.5);
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 5pc;
-    margin-bottom: 5pc;
-    
 
 }
 
