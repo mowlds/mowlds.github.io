@@ -577,6 +577,9 @@ table#supergrid tr:nth-child(even) {
     .column.middle{
       margin:2%
     }
+    .columntable{
+      width: 100%;
+    }
   }
 
 
