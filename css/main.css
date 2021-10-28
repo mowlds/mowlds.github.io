@@ -530,6 +530,78 @@ table#supergrid tr:nth-child(even) {
             
             }
 
+            .racewinner {
+              background-color: rgba(61, 33, 33, 0.5);
+              border-radius: 15px 50px;
+              width: 80%;
+              margin-left: auto;
+              margin-right: auto;
+            
+  
+          }
+  
+          h2.racewinner {
+              padding-top: 5px;
+              border-style: outset;
+  
+          }
+  
+          h3.racewinner {
+              background-color: rgba(211, 114, 114, 0.5);
+              padding-top: 2px;
+              padding-bottom: 3px;
+              border-style: outset;
+              margin-top: -15px;
+  
+          }
+          table#raceresults {
+            table-layout: fixed;
+            width: 90%;
+            border: 3px outset white;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        table#raceresults th {
+            border-bottom: 2px rgb(255, 255, 255) solid;
+            background-color: rgba(211, 114, 114, 0.5);
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        table#raceresults td {
+            background-color: rgba(211, 114, 114, 0.5);
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+        }
+
+        table#raceresults caption {
+            background-color: rgba(61, 33, 33, 0.5);
+            font-style: italic;
+            font-size: 18pt;
+            border-top: 2px solid rgb(255, 255, 255);
+            border-left: 2px solid rgb(255, 255, 255);
+            border-right: 2px solid white;
+            padding-bottom: 5px;
+            padding-top: 5px;
+
+        }
+
+        table#raceresults tr:nth-child(even) {
+            background-color: rgba(255, 139, 139, 0.5)
+        }
+        .column{
+          float: left;
+          width: 50%;
+          text-align: center;
+          padding-bottom: 5%;
+          padding-top: 3%;
+        }
 
 
 /* ==========================================================================
