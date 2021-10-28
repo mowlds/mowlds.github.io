@@ -569,14 +569,12 @@ table#supergrid tr:nth-child(even) {
         table#raceresults th {
             border-bottom: 2px rgb(255, 255, 255) solid;
             background-color: rgba(211, 114, 114, 0.5);
-            padding-bottom: 5px;
-            padding-top: 5px;
+            padding: 10px;
         }
 
         table#raceresults td {
             background-color: rgba(211, 114, 114, 0.5);
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding: 10px;
 
         }
 
