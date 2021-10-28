@@ -324,9 +324,6 @@ table#timeline {
     border-radius: 10px;
     border-collapse: collapse;
     border: 2px solid rgb(255, 255, 255);
-
-
-
 }
 
 table#timeline th {
@@ -368,7 +365,7 @@ table#timeline col:nth-child(even) {
     margin-right:auto;
     margin-top: 5pc;
     margin-bottom: 5pc;
-  overflow-x: auto;
+    overflow-x:scroll;
 
 }
 
