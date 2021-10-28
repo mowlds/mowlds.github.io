@@ -330,6 +330,7 @@ table#timeline th {
     border-bottom: 2px solid rgb(255, 255, 255);
     background-color: rgba(211, 114, 114, 0.5);
     border-radius: 12px;
+    width: max-content
 ;
 }
 
@@ -337,6 +338,7 @@ table#timeline td {
     background-color: rgba(211, 114, 114, 0.5);
     padding-top: 4px;
     border-radius: 12px;
+    width: max-content;
 }
 
 table#timeline caption {
@@ -365,7 +367,7 @@ table#timeline col:nth-child(even) {
     margin-right:auto;
     margin-top: 5pc;
     margin-bottom: 5pc;
-    overflow-x:scroll;
+    overflow-x:auto;
 
 }
 
