@@ -20,65 +20,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
 
 
   <style>
-
-
     #grad1 {
-  background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(157, 201, 202));
-}
-    
+      background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(157, 201, 202));
+    }
   </style>
 </head>
 
 <body style="font-family: 'Exo'">
   <header>
-    <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;"
-      class="center">
+    <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
     <p>
     <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
     </p>
     <div class="topnav" id="topnav">
-        <a href="#">Home</a>
-        <div class="dropdown" id="topnav">
-          <button class="dropbtn">Results
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/Race/2021/S2/">Latest Race</a>
-            <a href="/Tables/Seasons/2021/S2/overview.html">Latest Season</a>
-            </div>
+      <a href="#">Home</a>
+      <a href="/Tables/Seasons/2021/S2/overview.html">Current Season</a>
+      <div class="dropdown">
+        <button class="dropbtn">Wiki
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/seasons.html">Seasons</a>
+          <a href="/drivers.html">Drivers</a>
+          <a href="#">Races</a>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Wiki
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/seasons.html">Seasons</a>
-            <a href="/drivers.html">Drivers</a>
-            <a href="#">Races</a>
-          </div>
-        </div>
-        <a href="about.html">Headsgone Podcast</a>
-        <a href="about.html">Karun's Corner</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-        <div class="topnav-right">
+      </div>
+      <a href="about.html">Headsgone Podcast</a>
+      <a href="about.html">Karun's Corner</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="topnav-right">
         <a href="golf/home.html">Serious Golfing League</a>
-        </div>
-   </div>
-   <script>
-    function myFunction() {
-      var x = document.getElementById("topnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
       }
-    }
     </script>
 
   </header>
@@ -87,68 +75,212 @@
   <div class="row">
 
 
-    <div class="column middle">
-      <h3 style="text-align: center;">League Updates</h3>
-      <hr class="solid">
-      <a class="block" href="http://google.com">
-        <article>
-         <img class="newsimage" src="images\headsgone.png" alt="headsgone">
-        <h4 class="news">All you can eat tacos for Blarg as he claims victory in Mexico City</h4>
-        </article>
-    </a>
-    </p>
-    <a class="block" href="http://google.com">
-      <article>
-        <img class="newsimage" src="images\headsgone.png" alt="headsgone">  
-      <h4 class="news">Some other Cunt wins at COTA</h4>
-      </article>
-  </a>
-
-    </div>
-
     <div class="column side">
       <h3>Calendar</h3>
       <hr class="solid">
-        <table id="shortcalendar">
-         <tr><td>RACE 1</td><td>14/11</td><td><img src="images/trophy-png-30573.png" style="height: 25px; width: auto;"></td><td>Jambo</td></tr>
-         <tr><td>RACE 2</td><td>17/11</td><td></td><td></td></tr>
-         <tr><td>RACE 3</td><td>21/11</td><td></td><td></td></tr>
-         <tr><td>RACE 4</td><td>24/11</td><td></td><td></td></tr>
-         <tr><td>RACE 5</td><td>28/11</td><td></td><td></td></tr>
-         <tr><td>RACE 6</td><td>01/12</td><td></td><td></td></tr>
-         <tr><td>RACE 7</td><td>5/12</td><td></td><td></td></tr>
-         <tr><td>RACE 8</td><td>8/12</td><td></td><td></td></tr>
-         <tr><td>RACE 9</td><td>12/12</td><td></td><td></td></tr>
-         <tr><td>RACE 10</td><td>15/12</td><td></td><td></td></tr>
-         <tr><td>RACE 11</td><td>19/12</td><td></td><td></td></tr>
-         <tr><td>RACE 12</td><td>5/1</td><td></td><td></td></tr>
-         <tr><td>RACE 13</td><td>09/01</td><td></td><td></td></tr>
-         <tr><td>RACE 14</td><td>12/01</td><td></td><td></td></tr>
-         <tr><td>RACE 15</td><td>16/01</td><td></td><td></td></tr>
-         <tr><td>RACE 16</td><td>19/01</td><td></td><td></td></tr>
-         <tr><td>RACE 17</td><td>26/01</td><td></td><td></td></tr>
-         <tr><td>RACE 18</td><td>02/02</td><td></td><td></td></tr>
-         <tr><td>RACE 19</td><td>06/02</td><td></td><td></td></tr>
-         <tr><td>RACE 20</td><td>09/02</td><td></td><td></td></tr>
-         <tr><td>RACE 21</td><td>16/02</td><td></td><td></td></tr>
-         <tr><td>RACE 22</td><td>20/02</td><td></td><td></td></tr>
-         <tr><td>RACE 23</td><td>23/02</td><td></td><td></td></tr>
-         <tr><td>RACE 24</td><td>27/02</td><td></td><td></td></tr>
-        </table>
+      <table id="shortcalendar">
+        <tr>
+          <td>RACE 1</td>
+          <td>14/11</td>
+          <td><img src="images/trophy-png-30573.png" style="height: 25px; width: auto;"></td>
+          <td>Jambo</td>
+        </tr>
+        <tr>
+          <td>RACE 2</td>
+          <td>17/11</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 3</td>
+          <td>21/11</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 4</td>
+          <td>24/11</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 5</td>
+          <td>28/11</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 6</td>
+          <td>01/12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 7</td>
+          <td>5/12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 8</td>
+          <td>8/12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 9</td>
+          <td>12/12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 10</td>
+          <td>15/12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 11</td>
+          <td>19/12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 12</td>
+          <td>5/1</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 13</td>
+          <td>09/01</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 14</td>
+          <td>12/01</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 15</td>
+          <td>16/01</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 16</td>
+          <td>19/01</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 17</td>
+          <td>26/01</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 18</td>
+          <td>02/02</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 19</td>
+          <td>06/02</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 20</td>
+          <td>09/02</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 21</td>
+          <td>16/02</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 22</td>
+          <td>20/02</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 23</td>
+          <td>23/02</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RACE 24</td>
+          <td>27/02</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
       </br>
-    </br>
+      </br>
 
       <h3>Latest Standings</h3>
       <hr class="solid">
       <h4>F1 2021 Season 1 Drivers' Championship</h4>
-      <img src="images\headsgone.png" alt="headsgone">
+      <table id="shortcalendar">
+        <tbody>
+         <tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>5</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>6</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>7</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>8</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>9</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>11</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>12</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>13</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>14</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>15</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>16</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>17</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>18</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>19</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>20</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>21</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>22</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+         <tr><td>23</td><td>&nbsp;</td><td></td></tr>
+        </tbody></table>
       <p>Enter Latest #Headsgone headline here</p>
-      <hr class="solid">
-      <h4>F1 2021 Season 1 Constructors Championship</h4>
-      <img src="images\headsgone.png" alt="headsgone">
-      <p>Enter Latest #Headsgone headline here</p>
+
     </div>
 
+    <div class="column middle">
+      <h3 style="text-align: center;">League Updates</h3>
+      <hr class="solid">
+      <a class="block" href="/Race/template.html">
+        <article>
+          <h3>F1 2021 Season 2 - Race 1: Bahrain Grand Prix</h3>
+          <div class="racewinner">
+            <h4 class="racewinner">RACE WINNER - <img src="images/trophy-png-30573.png" style="height: 20px;">Wiggins</h4>
+          </div>
+          <h4 class="news">No-rain at Sakhir as Wiggins claims victory in the season opener</h4>
+        </article>
+      </a>
+      </p>
+      <a class="block" href="http://google.com">
+        <article>
+          <img class="newsimage" src="images\headsgone.png" alt="headsgone">
+          <h4 class="news">Some other Cunt wins at COTA</h4>
+        </article>
+      </a>
+
+    </div>
 
   </div>
 

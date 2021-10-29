@@ -16,7 +16,8 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background-color: rgba(139, 4, 4, 0.199);
+  border: 5px solid rgb(61, 33, 33);
+  border-radius: 10px;
   box-shadow:10px 10px 5px grey;
   text-align: center;
   margin: 1%;
@@ -27,7 +28,8 @@
   -webkit-flex: 2;
   -ms-flex: 2;
   flex: 2;
-  background-color: rgba(139, 4, 4, 0.199);
+  border: 5px solid rgb(61, 33, 33);
+  border-radius: 10px;
   box-shadow:10px 10px 5px grey;
   margin: 1%;
 }
@@ -128,7 +130,10 @@
 
 
   hr.solid {
-    border-top: 3px solid rgb(61, 33, 33);
+    border-top: 5px solid rgb(61, 33, 33);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
   hr.dashed{
     border-top: 3px dashed rgb(61, 33, 33);
@@ -155,9 +160,10 @@ padding-left: 5%;
   }
   article{
         box-shadow:3px 3px 1.5px rgb(61, 33, 33);
-    background-color: rgba(255, 255, 255, 0.253);
+    background-color: rgba(139, 4, 4, 0.199);
     border-radius: 5% 5%;
     padding: 1%;
+    margin-bottom: 5%;
     align-content: center;
     text-align: center;
     
@@ -571,8 +577,22 @@ table#supergrid tr:nth-child(even) {
               padding-bottom: 3px;
               border-style: outset;
               margin-top: -15px;
-  
           }
+
+               h2.racewinner {
+              padding-top: 5px;
+              border-style: outset;
+              background-color: rgba(61, 33, 33, 0.5);
+
+          }
+          h4.racewinner {
+            padding-top: 5px;
+            border-style: outset;
+            background-color: rgba(61, 33, 33, 0.5);
+
+        }
+  
+          
           table#raceresults {
             table-layout: fixed;
             max-width: 80%;
