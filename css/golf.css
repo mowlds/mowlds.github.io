@@ -92,16 +92,18 @@
               }
               hr.solidred {
                 border-top: 10px solid rgb(78, 1, 1);
-                width: 50%;
+                width: 100%;
                 margin-left: 0;
             
               }
               hr.solidblue {
                 border-top: 10px solid rgb(18, 14, 34);
-                width: 50%;
+                width: 100%;
                 margin-left: 0;
                 margin-top: -6px;
               }
+
+              .matchweek{margin-left: 5%;}
 
 table.golflive{
     border-radius: 10px;
@@ -239,3 +241,108 @@ table.golfunplayed td{
               .no-scrollbar::-webkit-scrollbar {
                 display: none;
               }
+              .row {
+                display: -webkit-flex;
+                display: flex;
+                width: 99%;
+              
+              }
+              
+              .column.side {
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                margin: 2%;
+                 
+              }
+                 .column.middle {
+                -webkit-flex: 2;
+                -ms-flex: 2;
+                flex: 2;
+                margin: 2%;
+              }
+
+
+            table.standings{
+                border-radius: 10px;
+                font-size: 10pt;
+                width: 135px;
+                border: 3px solid rgb(78, 1, 1);
+                padding: 2px;
+                margin-top: 2%;
+                margin-bottom: 10%;
+                font-weight: bold;
+            }
+            
+            table.standings tr{
+                padding: 10px;
+                border-bottom: 1px solid white;
+              
+            }
+            
+            table.standings th{
+                background-color: rgb(78, 1, 1);
+                color: white;
+                padding: 10px;
+            }
+            table.standings td{
+                background-color: rgb(180, 162, 162);
+                padding: 5px;
+                
+            }
+            table.weekresults{
+                table-layout: auto;
+                border-radius: 10px;
+                font-size: 10pt;
+                width: 400px;
+                border: 3px solid rgb(18, 14, 34);
+                padding: 2px;
+                margin-top: 2%;
+                margin-bottom: 10%;
+                font-weight: bold;
+            }
+            
+            table.weekresults tr{
+                padding: 10px;
+                background-color: rgb(163, 162, 180)
+              
+            }
+            table.weekresults tr:nth-child(even) {
+                background-color: #d2d2e6
+              }
+            
+            table.weekresults th{
+                background-color: rgb(9, 1, 78);
+                color: white;
+                padding: 10px;
+            }
+            table.weekresults td{
+                                padding: 5px;
+                
+            }
+
+
+
+
+
+article{
+    box-shadow:3px 3px 1.5px rgb(61, 33, 33);
+    border: 3px solid rgb(78, 1, 1);
+    border-radius: 5%;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+            @media screen and ( max-width: 500px ) { 
+                .row { flex-direction: column; }
+            }
