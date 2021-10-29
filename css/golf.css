@@ -79,6 +79,10 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    .topnav .icon {
+        display: none;
+      }
   
   
   
