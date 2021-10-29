@@ -252,7 +252,8 @@ table.golfunplayed td{
                 -webkit-flex: 1;
                 -ms-flex: 1;
                 flex: 1;
-                margin: 2%;
+               text-align: center;
+               margin-top: 2%;
                  
               }
                  .column.middle {
@@ -266,10 +267,13 @@ table.golfunplayed td{
             table.standings{
                 border-radius: 10px;
                 font-size: 10pt;
-                width: 135px;
+                min-width: 50%;
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
                 border: 3px solid rgb(78, 1, 1);
                 padding: 2px;
-                margin-top: 2%;
+                margin-top: 5%;
                 margin-bottom: 10%;
                 font-weight: bold;
             }
@@ -294,11 +298,11 @@ table.golfunplayed td{
                 table-layout: auto;
                 border-radius: 10px;
                 font-size: 10pt;
-                width: 400px;
+                max-width: 95%;
                 border: 3px solid rgb(18, 14, 34);
                 padding: 2px;
                 margin-top: 2%;
-                margin-bottom: 10%;
+                margin-bottom: 2%;
                 font-weight: bold;
             }
             
@@ -329,7 +333,7 @@ article{
     box-shadow:3px 3px 1.5px rgb(61, 33, 33);
     border: 3px solid rgb(78, 1, 1);
     border-radius: 5%;
-    padding: 2%;
+    padding: 5%;
     margin-top: 2%;
 }
 
