@@ -353,4 +353,29 @@ article{
 
             @media screen and ( max-width: 500px ) { 
                 .row { flex-direction: column; }
+                .topnav a:not(:first-child) {display: none;}
+                .topnav div:not(:first-child) {display: none;}
+                .topnav a.icon {float: right; display: block;}
+                .topnav.responsive {position: relative;}
+                .topnav.responsive a.icon {
+                 position: absolute;
+                 right: 0;
+                 top: 0;
+                }
+            
+                .topnav.responsive a {
+                 float: none;
+                 display: block;
+                 text-align: left;
+                }
+            
+                .topnav.responsive div {
+                  float: none;
+                  display:contents;
+                  text-align: left;
+                 }
+                 .topnav.responsive .dropdown{
+                 float: none;
+                 text-align: left;
+                 }
             }
