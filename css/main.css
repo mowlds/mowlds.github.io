@@ -5,6 +5,10 @@
     font-family: 'exo';
 }
 
+.icon{
+  height: 25px;
+}
+
 .row {
   display: -webkit-flex;
   display: flex;
