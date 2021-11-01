@@ -23,49 +23,43 @@
     </style>
 </head>
 <header>
-
-    <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE WIKI</h2>
-
+    <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+    <p>
+    <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
+    </p>
     <div class="topnav" id="topnav">
-        <a href="#">Home</a>
-        <div class="dropdown" id="topnav">
-          <button class="dropbtn">Results
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/Race/2021/S2/">Latest Race</a>
-            <a href="/Tables/Seasons/2021/S2/overview.html">Latest Season</a>
-            </div>
+      <a href="#">Home</a>
+      <a href="/Tables/Seasons/2021/S2/overview.html">Current Season</a>
+      <div class="dropdown">
+        <button class="dropbtn">Wiki
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/seasons.html">Seasons</a>
+          <a href="/drivers.html">Drivers</a>
+          <a href="#">Races</a>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Wiki
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/seasons.html">Seasons</a>
-            <a href="/drivers.html">Drivers</a>
-            <a href="#">Races</a>
-          </div>
-        </div>
-        <a href="about.html">Headsgone Podcast</a>
-        <a href="about.html">Karun's Corner</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-        <div class="topnav-right">
-        <a href="https://youtu.be/6vJwj1NaGQ8">Serious Golfing League</a>
-        </div>
-   </div>
-   <script>
-    function myFunction() {
-      var x = document.getElementById("topnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
+      </div>
+      <a href="about.html">Headsgone Podcast</a>
+      <a href="about.html">Karun's Corner</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="topnav-right">
+        <a href="golf/home.html">Serious Golfing League</a>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
       }
-    }
     </script>
+
   </header>
 <body>
     <div class="raceinfo">
