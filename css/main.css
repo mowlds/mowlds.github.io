@@ -421,8 +421,8 @@ table#champtable td {
     background-color: rgba(211, 114, 114, 0.5);
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 
 }
 
@@ -525,7 +525,7 @@ table#supergrid tr:nth-child(even) {
             
             table#calendar th {
                 border-bottom: 2px rgb(255, 255, 255) solid;
-                background-color: rgba(211, 114, 114, 0.5);
+                background-color: rgba(43, 75, 52, 0.5);
                 padding-bottom: 2px;
                 padding-top: 2px;
                 text-align: center;
@@ -535,7 +535,7 @@ table#supergrid tr:nth-child(even) {
             }
             
             table#calendar td {
-                background-color: rgba(211, 114, 114, 0.5);
+                background-color: rgba(43, 75, 52, 0.5);
                 padding-left: 10px;
                 padding-right: 10px;
                 text-align: center;
@@ -545,7 +545,7 @@ table#supergrid tr:nth-child(even) {
             }
             
             table#calendar caption {
-                background-color: rgba(61, 33, 33, 0.5);
+                background-color: rgba(12, 22, 13, 0.5);
                 font-style: italic;
                 font-size: 18pt;
                 border-top: 2px solid rgb(255, 255, 255);
@@ -557,7 +557,7 @@ table#supergrid tr:nth-child(even) {
             }
             
             table#calendar tr:nth-child(even) {
-                background-color: rgba(255, 139, 139, 0.5)
+                background-color: rgba(90, 156, 108, 0.5)
             }
             .calendar {
                 text-align: center;
