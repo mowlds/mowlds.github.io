@@ -57,10 +57,8 @@
         }
 
         table#supergrid {
-            table-layout: auto;
             width: 100%;
             border: 3px outset white;
-            border-collapse: collapse;
             margin-bottom: 10px;
             margin-top: 40px;
             font-size: 8pt;
@@ -77,10 +75,9 @@
         }
 
         table#supergrid td {
-            background-color: rgba(211, 114, 114, 0.5);
-            padding-top: 2px;
-            padding-bottom: 2px;
+            background-color: rgb(41, 38, 38);
             text-align: center;
+            vertical-align: middle;
 
         }
 
@@ -95,10 +92,11 @@
             padding-top: 5px;
 
         }
+        .icon{
+  height: 25px;
+  margin-bottom: -3px;
+}
 
-        table#supergrid tr:nth-child(even) {
-            background-color: rgba(255, 139, 139, 0.5)
-        }
     </style>
 </head>
 
@@ -120,7 +118,7 @@
                 <th>Team</th>
                 <th>Points</th>
                 <th>Diff</th>
-                <th>Race</th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -148,7 +146,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>BAH</td>
+                <td></td>
                 <td>ESP</td>
                 <td>MON</td>
                 <td>AZE</td>
@@ -261,9 +259,9 @@
                 <td>Team Ecosse</td>
                 <td>30</td>
                 <td>-5</td>
-                <td>5</td>
-                <td>6</td>
-                <td>11</td>
+                <td><img class="icon" src="../images/numbers/1.png"></td>
+                <td><img class="icon" src="../images/numbers/2.png"></td>
+                <td><img class="icon" src="../images/numbers/3.png"></td>
                 <td>DNF</td>
                 <td>15</td>
                 <td>5</td>
