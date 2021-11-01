@@ -21,7 +21,7 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  border: 5px solid rgb(61, 33, 33);
+  border: 5px solid rgb(43, 75, 52);
   border-radius: 10px;
   box-shadow:10px 10px 5px grey;
   text-align: center;
@@ -33,7 +33,7 @@
   -webkit-flex: 2;
   -ms-flex: 2;
   flex: 2;
-  border: 5px solid rgb(61, 33, 33);
+  border: 5px solid rgb(43, 75, 52);
   border-radius: 10px;
   box-shadow:10px 10px 5px grey;
   margin: 1%;
@@ -42,7 +42,7 @@
 
    .topnav {
   overflow: hidden;
-  background-color: rgb(37, 21, 21);
+  background-color: rgb(43, 75, 52);
 }
 
 .topnav a {
@@ -55,7 +55,7 @@
 }
 
 .topnav a:hover {
-  background-color: rgb(61, 33, 33);
+  background-color: rgb((43, 75, 52));
   color: rgb(255, 255, 255);
 }
 
@@ -66,7 +66,7 @@
 
 .topnav-right {
   float: right;
-  background-color: rgb(145, 86, 86)
+  background-color: rgb(18, 14, 34)
 }
 
   .center {
@@ -87,19 +87,19 @@
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: rgb(37, 21, 21);
+    background-color: rgb(43, 75, 52);
     font-family: inherit;
     margin: 0;
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(61, 33, 33);
+    background-color: rgb(43, 75, 52);
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(61, 33, 33);
+    background-color: rgb(90, 156, 108);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -115,7 +115,7 @@
   }
   
   .dropdown-content a:hover {
-    background-color: rgb(37, 21, 21);
+    background-color: rgb(43, 75, 52);
   }
   
   .dropdown:hover .dropdown-content {
@@ -135,13 +135,13 @@
 
 
   hr.solid {
-    border-top: 5px solid rgb(61, 33, 33);
+    border-top: 5px solid rgb(43, 75, 52);
     width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
   hr.dashed{
-    border-top: 3px dashed rgb(61, 33, 33);
+    border-top: 3px dashed rgb((43, 75, 52));
   }
   body{
   font-family: 'exo';
@@ -161,11 +161,11 @@ padding-left: 5%;
     text-decoration: none, 
   }
   a:hover{
-    color: rgb(61, 33, 33);
+    color: rgb((43, 75, 52));
   }
   article{
-        box-shadow:3px 3px 1.5px rgb(61, 33, 33);
-    background-color: rgba(139, 4, 4, 0.199);
+        box-shadow:3px 3px 1.5px rgb(43, 75, 52);
+    background-color: rgba(90, 156, 108, 0.5);
     border-radius: 5% 5%;
     padding: 1%;
     margin-bottom: 5%;
@@ -280,7 +280,7 @@ table#shortcalendar{
   table-layout:fixed;
   width:85%;
   text-align: center;
-  border: 3px solid rgb(61, 33, 33);
+  border: 3px solid rgb(43, 75, 52);
   border-collapse: collapse;
   font-weight: bold;
   box-shadow:10px 10px 5px grey;
@@ -307,7 +307,7 @@ margin-left: 1%;
   }
 
   table#shortcalendar tr:nth-child(even) {
-    background-color: rgba(255, 139, 139, 0.5)
+    background-color: rgb(90, 156, 108)
   }
   .topnav .icon {
     display: none;
@@ -320,7 +320,7 @@ margin-left: 1%;
     margin-left: auto;
     margin-right: auto;
     padding: 1pc;
-    background-color: rgba(61, 33, 33, 0.5);
+    background-color: rgba(43, 75, 52, 0.5);
     border-radius: 15px 50px;
     border-style: outset;
 }
@@ -357,7 +357,7 @@ table#timeline colgroup {
 
 table#timeline th {
     border-bottom: 2px solid rgb(255, 255, 255);
-    background-color: rgba(211, 114, 114, 0.5);
+    background-color: rgba(43, 75, 52, 0.5);
     border-radius: 12px;
     min-width: 35px;
     padding: 5px
@@ -366,7 +366,7 @@ table#timeline th {
 }
 
 table#timeline td {
-    background-color: rgba(211, 114, 114, 0.5);
+    background-color: rgba(43, 75, 52, 0.5);
     padding: 5px;
     border-radius: 12px;
     min-width: 35px;
@@ -380,7 +380,7 @@ table#timeline caption {
     border-top: 2px solid rgb(255, 255, 255);
     border-left: 2px solid rgb(255, 255, 255);
     border-right: 2px solid white;
-    background-color: rgba(61, 33, 33, 0.5);
+    background-color: rgba(12, 22, 13, 0.5);
 
 }
 
@@ -389,7 +389,7 @@ table#timeline tr:nth-child(2) {
 }
 
 table#timeline col:nth-child(even) {
-    background-color: rgba(211, 114, 114, 0.5);
+    background-color: rgba(90, 156, 108, 0.5);
 }
 
 
@@ -412,13 +412,13 @@ table#champtable {
 
 table#champtable th {
     border-bottom: 2px rgb(255, 255, 255) solid;
-    background-color: rgba(211, 114, 114, 0.5);
+    background-color: rgba(43, 75, 52, 0.5);
 padding-left: 10px;
 padding-right: 10px;
 }
 
 table#champtable td {
-    background-color: rgba(211, 114, 114, 0.5);
+    background-color: rgba(43, 75, 52, 0.5);
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 7px;
@@ -427,7 +427,7 @@ table#champtable td {
 }
 
 table#champtable caption {
-    background-color: rgba(61, 33, 33, 0.5);
+    background-color: rgba(12, 22, 13, 0.5);
     font-style: italic;
     font-size: 18pt;
     border-top: 2px solid rgb(255, 255, 255);
@@ -438,7 +438,7 @@ padding: 5px;
 }
 
 table#champtable tr:nth-child(even) {
-    background-color: rgba(255, 139, 139, 0.5)
+    background-color: rgba(90, 156, 108, 0.5)
 }
 
 
@@ -491,7 +491,7 @@ table#supergrid td {
 }
 
 table#supergrid caption {
-    background-color: rgba(61, 33, 33, 0.5);
+    background-color: rgba((43, 75, 52), 0.5);
     font-style: italic;
     font-size: 18pt;
     border-top: 2px solid rgb(255, 255, 255);
@@ -579,12 +579,12 @@ table#supergrid tr:nth-child(even) {
           h2.racewinner {
               padding-top: 5px;
               border-style: outset;
-              background-color: rgba(61, 33, 33, 0.5);
+              background-color: rgba(43, 75, 52, 0.5);
 
           }
   
           h3.racewinner {
-              background-color: rgba(211, 114, 114, 0.5);
+              background-color: rgba(90, 156, 108, 0.5);
               padding-top: 2px;
               padding-bottom: 3px;
               border-style: outset;
@@ -594,13 +594,13 @@ table#supergrid tr:nth-child(even) {
                h2.racewinner {
               padding-top: 5px;
               border-style: outset;
-              background-color: rgba(61, 33, 33, 0.5);
+              background-color: rgba(43, 75, 52, 0.5);
 
           }
           h4.racewinner {
             padding-top: 5px;
             border-style: outset;
-            background-color: rgba(61, 33, 33, 0.5);
+            background-color: rgba(43, 75, 52, 0.5);
 
         }
   
@@ -620,13 +620,13 @@ table#supergrid tr:nth-child(even) {
 
         table#raceresults th {
             border-bottom: 2px rgb(255, 255, 255) solid;
-            background-color: rgba(211, 114, 114, 0.5);
+            background-color: rgba(43, 75, 52, 0.5);
             padding: 10px;
             width: max-content
         }
 
         table#raceresults td {
-            background-color: rgba(211, 114, 114, 0.5);
+            background-color: rgba(43, 75, 52, 0.5);
             padding-right: 10px;
             padding-left: 10px;
             height: 30px;
@@ -636,7 +636,7 @@ table#supergrid tr:nth-child(even) {
         }
 
         table#raceresults caption {
-            background-color: rgba(61, 33, 33, 0.5);
+            background-color: rgba(12, 22, 13, 0.5);
             font-style: italic;
             font-size: 18pt;
             border-top: 2px solid rgb(255, 255, 255);
@@ -648,7 +648,7 @@ table#supergrid tr:nth-child(even) {
         }
 
         table#raceresults tr:nth-child(even) {
-            background-color: rgba(255, 139, 139, 0.5)
+            background-color: rgba(90, 156, 108, 0.5)
         }
         .column{
           float: left;
