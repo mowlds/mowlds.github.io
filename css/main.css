@@ -126,8 +126,8 @@
 
   header
   {
-    background: radial-gradient(ellipse at top, #91c2b7, transparent),
-            radial-gradient(ellipse at bottom, #ecd052, transparent);
+    background: radial-gradient(ellipse at top, #fdffff, transparent),
+              radial-gradient(ellipse at bottom, #569263, transparent);
             width: 100%;
             padding-top: 1%;
             
