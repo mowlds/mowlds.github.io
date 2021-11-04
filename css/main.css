@@ -458,6 +458,9 @@ table#champtable tr:nth-child(even) {
     display: table;
     clear: both;
 }
+.supergrid{
+  overflow-x: auto;
+}
 
 table#supergrid {
   width: 90%;
@@ -676,6 +679,10 @@ background-color: rgb(59, 59, 56);
     .row { flex-direction: column; }
     .timeline {display: none;}
     .calendar {font-size: 6pt;}
+    .supergrid{font-size: 6pt;}
+    table#supergrid td {font-size: 6pt;}
+    table#supergrid th {font-size: 7pt;}
+    table#supergrid caption {font-size: 8pt;}
     table#calendar td {font-size: 6pt;}
     table#calendar th {font-size: 7pt;}
     table#calendar caption {font-size: 8pt;}
