@@ -460,48 +460,56 @@ table#champtable tr:nth-child(even) {
 }
 
 table#supergrid {
-    table-layout: auto;
-    width: 100%;
-    border: 3px outset white;
-    margin-bottom: 10px;
-    margin-top: 40px;
-    font-size: 8pt;
-
-
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-size: 8pt;
+  border-collapse: collapse;
+  border-right: 1px solid white;
+  background-color: rgb(43, 75, 52);
+  font-weight: bold;
+  
 }
 
 table#supergrid th {
-    border-bottom: 2px rgb(255, 255, 255) solid;
-    background-color: rgba(211, 114, 114, 0.5);
-    padding-bottom: 2px;
-    padding-top: 2px;
-    text-align: center;
-    font-size: 12pt;
+  border-bottom: 2px rgb(255, 255, 255) solid;
+  background-color: rgba(12, 22, 13, 0.5);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-align: center;
 }
 
 table#supergrid td {
-    background-color: rgba(211, 114, 114, 0.5);
-    vertical-align: middle;
-    text-align: center;
-    font-size: 10pt;
-    border-left: 1px solid white;
-
+  text-align: center;
+  height: 25px;
+  border-bottom: 1px solid white;
+  
+  
 }
 
 table#supergrid caption {
-    background-color: rgba((43, 75, 52), 0.5);
-    font-style: italic;
-    font-size: 18pt;
-    border-top: 2px solid rgb(255, 255, 255);
-    border-left: 2px solid rgb(255, 255, 255);
-    border-right: 2px solid white;
-    padding-bottom: 5px;
-    padding-top: 5px;
+  background-color: rgba(12, 22, 13, 0.5);
+  font-style: italic;
+  font-size: 18pt;
+  border-top: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid white;
+  padding-bottom: 5px;
+  padding-top: 5px;
 
 }
-
-table#supergrid tr:nth-child(even) {
-    background-color: rgba(255, 139, 139, 0.5)
+.grid{
+width: 35px;
+border-right: 1px solid white;
+}
+.icongrid{
+margin-bottom: -4px;
+height: 25px;
+}
+.races{
+width: 35px;
+border: 1px solid white;
+background-color: rgb(59, 59, 56);
 }
 * {
     font-family: 'exo';
