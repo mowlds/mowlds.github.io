@@ -55,7 +55,7 @@
 }
 
 .topnav a:hover {
-  background-color: rgb((43, 75, 52));
+  background-color: rgb(90, 156, 108);
   color: rgb(255, 255, 255);
 }
 
@@ -93,7 +93,7 @@
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(43, 75, 52);
+    background-color: rgb(90, 156, 108);
   }
   
   .dropdown-content {
