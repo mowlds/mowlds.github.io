@@ -5,6 +5,10 @@
     font-family: 'exo';
 }
 
+a:hover{
+  color: rgb(12, 22, 13);;
+}
+
 .icon{
   height: 25px;
   padding-top: 5px;
