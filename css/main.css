@@ -476,7 +476,6 @@ table#supergrid {
 }
 
 table#supergrid th {
-  border-bottom: 2px rgb(255, 255, 255) solid;
   background-color: rgba(12, 22, 13, 0.5);
   padding-bottom: 2px;
   padding-top: 2px;
@@ -487,17 +486,18 @@ table#supergrid td {
   text-align: center;
   height: 25px;
   border-bottom: 1px solid white;
-  
-  
+   
+}
+table#supergrid tr {
+  border-left:  1px solid white;
+   
 }
 
 table#supergrid caption {
   background-color: rgba(12, 22, 13, 0.5);
   font-style: italic;
   font-size: 18pt;
-  border-top: 2px solid rgb(255, 255, 255);
-  border-left: 2px solid rgb(255, 255, 255);
-  border-right: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   padding-bottom: 5px;
   padding-top: 5px;
 
