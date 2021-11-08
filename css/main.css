@@ -677,6 +677,39 @@ background-color: rgb(59, 59, 56);
           overflow-x:auto;
         }
 
+        blockquote.twitter-timeline {
+          display: inline-block;
+          font-family: 'exo';
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 16px;
+          border-color: #eee #ddd #bbb;
+          border-style: solid;
+          border-width: 8px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+          margin: 10px 5px;
+          padding: 0 16px 16px 16px;
+          max-width: 468px;
+        }
+        
+        blockquote.twitter-timeline p {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 20px;
+        }
+        
+        blockquote.twitter-timeline a {
+          color: inherit;
+          font-weight: normal;
+          text-decoration: none;
+          outline: 0 none;
+        }
+        
+        blockquote.twitter-timeline a:hover,
+        blockquote.twitter-timeline a:focus {
+          text-decoration: underline;
+        }
+
 
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 500 px
