@@ -414,6 +414,7 @@ table#champtable {
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
+    text-align: center;
 
 }
 
@@ -425,7 +426,7 @@ padding-right: 10px;
 }
 
 table#champtable td {
-    background-color: rgba(43, 75, 52, 0.5);
+    background-color: rgba(59, 59, 56, 0.5);
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 7px;
@@ -445,7 +446,7 @@ padding: 5px;
 }
 
 table#champtable tr:nth-child(even) {
-    background-color: rgba(90, 156, 108, 0.5)
+    background-color: rgba(115, 156, 126, 0.5)
 }
 
 
@@ -709,6 +710,15 @@ background-color: rgb(59, 59, 56);
         blockquote.twitter-timeline a:focus {
           text-decoration: underline;
         }
+        .sponsor
+      {
+        border: 4px solid rgb(88, 20, 20);
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        background-color: rgb(238, 202, 202);
+        color: rgb(0, 0, 0);
+      }
 
 
 /* ==========================================================================
