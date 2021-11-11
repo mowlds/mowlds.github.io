@@ -408,7 +408,7 @@ table#timeline col:nth-child(even) {
 table#champtable {
     table-layout: fixed;
     max-width: 80%;
-    min-width: 60%;
+    min-width: 40%;
     border: 3px outset white;
     border-collapse: collapse;
     margin-left: auto;
@@ -448,6 +448,7 @@ padding: 5px;
 table#champtable tr:nth-child(even) {
     background-color: rgba(115, 156, 126, 0.5)
 }
+
 
 
 * {
@@ -523,6 +524,17 @@ width: 35px;
 border: 1px solid white;
 background-color: rgb(59, 59, 56);
 }
+.points{
+  width: 50px;
+  background-color:rgba(90, 156, 108, 0.507) ;
+  color: black;
+}
+
+
+
+
+
+
 * {
     font-family: 'exo';
 }
