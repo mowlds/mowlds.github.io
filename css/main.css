@@ -529,7 +529,10 @@ background-color: rgb(59, 59, 56);
   background-color:rgba(90, 156, 108, 0.507) ;
   color: black;
 }
-
+.newstype{
+font-weight: bold;
+text-decoration: underline rgb(43, 75, 52) 4px;
+}
 
 
 
