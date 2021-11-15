@@ -476,7 +476,7 @@ table#champtable tr:nth-child(even) {
 }
 
 table#supergrid {
-  max-width: 90%;
+  max-width: 82%;
   min-width: 80%;
   margin-bottom: 10px;
   margin-top: 40px;
