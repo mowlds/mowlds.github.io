@@ -13,6 +13,10 @@ a:hover{
   height: 25px;
   padding-top: 5px;
 }
+.trophy{
+  height: 25px;
+  vertical-align: middle;
+}
 
 .row {
   display: -webkit-flex;
