@@ -534,6 +534,16 @@ background-color: rgb(59, 59, 56);
   background-color:rgba(90, 156, 108, 0.507) ;
   color: black;
 }
+.diff{
+  width: 30px;
+  background-color:rgba(131, 150, 136, 0.87) ;
+  color: black;
+  font-weight: lighter;
+  font-size: smaller;
+}
+
+
+
 .newstype{
 font-weight: bold;
 text-decoration: underline rgb(43, 75, 52) 4px;
