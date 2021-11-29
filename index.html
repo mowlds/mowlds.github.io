@@ -3,73 +3,59 @@
 <head>
 
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>The Serious Racing League</title>
-  <meta name="description" content="">
+    <title>The Serious Racing League</title>
+    <meta name="description" content="">
 
-  <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/html5-boilerplate.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
-  <style>
-    #grad1 {
-      background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(157, 201, 202));
-    }
-  </style>
+    <style>
+        #grad1 {
+            background-image: linear-gradient(to bottom right, rgb(211, 211, 211), rgb(157, 201, 202));
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body style="font-family: 'Exo'">
-  <header>
-    <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
-    <p>
-    <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
-    </p>
-    <div class="topnav" id="topnav">
-      <a href="http://www.seriousracingleague.com">Home</a>
-      <a href="/Tables/Seasons/2021/S2/overview.html">Current Season</a>
-      <div class="dropdown">
-        <button class="dropbtn">Wiki
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="/seasons.html">Seasons</a>
-          <a href="/drivers.html">Drivers</a>
-          <a href="#">Races</a>
+    <header>
+        <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+        <p>
+            <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
+        </p>
+        <div id="nav-placeholder">
         </div>
-      </div>
-      <a href="about.html">Headsgone Podcast</a>
-      <a href="about.html">Karun's Corner</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-      <div class="topnav-right">
-        <a href="/golf/home.html">Serious Golfing League</a>
-      </div>
-    </div>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("topnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-    </script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("nav.html");
+            });</script>
 
-  </header>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    </header>
 
 
   <div class="row">
