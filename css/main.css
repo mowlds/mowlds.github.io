@@ -181,6 +181,15 @@ padding-left: 5%;
     text-align: center;
     
   }
+  
+  .newsarticle{
+background-color: rgba(90, 156, 108, 0.212);
+
+padding: 2%;
+margin-bottom: 5%;
+
+
+}
   h4{
     text-decoration: none;
   }
