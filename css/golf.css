@@ -332,6 +332,7 @@ table.golfunplayed td{
                                 padding: 5px;
                 
             }
+            
 
 
 
@@ -382,4 +383,20 @@ article{
                  float: none;
                  text-align: left;
                  }
+            }
+            .container {
+              position: relative;
+              text-align: center;
+              color: white;
+            }
+            .centered {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 40px;
+              font-weight: bolder;
+              background: rgba(78, 1, 1, 0.8);
+              border-radius: 10px;
+              padding: 1%;
             }
