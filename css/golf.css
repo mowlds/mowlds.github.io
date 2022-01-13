@@ -332,7 +332,10 @@ table.golfunplayed td{
                                 padding: 5px;
                 
             }
-            
+            .responsive {
+              width: 100%;
+              height: auto;
+            }
 
 
 
