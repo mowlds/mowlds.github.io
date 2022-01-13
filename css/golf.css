@@ -336,9 +336,108 @@ table.golfunplayed td{
               width: 100%;
               height: auto;
             }
+            table.teamsouth{
+              table-layout: auto;
+              border-radius: 10px;
+              font-size: 10pt;
+              max-width: 95%;
+              min-width: 75%;
+              margin-left: auto;
+              margin-right: auto;
+              border: 3px solid rgb(18, 14, 34);
+              padding: 2px;
+              margin-top: 2%;
+              margin-bottom: 2%;
+              font-weight: bold;
+          }
+          table.teamsouth tr{
+            padding: 10px;
+            background-color: rgb(163, 162, 180)
+          
+        }
+        table.teamsouth tr:nth-child(even) {
+            background-color: #d2d2e6
+          }
+        
+        table.teamsouth th{
+            background-color: rgb(9, 1, 78);
+            color: white;
+            padding: 10px;
+        }
+        table.teamsouth td{
+                            padding: 5px;
+        }
 
-
-
+        table.teamnorth{
+          table-layout: auto;
+          border-radius: 10px;
+          font-size: 10pt;
+          max-width: 95%;
+          min-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+          border: 3px solid rgb(78, 1, 1);
+          padding: 2px;
+          margin-top: 2%;
+          margin-bottom: 2%;
+          font-weight: bold;
+      }
+      table.teamnorth tr{
+        padding: 10px;
+        background-color: rgb(180, 162, 162)
+      
+    }
+    table.teamnorth tr:nth-child(even) {
+        background-color: #e6d3d2
+      }
+    
+    table.teamnorth th{
+        background-color: rgb(78, 1, 1);
+        color: white;
+        padding: 10px;
+    }
+    table.teamnorth td{
+                        padding: 5px;
+    }
+    table.presidents{
+      table-layout: auto;
+      border-radius: 10px;
+      font-size: 10pt;
+      max-width: 95%;
+      min-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid rgb(18, 14, 34);
+      padding: 2px;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      font-weight: bold;
+  }
+  
+  table.presidents tr{
+      padding: 10px;
+      background-color: rgb(163, 162, 180)
+    
+  }
+  table.presidents tr:nth-child(even) {
+      background-color: #d2d2e6
+    }
+  
+  table.presidents th{
+      background-color: rgb(9, 1, 78);
+      color: white;
+      padding: 10px;
+  }
+  table.presidents td{
+                      padding: 5px;
+  }
+  table.presidents td:nth-child(1){
+  background-color: rgb(180, 162, 162);
+  }  table.presidents td:nth-child(2){
+    background-color: #d2d2e6;
+    } table.presidents td:nth-child(3){
+      background-color: rgb(163, 162, 180);
+      }
 
 
 article{
