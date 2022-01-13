@@ -348,6 +348,17 @@ article{
     padding: 5%;
     margin-top: 2%;
 }
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bolder;
+  background: rgba(78, 1, 1, 0.8);
+  border-radius: 10px;
+  padding: 1%;
+}
 
 
 
@@ -386,20 +397,21 @@ article{
                  float: none;
                  text-align: left;
                  }
+                 .centered {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 10px;
+                  font-weight: bolder;
+                  background: rgba(78, 1, 1, 0.8);
+                  border-radius: 10px;
+                  padding: 1%;
+                }
             }
             .container {
               position: relative;
               text-align: center;
               color: white;
             }
-            .centered {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              font-size: 40px;
-              font-weight: bolder;
-              background: rgba(78, 1, 1, 0.8);
-              border-radius: 10px;
-              padding: 1%;
-            }
+           
