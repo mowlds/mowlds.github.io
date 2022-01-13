@@ -400,7 +400,7 @@ table.golfunplayed td{
                         padding: 5px;
     }
     table.presidents{
-      table-layout: auto;
+      table-layout:fixed ;
       border-radius: 10px;
       font-size: 10pt;
       max-width: 95%;
@@ -433,10 +433,13 @@ table.golfunplayed td{
   }
   table.presidents td:nth-child(1){
   background-color: rgb(180, 162, 162);
+  width: 45%;
   }  table.presidents td:nth-child(2){
     background-color: #d2d2e6;
+    width: 10%;
     } table.presidents td:nth-child(3){
       background-color: rgb(163, 162, 180);
+      width: 45%;
       }
 
 
