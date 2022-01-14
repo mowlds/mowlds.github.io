@@ -462,7 +462,46 @@ article{
   padding: 1%;
 }
 
+table.score{
+  table-layout:fixed ;
 
+  border-radius: 20px;
+  font-size: 10pt;
+  max-width: 60%;
+  min-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid rgb(18, 14, 34);
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-weight: bold;
+}
+
+table.score td{
+                  padding: 5px;
+}
+table.score td:nth-child(1){
+background-color: rgb(180, 162, 162);
+width: 10%;
+}  table.score td:nth-child(2){
+background-color: rgba(78, 1, 1, 0.8);
+
+} table.score td:nth-child(3){
+  background-color: rgba(18, 14, 34, 0.8);
+
+  }
+  table.score td:nth-child(4){
+    background-color: rgb(163, 162, 180);
+    width: 10%;
+  }
+  table.score tr :first-child{
+ border-top-left-radius: 12px;
+ border-bottom-left-radius: 12px;
+  }
+table.score tr :last-child{
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
 
 
 
