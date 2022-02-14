@@ -759,6 +759,13 @@ text-decoration: underline rgb(43, 75, 52) 4px;
         background-color: rgb(238, 202, 202);
         color: rgb(0, 0, 0);
       }
+      .fastestlap{
+        border: 3px;
+        border-color: purple;
+        border-style: solid;
+        padding: 3px;
+        border-radius: 50%;
+      }
 
 
 /* ==========================================================================
