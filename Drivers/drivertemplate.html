@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
     <link rel="stylesheet" href="../css/drivers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
     <style>
@@ -27,19 +29,13 @@
 
     <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE WIKI</h2>
 
-    <div class="topnav">
-        <a href="fsdfs.html">Home</a>
-        <a href="recipes.html">Calendar</a>
-        <a href="tips.html">How To Watch</a>
-        <a href="about.html">Results</a>
-        <a href="about.html">History</a>
-        <a href="about.html">Wiki</a>
-        <a href="about.html">Headsgone Podcast</a>
-        <a href="about.html">Karun's Corner</a>
-        <div class="topnav-right">
-        <a href="about.html">Serious Golfing League</a>
-        </div>
-   </div>
+    <div id="nav-placeholder">
+    </div>
+    <script>
+        $.get("/nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+        </script>
   </header>
 
 <body>
