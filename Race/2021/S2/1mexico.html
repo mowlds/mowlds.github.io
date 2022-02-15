@@ -27,37 +27,22 @@
     <p>
     <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
     </p>
-    <div class="topnav" id="topnav">
-      <a href="http://www.seriousracingleague.com">Home</a>
-      <a href="/Tables/Seasons/2021/S2/overview.html">Current Season</a>
-      <div class="dropdown">
-        <button class="dropbtn">Wiki
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="/seasons.html">Seasons</a>
-          <a href="/drivers.html">Drivers</a>
-          <a href="#">Races</a>
-        </div>
-      </div>
-      <a href="about.html">Headsgone Podcast</a>
-      <a href="about.html">Karun's Corner</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-      <div class="topnav-right">
-        <a href="/golf/home.html">Serious Golfing League</a>
-      </div>
+    <div id="nav-placeholder">
     </div>
     <script>
-      function myFunction() {
-        var x = document.getElementById("topnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });</script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("topnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-      }
     </script>
 
   </header>
