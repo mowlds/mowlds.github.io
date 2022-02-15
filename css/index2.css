@@ -1,0 +1,867 @@
+/* ==========================================================================
+   Your custom CSS styles
+   ========================================================================== */
+   * {
+    font-family: 'exo';
+}
+
+a:hover{
+  color: rgb(12, 22, 13);;
+}
+
+.icon{
+  height: 25px;
+  padding-top: 5px;
+}
+.trophy{
+  height: 25px;
+  vertical-align: middle;
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  width: 99%;
+
+}
+
+.column.side {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 1%;
+   
+}
+
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  margin: 1%;
+}
+
+
+   .topnav {
+  overflow: hidden;
+  background-color: rgb(43, 75, 52);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topnav a:hover {
+  background-color: rgb(90, 156, 108);
+  color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+  background-color: rgb(18, 14, 34)
+}
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: rgb(43, 75, 52);
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(90, 156, 108);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(90, 156, 108);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(43, 75, 52);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+  header
+  {
+    background: radial-gradient(ellipse at top, #fdffff, transparent),
+              radial-gradient(ellipse at bottom, #569263, transparent);
+            width: 100%;
+            padding-top: 1%;
+            
+            }
+
+
+  hr.solid {
+    border-top: 5px solid rgb(43, 75, 52);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  hr.dashed{
+    border-top: 3px dashed rgb((43, 75, 52));
+  }
+  body{
+  font-family: 'exo';
+  }
+  html, body{
+    background-color: #e3e9e3;
+  }
+  .block{
+    display: inline-block ;
+    text-decoration: none;
+padding: 1%;
+width: 30%;
+vertical-align:top;
+
+
+    
+  }
+  a {
+    color:inherit;
+    text-decoration: none, 
+  }
+  a:hover{
+    color: rgb((43, 75, 52));
+  }
+  article{
+ 
+    background-color: rgba(90, 156, 108, 0.075);
+    border-radius: 5% 5%;
+    padding: 1%;
+    margin-bottom: 5%;
+    align-content: center;
+    text-align: center;
+
+    
+  }
+  
+  .newsarticle{
+background-color: rgba(90, 156, 108, 0.212);
+
+padding: 2%;
+margin-bottom: 5%;
+
+
+}
+  h4{
+    text-decoration: none;
+  }
+  #header-right {
+    float: right;
+    text-align: center;
+}
+.raceresults{
+  background-image: ("images\bahrain.jpg")
+}
+.wikiparent{
+box-shadow: 5px 5px 10px grey;
+margin-left: 2pc;
+margin-right: 2pc;
+background-color: rgba(139, 4, 4, 0.199);
+
+}
+.h2wiki{
+  margin-left: 2pc;
+  padding-top: 2pc;
+}
+
+
+.wiki{
+  text-align: left;
+  padding-bottom: 5%;
+
+}
+.wikia{
+  display: flex;
+  text-align: left;
+}
+
+
+ul.wikilist{
+list-style-type: none;
+padding-top: 5px;
+}
+
+
+ul.wikilist > li{
+  display:inline-block;
+}
+
+
+li{
+  display: inline;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid grey;
+}
+
+.driverrecords{
+  text-align: center;
+
+}
+img.bio{border: 3px solid rgb(0, 0, 0);
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+
+}
+table#driverrecords{
+table-layout: fixed;
+width: 30%;
+text-align: center;
+border: 3px outset white;
+border-collapse: collapse;
+margin-bottom: 20px;
+margin-left: 2%;
+margin-right:auto;
+}
+
+table#driverrecords caption {
+padding-bottom: 10px;
+padding-top: 10px;
+font-style: italic;
+text-align: center;
+background-color: rgba(255, 139, 139, 0.5);
+border: 3px outset white;
+}
+table#driverrecords tr{
+padding-top: 2px;
+padding-bottom: 2px;
+text-align: center;
+}
+
+table#driverrecords tr:nth-child(even) {
+  background-color: rgba(255, 139, 139, 0.5)
+}
+.news{
+  padding-left: 2%;
+}
+
+.newsimage{
+align-content: center;
+padding-top: 2%;
+padding-left: 2%;
+max-width: 75%;
+height: auto;
+}
+
+table#shortcalendar{
+  table-layout:fixed;
+  width:85%;
+  text-align: center;
+  border: 3px solid rgb(43, 75, 52);
+  border-collapse: collapse;
+  font-weight: bold;
+  box-shadow:10px 10px 5px grey;
+  margin-left: auto;
+  margin-right: auto;
+margin-bottom: 5%;
+
+  }
+  
+  table#shortcalendar caption {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-style: italic;
+  text-align: center;
+  background-color: rgba(255, 139, 139, 0.5);
+
+  }
+  table#shortcalendar tr{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  }
+  table#shortcalendar td{
+margin-left: 1%;
+padding-left: 5px;
+padding-right: 5px;
+  }
+
+  table#shortcalendar tr:nth-child(even) {
+    background-color: rgba(90, 156, 108, 0.507)
+  }
+  .topnav .icon {
+    display: none;
+  }
+
+  .raceinfo {
+    width: 80%;
+    text-align: center;
+    margin-top: 2pc;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1pc;
+    background-color: rgba(43, 75, 52, 0.5);
+    border-radius: 15px 50px;
+    border-style: outset;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+table#timeline {
+    table-layout: fixed;
+    width: 90%;
+    border-radius: 10px;
+    border-collapse: collapse;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    text-align: center;
+    
+}
+
+table#timeline colgroup {
+  width: 100%;
+}
+
+table#timeline th {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: rgba(43, 75, 52, 0.5);
+    border-radius: 12px;
+    min-width: 35px;
+    padding: 5px
+    
+;
+}
+
+table#timeline td {
+    background-color: rgba(43, 75, 52, 0.5);
+    padding: 5px;
+    border-radius: 12px;
+    min-width: 35px;
+
+}
+
+table#timeline caption {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-style: italic;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid white;
+    background-color: rgba(12, 22, 13, 0.5);
+
+}
+
+table#timeline tr:nth-child(2) {
+    font-weight: bold;
+}
+
+table#timeline col:nth-child(even) {
+    background-color: rgba(90, 156, 108, 0.5);
+}
+
+
+.timeline {
+  overflow-x:auto;
+
+}
+
+table#champtable {
+    table-layout: fixed;
+    max-width: 80%;
+    min-width: 40%;
+    border: 3px outset white;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+table#champtable th {
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    background-color: rgba(43, 75, 52, 0.5);
+padding-left: 10px;
+padding-right: 10px;
+}
+
+table#champtable td {
+    background-color: rgba(59, 59, 56, 0.5);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+
+table#champtable caption {
+    background-color: rgba(12, 22, 13, 0.5);
+    font-style: italic;
+    font-size: 18pt;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid white;
+padding: 5px;
+
+}
+
+table#champtable tr:nth-child(even) {
+    background-color: rgba(115, 156, 126, 0.5)
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.columntable{
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 5%;
+
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.supergrid{
+  overflow-x: auto;
+}
+
+table#supergrid {
+  max-width: 82%;
+  min-width: 80%;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-size: 8pt;
+  border-collapse: collapse;
+  background-color: rgb(43, 75, 52);
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+table#supergrid th {
+  background-color: rgba(12, 22, 13, 0.5);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+table#supergrid td {
+  text-align: center;
+  height: 25px;
+  border-bottom: 1px solid white;
+   
+}
+table#supergrid tr {
+  border-left:  1px solid white;
+   
+}
+
+table#supergrid caption {
+  background-color: rgba(12, 22, 13, 0.5);
+  font-style: italic;
+  font-size: 18pt;
+  border: 2px solid rgb(255, 255, 255);
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+}
+.grid{
+width: 35px;
+border-right: 1px solid white;
+}
+.icongrid{
+margin-bottom: -4px;
+height: 25px;
+}
+.races{
+width: 35px;
+border: 1px solid white;
+background-color: rgb(59, 59, 56);
+}
+.points{
+  width: 50px;
+  background-color:rgba(90, 156, 108, 0.507) ;
+  color: black;
+}
+.diff{
+  width: 30px;
+  background-color:rgba(131, 150, 136, 0.87) ;
+  color: black;
+  font-weight: lighter;
+  font-size: smaller;
+}
+
+
+
+.newstype{
+font-weight: bold;
+text-decoration: underline rgb(43, 75, 52) 4px;
+}
+
+
+
+
+
+* {
+    font-family: 'exo';
+}
+
+
+              table#calendar {
+                table-layout: fixed;
+                max-width: 90%;
+                border: 3px outset white;
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2pc;
+                font-weight: bold;
+       
+            
+            }
+            
+            table#calendar th {
+                border-bottom: 2px rgb(255, 255, 255) solid;
+                background-color: rgba(43, 75, 52, 0.5);
+                padding-bottom: 2px;
+                padding-top: 2px;
+                text-align: center;
+                font-size: 12pt;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+            
+            table#calendar td {
+                background-color: rgba(43, 75, 52, 0.5);
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+                font-size: 10pt;
+               
+            
+            }
+            
+            table#calendar caption {
+                background-color: rgba(12, 22, 13, 0.5);
+                font-style: italic;
+                font-size: 18pt;
+                border-top: 2px solid rgb(255, 255, 255);
+                border-left: 2px solid rgb(255, 255, 255);
+                border-right: 2px solid white;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            
+            }
+            
+            table#calendar tr:nth-child(even) {
+                background-color: rgba(90, 156, 108, 0.5)
+            }
+            .calendar {
+                text-align: center;
+                padding-bottom: 5%;
+                overflow-x: auto;
+            
+            }
+
+            .racewinner {
+              
+              border-radius: 15px 50px;
+              margin-left: auto;
+              margin-right: auto;
+              max-width: 80%;
+            
+  
+          }
+  
+          h2.racewinner {
+              padding-top: 5px;
+              border-style: outset;
+              background-color: rgba(43, 75, 52, 0.5);
+
+          }
+  
+          h3.racewinner {
+              background-color: rgba(90, 156, 108, 0.5);
+              padding-top: 2px;
+              padding-bottom: 3px;
+              border-style: outset;
+              margin-top: -15px;
+          }
+
+               h2.racewinner {
+              padding-top: 5px;
+              border-style: outset;
+              background-color: rgba(43, 75, 52, 0.5);
+
+          }
+          h4.racewinner {
+            padding-top: 5px;
+            border-style: outset;
+            background-color: rgba(43, 75, 52, 0.5);
+
+        }
+  
+          
+          table#raceresults {
+            table-layout: fixed;
+            max-width: 80%;
+            min-width: 60%;
+            border: 3px outset white;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        table#raceresults th {
+            border-bottom: 2px rgb(255, 255, 255) solid;
+            background-color: rgba(43, 75, 52, 0.5);
+            padding: 10px;
+            width: max-content
+        }
+
+        table#raceresults td {
+            background-color: rgba(43, 75, 52, 0.5);
+            padding-right: 10px;
+            padding-left: 10px;
+            height: 30px;
+            width: max-content;
+            vertical-align: middle;
+
+        }
+
+        table#raceresults caption {
+            background-color: rgba(12, 22, 13, 0.5);
+            font-style: italic;
+            font-size: 18pt;
+            border-top: 2px solid rgb(255, 255, 255);
+            border-left: 2px solid rgb(255, 255, 255);
+            border-right: 2px solid white;
+            padding-bottom: 5px;
+            padding-top: 5px;
+
+        }
+
+        table#raceresults tr:nth-child(even) {
+            background-color: rgba(90, 156, 108, 0.5)
+        }
+        .column{
+          float: left;
+          width: 50%;
+          text-align: center;
+          padding-top: 3%;
+        }
+        .raceresults{
+          overflow-x:auto;
+        }
+
+        blockquote.twitter-timeline {
+          display: inline-block;
+          font-family: 'exo';
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 16px;
+          border-color: #eee #ddd #bbb;
+          border-style: solid;
+          border-width: 8px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+          margin: 10px 5px;
+          padding: 0 16px 16px 16px;
+          max-width: 468px;
+        }
+        
+        blockquote.twitter-timeline p {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 20px;
+        }
+        
+        blockquote.twitter-timeline a {
+          color: inherit;
+          font-weight: normal;
+          text-decoration: none;
+          outline: 0 none;
+        }
+        
+        blockquote.twitter-timeline a:hover,
+        blockquote.twitter-timeline a:focus {
+          text-decoration: underline;
+        }
+        .sponsor
+      {
+        border: 4px solid rgb(88, 20, 20);
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        background-color: rgb(238, 202, 202);
+        color: rgb(0, 0, 0);
+      }
+      .fastestlap{
+        border: 3px;
+        border-color: purple;
+        border-style: solid;
+        padding: 3px;
+        border-radius: 50%;
+      }
+
+
+/* ==========================================================================
+   Your custom CSS styles for smartphones and screens smaller than 500 px
+   ========================================================================== */
+
+   @media screen and ( max-width: 500px ) { 
+    .row { flex-direction: column; }
+    .timeline {display: none;}
+    .calendar {font-size: 6pt;}
+    .supergrid{font-size: 6pt;}
+    table#supergrid td {font-size: 6pt;}
+    table#supergrid th {font-size: 7pt;}
+    table#supergrid caption {font-size: 8pt;}
+    table#calendar td {font-size: 6pt;}
+    table#calendar th {font-size: 7pt;}
+    table#calendar caption {font-size: 8pt;}
+    table#raceresults td {font-size: 6pt;}
+    table#raceresults th {font-size: 7pt;}
+    table#raceresults caption {font-size: 8pt;}
+    .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+    .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+    .topnav a:not(:first-child) {display: none;}
+    .topnav div:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    table#driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+  }
+
+    @media screen and ( max-width: 500px ) { 
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+     position: absolute;
+     right: 0;
+     top: 0;
+    }
+
+    .topnav.responsive a {
+     float: none;
+     display: block;
+     text-align: left;
+    }
+
+    .topnav.responsive div {
+      float: none;
+      display:contents;
+      text-align: left;
+     }
+     .topnav.responsive .dropdown{
+     float: none;
+     text-align: left;
+     }
+     .column.side {
+       margin: 2%;
+    }
+    .column.middle{
+      margin:2%
+    }
+    .columntable{
+      width: 100%;
+    }
+    .column{
+      width: 100%;
+    }
+  }
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Clearfix
+ * Adding a 'clearfix' class will allow parent elements to contain a floated child element
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
