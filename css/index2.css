@@ -616,7 +616,7 @@ color: #fdffff;
   border-right: 1px dashed rgba(238, 241, 239, 0.336);
   background-color: rgb(1, 39, 3);
   padding-top: 10px;
-  padding-right: 20px;
+
 
 }
 
@@ -648,6 +648,7 @@ table.notraced th{
   color: white;
   padding-left: 10px;
   padding-right: 10px;
+  text-align: center;
 }
 
 table.notraced td{
