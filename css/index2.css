@@ -597,14 +597,15 @@ text-decoration: underline rgb(43, 75, 52) 4px;
 .hs > li,
 .item {
   scroll-snap-align: center;
-  padding: calc(var(--gutter) / 2 * 1.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+color: #fdffff;
   border-right: 1px dashed rgba(238, 241, 239, 0.336);
   background-color: rgb(1, 39, 3);
+  padding-top: 10px;
+  padding-right: 20px;
 
 }
 
