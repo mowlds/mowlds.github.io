@@ -30,8 +30,12 @@ a:hover{
   -ms-flex: 1;
   flex: 1;
   margin: 1%;
-   
+  border-right: solid 10px rgb(1, 39, 3);
+  border-top: solid 10px rgb(1, 39, 3);
+  border-top-right-radius: 10px;
+    
 }
+
 
 .column.middle {
   -webkit-flex: 2;
