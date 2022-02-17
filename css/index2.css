@@ -647,7 +647,18 @@ table.notraced td{
 
 }
 
+hr.solidgreen {
+  border-top: 10px solid rgb(1, 39, 3);
+  width: 100%;
+  margin-left: 0;
 
+}
+hr.solidblue {
+  border-top: 10px solid rgb(18, 14, 34);
+  width: 100%;
+  margin-left: 0;
+  margin-top: -6px;
+}
 
 
 
