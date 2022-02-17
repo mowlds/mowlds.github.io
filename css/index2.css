@@ -44,6 +44,9 @@ a:hover{
    .topnav {
   overflow: hidden;
   background-color: rgb(1, 39, 3);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .topnav a {
@@ -147,6 +150,15 @@ a:hover{
   body{
   font-family: 'exo';
   }
+main{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  
+
+}
+
+
   html, body{
     background-color: #e3e9e3;
   }
