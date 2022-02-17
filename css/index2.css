@@ -43,7 +43,7 @@ a:hover{
 
    .topnav {
   overflow: hidden;
-  background-color: rgb(43, 75, 52);
+  background-color: rgb(1, 39, 3);
 }
 
 .topnav a {
@@ -604,7 +604,7 @@ text-decoration: underline rgb(43, 75, 52) 4px;
   align-items: center;
   border-radius: 50px;
   border: 3px solid rgb(238, 241, 239);
-  background-color: rgb(43, 75, 52);
+  background-color: rgb(1, 39, 3);
 
 }
 
