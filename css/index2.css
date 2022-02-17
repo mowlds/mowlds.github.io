@@ -36,9 +36,7 @@ a:hover{
     
 }
 
-.sideborder {
-  position: fixed;
-}
+
 
 .column.middle {
   -webkit-flex: 2;
