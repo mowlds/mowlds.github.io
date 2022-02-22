@@ -166,12 +166,18 @@ main{
   html, body{
     background-color: #e3e9e3;
   }
+
   .block{
     display: inline-block ;
     text-decoration: none;
 padding: 1%;
 width: 30%;
+height: 275px;
 vertical-align:top;
+border: 1px solid rgb(18, 14, 34);
+border-radius: 5px;
+margin: 5px;
+background-color: rgba(99, 83, 190, 0.144) ;
 
 
     
@@ -184,9 +190,7 @@ vertical-align:top;
     color: rgb((43, 75, 52));
   }
   article{
- 
-    background-color: rgba(90, 156, 108, 0.075);
-    border-radius: 5% 5%;
+     border-radius: 5% 5%;
     padding: 1%;
     margin-bottom: 5%;
     align-content: center;
@@ -566,7 +570,7 @@ background-color: rgb(59, 59, 56);
 
 .newstype{
 font-weight: bold;
-text-decoration: underline rgb(43, 75, 52) 4px;
+text-decoration: underline rgb(18, 14, 34) 4px;
 }
 :root {
   --gutter: 20px;
@@ -774,7 +778,7 @@ hr.solidblue {
           h4.racewinner {
             padding-top: 5px;
             border-style: outset;
-            background-color: rgba(43, 75, 52, 0.5);
+            background-color: rgba(18, 14, 34, 0.349);
 
         }
   
