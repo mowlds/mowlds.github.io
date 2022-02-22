@@ -172,11 +172,12 @@ main{
     text-decoration: none;
 padding: 1%;
 width: 30%;
-height: 275px;
+height: 300px;
 vertical-align:top;
 border: 1px solid rgb(18, 14, 34);
 border-radius: 5px;
 margin: 5px;
+margin-bottom: 10px;
 background-color: rgba(99, 83, 190, 0.144) ;
 
 
