@@ -894,6 +894,7 @@ hr.solidblue {
    Your custom CSS styles for smartphones and screens smaller than 500 px
    ========================================================================== */
 
+  
    @media screen and ( max-width: 500px ) { 
     .row { flex-direction: column; }
     .timeline {display: none;}
@@ -917,6 +918,7 @@ hr.solidblue {
       display: block;
     }
     table#driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+    .block {display: inline-block; text-decoration: none; padding: 1%; width: 80%; vertical-align:top; border: 1px solid rgb(18, 14, 34); border-radius: 5px; margin: 5px; margin-bottom: 10px; background-color: rgba(99, 83, 190, 0.144) ; 
   }
 
     @media screen and ( max-width: 500px ) { 
@@ -990,3 +992,4 @@ hr.solidblue {
 .clearfix {
     *zoom: 1;
 }
+   }
