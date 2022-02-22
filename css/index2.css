@@ -30,8 +30,8 @@ a:hover{
   -ms-flex: 1;
   flex: 1;
   margin: 1%;
-  border-right: solid 10px rgb(1, 39, 3);
-  border-top: solid 10px rgb(1, 39, 3);
+  border-right: solid 10px rgb(18, 14, 34);
+  border-top: solid 10px rgb(18, 14, 34);
   border-top-right-radius: 10px;
     
 }
@@ -143,7 +143,7 @@ a:hover{
 
 
   hr.solid {
-    border-top: 5px solid rgb(43, 75, 52);
+    border-top: 5px solid rgb(18, 14, 34);
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -310,13 +310,13 @@ table#shortcalendar{
   table-layout:fixed;
   width:85%;
   text-align: center;
-  border: 3px solid rgb(43, 75, 52);
   border-collapse: collapse;
-  font-weight: bold;
-  box-shadow:10px 10px 5px grey;
+
   margin-left: auto;
   margin-right: auto;
 margin-bottom: 5%;
+background-color: rgb(1, 39, 3);
+color: #fdffff;
 
   }
   
@@ -329,9 +329,10 @@ margin-bottom: 5%;
 
   }
   table#shortcalendar tr{
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   text-align: center;
+  border-bottom: 1px dashed rgba(238, 241, 239, 0.336);
   }
   table#shortcalendar td{
 margin-left: 1%;
@@ -339,9 +340,6 @@ padding-left: 5px;
 padding-right: 5px;
   }
 
-  table#shortcalendar tr:nth-child(even) {
-    background-color: rgba(90, 156, 108, 0.507)
-  }
   .topnav .icon {
     display: none;
   }
