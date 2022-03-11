@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>F1 2021 Season 3, Race 2 - Brazilian Grand Prix</title>
+    <meta name="description" content="">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../images/tracks/brazil.jpg');
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+            font-family: 'exo';
+            color: white;
+        }
+    </style>
+</head>
+<header>
+    <img src="../../../images/SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+    <p>
+    <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
+    </p>
+    <div id="nav-placeholder">
+    </div>
+    <script>
+        $.get("/nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+        </script>
+
+  </header>
+<body>
+    <div class="raceinfo">
+        <img src="../../../images/SRL.png" height="50px">
+        <H1>F1 2021 Season 3, Race 2 - Brazilian Grand Prix</H1>
+        <h2>Autodromo Jose Carlose Pace, Sao Paolo, Brazil</h2>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="racewinner">
+                <h2 class="racewinner">POLE POSITION</h2>
+            </div>
+            <h3 class="racewinner">PORT</h3>
+            <div class="racewinner">
+                <h2 class="racewinner">FASTEST LAP</h2>
+            </div>
+            <h3 class="racewinner">MONTY - 1:09.480</h3>
+        </div>
+        <div class="column">
+            <div class="racewinner">
+                <h2 class="racewinner">RACE WINNER</h2>
+            </div>
+            <h3 class="racewinner">MAV</h3>
+            <div class="racewinner">
+                <h2 class="racewinner">DRIVER OF THE DAY</h2>
+            </div>
+            <h3 class="racewinner">CHUGGZI</h3>
+        </div>
+
+    </div>
+    </div>
+
+
+    <div class="raceresults">
+        <table id="raceresults">
+            <caption style="font-weight: bolder ;">QUALIFYING RESULTS</caption>
+            <tbody>
+                <tr>
+                    <th>Sprint Result</th>
+                    <th>Team</th>
+                    <th>Driver</th>
+                    <th>Points</th>
+                    <th>Time</th>
+                    <th>Delta</th>
+                    <th>Pens</th>
+                    <th>Starting Tyre</th>
+                    <th>Qualifying Result</th>
+                    <th>Time</th>
+                    <th>Change</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img class="icon" src="../../../images/teams/redbull.png"></td>
+                    <td>Port</td>
+                    <td>3</td>
+                    <td>5:52.590</td>
+                    <td></td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>1</td>
+                    <td>1:08.361</td>
+                    <td><i class="fa fa-arrow-circle-right"></i></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img class="icon" src="../../../images/teams/mclaren.png"></td>
+                    <td>Mav</td>
+                    <td>2</td>
+                    <td></td>
+                    <td>+3.051</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>3</td>
+                    <td>1:08.577</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img class="icon" src="../../../images/teams/ferrari.png"></td>
+                    <td>Stefarno</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>+4.028</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>2</td>
+                    <td>1:08.419</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img class="icon" src="../../../images/teams/ferrari.png"></td>
+                    <td>Rob</td>
+                    <td></td>
+                    <td></td>
+                    <td>+4.552</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>5</td>
+                    <td>1:08.798</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img class="icon" src="../../../images/teams/alpine.png"></td>
+                    <td>Ry</td>
+                    <td></td>
+                    <td></td>
+                    <td>+4.964</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>7</td>
+                    <td>1:08.871</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>2</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><img class="icon" src="../../../images/teams/williams.png"></td>
+                    <td>Blarg</td>
+                    <td></td>
+                    <td></td>
+                    <td>+5.712</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>10</td>
+                    <td>1:09.156</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>4</span></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><img class="icon" src="../../../images/teams/mercedes.png"></td>
+                    <td>Owl</td>
+                    <td></td>
+                    <td></td>
+                    <td>+6.649</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>8</td>
+                    <td>1:08.878</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><img class="icon" src="../../../images/teams/alfaromeo.png"></td>
+                    <td>Homer</td>
+                    <td></td>
+                    <td></td>
+                    <td>+8.390</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>15</td>
+                    <td>1:09.558</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>7</span></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><img class="icon" src="../../../images/teams/mercedes.png"></td>
+                    <td>DeafParrot</td>
+                    <td></td>
+                    <td></td>
+                    <td>+9.965</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>20</td>
+                    <td>NO TIME</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>11</span></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><img class="icon" src="../../../images/teams/astonmartin.png"></td>
+                    <td>Beckford</td>
+                    <td></td>
+                    <td></td>
+                    <td>+11.279</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>6</td>
+                    <td>1:08.864</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>4</span></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><img class="icon" src="../../../images/teams/alfaromeo.png"></td>
+                    <td>Nick</td>
+                    <td></td>
+                    <td></td>
+                    <td>+18.964</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>19</td>
+                    <td>NO TIME</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>8</span></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><img class="icon" src="../../../images/teams/williams.png"></td>
+                    <td>Jehrome</td>
+                    <td></td>
+                    <td></td>
+                    <td>+27.026</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>13</td>
+                    <td>1:09.419</td>
+                    <td><span style="color:green"><i class="fa fa-arrow-circle-up"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><img class="icon" src="../../../images/teams/alpine.png"></td>
+                    <td>Chuggzi</td>
+                    <td></td>
+                    <td></td>
+                    <td>+27.870</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>12</td>
+                    <td>1:09.296</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td><img class="icon" src="../../../images/teams/alphatauri.png"></td>
+                    <td>Wiggins</td>
+                    <td></td>
+                    <td></td>
+                    <td>+29.829</td>
+                    <td><i class="fa fa-plus-circle"></i>2</td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>14</td>
+                    <td>1:09.465</td>
+                    <td><i class="fa fa-arrow-circle-right"></i></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td><img class="icon" src="../../../images/teams/astonmartin.png"></td>
+                    <td>Maxey</td>
+                    <td></td>
+                    <td></td>
+                    <td>+37.950</td>
+                    <td><i class="fa fa-plus-circle"></i>2</td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>9</td>
+                    <td>1:08.884</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>6</span></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td><img class="icon" src="../../../images/teams/alphatauri.png"></td>
+                    <td>Frankie</td>
+                    <td></td>
+                    <td></td>
+                    <td>+38.401</td>
+                    <td><i class="fa fa-plus-circle"></i>2</td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>11</td>
+                    <td>1:09.240</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>5</span></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td><img class="icon" src="../../../images/teams/redbull.png"></td>
+                    <td>Monty</td>
+                    <td></td>
+                    <td></td>
+                    <td>DNF</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>4</td>
+                    <td>1:08.692</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>13</span></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td><img class="icon" src="../../../images/teams/haas.png"></td>
+                    <td>CJ</td>
+                    <td></td>
+                    <td></td>
+                    <td>DNF</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>17</td>
+                    <td>1:10.085</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td><img class="icon" src="../../../images/teams/mclaren.png"></td>
+                    <td>Sunny</td>
+                    <td></td>
+                    <td></td>
+                    <td>DNF</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>18</td>
+                    <td>1:10.544</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>1</span></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td><img class="icon" src="../../../images/teams/haas.png"></td>
+                    <td>Haguey</td>
+                    <td></td>
+                    <td></td>
+                    <td>DNF</td>
+                    <td></td>
+                    <td><img class="icon" src="../../../images/s.png"></td>
+                    <td>16</td>
+                    <td>1:09.708</td>
+                    <td><span style="color:red"><i class="fa fa-arrow-circle-down"></i>4</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</br>
+</br>
+
+    <div class="raceresults">
+        <table id="raceresults">
+            <caption style="font-weight: bolder ;">RACE RESULTS</caption>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Points</th>
+                <th>Time</th>
+                <th>Delta</th>
+                <th>Pens</th>
+                <th colspan="4">Tyres</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><img class="icon" src="../../../images/teams/mclaren.png"></td>
+                <td>Mav</td>
+                <td>25</td>
+                <td>45:20.761</td>
+                <td></td>
+                <td></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img class="icon" src="../../../images/teams/ferrari.png"></td>
+                <td>Rob</td>
+                <td>18</td>
+                <td></td>
+                <td>+5.037</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img class="icon" src="../../../images/teams/alpine.png"></td>
+                <td>Chuggzi</td>
+                <td>15</td>
+                <td></td>
+                <td>+5.321</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img class="icon" src="../../../images/teams/williams.png"></td>
+                <td>Blarg</td>
+                <td>12</td>
+                <td></td>
+                <td>+5.799</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><img class="icon" src="../../../images/teams/ferrari.png"></td>
+                <td>Stefarno</td>
+                <td>10</td>
+                <td></td>
+                <td>+6.370</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><img class="icon" src="../../../images/teams/williams.png"></td>
+                <td>Jehrome</td>
+                <td>8</td>
+                <td></td>
+                <td>+14.608</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><img class="icon" src="../../../images/teams/alfaromeo.png"></td>
+                <td>Hom</td>
+                <td>6</td>
+                <td></td>
+                <td>+15.037</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><img class="icon" src="../../../images/teams/mercedes.png"></td>
+                <td>DeafParrot</td>
+                <td>4</td>
+                <td></td>
+                <td>+22.669</td>
+                <td><i class="fa fa-plus-circle"></i>3</td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><img class="icon" src="../../../images/teams/astonmartin.png"></td>
+                <td>Maxey</td>
+                <td>2</td>
+                <td></td>
+                <td>+23.758</td>
+                <td><i class="fa fa-plus-circle"></i>12</td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><img class="icon" src="../../../images/teams/haas.png"></td>
+                <td>Haguey</td>
+                <td>1</td>
+                <td></td>
+                <td>+27.128</td>
+                <td><i class="fa fa-plus-circle"></i>3</td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><img class="icon" src="../../../images/teams/haas.png"></td>
+                <td>CJ</td>
+                <td></td>
+                <td></td>
+                <td>+32.000</td>
+                <td><i class="fa fa-plus-circle"></i>3</td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/h.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><img class="icon" src="../../../images/teams/redbull.png"></td>
+                <td>Port</td>
+                <td></td>
+                <td></td>
+                <td>+32.387</td>
+                <td><i class="fa fa-plus-circle"></i>6</td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr STYLE="background-color: purple;">
+                <td>13</td>
+                <td><img class="icon" src="../../../images/teams/redbull.png"></td>
+                <td>Monty</td>
+                <td></td>
+                <td></td>
+                <td>+35.747</td>
+                <td><i class="fa fa-plus-circle"></i>3</td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><img class="icon" src="../../../images/teams/astonmartin.png"></td>
+                <td>Beckford</td>
+                <td></td>
+                <td></td>
+                <td>+37.560</td>
+                <td><i class="fa fa-plus-circle"></i>6</td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><img class="icon" src="../../../images/teams/alpine.png"></td>
+                <td>Ry</td>
+                <td></td>
+                <td></td>
+                <td>+51.775</td>
+                <td><i class="fa fa-plus-circle"></i>9</td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><img class="icon" src="../../../images/teams/mercedes.png"></td>
+                <td>Owl</td>
+                <td></td>
+                <td></td>
+                <td>+52.218</td>
+                <td><i class="fa fa-plus-circle"></i>6</td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td><img class="icon" src="../../../images/teams/astonmartin.png"></td>
+                <td>Nick</td>
+                <td></td>
+                <td></td>
+                <td>+1 LAP</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td><img class="icon" src="../../../images/teams/alphatauri.png"></td>
+                <td>Wiggins</td>
+                <td></td>
+                <td></td>
+                <td>+3 LAPS</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td><img class="icon" src="../../../images/teams/mclaren.png"></td>
+                <td>Sunny</td>
+                <td></td>
+                <td></td>
+                <td>DNF</td>
+                <td><i class="fa fa-plus-circle"></i>3</td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/s.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td><img class="icon" src="../../../images/teams/alphatauri.png"></td>
+                <td>Frankie</td>
+                <td></td>
+                <td></td>
+                <td>DNF</td>
+                <td></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td><img class="icon" src="../../../images/m.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+    </div>
+    </div>
+</body>
