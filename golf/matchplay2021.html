@@ -182,6 +182,13 @@ body {
 .bracket .round .winners > div.connector{
 display: none;
 }
+.bracket .round .winners > div.matchups .matchup:last-child {
+  margin-bottom: 4rem !important;
+  border-bottom: 5px, dotted, #441c14;
+}
+.bracket .round .winners > div.matchups .matchup:not(last-child) {
+  margin-bottom: 2rem;
+}
 }
 
 
@@ -222,7 +229,7 @@ display: none;
 </br>
     <div class="bracket">
     <section class="round sixteen">
-        <div class="winners">
+            <div class="winners">
             <div class="matchups">
               <div class="matchup">
                 <div class="participants">
