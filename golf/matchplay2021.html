@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2022 SGL Presidents Cup</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="../css/golf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+body {
+    text-align: center;
+}
+h3 {
+    padding-top: 20px;
+}
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700';
+html {
+  font-size: 1rem;
+}
+
+body {
+  background: #f0f2f2;
+}
+
+.bracket {
+
+  font-size: 0;
+}
+.bracket .round {
+  display: inline-block;
+  vertical-align: middle;
+}
+.bracket .round .winners > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.bracket .round .winners > div.matchups .matchup:last-child {
+  margin-bottom: 0 !important;
+}
+.bracket .round .winners > div.matchups .matchup .participants {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant {
+  box-sizing: border-box;
+  color: #858585;
+  border-left: 0.25rem solid #858585;
+  background: white;
+  width: 14rem;
+  height: 3rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.winner {
+  color: rgb(18, 14, 34);
+  border-color: rgb(107, 45, 45);
+  background: rgb(207, 207, 233);
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.NA {
+  color: rgb(233, 233, 233);
+  border-color: rgb(18, 14, 34);
+  background: rgb(0, 0, 0);
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.loser {
+  color: #dc563f;
+  border-color: #dc563f;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant:not(:last-child) {
+  border-bottom: thin solid #f0f2f2;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant span {
+  margin: 0 1.25rem;
+  line-height: 3;
+  font-size: 1rem;
+  font-family: "Roboto Slab";
+}
+.bracket .round .winners > div.connector.filled .line, .bracket .round .winners > div.connector.filled.bottom .merger:after, .bracket .round .winners > div.connector.filled.top .merger:before {
+  border-color: rgb(18, 14, 34);
+}
+.bracket .round .winners > div.connector .line, .bracket .round .winners > div.connector .merger {
+  box-sizing: border-box;
+  width: 2rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.bracket .round .winners > div.connector .line {
+  border-bottom: thin solid #c0c0c8;
+  height: 4rem;
+}
+.bracket .round .winners > div.connector .merger {
+  position: relative;
+  height: 8rem;
+}
+.bracket .round .winners > div.connector .merger:before, .bracket .round .winners > div.connector .merger:after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  border: 0 solid;
+  border-color: #c0c0c8;
+}
+.bracket .round .winners > div.connector .merger:before {
+  border-right-width: thin;
+  border-top-width: thin;
+}
+.bracket .round .winners > div.connector .merger:after {
+  border-right-width: thin;
+  border-bottom-width: thin;
+}
+.bracket .round.sixteen .winners:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.sixteen .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.quarterfinals .winners:not(:last-child) {
+  margin-bottom: 10rem;
+}
+.bracket .round.quarterfinals .winners .connector .merger {
+  height: 16rem;
+}
+.bracket .round.quarterfinals .winners .connector .line {
+  height: 8rem;
+}
+.bracket .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 10rem;
+}
+.bracket .round.semifinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 26rem;
+}
+.bracket .round.semifinals .winners:not(:last-child) {
+  margin-bottom: 180rem;
+}
+.bracket .round.semifinals .winners .connector .merger {
+  height: 32rem;
+}
+.bracket .round.semifinals .winners .connector .line {
+  height: 16rem;
+}
+.bracket .round.finals .winners .connector .merger {
+  height: 20rem;
+}
+.bracket .round.finals .winners .connector .line {
+  height: 20rem;
+}
+    </style>
+
+</head>
+
+<body style="font-family: 'Exo'">
+    <header>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 100pt; color: rgb(133, 2, 2); margin: -30px;">
+            SGL</p>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 20pt; margin-top: -5px; color: rgb(133, 2, 2);">
+            The Serious Golfing League</p>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $.get("/golfnav.html", function(data){
+                    $("#nav-placeholder").replaceWith(data);
+                });
+                </script>
+
+    </header>
+
+    <hr class="solidred">
+    <hr class="solidblue">
+    <div class="container">
+        <img class="responsive" src="../images/northsouth (2).png">
+        <div stlye="font-size: 50%" class="centered">2021 SGL WORLD MATCHPLAY CHAMPIONSHIP</div>
+    </div>
+
+    <hr class="solidred">
+    <hr class="solidblue">
+</br>
+<h3>TOURNAMENT BRACKET</h3>
+</br>
+</br>
+    <div class="bracket">
+    <section class="round sixteen">
+        <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                <div class="participant NA"><span>BYE</span></div>
+                  <div class="participant winner"><span>(1) DEAFPARROT</span></div>
+
+                </div>
+              </div>
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>(8) CJ</span></div>
+                  <div class="participant"><span>(9) WIGGINS</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>(4) GAZ</span></div>
+                  <div class="participant"><span>(13) RIO</span></div>
+                </div>
+              </div>
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant"><span>(5) MAV</span></div>
+                  <div class="participant winner"><span>(12) NICK</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                    <div class="participant NA"><span>BYE</span></div>
+                  <div class="participant winner"><span>(2) TONY</span></div>
+
+                </div>
+              </div>
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>(7) BECKFORD</span></div>
+                  <div class="participant"><span>(10) PORT</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>(3) SUNNY</span></div>
+                  <div class="participant"><span>(14) JEHROME</span></div>
+                </div>
+              </div>
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>(6) HOMER</span></div>
+                  <div class="participant "><span>(11) ROB</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+    </section>
+        <section class="round quarterfinals">
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>Uno</span></div>
+                  <div class="participant"><span>Ocho</span></div>
+                </div>
+              </div>
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant"><span>Dos</span></div>
+                  <div class="participant winner"><span>Siete</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant"><span>Treis</span></div>
+                  <div class="participant winner"><span>Seis</span></div>
+                </div>
+              </div>
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant"><span>Cuatro</span></div>
+                  <div class="participant winner"><span>Cinco</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </section>
+        <section class="round semifinals">
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>Uno</span></div>
+                  <div class="participant"><span>Dos</span></div>
+                </div>
+              </div>
+         
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>Seis</span></div>
+                  <div class="participant"><span>Cinco</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </section>
+        <section class="round finals">
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>Uno</span></div>
+                  <div class="participant"><span>Seis</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
