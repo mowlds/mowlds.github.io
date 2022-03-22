@@ -182,11 +182,28 @@ body {
 .bracket .round .winners > div.connector{
 display: none;
 }
-.bracket .round .winners > div.matchups .matchup:last-child {
-  margin-bottom: 4rem !important;
-  border-bottom: 5px, dotted, #441c14;
+.bracket .round.sixteen .winners:not(:last-child) {
+  margin-bottom: 2rem;
 }
-.bracket .round .winners > div.matchups .matchup:not(last-child) {
+.bracket .round.sixteen .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.quarterfinals .winners:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.quarterfinals .winners .connector .merger {
+  height: 2rem;
+}
+.bracket .round.quarterfinals .winners .connector .line {
+  height: 2rem;
+}
+.bracket .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.semifinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.semifinals .winners:not(:last-child) {
   margin-bottom: 2rem;
 }
 }
