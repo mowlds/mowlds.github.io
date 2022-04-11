@@ -546,9 +546,9 @@ background-color: rgb(59, 59, 56);
 .diff{
   width: 30px;
   background-color:rgba(131, 150, 136, 0.87) ;
-  color: black;
+  color: rgba(0, 0, 0, 0.163);
   font-weight: lighter;
-  font-size: smaller;
+  font-size: x-small;
 }
 
 
