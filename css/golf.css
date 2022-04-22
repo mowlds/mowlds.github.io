@@ -512,7 +512,7 @@ table.score tr :last-child{
 
 
             @media screen and ( max-width: 500px ) { 
-                .row { flex-direction: column; }
+                
 
                 .topnav.responsive {position: relative;}
                 .topnav.responsive a.icon {
