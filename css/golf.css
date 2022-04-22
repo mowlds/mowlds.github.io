@@ -513,9 +513,7 @@ table.score tr :last-child{
 
             @media screen and ( max-width: 500px ) { 
                 .row { flex-direction: column; }
-                .topnav a:not(:first-child) {display: none;}
-                .topnav div:not(:first-child) {display: none;}
-                .topnav a.icon {float: right; display: block;}
+
                 .topnav.responsive {position: relative;}
                 .topnav.responsive a.icon {
                  position: absolute;
