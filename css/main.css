@@ -340,7 +340,8 @@ padding-right: 5px;
   }
 
   .raceinfo {
-    width: 80%;
+    max-width: 90%;
+    min-width: 80%;
     text-align: center;
     margin-top: 2pc;
     margin-left: auto;
