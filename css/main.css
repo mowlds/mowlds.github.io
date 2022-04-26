@@ -828,6 +828,17 @@ text-decoration: underline rgb(43, 75, 52) 4px;
      float: none;
      text-align: left;
      }
+     .dropdown .dropbtn {
+      font-size: 14px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: rgb(43, 75, 52);
+      font-family: inherit;
+      margin: 0;
+      pointer-events: none;
+    }
      .column.side {
        margin: 2%;
     }
