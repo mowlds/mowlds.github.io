@@ -32,11 +32,10 @@
     </p>
     <div id="nav-placeholder">
     </div>
-    <script>
-        $.get("/nav.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-        </script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("nav.html");
+            });</script>
 
   </header>
 

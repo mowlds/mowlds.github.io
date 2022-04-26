@@ -30,11 +30,10 @@
     </p>
     <div id="nav-placeholder">
     </div>
-    <script>
-        $.get("/nav.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-        </script>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("nav.html");
+            });</script>
 
   </header>
 <body>
@@ -286,7 +285,7 @@
                 <td><img class="icon" src="../../../images/m.png"></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr  style="background-color: purple;">
                 <td>2</td>
                 <td><img class="icon" src="../../../images/flags/48/China.png"></td>
                 <td>Blarg</td>
@@ -500,6 +499,7 @@
                 <td></td>
                 <td><img class="icon" src="../../../images/s.png"></td>
                 <td><img class="icon" src="../../../images/s.png"></td>
+                <td></td>
             </tr>
         </table>
     </div>
