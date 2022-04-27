@@ -68,7 +68,7 @@ a:hover{
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #598474;
   color: white;
 }
 
@@ -95,13 +95,13 @@ a:hover{
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: rgb(43, 75, 52);
+    background-color: rgb(1, 39, 3);
     font-family: inherit;
     margin: 0;
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(90, 156, 108);
+    background-color: rgb(43, 75, 52);
   }
   
   .dropdown-content {
