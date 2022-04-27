@@ -918,6 +918,7 @@ hr.solidblue {
     .topnav {
       overflow: hidden;
       background-color: rgb(1, 39, 3);
+      padding: 0%
   }
     .topnav a.icon {
       float: right;
