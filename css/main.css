@@ -260,7 +260,7 @@ img.table{
 }
 
 
-table#driverrecords{
+table.driverrecords{
 table-layout: fixed;
 min-width: 30%;
 text-align: center;
@@ -271,7 +271,7 @@ margin-left: 2%;
 margin-right:auto;
 }
 
-table#driverrecords caption {
+table.driverrecords caption {
 padding-bottom: 10px;
 padding-top: 10px;
 font-style: italic;
@@ -279,13 +279,19 @@ text-align: center;
 background-color: rgba(255, 139, 139, 0.5);
 border: 3px outset white;
 }
-table#driverrecords tr{
+table.driverrecords tr{
 padding-top: 2px;
 padding-bottom: 2px;
+
 text-align: center;
 }
+table.driverrecords td{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  }
 
-table#driverrecords tr:nth-child(even) {
+table.driverrecords tr:nth-child(even) {
   background-color: rgba(255, 139, 139, 0.5)
 }
 .news{
@@ -902,7 +908,7 @@ text-decoration: underline rgb(43, 75, 52) 4px;
       float: right;
       display: block;
     }
-    table#driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+    table.driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
   }
 
     @media screen and ( max-width: 500px ) { 
