@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<head>
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Driver Template</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/html5-boilerplate.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body style="font-family: 'Exo'">
+  <header>
+    <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+    <p>
+    <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
+    </p>
+    <div id="nav-placeholder">
+    </div>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("/nav.html");
+            });</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+  </header>
+
+  <div class="row">
+    <div class="column side">
+     <img class="bio" src="../images/Drivers/Bios/slapping.png" height="100px">dbo.DriverImage
+     <div class="biotable">
+        <table id="biotable">
+            <caption style="font-weight: bolder ;">Driver.Name</caption>
+            <tr>
+                <th>First Race</th>
+                <td>Year</td>
+                <td>Season</td>
+                <td>Race</td>
+            </tr>
+            <tr>
+              <th>Wins</th>
+              <td>0</td>
+          </tr>
+          <tr>
+              <th>Pole Positions</th>
+              <td>1</td>
+          </tr>
+          <tr>
+              <th>Fastest Laps</th>
+              <td>2</td>
+          </tr>
+          <tr>
+              <th>DotD</th>
+              <td>0</td>
+          </tr>
+          <tr>
+            <th>Podiums</th>
+            <td>11</td>
+        </tr>
+          <tr>
+            <th>Points</th>
+            <td>433</td>
+        </tr>
+          <tr>
+              <th>Headsgone Rating</th>
+              <td>7/10</td>
+          </tr>
+            </table>
+     </div>
+    </div>
+ 
+
+    <div class="column middle">
+    dbo.driver.driverquote - "waaaaaaaaaaaaaaahhhhhhhhhh"</br></br>dbo.driver.bio "this upstanding gentleman is still yet to win a race yadda yadda"</br>
+  </div>
+</div>
+
+
+  <div class="wikiparent">
+    <h2 class="h2wiki">RACE RECORD</h2>
+    <div class="wiki">
+      <div class="driverrecords">
+        <table class="driverrecords">
+          <tr>
+            <th>Year</th>
+            <th>Season</th>
+            <th>AUS</th>
+            <th>BAH</th>
+            <th>CHN</th>
+            <th>AZE</th>
+            <th>MON</th>
+            <th>CAN</th>
+            <th>POINTS</th>
+            <th>POSITION</th>
+
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>2</td>
+            <td>12</td>
+            <td>DNF</td>
+            <td>DNF</td>
+            <td>3</td>
+            <td>14</td>
+            <td>15</td>
+            <td>22</td>
+            <td>17th</td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>1</td>
+            <td>12</td>
+            <td>DNF</td>
+            <td>DNF</td>
+            <td>3</td>
+            <td>14</td>
+            <td>15</td>
+            <td>22</td>
+            <td>17th</td>
+          </tr>
+
+        </table>
+      </div>
+      <h2 class="h2wiki">MEGA TABLE</h2>
+      <div class="driverrecords">
+        <table class="driverrecords">
+          <tr>
+
+            <th>Wins</th>
+            <th>Podiums</th>
+            <th>Wednesdays</th>
+            <th>Wanker %</th>
+          </tr>
+          <tr>
+
+            <td>325324</td>
+          </tr>
+          <tr>
+
+            <td>433</td>
+          </tr>
+          <tr>
+
+            <td>1</td>
+          </tr>
+          <tr>
+
+            <td>0</td>
+          </tr>
+          <tr>
+
+            <td>0</td>
+          </tr>
+          <tr>
+
+            <td>7/10</td>
+          </tr>
+        </table>
+      </div>
+     
+
+    </div>
+  </div>
+  </div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
