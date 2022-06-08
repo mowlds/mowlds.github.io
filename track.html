@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<head>
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Track Template</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/html5-boilerplate.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body style="font-family: 'Exo'">
+  <header>
+    <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+    <p>
+    <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
+    </p>
+    <div id="nav-placeholder">
+    </div>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("/nav.html");
+            });</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+  </header>
+
+  <div class="row">
+    <div class="column side">
+     <img class="bio" src="../images/Drivers/Bios/slapping.png" height="100px">Image of Track Map/Layout
+     <div class="biotable">
+        <table id="biotable">
+            <caption style="font-weight: bolder ;">dbo.track.name, dbo.track.city, dbo.track.country</caption>
+            <tr>
+                <th>First Raced</th>
+                <td>dbo.Season.Year</td>
+                <td>dbo.Season.Number</td>
+            </tr>
+            <tr>
+              <th>Races Held</th>
+              <td>count races at track</td>
+          </tr>
+            <tr>
+                <th>Laps</th>
+                <td>dbo.track.laps</td>
+            </tr>
+
+            <tr>
+                <th>Track Record</th>
+                <td>dbo.driverresult.bestlap</td>
+                <td>dbo.driver.name</td>
+            </tr>
+            <tr>
+                <th>Headsgone Rating</th>
+                <td>7/10</td>
+            </tr>
+            </table>
+     </div>
+    </div>
+ 
+
+    <div class="column middle">
+    dbo.track.name</br></br>dbo.track.about (some basic info on track and notable SRL races/incidents)</br>
+  </div>
+</div>
+
+
+  <div class="wikiparent">
+    <h2 class="h2wiki">TRACK RECORDS</h2>
+    <div class="wiki">
+      <div class="driverrecords">
+        <table id="driverrecords">
+          <caption style="font-weight: bolder ;">RACES HELD</caption>
+          <tr>
+            <th>Year</th>
+            <th>Season</th>
+            <th>Race</th>
+            <th>Pole Position</th>
+            <th>Time</th>
+            <th>Winner</th>
+            <th>Time</th>
+            <th>Fastest Lap</th>
+            <th>Time</th>
+            <th>Dotd</th>
+
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>1</td>
+            <td>12</td>
+            <td>Tony</td>
+            <td>1:09.121</td>
+            <td>Chissell</td>
+            <td>42:41.122</td>
+            <td>Stefarno</td>
+            <td>1:09.766</td>
+            <td>DeafParrot</td>
+          </tr>
+
+        </table>
+      </div>
+      <div class="driverrecords">
+        <table id="driverrecords">
+          <caption style="font-weight: bolder ;">BY MOST CHAMPIONSHIP POINTS</caption>
+          <tr>
+            <th>Driver</th>
+            <th>Wins</th>
+          </tr>
+          <tr>
+            <td>Tony</td>
+            <td>325324</td>
+          </tr>
+          <tr>
+            <td>Nick</td>
+            <td>433</td>
+          </tr>
+          <tr>
+            <td>DP</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Wiggins</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>7/10</td>
+          </tr>
+        </table>
+      </div>
+      <div class="driverrecords">
+      <table id="driverrecords">
+        <caption style="font-weight: bolder ;">BY MOST PODIUMS</caption>
+        <tr>
+          <th>Driver</th>
+          <th>Wins</th>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>325324</td>
+        </tr>
+        <tr>
+          <td>Nick</td>
+          <td>433</td>
+        </tr>
+        <tr>
+          <td>DP</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Wiggins</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>7/10</td>
+        </tr>
+      </table>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -262,7 +262,7 @@ img.table{
 
 table#driverrecords{
 table-layout: fixed;
-width: 30%;
+min-width: 30%;
 text-align: center;
 border: 3px outset white;
 border-collapse: collapse;
@@ -641,6 +641,105 @@ text-decoration: underline rgb(43, 75, 52) 4px;
             
   
           }
+          .driverinfo {
+            text-align: center;
+                       padding-top: 10px;
+                       margin-bottom: 20px;
+                       margin-top: 20px;
+                       margin-left: 150px;
+                       margin-right: 150px;
+                       background-color: rgba(34, 61, 33, 0.5);
+                       border-radius: 15px 50px;
+                       border-style: outset;
+                   }
+                   .biotable{
+                    text-align: center;
+  
+                }
+                img.bio{border: 3px solid rgb(0, 0, 0);
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-top: 10px;
+                  
+              }
+              table#biotable{
+                  margin-top: 10px;
+                  table-layout: fixed;
+                  width: 100%;
+                  margin-left: auto;
+                  margin-right: auto;
+              }
+  
+              table#biotable caption {
+                  padding-bottom: 10px;
+                  padding-top: 10px;
+                  font-style: italic;
+              }
+              table#biotable tr{
+                  padding-top: 2px;
+                  padding-bottom: 2px;
+              }
+              table#drivertimeline {
+                  table-layout: fixed;
+                  width: 98%;
+                  border-radius: 10px;
+                  border-collapse: collapse;
+                  margin-bottom: 40px;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  border: 2px solid rgb(255, 255, 255);
+      
+      
+      
+              }
+      
+              table#drivertimeline th {
+                  border-bottom: 2px solid rgb(255, 255, 255);
+                  background-color: rgba(114, 211, 122, 0.5);
+                  border-radius: 12px;
+                  width: 35px;
+      ;
+              }
+      
+              table#drivertimeline td {
+                  background-color: rgba(114, 211, 122, 0.5);
+                  padding-top: 4px;
+                  border-radius: 12px;
+                  width: 35px;
+                  padding-bottom: 4px;
+              }
+      
+              table#drivertimeline caption {
+                  padding-bottom: 10px;
+                  padding-top: 10px;
+                  font-style: italic;
+                  border-top: 2px solid rgb(255, 255, 255);
+                  border-left: 2px solid rgb(255, 255, 255);
+                  border-right: 2px solid white;
+      
+              }
+      
+              table#drivertimeline tr:nth-child(2) {
+                  font-weight: bold;
+              }
+      
+              table#drivertimeline col:nth-child(even) {
+                  background-color: rgba(114, 211, 119, 0.5);
+              }
+      
+      
+              .drivertimeline {
+                  text-align: center;
+                  background-color: rgba(34, 61, 33, 0.5);
+                  margin-right: 20px;
+                  margin-left: 20px;
+                  margin-top: 40px;
+                  border-radius: 15px 50px;
+                  border-style: outset;
+      
+              }
+              h2.drivertimeline{padding-top: 20px;}        
   
           h2.racewinner {
               padding-top: 5px;
