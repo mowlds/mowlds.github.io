@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>List Of Teams</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/html5-boilerplate.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body style="font-family: 'Exo'">
+  <header>
+    <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+    <p>
+    <h2 style="text-align: center;font-family:'Exo';font-style: italic;">THE SERIOUS RACING LEAGUE</h2>
+    </p>
+    <div id="nav-placeholder">
+    </div>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("/nav.html");
+            });</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+  </header>
+
+
+
+  <div class="wikiparent">
+    <h2 class="h2wiki">REAL TEAMS</h2>
+    <div class="wiki">
+      <ul class="wikilist">
+        
+        <li>Alfa Romeo</li>
+        <li>Alpha Tauri</li>
+        <li>Alpine</li>
+        <li>Aston Martin</li>
+        <li>Ferrari</li>
+        <li>Force India</li>
+        <li>Haas</li>
+        <li>Manor</li>
+        <li>McLaren</li>
+        <li>Mercedes</li>
+        <li>Red Bull</li>
+        <li>Renault</li>
+        <li>Sauber</li>
+        <li>Williams</li>
+</ul>
+</div>
+<h2 class="h2wiki">SRL TEAMS</h2>
+    <div class="wiki">
+      <ul class="wikilist">
+        
+        <li>Hulkenberg</li>
+        <li>McBlarggzi</li>
+        <li>etc</li>
+</ul>
+</div>
+      
+  </div>
+  
+  <div class="wikiparent">
+    <h2 class="h2wiki">TRACK STATISTICS</h2>
+    <div class="wiki">
+      <h2 class="h2wiki">MEGA TABLE</h2>
+      <div class="driverrecords">
+        <table class="driverrecords">
+          <tr>
+
+            <th>Team</th>
+            <th>Races</th>
+            <th>Entries</th>
+            <th>Constructors Titles</th>
+            <th>Wins</th>
+            <th>Podiums</th>
+            <th>Poles</th>
+            <th>Total Poins</th>
+          </tr>
+          <tr>
+
+            <td>Williams</td>
+            <td>35</td>
+            <td>70</td>
+            <td>2</td>
+            <td>31</td>
+            <td>55</td>
+            <td>22</td>
+            <td>561</td>
+          </tr>
+          
+        </table>
+      </div>
+     
+
+    </div>
+
+    </div>
+  </div>
+  </div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
