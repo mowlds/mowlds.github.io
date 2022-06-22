@@ -399,6 +399,39 @@ table.golfunplayed td{
     table.teamnorth td{
                         padding: 5px;
     }
+
+    table.hateful{
+      table-layout: auto;
+      border-radius: 10px;
+      font-size: 10pt;
+      max-width: 95%;
+      min-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid rgb(108, 109, 8);
+      padding: 2px;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      font-weight: bold;
+  }
+  table.hateful tr{
+    padding: 10px;
+    background-color: rgb(175, 158, 49)
+  
+}
+table.hateful tr:nth-child(even) {
+    background-color: #f0f1d1
+  }
+
+table.hateful th{
+    background-color: rgb(125, 109, 5);
+    color: white;
+    padding: 10px;
+}
+table.hateful td{
+                    padding: 5px;
+}
+
     table.presidents{
       table-layout:fixed ;
       border-radius: 10px;
