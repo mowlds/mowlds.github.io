@@ -752,12 +752,15 @@ text-decoration: underline rgb(43, 75, 52) 4px;
               padding-top: 5px;
               border-style: outset;
               background-color: rgb(15, 26, 18);
+              border-radius: 100px;
 
           }
           h3.racewinner {
             padding-top: 5px;
             border-style: outset;
             background-color: rgb(32, 44, 36);
+            width: 300px;
+            border-radius: 100px;
 
         }
   
