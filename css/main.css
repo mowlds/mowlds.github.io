@@ -22,6 +22,7 @@ a:hover{
   display: -webkit-flex;
   display: flex;
   width: 99%;
+  padding-bottom: 3%;
 
 }
 
@@ -199,7 +200,7 @@ margin-bottom: 5%;
     text-align: center;
 }
 .raceresults{
-  background-image: ("images\bahrain.jpg")
+  padding: 1%;
 }
 .wikiparent{
 box-shadow: 5px 5px 10px grey;
@@ -362,9 +363,6 @@ padding-right: 5px;
     margin-left: auto;
     margin-right: auto;
     padding: 1pc;
-    background-color: rgba(43, 75, 52, 0.5);
-    border-radius: 15px 50px;
-    border-style: outset;
 }
 
 
@@ -647,10 +645,9 @@ text-decoration: underline rgb(43, 75, 52) 4px;
 
             .racewinner {
               
-              border-radius: 15px 50px;
               margin-left: auto;
               margin-right: auto;
-              max-width: 90%
+              max-width: 85%
               ;
             
   
@@ -758,24 +755,24 @@ text-decoration: underline rgb(43, 75, 52) 4px;
           h2.racewinner {
               padding-top: 5px;
               border-style: outset;
-              background-color: rgba(43, 75, 52, 0.5);
+              background-color: rgb(15, 26, 18);
 
           }
-  
           h3.racewinner {
-              background-color: rgba(90, 156, 108, 0.5);
-              padding-top: 2px;
-              padding-bottom: 3px;
-              border-style: outset;
-              margin-top: -15px;
-          }
+            padding-top: 5px;
+            border-style: outset;
+            background-color: rgb(32, 44, 36);
 
-               h2.racewinner {
-              padding-top: 5px;
-              border-style: outset;
-              background-color: rgba(43, 75, 52, 0.5);
-
+        }
+  
+          h2.racewin {
+              margin-top: -12px;
           }
+          h3.racewin {
+            margin-top: -12px;
+        }
+
+
           h4.racewinner {
             padding-top: 5px;
             border-style: outset;
@@ -800,7 +797,7 @@ text-decoration: underline rgb(43, 75, 52) 4px;
 
         table#raceresults th {
             border-bottom: 2px rgb(255, 255, 255) solid;
-            background-color: rgba(43, 75, 52, 0.5);
+            background-color: rgb(15, 26, 18);;
             padding: 10px;
             width: max-content
         }
@@ -816,12 +813,9 @@ text-decoration: underline rgb(43, 75, 52) 4px;
         }
 
         table#raceresults caption {
-            background-color: rgba(12, 22, 13, 0.5);
-            font-style: italic;
-            font-size: 18pt;
-            border-top: 2px solid rgb(255, 255, 255);
-            border-left: 2px solid rgb(255, 255, 255);
-            border-right: 2px solid white;
+
+            font-size: 24pt;
+
             padding-bottom: 5px;
             padding-top: 5px;
 
@@ -834,7 +828,7 @@ text-decoration: underline rgb(43, 75, 52) 4px;
           float: left;
           width: 50%;
           text-align: center;
-          padding-top: 3%;
+          padding: 1%;
         }
         .raceresults{
           overflow-x:auto;
