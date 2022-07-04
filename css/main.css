@@ -589,9 +589,7 @@ background-color: rgb(59, 59, 56);
 font-weight: bold;
 text-decoration: underline rgb(43, 75, 52) 4px;
 }
-input[type=checkbox] {
-color: white;
-}
+
 * {
     font-family: 'exo';
 }
