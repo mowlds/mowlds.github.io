@@ -969,8 +969,6 @@ table#nolayout {
     max-width: 80%;
     min-width: 60%;
     border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
     padding: 5px;
     font-weight: bold;
     text-align: center;
