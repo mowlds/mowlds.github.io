@@ -11,16 +11,19 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.FinalPosition)
+                    
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Driver1.Name)
                 </th>
                 <th>
+                    Points
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Time)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.BestLap)
+                    Fastest Lap
                 </th>
                 <th>
                     Pens
@@ -28,9 +31,7 @@
                 <th>
                     Tyres
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RacePoints)
-                </th>
+                
             </tr>
         </thead>
         <tbody>
@@ -42,6 +43,11 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Driver1.Name)
+                    </td>
+                     <td>
+                        <div class="result-driver-info">
+                            @Html.DisplayFor(modelItem => item.RacePoints)
+                        </div>
                     </td>
                     <td>
                         @if (String.IsNullOrWhiteSpace(item.Time))
@@ -145,11 +151,7 @@
                             </tr>
                         </table>
                     </td>
-                    <td>
-                        <div class="result-driver-info">
-                            @Html.DisplayFor(modelItem => item.RacePoints)
-                        </div>
-                    </td>
+                   
                 </tr>
             }
         </tbody>
