@@ -9,6 +9,10 @@ body {
     color: white;
 }
 
+.mainbody{
+  padding-bottom: 200px;
+}
+
 a:hover{
   color: rgb(12, 22, 13);;
 }
