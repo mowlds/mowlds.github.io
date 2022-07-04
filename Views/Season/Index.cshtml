@@ -9,11 +9,12 @@
 <table id="calendar">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.GameVersion)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                Season
             </th>
             <th>
                 Real Performance
@@ -32,10 +33,10 @@
         {
             <tr>
                 <td>
-                    Season @Html.DisplayFor(modelItem => item.Number)
+                    @Html.DisplayFor(modelItem => item.Year)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Year)
+                    Season @Html.DisplayFor(modelItem => item.Number)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.isrealperformance)
