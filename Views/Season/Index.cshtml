@@ -25,6 +25,9 @@
             <th>
                 # of Races
             </th>
+            <th>
+                Champion
+            </th>
             
         </tr>
     </thead>
@@ -51,6 +54,9 @@
                     @{string parameterValue = item.Race.Count().ToString();
                     }
                     <a href=@linkvalue>@parameterValue races</a>
+                </td>
+                <td>
+               
                 </td>
             </tr>
         }
