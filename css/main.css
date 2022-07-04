@@ -590,7 +590,9 @@ font-weight: bold;
 text-decoration: underline rgb(43, 75, 52) 4px;
 }
 
-
+input[type="checkbox" i]:disabled {
+  color: white;
+}
 
 
 
