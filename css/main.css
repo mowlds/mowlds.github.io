@@ -592,6 +592,52 @@ text-decoration: underline rgb(43, 75, 52) 4px;
 * {
     font-family: 'exo';
 }
+table#list {
+  table-layout: fixed;
+  max-width: 90%;
+  border: 3px outset white;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2pc;
+  font-weight: bold;
+
+
+}
+
+table#list th {
+  border-bottom: 2px rgb(255, 255, 255) solid;
+  background-color: rgb(15, 26, 18);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-align: center;
+  font-size: 12pt;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+table#list td {
+  background-color: rgba(43, 75, 52, 0.5);
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  font-size: 10pt;
+ 
+
+}
+
+table#list caption {
+
+  font-size: 24pt;
+
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+}
+
+table#list tr:nth-child(even) {
+  background-color: rgba(90, 156, 108, 0.5)
+}
 
 
               table#calendar {
@@ -906,6 +952,9 @@ text-decoration: underline rgb(43, 75, 52) 4px;
     table#calendar td {font-size: 6pt;}
     table#calendar th {font-size: 7pt;}
     table#calendar caption {font-size: 8pt;}
+    table#list td {font-size: 6pt;}
+    table#list th {font-size: 7pt;}
+    table#list caption {font-size: 8pt;}
     table#raceresults td {font-size: 6pt;}
     table#raceresults th {font-size: 7pt;}
     table#raceresults caption {font-size: 8pt;}
