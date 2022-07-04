@@ -16,6 +16,7 @@
             <th>
                 Race
             </th>
+            <th></th>
             <th>
                 Track
             </th>
@@ -41,6 +42,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.RaceNumber)
                 </td>
+                <td>
+                        <img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)">
+                    </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Track1.Name)
                 </td>
