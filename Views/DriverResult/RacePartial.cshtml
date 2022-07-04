@@ -1,0 +1,158 @@
+﻿@model IEnumerable<mowlds.github.io.DAL.DriverResult>
+
+@{
+    ViewData["Title"] = "Race";
+    Layout = "~/Views/Shared/_PartialLayout.cshtml";
+}
+
+<div class="raceresults">
+    <table id="raceresults">
+        <caption style="font-weight: bolder ;">RACE RESULTS</caption>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FinalPosition)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Driver1.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BestLap)
+                </th>
+                <th>
+                    Pens
+                </th>
+                <th>
+                    Tyres
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RacePoints)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 3))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FinalPosition)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Driver1.Name)
+                    </td>
+                    <td>
+                        @if (String.IsNullOrWhiteSpace(item.Time))
+                        {
+                            @Html.DisplayFor(modelItem => item.Delta)
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.Time)
+                        }
+                    </td>
+                    <td>
+                        @if ((bool)item.HasFastestLap)
+                        {
+                            @Html.DisplayFor(modelItem => item.BestLap)
+                        }
+                    </td>
+                    <td>
+                        @if ((bool)(item.HasTimePenalty))
+                        {
+                            @String.Format("+{0} secs", item.TimePenaltyDuration)
+                        }
+                    </td>
+                    <td>
+                        <table id="nolayout">
+                            <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre1))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre1.Trim()">
+                                            </div>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre2))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre2.Trim()">
+                                            </div>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre3))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre3.Trim()">
+                                            </div>
+                                        </div>
+
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre4))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre4.Trim()">
+                                            </div>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre5))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre5.Trim()">
+                                            </div>
+                                        </div>
+
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre6))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre6.Trim()">
+                                            </div>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre7))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre7.Trim()">
+                                            </div>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Tyre8))
+                                    {
+                                        <div class="result-driver-info result-driver-tyres">
+                                            <div class="result-driver-tyres-@item.Tyre8.Trim()">
+                                            </div>
+                                        </div>
+                                    }
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <div class="result-driver-info">
+                            @Html.DisplayFor(modelItem => item.RacePoints)
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

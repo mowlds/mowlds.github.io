@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SRLModelStoreContainer" CdmEntityContainer="SRLEntities">
+    <EntitySetMapping Name="Driver">
+      <EntityTypeMapping TypeName="SRLModel.Driver">
+        <MappingFragment StoreEntitySet="Driver">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ForumName" ColumnName="ForumName" />
+          <ScalarProperty Name="PSNName" ColumnName="PSNName" />
+          <ScalarProperty Name="DriverNumber" ColumnName="DriverNumber" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Bio" ColumnName="Bio" />
+          <ScalarProperty Name="DriverQuote" ColumnName="DriverQuote" />
+          <ScalarProperty Name="DriverImage" ColumnName="DriverImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverResult">
+      <EntityTypeMapping TypeName="SRLModel.DriverResult">
+        <MappingFragment StoreEntitySet="DriverResult">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Race" ColumnName="Race" />
+          <ScalarProperty Name="SessionType" ColumnName="SessionType" />
+          <ScalarProperty Name="ProvisionalPosition" ColumnName="ProvisionalPosition" />
+          <ScalarProperty Name="FinalPosition" ColumnName="FinalPosition" />
+          <ScalarProperty Name="RacePoints" ColumnName="RacePoints" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Delta" ColumnName="Delta" />
+          <ScalarProperty Name="BestLap" ColumnName="BestLap" />
+          <ScalarProperty Name="HasGridPenalty" ColumnName="HasGridPenalty" />
+          <ScalarProperty Name="GridPenaltyDrop" ColumnName="GridPenaltyDrop" />
+          <ScalarProperty Name="HasTimePenalty" ColumnName="HasTimePenalty" />
+          <ScalarProperty Name="TimePenaltyDuration" ColumnName="TimePenaltyDuration" />
+          <ScalarProperty Name="HasFastestLap" ColumnName="HasFastestLap" />
+          <ScalarProperty Name="HasDriverOfTheDay" ColumnName="HasDriverOfTheDay" />
+          <ScalarProperty Name="HasDNF" ColumnName="HasDNF" />
+          <ScalarProperty Name="IsClassified" ColumnName="IsClassified" />
+          <ScalarProperty Name="HasDSQ" ColumnName="HasDSQ" />
+          <ScalarProperty Name="HasGridBan" ColumnName="HasGridBan" />
+          <ScalarProperty Name="Tyre1" ColumnName="Tyre1" />
+          <ScalarProperty Name="Tyre2" ColumnName="Tyre2" />
+          <ScalarProperty Name="Tyre3" ColumnName="Tyre3" />
+          <ScalarProperty Name="Tyre4" ColumnName="Tyre4" />
+          <ScalarProperty Name="Tyre5" ColumnName="Tyre5" />
+          <ScalarProperty Name="Tyre6" ColumnName="Tyre6" />
+          <ScalarProperty Name="Tyre7" ColumnName="Tyre7" />
+          <ScalarProperty Name="Tyre8" ColumnName="Tyre8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Event">
+      <EntityTypeMapping TypeName="SRLModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Event1" ColumnName="Event" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Race">
+      <EntityTypeMapping TypeName="SRLModel.Race">
+        <MappingFragment StoreEntitySet="Race">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="Track" ColumnName="Track" />
+          <ScalarProperty Name="RaceNumber" ColumnName="RaceNumber" />
+          <ScalarProperty Name="RaceName" ColumnName="RaceName" />
+          <ScalarProperty Name="RaceDate" ColumnName="RaceDate" />
+          <ScalarProperty Name="Laps" ColumnName="Laps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RaceLaps">
+      <EntityTypeMapping TypeName="SRLModel.RaceLaps">
+        <MappingFragment StoreEntitySet="RaceLaps">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Race" ColumnName="Race" />
+          <ScalarProperty Name="SessionType" ColumnName="SessionType" />
+          <ScalarProperty Name="Lap" ColumnName="Lap" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="LeadDriver" ColumnName="LeadDriver" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Season">
+      <EntityTypeMapping TypeName="SRLModel.Season">
+        <MappingFragment StoreEntitySet="Season">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="GameVersion" ColumnName="GameVersion" />
+          <ScalarProperty Name="isrealperformance" ColumnName="isrealperformance" />
+          <ScalarProperty Name="isoneshotqualy" ColumnName="isoneshotqualy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Session">
+      <EntityTypeMapping TypeName="SRLModel.Session">
+        <MappingFragment StoreEntitySet="Session">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SessionType" ColumnName="SessionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SRLModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Team">
+      <EntityTypeMapping TypeName="SRLModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="About" ColumnName="About" />
+          <ScalarProperty Name="TeamLogo" ColumnName="TeamLogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Track">
+      <EntityTypeMapping TypeName="SRLModel.Track">
+        <MappingFragment StoreEntitySet="Track">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CodiesID" ColumnName="CodiesID" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+          <ScalarProperty Name="HeadsgoneRating" ColumnName="HeadsgoneRating" />
+          <ScalarProperty Name="About" ColumnName="About" />
+          <ScalarProperty Name="Background" ColumnName="Background" />
+          <ScalarProperty Name="TrackMap" ColumnName="TrackMap" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverTeam">
+      <EntityTypeMapping TypeName="SRLModel.DriverTeam">
+        <MappingFragment StoreEntitySet="DriverTeam">
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

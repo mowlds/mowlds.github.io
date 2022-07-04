@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+    <meta name="viewport" content="width=device-width" />
+    <style>
+    </style>
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<header>
+    <p>
+        <h2 style="text-align: center;font-family:'Bayon';">THE SERIOUS RACING LEAGUE</h2>
+    </p>
+    <div class="topnav" id="topnav">
+        <a href="/index.html">Home</a>
+        <a href="/Race/2021/S4/overview.html">Current Season</a>
+        <a href="/stewards.html">Stewarding</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Wiki
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/seasons.html">Seasons</a>
+                <a href="/drivers.html">Drivers</a>
+                <a href="#">Races</a>
+                <a href="/teams.html">Teams</a>
+                <a href="/tracks.html">Tracks</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                SRL DatabaseVersion
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/Season">Seasons</a>
+                <a href="/Races">Races</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            &#9776;
+        </a>
+        <div class="topnav-right">
+            <a href="/golf/home.html">Serious Golfing League</a>
+        </div>
+    </div>
+</html>
+    </header>
+<body>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

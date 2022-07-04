@@ -1,0 +1,49 @@
+﻿@model IEnumerable<mowlds.github.io.DAL.DriverResult>
+
+@{
+    ViewData["Title"] = "RaceOverview";
+    Layout = "~/Views/Shared/_PartialLayout.cshtml";
+}
+
+<div class="raceinfo">
+    <img src="~/images/SRL.png" height="50px">
+    <H1>
+        F1 @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Year) Season @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Number),
+        Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber) - @Html.DisplayFor(raceItem => Model.First().Race1.RaceName)
+    </H1>
+    @{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+    }
+    <h2>@Html.DisplayFor(raceItem => parameterValue)</h2>
+    <h2>@Html.DisplayFor(raceItem => Model.First().Race1.Track1.Name), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.City), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.Country)</h2>
+</div>
+
+<div class="row">
+    <div class="column">
+        <div class="racewinner">
+            <h2 class="racewinner">POLE POSITION</h2>
+        </div>
+        <h2 class="racewin">
+            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Driver1.Name) -
+            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Time)
+        </h2>
+        <div class="racewinner">
+            <h3 class="racewinner">FASTEST LAP</h3>
+        </div>
+        <h3 class="racewin">
+            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().Driver1.Name) -
+            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().BestLap)
+        </h3>
+    </div>
+    <div class="column">
+        <div class="racewinner">
+            <h2 class="racewinner">RACE WINNER</h2>
+        </div>
+        <h2 class="racewin">
+            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.FinalPosition == 1).First().Driver1.Name)
+        </h2>
+        <div class="racewinner">
+            <h3 class="racewinner">DRIVER OF THE DAY</h3>
+        </div>
+        <h3 class="racewin">@Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasDriverOfTheDay).FirstOrDefault().Driver1.Name)</h3>
+    </div>
+</div>

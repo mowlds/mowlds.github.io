@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SRLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ForumName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="PSNName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="DriverNumber" Type="Int32" />
+    <Property Name="Colour" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Bio" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DriverQuote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DriverImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DriverTeam" Relationship="Self.Driver_to_DriverTeam" FromRole="Driver" ToRole="DriverTeam" />
+    <NavigationProperty Name="DriverResult" Relationship="Self.FK_Driver_DriverResult" FromRole="Driver" ToRole="DriverResult" />
+    <NavigationProperty Name="RaceLaps" Relationship="Self.Lead_Driver_to_RaceLaps" FromRole="Driver" ToRole="RaceLaps" />
+  </EntityType>
+  <EntityType Name="DriverResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Driver" Type="Int32" Nullable="false" />
+    <Property Name="Race" Type="Int32" Nullable="false" />
+    <Property Name="SessionType" Type="Int32" Nullable="false" />
+    <Property Name="FinalPosition" Type="Int32" Nullable="false" />
+    <Property Name="RacePoints" Type="Int32" />
+    <Property Name="Time" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Delta" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="BestLap" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="HasGridPenalty" Type="Boolean" Nullable="false" />
+    <Property Name="GridPenaltyDrop" Type="Int32" />
+    <Property Name="HasTimePenalty" Type="Boolean" Nullable="false" />
+    <Property Name="TimePenaltyDuration" Type="Int32" />
+    <Property Name="HasFastestLap" Type="Boolean" Nullable="false" />
+    <Property Name="HasDriverOfTheDay" Type="Boolean" Nullable="false" />
+    <Property Name="HasDNF" Type="Boolean" Nullable="false" />
+    <Property Name="IsClassified" Type="Boolean" Nullable="false" />
+    <Property Name="HasDSQ" Type="Boolean" Nullable="false" />
+    <Property Name="HasGridBan" Type="Boolean" Nullable="false" />
+    <Property Name="Tyre1" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Tyre2" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Tyre3" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Tyre4" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Tyre5" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Tyre6" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Tyre7" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="Tyre8" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Driver1" Relationship="Self.FK_Driver_DriverResult" FromRole="DriverResult" ToRole="Driver" />
+    <NavigationProperty Name="Race1" Relationship="Self.FK_Race_DriverResult" FromRole="DriverResult" ToRole="Race" />
+    <NavigationProperty Name="Session" Relationship="Self.FK_SessionType_DriverResult" FromRole="DriverResult" ToRole="Session" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Event1" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="RaceLaps" Relationship="Self.Event_to_RaceLaps" FromRole="Event" ToRole="RaceLaps" />
+  </EntityType>
+  <EntityType Name="Race">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Season" Type="Int32" Nullable="false" />
+    <Property Name="Track" Type="Int32" Nullable="false" />
+    <Property Name="RaceNumber" Type="Int32" Nullable="false" />
+    <Property Name="RaceName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="RaceDate" Type="DateTime" Precision="0" />
+    <Property Name="Laps" Type="Int32" />
+    <NavigationProperty Name="DriverResult" Relationship="Self.FK_Race_DriverResult" FromRole="Race" ToRole="DriverResult" />
+    <NavigationProperty Name="RaceLaps" Relationship="Self.Race_to_Racelaps" FromRole="Race" ToRole="RaceLaps" />
+    <NavigationProperty Name="Season1" Relationship="Self.Race_To_Season" FromRole="Race" ToRole="Season" />
+    <NavigationProperty Name="Track1" Relationship="Self.Race_to_Track" FromRole="Race" ToRole="Track" />
+  </EntityType>
+  <EntityType Name="RaceLaps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Race" Type="Int32" />
+    <Property Name="SessionType" Type="Int32" />
+    <Property Name="Lap" Type="Int32" Nullable="false" />
+    <Property Name="EventType" Type="Int32" />
+    <Property Name="LeadDriver" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Driver" Relationship="Self.Lead_Driver_to_RaceLaps" FromRole="RaceLaps" ToRole="Driver" />
+    <NavigationProperty Name="Event" Relationship="Self.Event_to_RaceLaps" FromRole="RaceLaps" ToRole="Event" />
+    <NavigationProperty Name="Race1" Relationship="Self.Race_to_Racelaps" FromRole="RaceLaps" ToRole="Race" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="GameVersion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="isrealperformance" Type="Boolean" Nullable="false" />
+    <Property Name="isoneshotqualy" Type="Boolean" />
+    <Property Name="isrealteams" Type="Boolean" />
+    <NavigationProperty Name="Race" Relationship="Self.Race_To_Season" FromRole="Season" ToRole="Race" />
+    <NavigationProperty Name="DriverTeam" Relationship="Self.Season_To_DriverTeam" FromRole="Season" ToRole="DriverTeam" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="SessionType" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DriverResult" Relationship="Self.FK_SessionType_DriverResult" FromRole="Session" ToRole="DriverResult" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TeamLogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DriverTeam" Relationship="Self.Team_To_DriverTeam" FromRole="Team" ToRole="DriverTeam" />
+  </EntityType>
+  <EntityType Name="Track">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="CodiesID" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Abbreviation" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="HeadsgoneRating" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Background" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TrackMap" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Race" Relationship="Self.Race_to_Track" FromRole="Track" ToRole="Race" />
+  </EntityType>
+  <EntityType Name="DriverTeam">
+    <Key>
+      <PropertyRef Name="Driver" />
+      <PropertyRef Name="Season" />
+    </Key>
+    <Property Name="Driver" Type="Int32" Nullable="false" />
+    <Property Name="Team" Type="Int32" />
+    <Property Name="Season" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Driver1" Relationship="Self.Driver_to_DriverTeam" FromRole="DriverTeam" ToRole="Driver" />
+    <NavigationProperty Name="Season1" Relationship="Self.Season_To_DriverTeam" FromRole="DriverTeam" ToRole="Season" />
+    <NavigationProperty Name="Team1" Relationship="Self.Team_To_DriverTeam" FromRole="DriverTeam" ToRole="Team" />
+  </EntityType>
+  <Association Name="Driver_to_DriverTeam">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+    <End Role="DriverTeam" Type="Self.DriverTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverTeam">
+        <PropertyRef Name="Driver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Driver_DriverResult">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+    <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverResult">
+        <PropertyRef Name="Driver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Lead_Driver_to_RaceLaps">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+    <End Role="RaceLaps" Type="Self.RaceLaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaceLaps">
+        <PropertyRef Name="LeadDriver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Race_DriverResult">
+    <End Role="Race" Type="Self.Race" Multiplicity="1" />
+    <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Race">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverResult">
+        <PropertyRef Name="Race" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionType_DriverResult">
+    <End Role="Session" Type="Self.Session" Multiplicity="1" />
+    <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverResult">
+        <PropertyRef Name="SessionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Event_to_RaceLaps">
+    <End Role="Event" Type="Self.Event" Multiplicity="0..1" />
+    <End Role="RaceLaps" Type="Self.RaceLaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaceLaps">
+        <PropertyRef Name="EventType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Race_to_Racelaps">
+    <End Role="Race" Type="Self.Race" Multiplicity="0..1" />
+    <End Role="RaceLaps" Type="Self.RaceLaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Race">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaceLaps">
+        <PropertyRef Name="Race" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Race_To_Season">
+    <End Role="Season" Type="Self.Season" Multiplicity="1" />
+    <End Role="Race" Type="Self.Race" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Race">
+        <PropertyRef Name="Season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Race_to_Track">
+    <End Role="Track" Type="Self.Track" Multiplicity="1" />
+    <End Role="Race" Type="Self.Race" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Track">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Race">
+        <PropertyRef Name="Track" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Season_To_DriverTeam">
+    <End Role="Season" Type="Self.Season" Multiplicity="1" />
+    <End Role="DriverTeam" Type="Self.DriverTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverTeam">
+        <PropertyRef Name="Season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Team_To_DriverTeam">
+    <End Role="Team" Type="Self.Team" Multiplicity="0..1" />
+    <End Role="DriverTeam" Type="Self.DriverTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverTeam">
+        <PropertyRef Name="Team" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SRLContext1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Driver" EntityType="Self.Driver" />
+    <EntitySet Name="DriverResult" EntityType="Self.DriverResult" />
+    <EntitySet Name="Event" EntityType="Self.Event" />
+    <EntitySet Name="Race" EntityType="Self.Race" />
+    <EntitySet Name="RaceLaps" EntityType="Self.RaceLaps" />
+    <EntitySet Name="Season" EntityType="Self.Season" />
+    <EntitySet Name="Session" EntityType="Self.Session" />
+    <EntitySet Name="Team" EntityType="Self.Team" />
+    <EntitySet Name="Track" EntityType="Self.Track" />
+    <EntitySet Name="DriverTeam" EntityType="Self.DriverTeam" />
+    <AssociationSet Name="Driver_to_DriverTeam" Association="Self.Driver_to_DriverTeam">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="DriverTeam" EntitySet="DriverTeam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Driver_DriverResult" Association="Self.FK_Driver_DriverResult">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="DriverResult" EntitySet="DriverResult" />
+    </AssociationSet>
+    <AssociationSet Name="Lead_Driver_to_RaceLaps" Association="Self.Lead_Driver_to_RaceLaps">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="RaceLaps" EntitySet="RaceLaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Race_DriverResult" Association="Self.FK_Race_DriverResult">
+      <End Role="Race" EntitySet="Race" />
+      <End Role="DriverResult" EntitySet="DriverResult" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionType_DriverResult" Association="Self.FK_SessionType_DriverResult">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="DriverResult" EntitySet="DriverResult" />
+    </AssociationSet>
+    <AssociationSet Name="Event_to_RaceLaps" Association="Self.Event_to_RaceLaps">
+      <End Role="Event" EntitySet="Event" />
+      <End Role="RaceLaps" EntitySet="RaceLaps" />
+    </AssociationSet>
+    <AssociationSet Name="Race_to_Racelaps" Association="Self.Race_to_Racelaps">
+      <End Role="Race" EntitySet="Race" />
+      <End Role="RaceLaps" EntitySet="RaceLaps" />
+    </AssociationSet>
+    <AssociationSet Name="Race_To_Season" Association="Self.Race_To_Season">
+      <End Role="Season" EntitySet="Season" />
+      <End Role="Race" EntitySet="Race" />
+    </AssociationSet>
+    <AssociationSet Name="Race_to_Track" Association="Self.Race_to_Track">
+      <End Role="Track" EntitySet="Track" />
+      <End Role="Race" EntitySet="Race" />
+    </AssociationSet>
+    <AssociationSet Name="Season_To_DriverTeam" Association="Self.Season_To_DriverTeam">
+      <End Role="Season" EntitySet="Season" />
+      <End Role="DriverTeam" EntitySet="DriverTeam" />
+    </AssociationSet>
+    <AssociationSet Name="Team_To_DriverTeam" Association="Self.Team_To_DriverTeam">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="DriverTeam" EntitySet="DriverTeam" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

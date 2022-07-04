@@ -1,0 +1,19 @@
+﻿@model IEnumerable < mowlds.github.io.DAL.DriverResult>
+@{
+    ViewData["Title"] = "Race results";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="raceOverview">
+    @* CDB: This loads the overview info from the provided model*@
+    @Html.Partial("RaceOverviewPartial", Model)
+</div>
+<div id="qualyResult">
+    @* CDB: This loads the qualifying result from the provided model *@
+    @Html.Partial("QualyPartial", Model)
+</div>
+<div id="raceResult">
+    @* CDB: This loads the qualifying result from the provided model *@
+    @Html.Partial("RacePartial", Model)
+</div>

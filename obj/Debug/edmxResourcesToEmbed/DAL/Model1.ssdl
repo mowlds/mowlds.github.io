@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SRLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="ForumName" Type="nchar" MaxLength="30" />
+    <Property Name="PSNName" Type="nchar" MaxLength="30" />
+    <Property Name="DriverNumber" Type="int" />
+    <Property Name="Colour" Type="nchar" MaxLength="30" />
+    <Property Name="Bio" Type="text" />
+    <Property Name="DriverQuote" Type="text" />
+    <Property Name="DriverImage" Type="text" />
+  </EntityType>
+  <EntityType Name="DriverResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Driver" Type="int" />
+    <Property Name="Race" Type="int" />
+    <Property Name="SessionType" Type="int" />
+    <Property Name="ProvisionalPosition" Type="nchar" MaxLength="10" />
+    <Property Name="FinalPosition" Type="nchar" MaxLength="10" />
+    <Property Name="RacePoints" Type="int" />
+    <Property Name="Time" Type="nchar" MaxLength="10" />
+    <Property Name="Delta" Type="nchar" MaxLength="10" />
+    <Property Name="BestLap" Type="nchar" MaxLength="10" />
+    <Property Name="HasGridPenalty" Type="bit" />
+    <Property Name="GridPenaltyDrop" Type="nchar" MaxLength="10" />
+    <Property Name="HasTimePenalty" Type="bit" />
+    <Property Name="TimePenaltyDuration" Type="nchar" MaxLength="10" />
+    <Property Name="HasFastestLap" Type="bit" />
+    <Property Name="HasDriverOfTheDay" Type="bit" />
+    <Property Name="HasDNF" Type="bit" />
+    <Property Name="IsClassified" Type="bit" />
+    <Property Name="HasDSQ" Type="bit" />
+    <Property Name="HasGridBan" Type="bit" />
+    <Property Name="Tyre1" Type="nchar" MaxLength="10" />
+    <Property Name="Tyre2" Type="nchar" MaxLength="10" />
+    <Property Name="Tyre3" Type="nchar" MaxLength="10" />
+    <Property Name="Tyre4" Type="nchar" MaxLength="10" />
+    <Property Name="Tyre5" Type="nchar" MaxLength="10" />
+    <Property Name="Tyre6" Type="nchar" MaxLength="10" />
+    <Property Name="Tyre7" Type="nchar" MaxLength="10" />
+    <Property Name="Tyre8" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DriverTeam">
+    <Key>
+      <PropertyRef Name="Driver" />
+      <PropertyRef Name="Season" />
+    </Key>
+    <Property Name="Driver" Type="int" Nullable="false" />
+    <Property Name="Team" Type="int" />
+    <Property Name="Season" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Event" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PositionPoints">
+          <Property Name="Position" Type="int" />
+          <Property Name="Points" Type="int" />
+          <Property Name="SessionType" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Race">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Season" Type="int" Nullable="false" />
+    <Property Name="Track" Type="int" Nullable="false" />
+    <Property Name="RaceNumber" Type="int" Nullable="false" />
+    <Property Name="RaceName" Type="nchar" MaxLength="50" />
+    <Property Name="RaceDate" Type="date" />
+    <Property Name="Laps" Type="int" />
+  </EntityType>
+  <EntityType Name="RaceLaps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Race" Type="int" />
+    <Property Name="SessionType" Type="int" />
+    <Property Name="Lap" Type="int" Nullable="false" />
+    <Property Name="EventType" Type="int" />
+    <Property Name="LeadDriver" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="GameVersion" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="isrealperformance" Type="bit" Nullable="false" />
+    <Property Name="isoneshotqualy" Type="bit" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SessionType" Type="nchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="30" />
+    <Property Name="About" Type="text" />
+    <Property Name="TeamLogo" Type="text" />
+  </EntityType>
+  <EntityType Name="Track">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="50" />
+    <Property Name="Country" Type="nchar" MaxLength="50" />
+    <Property Name="City" Type="nchar" MaxLength="50" />
+    <Property Name="CodiesID" Type="nchar" MaxLength="50" />
+    <Property Name="Abbreviation" Type="nchar" MaxLength="3" />
+    <Property Name="HeadsgoneRating" Type="nchar" MaxLength="10" />
+    <Property Name="About" Type="text" />
+    <Property Name="Background" Type="text" />
+    <Property Name="TrackMap" Type="text" />
+    <Property Name="Flag" Type="text" />
+  </EntityType>
+  <Association Name="Driver Result to Driver">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="0..1" />
+    <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverResult">
+        <PropertyRef Name="Driver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Driver to DriverTeam">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+    <End Role="DriverTeam" Type="Self.DriverTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverTeam">
+        <PropertyRef Name="Driver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Event to RaceLaps">
+    <End Role="Event" Type="Self.Event" Multiplicity="0..1" />
+    <End Role="RaceLaps" Type="Self.RaceLaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaceLaps">
+        <PropertyRef Name="EventType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_PositionPoints_SessionType" />-->
+  <Association Name="Lead Driver to RaceLaps">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="1" />
+    <End Role="RaceLaps" Type="Self.RaceLaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaceLaps">
+        <PropertyRef Name="LeadDriver" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Race to Driver Result">
+    <End Role="Race" Type="Self.Race" Multiplicity="0..1" />
+    <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Race">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverResult">
+        <PropertyRef Name="Race" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Race to Racelaps">
+    <End Role="Race" Type="Self.Race" Multiplicity="0..1" />
+    <End Role="RaceLaps" Type="Self.RaceLaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Race">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RaceLaps">
+        <PropertyRef Name="Race" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Race To Season">
+    <End Role="Season" Type="Self.Season" Multiplicity="1" />
+    <End Role="Race" Type="Self.Race" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Race">
+        <PropertyRef Name="Season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Race to Track">
+    <End Role="Track" Type="Self.Track" Multiplicity="1" />
+    <End Role="Race" Type="Self.Race" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Track">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Race">
+        <PropertyRef Name="Track" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Season To DriverTeam">
+    <End Role="Season" Type="Self.Season" Multiplicity="1" />
+    <End Role="DriverTeam" Type="Self.DriverTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverTeam">
+        <PropertyRef Name="Season" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Session TO Driver Result">
+    <End Role="Session" Type="Self.Session" Multiplicity="0..1" />
+    <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverResult">
+        <PropertyRef Name="SessionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Team To DriverTeam">
+    <End Role="Team" Type="Self.Team" Multiplicity="0..1" />
+    <End Role="DriverTeam" Type="Self.DriverTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DriverTeam">
+        <PropertyRef Name="Team" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SRLModelStoreContainer">
+    <EntitySet Name="Driver" EntityType="Self.Driver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DriverResult" EntityType="Self.DriverResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Race" EntityType="Self.Race" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RaceLaps" EntityType="Self.RaceLaps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Season" EntityType="Self.Season" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Session" EntityType="Self.Session" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Track" EntityType="Self.Track" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DriverTeam" EntityType="Self.DriverTeam" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DriverTeam].[Driver] AS [Driver], 
+    [DriverTeam].[Team] AS [Team], 
+    [DriverTeam].[Season] AS [Season]
+    FROM [dbo].[DriverTeam] AS [DriverTeam]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="Driver Result to Driver" Association="Self.Driver Result to Driver">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="DriverResult" EntitySet="DriverResult" />
+    </AssociationSet>
+    <AssociationSet Name="Driver to DriverTeam" Association="Self.Driver to DriverTeam">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="DriverTeam" EntitySet="DriverTeam" />
+    </AssociationSet>
+    <AssociationSet Name="Event to RaceLaps" Association="Self.Event to RaceLaps">
+      <End Role="Event" EntitySet="Event" />
+      <End Role="RaceLaps" EntitySet="RaceLaps" />
+    </AssociationSet>
+    <AssociationSet Name="Lead Driver to RaceLaps" Association="Self.Lead Driver to RaceLaps">
+      <End Role="Driver" EntitySet="Driver" />
+      <End Role="RaceLaps" EntitySet="RaceLaps" />
+    </AssociationSet>
+    <AssociationSet Name="Race to Driver Result" Association="Self.Race to Driver Result">
+      <End Role="Race" EntitySet="Race" />
+      <End Role="DriverResult" EntitySet="DriverResult" />
+    </AssociationSet>
+    <AssociationSet Name="Race to Racelaps" Association="Self.Race to Racelaps">
+      <End Role="Race" EntitySet="Race" />
+      <End Role="RaceLaps" EntitySet="RaceLaps" />
+    </AssociationSet>
+    <AssociationSet Name="Race To Season" Association="Self.Race To Season">
+      <End Role="Season" EntitySet="Season" />
+      <End Role="Race" EntitySet="Race" />
+    </AssociationSet>
+    <AssociationSet Name="Race to Track" Association="Self.Race to Track">
+      <End Role="Track" EntitySet="Track" />
+      <End Role="Race" EntitySet="Race" />
+    </AssociationSet>
+    <AssociationSet Name="Season To DriverTeam" Association="Self.Season To DriverTeam">
+      <End Role="Season" EntitySet="Season" />
+      <End Role="DriverTeam" EntitySet="DriverTeam" />
+    </AssociationSet>
+    <AssociationSet Name="Session TO Driver Result" Association="Self.Session TO Driver Result">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="DriverResult" EntitySet="DriverResult" />
+    </AssociationSet>
+    <AssociationSet Name="Team To DriverTeam" Association="Self.Team To DriverTeam">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="DriverTeam" EntitySet="DriverTeam" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

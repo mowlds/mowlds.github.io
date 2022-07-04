@@ -4,6 +4,10 @@
    * {
     font-family: 'exo';
 }
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/srlhq.jpg');
+    color: white;
+}
 
 a:hover{
   color: rgb(12, 22, 13);;
@@ -960,7 +964,71 @@ text-decoration: underline rgb(43, 75, 52) 4px;
     }
   }
 
+table#nolayout {
+    table-layout: fixed;
+    max-width: 80%;
+    min-width: 60%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+}
 
+    table#nolayout th {
+        border-bottom: 2px rgb(255, 255, 255) solid;
+        background-color: rgb(15, 26, 18);
+        ;
+        padding: 10px;
+        width: max-content
+    }
+
+    table#nolayout td {
+        background-color: inherit;
+        padding-right: 10px;
+        padding-left: 10px;
+        height: 30px;
+        width: max-content;
+        vertical-align: middle;
+    }
+
+
+.result-driver-tyres {
+    width: 20px;
+    height: 20px;
+    padding-right: 2px;
+}
+
+    .result-driver-tyres div {
+        width: 20px;
+        height: 20px;
+        padding-top: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: 5px;
+    }
+
+.result-driver-tyres-S {
+    background-image: url('../images/s.png')
+}
+
+.result-driver-tyres-M {
+    background-image: url('../images/m.png')
+}
+
+.result-driver-tyres-H {
+    background-image: url('../images/h.png')
+}
+
+.result-driver-tyres-I {
+    background-image: url('~/images/i.png')
+}
+
+.result-driver-tyres-W {
+    background-image: url('../images/w.png')
+}
 
 
 /* ==========================================================================

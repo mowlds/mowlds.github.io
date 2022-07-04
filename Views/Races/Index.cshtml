@@ -1,0 +1,66 @@
+﻿
+@model IEnumerable<mowlds.github.io.DAL.Race>
+
+@{
+    ViewData["Title"] = "RaceOverview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table id="calendar">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RaceNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Track1.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RaceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RaceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Laps)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Season1.GameVersion) - Season @Html.DisplayFor(modelItem => item.Season1.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RaceNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Track1.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RaceName)
+                </td>
+                <td>
+                    @{string racedate = item.RaceDate.Value.ToString("dd-MM-yyyy");
+                    }
+                    @racedate
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Laps)
+                </td>
+                <td>
+                    @{string parameterValue = string.Format("DriverResult?race={0}", item.ID.ToString());
+                    }
+                    <a href=@parameterValue>View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

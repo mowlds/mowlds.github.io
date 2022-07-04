@@ -1,0 +1,57 @@
+﻿@model IEnumerable<mowlds.github.io.DAL.Season>
+
+@{
+    ViewData["Title"] = "Seasons";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table id="calendar">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GameVersion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isrealperformance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isoneshotqualy)
+            </th>
+            <th>
+                # of races
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameVersion) - Season @Html.DisplayFor(modelItem => item.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isrealperformance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isoneshotqualy)
+                </td>
+                <td>
+                    @{string linkvalue = string.Format("Season/season?season={0}", item.ID.ToString());
+                    }
+
+                    @{string parameterValue = item.Race.Count().ToString();
+                    }
+                    <a href=@linkvalue>@parameterValue races</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
