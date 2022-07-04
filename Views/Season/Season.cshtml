@@ -22,7 +22,7 @@
 
     <div class="calendar">
         <table id="calendar">
-            <caption style="font-weight: bolder;">F1 @Html.DisplayFor(seasonItem => Model.First().Year) Season @Html.DisplayFor(seasonItem => Model.First().Number) CALENDAR</caption>
+            <caption style="font-weight: bolder;">F1 @Html.DisplayFor(seasonItem => Model.First().Year) Season @Html.DisplayFor(seasonItem => Model.First().Number) Calendar</caption>
             <thead>
                 <tr>
                     <th></th>
@@ -31,7 +31,7 @@
                     <th>Circuit</th>
                     <th>Grand Prix</th>
                     <th>Date</th>
-                    <th>&nbsp;</th>
+
                     <th>Winner</th>
                     <th>Pole</th>
                     <th>Fastest Lap</th>
@@ -61,9 +61,7 @@
                         }
                         @Html.DisplayFor(modelItem => parameterValue)
                     </td>
-                    <td>
-                        <img class="icongrid" src="~/images/trophy.png">
-                    </td>
+
                     <td>
                         @{string winnername = item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Driver1.Name;
                             string winnerlink = string.Format("DriverResult?race={0}", item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Race.ToString());
