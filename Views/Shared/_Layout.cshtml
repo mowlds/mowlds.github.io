@@ -24,50 +24,57 @@
     <p>
         <h2 style="text-align: center;font-family:'Bayon';">THE SERIOUS RACING LEAGUE</h2>
     </p>
-    <div class="topnav" id="topnav">
-        <a href="/index.html">Home</a>
-        <a href="/Race/2021/S4/overview.html">Current Season</a>
-        <a href="/stewards.html">Stewarding</a>
-        <div class="dropdown">
-            <button class="dropbtn">
-                Wiki
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="/seasons.html">Seasons</a>
-                <a href="/drivers.html">Drivers</a>
-                <a href="#">Races</a>
-                <a href="/teams.html">Teams</a>
-                <a href="/tracks.html">Tracks</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">
-                SRL DatabaseVersion
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="/Season">Seasons</a>
-                <a href="/Races">Races</a>
-            </div>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            &#9776;
-        </a>
-        <div class="topnav-right">
-            <a href="/golf/home.html">Serious Golfing League</a>
-        </div>
-    </div>
-    <script>
-function myFunction() {
-  var x = document.getElementById("topnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+    <!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>Document</title>
+ </head>
+ <body>
+   <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">SRL</div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="/index.html">Home</a></li>
+         <li><a href="/Race/2021/S4/overview.html">Current Season</a></li>
+         <li><a href="/stewards.html">Stewards Corner</a></li>
+         <li class="services">
+           <a href="/">Wiki</a>
+           <!-- DROPDOWN MENU -->
+           <ul class="dropdown">
+             <li><a href="/seasons.html">Seasons</li>
+             <li><a href="/drivers.html">Drivers</a></li>
+             <li><a href="/Races">Races</a></li>
+             <li><a href="/teams.html">Teams</a></li>
+             <li><a href="/tracks.html">Tracks</a></li>
+           </ul>
+         </li>
+         <li class="services">
+           <a href="/">Database</a>
+           <!-- DROPDOWN MENU -->
+           <ul class="dropdown">
+             <li><a href="/Season">Seasons</li>
+             <li><a href="/Races">Races</a></li>
+           </ul>
+         </li>
+         <li class="topnav-right">
+            <li><a href="/golf/home.html">Serious Golfing League</a></li>
+       </div>
+     </ul>
+   </nav>
+ </body>
+</html>
+
+
 </html>
     </header>
 <body>
