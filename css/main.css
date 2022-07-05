@@ -1086,8 +1086,7 @@ table#nolayout {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  background-color: teal;
+  background-color: rgb(1, 39, 3);
   color: #fff;
  }
  .nav-links a {
