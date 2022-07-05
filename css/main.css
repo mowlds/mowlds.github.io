@@ -694,6 +694,10 @@ table#list tr:nth-child(even) {
                 overflow-x: auto;
             
             }
+            .overflow
+            {
+              overflow-x: auto;
+            }
 
             .racewinner {
               
