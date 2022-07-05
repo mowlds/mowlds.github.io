@@ -1113,7 +1113,7 @@ table#nolayout {
  .services {
   position: relative; 
  }
- .dropdown {
+ .dropdownnew {
   background-color: rgb(1, 139, 139);
   padding: 1em 0;
   position: absolute; /*WITH RESPECT TO PARENT*/
@@ -1121,10 +1121,10 @@ table#nolayout {
   border-radius: 8px;
   top: 35px;
  }
- .dropdown li + li {
+ .dropdownnew li + li {
   margin-top: 10px;
  }
- .dropdown li {
+ .dropdownnew li {
   padding: 0.5em 1em;
   width: 8em;
   text-align: center;
@@ -1132,7 +1132,7 @@ table#nolayout {
  .dropdown li:hover {
   background-color: #4c9e9e;
  }
- .services:hover .dropdown {
+ .services:hover .dropdownnew {
   display: block;
  }
 .navlink{
@@ -1174,12 +1174,12 @@ input[type=checkbox]{
  .hamburger {
   display: block;
  }
- .dropdown {
+ .dropdownnew {
   left: 50%;
   top: 30px;
   transform: translateX(35%);
  }
- .dropdown li:hover {
+ .dropdownnew li:hover {
   background-color: #4c9e9e;
  }
  }
