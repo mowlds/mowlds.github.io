@@ -1100,6 +1100,7 @@ table#nolayout {
  .menu {
   display: flex;
   gap: 1em;
+  margin:-15px
  }
  .menu li:hover {
   background-color: #4c9e9e;
@@ -1107,7 +1108,7 @@ table#nolayout {
   transition: 0.3s ease;
  }
  .menu li {
-  padding: 5px 14px;
+  padding: 20px;
  }
  /* DROPDOWN MENU */
  .services {
