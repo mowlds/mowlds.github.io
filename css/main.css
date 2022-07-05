@@ -251,10 +251,7 @@ ul.wikilist > li{
 
 
 li{
-  display: inline;
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid grey;
+  list-style: none;
 }
 
 .driverrecords{
@@ -1140,7 +1137,9 @@ table#nolayout {
  .services:hover .dropdown {
   display: block;
  }
-
+.navlink{
+  text-decoration: none;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
