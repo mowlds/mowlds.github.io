@@ -969,6 +969,7 @@ table#list tr:nth-child(even) {
     .topnav a.icon {
       float: right;
       display: block;
+      padding-bottom: 32px;
       
     }
     table.driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
