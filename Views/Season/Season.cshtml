@@ -27,8 +27,8 @@
                 <tr>
                     <th></th>
                     <th>&nbsp;</th>
-                    <th>Country</th>
-                    <th>Circuit</th>
+                    <th class="collapse">Country</th>
+                    <th class="collapse">Circuit</th>
                     <th>Grand Prix</th>
                     <th>Date</th>
 
@@ -47,10 +47,10 @@
                     <td>
                         <img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)">
                     </td>
-                    <td>
+                    <td class="collapse">
                         @Html.DisplayFor(modelItem => item.Track1.Country)
                     </td>
-                    <td>
+                    <td class="collapse">
                         @Html.DisplayFor(modelItem => item.Track1.Name)
                     </td>
                     <td>
