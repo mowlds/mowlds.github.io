@@ -954,16 +954,14 @@ table#list tr:nth-child(even) {
     .supergrid{font-size: 6pt;}
     table#supergrid td {font-size: 6pt;}
     table#supergrid th {font-size: 7pt;}
-    table#supergrid caption {font-size: 8pt;}
     table#calendar td {font-size: 6pt;}
     table#calendar th {font-size: 7pt;}
-    table#calendar caption {font-size: 8pt;}
     table#list td {font-size: 6pt;}
     table#list th {font-size: 7pt;}
-    table#list caption {font-size: 8pt;}
     table#raceresults td {font-size: 6pt;}
     table#raceresults th {font-size: 7pt;}
-    table#raceresults caption {font-size: 8pt;}
+    .collapse {display: none;}
+
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .topnav a:not(:first-child) {display: none;}

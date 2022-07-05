@@ -17,17 +17,19 @@
             <th>
                 Race
             </th>
-            <th></th>
+            <th>
+
+            </th>
             <th>
                 Track
             </th>
-            <th>
+            <th class="collapse">
                 Grand Prix
             </th>
             <th>
                 Date
             </th>
-            <th>
+            <th class="collapse">
                 @Html.DisplayNameFor(model => model.Laps)
             </th>
             <th></th>
@@ -46,13 +48,13 @@
                 <td>
                         <img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)">
                     </td>
-                <td>
+                <td class="collapse">
                     @Html.DisplayFor(modelItem => item.Track1.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.RaceName)
                 </td>
-                <td>
+                <td class="collapse">
                     @{string racedate = item.RaceDate.Value.ToString("dd-MM-yyyy");
                     }
                     @racedate
