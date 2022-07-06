@@ -2624,7 +2624,7 @@ input[type="checkbox"] {
   line-height: normal;
 }
 input[type="radio"][disabled],
-input[type="checkbox"][disabled]{}
+input[type="checkbox"][disabled]
 {
   color: white;
 }
