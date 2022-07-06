@@ -26,7 +26,7 @@ namespace mowlds.github.io.DAL
         public int Number { get; set; }
         public string GameVersion { get; set; }
         public bool isrealperformance { get; set; }
-        public bool isoneshotqualy { get; set; }
+        public Nullable<bool> isoneshotqualy { get; set; }
         public Nullable<bool> isrealteams { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
