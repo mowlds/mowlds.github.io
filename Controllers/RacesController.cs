@@ -28,7 +28,7 @@ namespace mowlds.github.io.Controllers
             var sRLContext = _context.Race.
                   Include("Season1").
                   Include("Track1").
-                OrderByDescending(r => r.Season1.GameVersion).ThenByDescending(r => r.Season1.Number).ThenBy(r => r.RaceNumber);
+                OrderByDescending(r => r.Season1.GameVersion).ThenByDescending(r => r.Season1.Number).ThenByDescending(r => r.RaceNumber);
             return View(sRLContext);
         }
     }
