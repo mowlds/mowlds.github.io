@@ -54,12 +54,12 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.RaceName)
                 </td>
-                <td class="collapse">
+                <td>
                     @{string racedate = item.RaceDate.Value.ToString("dd-MM-yyyy");
                     }
                     @racedate
                 </td>
-                <td>
+                <td class="collapse">
                     @Html.DisplayFor(modelItem => item.Laps)
                 </td>
                 <td>
