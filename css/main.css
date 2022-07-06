@@ -1086,8 +1086,9 @@ table#nolayout {
 .result-driver-tyres-W {
     background-image: url('../images/w.png')
 }
-input[type="checkbox"][disabled] {
+.check-box{
   color: white;
+  background-color: white;
 }
 
 /* ==========================================================================
