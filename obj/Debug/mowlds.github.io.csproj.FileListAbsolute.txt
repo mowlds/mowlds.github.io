@@ -72,7 +72,6 @@ D:\Source\mowlds.github.io\bin\System.Web.WebPages.Razor.xml
 D:\Source\mowlds.github.io\bin\Newtonsoft.Json.xml
 D:\Source\mowlds.github.io\bin\Antlr3.Runtime.pdb
 D:\Source\mowlds.github.io\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.AssemblyReference.cache
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.CoreCompileInputs.cache
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.CopyComplete
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.dll
@@ -81,3 +80,4 @@ D:\Source\mowlds.github.io\bin\EntityFramework.dll
 D:\Source\mowlds.github.io\bin\EntityFramework.SqlServer.dll
 D:\Source\mowlds.github.io\bin\EntityFramework.xml
 D:\Source\mowlds.github.io\bin\EntityFramework.SqlServer.xml
+D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.AssemblyReference.cache

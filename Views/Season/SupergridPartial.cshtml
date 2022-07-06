@@ -1,0 +1,86 @@
+﻿
+@model IEnumerable<mowlds.github.io.Models.SupergridViewModel>
+
+<div class="supergrid">
+    <table id="supergrid" class="drivergrid">
+        <colgroup>
+            <col span="3">
+            <col span="1" class="points">
+            <col span="1" class="diff">
+            <col span="20" class="races">
+        </colgroup>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            @foreach (var item in Model.First().races.OrderBy(r => r.RaceNumber))
+            {
+                <th scope="col"><img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)"></th>
+            }
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Driver</td>
+            <td>Team</td>
+            <td>Points</td>
+            <td>Diff</td>
+            @foreach (var item in Model.First().races.OrderBy(r => r.RaceNumber))
+            {
+                <td>@Html.DisplayFor(modelItem => item.Track1.Abbreviation)</td>
+            }
+        </tr>
+        @foreach (var supergrid in Model)
+        {
+            if (supergrid.driverResults.Any())
+            { 
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.driver.Name)
+        </td>
+        <td>
+            teamname
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.totalPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.diffPoints)
+        </td>
+        @foreach (var race in supergrid.races.OrderBy(r => r.RaceNumber))
+        {
+            bool hasvalue = false;
+            foreach (var dr in supergrid.driverResults)
+            {
+                if (race.ID == dr.Race)
+                {
+                    string result = dr.FinalPosition.ToString();
+                    if (dr.HasDNF)
+                    {
+                        result = "DNF";
+                    }
+                    if (dr.HasDSQ)
+                    {
+                        result = "DSQ";
+                    }
+
+                    string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap? "fl" : "");
+                    <td><img class="icongrid" src=@postionLink></td>
+                    hasvalue = true;
+                }
+            }
+            if (!hasvalue)
+            {
+                <td>&nbsp;</td>
+            }
+
+        }
+    </tr>
+            }
+        }
+    </table>
+</div>
