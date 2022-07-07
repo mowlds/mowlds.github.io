@@ -59,19 +59,32 @@ namespace mowlds.github.io.Controllers
             var season = _context.Season.Include("DriverTeam").Include("DriverTeam.Team1").Where(s=> s.ID == seasonID);
             var races = _context.Race.Include("Track1").Where(r => r.Season == seasonID).OrderBy(r => r.RaceNumber);
             var superGridContext = new List<SupergridViewModel>();
-            
+       //     var sprints = _context.Race.Include("DriverResult").Where(r => r.DriverResult.Where(dr => dr.SessionType == 4).Any()).Distinct();
+            List<int> sprintAdded = new List<int>();
             foreach (var driver in drivers)
             {
                 var supergrid = new SupergridViewModel();
                 supergrid.driver = driver;
                 supergrid.season = season.First();
                 supergrid.races = races.ToList();
-                supergrid.driverResults = _context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == driver.ID && d.SessionType > 2).ToList();
+                supergrid.driverResults = _context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == driver.ID && d.SessionType == 3).ToList();
+        //        supergrid.driverResults.AddRange(_context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == driver.ID && d.SessionType == 4).ToList());
                 supergrid.totalPoints = supergrid.driverResults.Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
                 supergrid.diffPoints = 0;
-                
+
+                //foreach (var sprintrace in sprints)
+                //{
+                //    if (!sprintAdded.Contains(sprintrace.ID))
+                //    {
+                //        sprintAdded.Add(sprintrace.ID);
+                //        supergrid.races.Add(sprintrace);
+                //    }
+                //}
+                //supergrid.driverResults.OrderBy(dr => dr.Race1.RaceNumber);
+                //supergrid.races.OrderBy(r => r.RaceNumber);
                 superGridContext.Add(supergrid);
             }
+
             return PartialView(superGridContext.OrderByDescending(sg => sg.totalPoints));
         }
 

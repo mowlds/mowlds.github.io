@@ -7,7 +7,8 @@
             <col span="3">
             <col span="1" class="points">
             <col span="1" class="diff">
-            <col span="20" class="races">
+              @{string count = Model.First().races.Count().ToString(); }
+            <col span="@count" class="races">
         </colgroup>
         <tr>
             <th></th>
@@ -34,7 +35,7 @@
         @foreach (var supergrid in Model)
         {
             if (supergrid.driverResults.Any())
-            { 
+            {
     <tr>
         <td>
             &nbsp;
@@ -43,7 +44,10 @@
             @Html.DisplayFor(modelItem => supergrid.driver.Name)
         </td>
         <td>
-            <img class="icongrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
+            @if (supergrid.season.DriverTeam.Any())
+            {
+                <img class="icongrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => supergrid.totalPoints)
