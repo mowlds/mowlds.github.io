@@ -43,7 +43,7 @@
             @Html.DisplayFor(modelItem => supergrid.driver.Name)
         </td>
         <td>
-            teamname
+            <img class="icongrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
         </td>
         <td>
             @Html.DisplayFor(modelItem => supergrid.totalPoints)

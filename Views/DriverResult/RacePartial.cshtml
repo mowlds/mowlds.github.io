@@ -48,7 +48,7 @@
                         @Html.DisplayFor(modelItem => item.Driver1.Name)
                     </td>
                     <td>
-                        Team
+                        <img class="icongrid" src="@Html.DisplayFor(modelitem => item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).First().Team1.TeamLogo)">
                     </td>
                      <td>
                         <div class="result-driver-info">

@@ -32,6 +32,7 @@ namespace mowlds.github.io.Controllers
             var sRLContext = _context.DriverResult.
                   Include("Driver1").
                   Include("Race1").
+                  Include("Race1.Season1").Include("Race1.Season1.DriverTeam").Include("Race1.Season1.DriverTeam.Team1").
                   Include("Session").
                   Where(grandprix => grandprix.Race == race);
             return View(sRLContext);
