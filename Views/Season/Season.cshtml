@@ -64,21 +64,33 @@
                     </td>
 
                     <td>
-                        @{string winnername = item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Driver1.Name;
-                            string winnerlink = string.Format("DriverResult?race={0}", item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Race.ToString());
-
+                        @{string winnername = String.Empty;
+                            string winnerlink = String.Empty;
+                            if (item.DriverResult.Any())
+                            {
+                                winnername = item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Driver1.Name;
+                                winnerlink = string.Format("DriverResult?race={0}", item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Race.ToString());
+                            }
                         }
                         <a href=~/@winnerlink>@winnername</a>
                     </td>
                     <td>
-                        @{string polename = item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 2).FirstOrDefault().Driver1.Name;
-
+                        @{
+                            string polename = String.Empty;
+                            if (item.DriverResult.Any())
+                            {
+                                polename = item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 2).FirstOrDefault().Driver1.Name;
+                            }
                         }
                         @polename
                     </td>
                     <td>
-                        @{string flname = item.DriverResult.Where(d => d.SessionType == 3 && d.HasFastestLap).FirstOrDefault().Driver1.Name;
-
+                        @{
+                            string flname = String.Empty;
+                            if (item.DriverResult.Any())
+                            {
+                                flname = item.DriverResult.Where(d => d.SessionType == 3 && d.HasFastestLap).FirstOrDefault().Driver1.Name;
+                            }
                         }
                         @flname
                     </td>
