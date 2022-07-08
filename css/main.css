@@ -576,8 +576,7 @@ background-color: rgb(59, 59, 56);
   color: black;
 }
 .drivername{
-  margin-left: 10px;
-  margin-right: 10px
+  width:120px
 }
 .diff{
   width: 30px;
