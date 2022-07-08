@@ -48,7 +48,7 @@
         <td>
             @if (supergrid.season.DriverTeam.Any())
             {
-                <img class="icon" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
+                <img class="logogrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
             }
         </td>
         <td>
