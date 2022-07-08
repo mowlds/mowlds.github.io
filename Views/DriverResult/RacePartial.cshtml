@@ -53,7 +53,7 @@
                             var hasTeam = item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).Any();
                             if (hasTeam)
                             {
-                                <img class="icongrid" src="@Html.DisplayFor(modelitem => item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).First().Team1.TeamLogo)">
+                                <img class="logogrid" src="@Html.DisplayFor(modelitem => item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).First().Team1.TeamLogo)">
                             }
                         }
                         </td>
