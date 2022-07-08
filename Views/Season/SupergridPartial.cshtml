@@ -38,54 +38,58 @@
         {
             if (supergrid.driverResults.Any())
             {
-    <tr>
-        <td>
-            &nbsp;
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => supergrid.driver.Name)
-        </td>
-        <td>
-            @if (supergrid.season.DriverTeam.Any())
-            {
-                <img class="logogrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
-            }
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => supergrid.totalPoints)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => supergrid.diffPoints)
-        </td>
-        @foreach (var race in supergrid.races.OrderBy(r => r.RaceNumber))
-        {
-            bool hasvalue = false;
-            foreach (var dr in supergrid.driverResults)
-            {
-                if (race.ID == dr.Race)
-                {
-                    string result = dr.FinalPosition.ToString();
-                    if (dr.HasDNF)
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => supergrid.driver.Name)
+                    </td>
+                    <td>
+                        @if (supergrid.season.DriverTeam.Any())
+                        {
+                            var hasTeam = supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).Any();
+                            if (hasTeam)
+                            {
+                                <img class="logogrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => supergrid.totalPoints)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => supergrid.diffPoints)
+                    </td>
+                    @foreach (var race in supergrid.races.OrderBy(r => r.RaceNumber))
                     {
-                        result = "DNF";
-                    }
-                    if (dr.HasDSQ)
-                    {
-                        result = "DSQ";
-                    }
+                        bool hasvalue = false;
+                        foreach (var dr in supergrid.driverResults)
+                        {
+                            if (race.ID == dr.Race)
+                            {
+                                string result = dr.FinalPosition.ToString();
+                                if (dr.HasDNF)
+                                {
+                                    result = "DNF";
+                                }
+                                if (dr.HasDSQ)
+                                {
+                                    result = "DSQ";
+                                }
 
-                    string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap? "fl" : "");
-                    <td><img class="icongrid" src=@postionLink></td>
-                    hasvalue = true;
-                }
-            }
-            if (!hasvalue)
-            {
-                <td>&nbsp;</td>
-            }
+                                string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap? "fl" : "");
+                                <td><img class="icongrid" src=@postionLink></td>
+                                hasvalue = true;
+                            }
+                        }
+                        if (!hasvalue)
+                        {
+                            <td>&nbsp;</td>
+                        }
 
-        }
-    </tr>
+                    }
+                </tr>
             }
         }
     </table>
