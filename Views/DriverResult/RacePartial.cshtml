@@ -48,8 +48,15 @@
                         @Html.DisplayFor(modelItem => item.Driver1.Name)
                     </td>
                     <td>
-                        <img class="icongrid" src="@Html.DisplayFor(modelitem => item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).First().Team1.TeamLogo)">
-                    </td>
+                        @if (item.Race1.Season1.DriverTeam.Any())
+                        {
+                            var hasTeam = item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).Any();
+                            if (hasTeam)
+                            {
+                                <img class="icongrid" src="@Html.DisplayFor(modelitem => item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).First().Team1.TeamLogo)">
+                            }
+                        }
+                        </td>
                      <td>
                         <div class="result-driver-info">
                             @Html.DisplayFor(modelItem => item.RacePoints)

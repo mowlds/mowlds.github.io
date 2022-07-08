@@ -87,7 +87,7 @@
                     <td>
                         @{
                             string flname = String.Empty;
-                            if (item.DriverResult.Any())
+                            if (item.DriverResult.Any() && item.DriverResult.Where(d => d.SessionType == 3 && d.HasFastestLap).Any())
                             {
                                 flname = item.DriverResult.Where(d => d.SessionType == 3 && d.HasFastestLap).FirstOrDefault().Driver1.Name;
                             }
