@@ -20,7 +20,7 @@
             <th></th>
             @foreach (var item in Model.First().races.OrderBy(r => r.RaceNumber))
             {
-                <th scope="col"><img class="icon" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)"></th>
+                <th scope="col"><img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)"></th>
             }
         </tr>
         <tr>
@@ -48,7 +48,7 @@
         <td>
             @if (supergrid.season.DriverTeam.Any())
             {
-                <img class="icongrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
+                <img class="icon" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
             }
         </td>
         <td>
