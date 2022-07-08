@@ -20,7 +20,7 @@
             <th></th>
             @foreach (var item in Model.First().races.OrderBy(r => r.RaceNumber))
             {
-                <th scope="col"><img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)"></th>
+                <th scope="col"><img class="icon" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)"></th>
             }
         </tr>
         <tr>
