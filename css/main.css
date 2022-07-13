@@ -581,7 +581,9 @@ background-color: rgb(59, 59, 56);
   color: black;
 }
 .drivername{
-  width:120px
+  width:120px;
+background-color:rgba(90, 156, 108, 0.507);
+
 }
 .diff{
   width: 30px;
