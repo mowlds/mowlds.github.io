@@ -869,7 +869,7 @@ table#list tr:nth-child(even) {
         }
 
         table#raceresults td {
-            background-color: rgba(43, 75, 52, 0.5);
+            background-color: rgba(43, 75, 52, 0.75);
             padding-right: 10px;
             padding-left: 10px;
             height: 30px;
@@ -888,7 +888,7 @@ table#list tr:nth-child(even) {
         }
 
         table#raceresults tr:nth-child(even) {
-            background-color: rgba(90, 156, 108, 0.5)
+            background-color: rgba(90, 156, 108, 0.75)
         }
         .column{
           float: left;
