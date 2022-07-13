@@ -674,7 +674,7 @@ table#list tr:nth-child(even) {
             }
             
             table#calendar td {
-                background-color: rgba(43, 75, 52, 0.5);
+                background-color: rgba(43, 75, 52, 0.75);
                 padding-left: 10px;
                 padding-right: 10px;
                 text-align: center;
@@ -693,7 +693,7 @@ table#list tr:nth-child(even) {
             }
             
             table#calendar tr:nth-child(even) {
-                background-color: rgba(90, 156, 108, 0.5)
+                background-color: rgba(149,149,149,0.75)
             }
             .calendar {
                 text-align: center;
