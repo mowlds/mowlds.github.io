@@ -888,7 +888,7 @@ table#list tr:nth-child(even) {
         }
 
         table#raceresults tr:nth-child(even) {
-            background-color: rgba(90, 156, 108, 0.75)
+            background-color: rgba(149,149,149, 0.75)
         }
         .column{
           float: left;
