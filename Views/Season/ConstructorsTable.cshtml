@@ -1,0 +1,31 @@
+﻿@model IEnumerable<mowlds.github.io.Models.ConstructorsModel>
+@using mowlds.github.io.Models;
+@{
+    ViewBag.Title = "Season";
+}
+@if (Model.Any())
+{ 
+<table id="champtable">
+    <caption style="font-weight: bolder ;">THE SAUCERLESS CYLINDRICAL CUP CONSTRUCTORS CHAMPIONSHIP</caption>
+    <tr>
+        <th>Team</th>
+        <th>Driver 1</th>
+        <th>Driver 2</th>
+        <th>Points</th>
+        <th>Wins</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        <img class="logogrid" src="@Html.DisplayFor(modelitem => item.team.TeamLogo)">
+    </td>
+    
+    <td>@Html.DisplayFor(modelItem => item.driver1.Name)</td>
+    <td>@Html.DisplayFor(modelItem => item.driver2.Name)</td>
+    <td>@Html.DisplayFor(modelItem => item.totalPoints)</td>
+    <td>@Html.DisplayFor(modelItem => item.totalWins)</td>
+</tr>
+    }
+    </table>
+}

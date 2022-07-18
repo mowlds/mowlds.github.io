@@ -1,0 +1,94 @@
+﻿
+
+@model IEnumerable<mowlds.github.io.Models.SuperGridQualyModel>
+
+<div class="supergrid">
+    <table id="supergrid" class="drivergrid">
+        <colgroup>
+            <col span="1">
+            <col span="1" class="drivername">
+            <col span="1">
+            <col span="1" class="drivername">
+            @{string count = Model.First().races.Count().ToString(); }
+            <col span="@count" class="races">
+        </colgroup>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            @foreach (var item in Model.First().races.OrderBy(r => r.RaceNumber))
+            {
+                <th scope="col"><img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)"></th>
+            }
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Driver</td>
+            <td></td>
+            <td>Avg Position</td>
+            @foreach (var item in Model.First().races.OrderBy(r => r.RaceNumber))
+            {
+                <td>@Html.DisplayFor(modelItem => item.Track1.Abbreviation)</td>
+            }
+        </tr>
+        @foreach (var supergrid in Model)
+        {
+            if (supergrid.driverResults.Any())
+            {
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => supergrid.driver.Name)
+                    </td>
+                    <td>
+                        @if (supergrid.season.DriverTeam.Any())
+                        {
+                            var hasTeam = supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).Any();
+                            if (hasTeam)
+                            {
+                                <img class="logogrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{var avgPosition = supergrid.avgGridPosition.ToString("#.00", System.Globalization.CultureInfo.InvariantCulture);}
+                        @Html.DisplayFor(modelItem => avgPosition )
+                    </td>
+                    @{
+                        foreach (var race in supergrid.races)
+                        {
+                            bool hasvalue = false;
+                                foreach (var dr in supergrid.driverResults)
+                                {
+                                    if (race.ID == dr.Race)
+                                    {
+                                        string result = dr.FinalPosition.ToString();
+                                        if (dr.HasDNF)
+                                        {
+                                            result = "DNF";
+                                        }
+                                        if (dr.HasDSQ)
+                                        {
+                                            result = "DSQ";
+                                        }
+
+                                        string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap ? "fl" : "");
+                                        <td><img class="icongrid" src=@postionLink></td>
+                                        hasvalue = true;
+                                    }
+                                }
+                                if (!hasvalue)
+                                {
+                                    <td>&nbsp;</td>
+                                }
+                            }
+
+                        }
+                </tr>
+            }
+        }
+    </table>
+</div>

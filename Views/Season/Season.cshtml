@@ -99,8 +99,21 @@
         </tbody>
     </table>
 </div>
-<div id="raceOverview">
+<div id="championshipTable">
     @* CDB: This loads the overview info from the provided model*@
     @{Html.RenderAction("SupergridPartial", "Season", new { seasonID = Model.First().ID });
+    }
+</div>
+
+<div id="constructorsTable">
+    @* CDB: This loads the overview info from the provided model*@
+    @{Html.RenderAction("ConstructorsTable", "Season", new { seasonID = Model.First().ID });
+    }
+</div>
+
+
+<div id="superGridTable">
+    @* CDB: This loads the overview info from the provided model*@
+    @{Html.RenderAction("SupergridQualyPartial", "Season", new { seasonID = Model.First().ID });
     }
 </div>
