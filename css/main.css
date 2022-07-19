@@ -515,6 +515,9 @@ table#champtable tr:nth-child(even) {
 .supergrid{
   overflow-x: auto;
 }
+.constructorstable{
+  overflow-x: auto;
+}
 
 table#supergrid {
   max-width: 82%;
