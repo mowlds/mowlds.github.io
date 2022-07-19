@@ -461,6 +461,8 @@ table#champtable {
     margin-right: auto;
     font-weight: bold;
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
 }
 
@@ -515,8 +517,8 @@ table#champtable tr:nth-child(even) {
 
 table#supergrid {
   max-width: 82%;
-  margin-bottom: 10px;
   margin-top: 40px;
+  margin-bottom: 40px;
   font-size: 8pt;
   border-collapse: collapse;
   background-color: rgb(43, 75, 52);
@@ -659,7 +661,8 @@ table#list tr:nth-child(even) {
                 border-collapse: collapse;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: 2pc;
+                margin-top: 40px;
+                margin-bottom: 40px;
                 font-weight: bold;
                 background-color: black;
        
