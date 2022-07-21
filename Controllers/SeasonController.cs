@@ -77,7 +77,7 @@ namespace mowlds.github.io.Controllers
                 supergrid.season = season.First();
                 supergrid.races = races.OrderBy(r => r.RaceNumber).ToList();
                 supergrid.driverResults = _context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == driver.ID && d.SessionType == 3).ToList();
-                supergrid.totalPoints = supergrid.driverResults.Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
+                supergrid.totalPoints = 0;
                 supergrid.diffPoints = 0;
                 supergrid.races = supergrid.races;
                 supergrid.driverResults = supergrid.driverResults.OrderBy(dr => dr.Race1.RaceNumber).ThenByDescending(dr => dr.SessionType).ToList();
@@ -92,6 +92,7 @@ namespace mowlds.github.io.Controllers
             {
                 supergrid.driverResults.AddRange(sprints.Where(s => s.Driver == supergrid.driver.ID));
                 supergrid.driverResults = supergrid.driverResults.OrderBy(dr => dr.Race1.RaceNumber).ThenByDescending(dr => dr.SessionType).ToList();
+                supergrid.totalPoints = supergrid.driverResults.Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
                 supergrid.diffPoints = supergrid.totalPoints- maxpoints;   
             }
             return PartialView(superGridContext.OrderByDescending(sg => sg.totalPoints));
