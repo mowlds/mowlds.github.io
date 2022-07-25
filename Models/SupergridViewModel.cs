@@ -15,6 +15,8 @@ namespace mowlds.github.io.Models
         public Driver driver { get; set; }
         public int totalPoints { get; set; }
         public int diffPoints { get; set; }
+        
+         public int highestPosition { get; set; }
        
     }
 }

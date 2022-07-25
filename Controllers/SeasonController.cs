@@ -82,6 +82,14 @@ namespace mowlds.github.io.Controllers
                 supergrid.driverResults.AddRange(sprints.Where(s => s.Driver == supergrid.driver.ID));
                 supergrid.driverResults = supergrid.driverResults.OrderBy(dr => dr.Race1.RaceNumber).ThenByDescending(dr => dr.SessionType).ToList();
                 supergrid.totalPoints = supergrid.driverResults.Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
+                if (supergrid.driverResults.Any())
+                { 
+                    supergrid.highestPosition = supergrid.driverResults.Min(dr => dr.FinalPosition);
+                }
+                else
+                {
+                    supergrid.highestPosition = 999;
+                }
                 superGridContext.Add(supergrid);
                 if (supergrid.totalPoints > maxpoints)
                 {
@@ -93,7 +101,7 @@ namespace mowlds.github.io.Controllers
             {
                 supergrid.diffPoints = supergrid.totalPoints- maxpoints;   
             }
-            return PartialView(superGridContext.OrderByDescending(sg => sg.totalPoints));
+            return PartialView(superGridContext.OrderByDescending(sg => sg.totalPoints).ThenBy(sg => sg.highestPosition));
         }
 
         [Route("SupergridQualyPartial")]
@@ -140,15 +148,25 @@ namespace mowlds.github.io.Controllers
                 {
                     var constructor = new ConstructorsModel();
                     constructor.driver1 = season.First().DriverTeam.Where(dt => dt.Team == team.ID).FirstOrDefault().Driver1;
-                    constructor.driver2 = season.First().DriverTeam.Where(dt => dt.Team == team.ID).LastOrDefault().Driver1;
+                    if (season.First().DriverTeam.Where(dt => dt.Team == team.ID).Count() > 1)
+                    { 
+                        constructor.driver2 = season.First().DriverTeam.Where(dt => dt.Team == team.ID).LastOrDefault().Driver1;
+                    }
+                    
                     constructor.team = team;
                     //race wins only, so get all race results first.
                     var driverResult = _context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == constructor.driver1.ID && d.SessionType ==3).ToList();
-                    driverResult.AddRange(_context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == constructor.driver2.ID && d.SessionType == 3).ToList());
+                    if (constructor.driver2 != null)
+                    {     
+                        driverResult.AddRange(_context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == constructor.driver2.ID && d.SessionType == 3).ToList());
+                    }
                     var totalWins = driverResult.Count(dr => dr.FinalPosition == 1);
                     //merge in sprint results to get total points.
                     driverResult.AddRange(_context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == constructor.driver1.ID && d.SessionType == 4).ToList());
-                    driverResult.AddRange(_context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == constructor.driver2.ID && d.SessionType == 4).ToList());
+                    if (constructor.driver2 != null)
+                    {
+                        driverResult.AddRange(_context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.Driver == constructor.driver2.ID && d.SessionType == 4).ToList());
+                    }
                     var totalPoints = driverResult.Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
 
 

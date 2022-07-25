@@ -23,7 +23,14 @@
     </td>
     
     <td>@Html.DisplayFor(modelItem => item.driver1.Name)</td>
+    @if (item.driver2 != null)
+    { 
     <td>@Html.DisplayFor(modelItem => item.driver2.Name)</td>
+    }
+                    else
+                    {
+                        <td>&nbsp;</td>
+                    }
     <td>@Html.DisplayFor(modelItem => item.totalPoints)</td>
     <td>@Html.DisplayFor(modelItem => item.totalWins)</td>
 </tr>
