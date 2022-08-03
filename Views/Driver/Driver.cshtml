@@ -1,0 +1,80 @@
+﻿@model mowlds.github.io.Models.DriverDisplayModel
+@{
+    ViewBag.Title = "Driver";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Driver</h2>
+
+<div class="row">
+    <div class="column side">
+        <img class="bio" src="@Html.DisplayFor(modelitem => Model.Driver.DriverImage)" height="100px">
+        <div class="biotable">
+            <table id="biotable">
+                <caption style="font-weight: bolder ;">@Html.DisplayFor(driver => Model.Driver.Name)</caption>
+                <tr>
+                    <th>First Race</th>
+                    <td>@Html.DisplayFor(driverItem => Model.FirstRace.Season1.GameVersion) - Season @Html.DisplayFor(driverItem => Model.FirstRace.Season1.Number) Race @Html.DisplayFor(driverItem => Model.FirstRace.RaceNumber) - @Html.DisplayFor(driverItem => Model.FirstRace.RaceName)</td>
+                </tr>
+                <tr>
+                    <th>Races</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.TotalRaces)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Wins</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.Wins)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Pole Positions</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.Poles)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Fastest Laps</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.Fls)
+                    </td>
+                </tr>
+                <tr>
+                    <th>DotD</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.Dotds)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Podiums</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.Podiums)
+                    </td>
+                </tr>
+                <tr>
+                    <th>DNFs</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.DNFs)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Points</th>
+                    <td>
+                        @Html.DisplayFor(driverItem => Model.TotalPoints)
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="column middle">
+        @Html.DisplayFor(driver => Model.Driver.DriverQuote)</br></br>
+        @Html.DisplayFor(driver => Model.Driver.Bio)</br>
+    </div>
+</div>
+
+<div id="championshipTable">
+    @* CDB: This loads the overview info from the provided model*@
+    @{Html.RenderAction("DriverCareerResults", "Driver", new { driverID = Model.Driver.ID });
+    }
+</div>

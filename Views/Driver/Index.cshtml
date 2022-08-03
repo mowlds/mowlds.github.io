@@ -1,0 +1,31 @@
+﻿@model IEnumerable<mowlds.github.io.DAL.Driver>
+@{
+    ViewData["Title"] = "Driver";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="wikiparent">
+    <h2 class="h2wiki">LIST OF DRIVERS</h2>
+    <div class="wiki">
+        @{var firstLetter = String.Empty;
+
+            foreach (var item in Model)
+            {
+                if (firstLetter != item.Name.First().ToString())
+                {
+                    firstLetter = item.Name.First().ToString();
+                <ul class="wikilist">
+                    <li style="font-weight: bold;">@Html.DisplayFor(modelitem => firstLetter)</li>
+                    @foreach (var driverItem in Model.Where(d => d.Name.First().ToString() == firstLetter))
+                    {
+                        string linkvalue = string.Format("Driver/driver?driver={0}", driverItem.ID.ToString());
+                        
+                        <li><a href=@linkvalue>@Html.DisplayFor(modelitem => driverItem.Name)</a></li>
+                    }
+                </ul>
+                }
+            }
+        }
+    </div>
+</div>
