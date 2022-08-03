@@ -760,6 +760,7 @@ table#list tr:nth-child(even) {
                   padding-bottom: 10px;
                   padding-top: 10px;
                   font-style: italic;
+                  font-size: 20px;
               }
               table#biotable tr{
                   padding-top: 2px;
