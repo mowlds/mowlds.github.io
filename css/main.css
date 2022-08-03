@@ -759,8 +759,7 @@ table#list tr:nth-child(even) {
               table#biotable caption {
                   padding-bottom: 10px;
                   padding-top: 10px;
-                  font-style: italic;
-                  font-size: 20px;
+                  font-size: 30px;
               }
               table#biotable tr{
                   padding-top: 2px;
