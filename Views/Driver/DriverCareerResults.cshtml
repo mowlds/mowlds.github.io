@@ -10,7 +10,7 @@
             <col span="1" class="drivername">
             <col span="1">
             <col span="1" class="points">
-
+            <col span="1" class="diff">
             @{string count = Model.First().allTracks.Count().ToString(); }
             <col span="@count" class="races">
         </colgroup>
@@ -19,7 +19,8 @@
             <th></th>
             <th></th>
             <th></th>
-
+            <th></th>
+            <th></th>
             @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
             {
                 <th scope="col"><img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Flag)"></th>
@@ -28,9 +29,10 @@
         <tr>
             <td>Year</td>
             <td>Season</td>
+            <td>&nbsp;</td>
             <td>Team</td>
             <td>Total Points</td>
-
+            <td>Final Position</td>
             @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
             {
                 <td>@Html.DisplayFor(modelItem => item.Abbreviation)</td>
@@ -47,7 +49,13 @@
         <td>
             @Html.DisplayFor(modelItem => supergrid.season.Number)
         </td>
-                <td>
+        <td>
+            @if (supergrid.season.isrealperformance)
+                    {
+                        <img class="icongrid" src="~/images/headsgone.png">
+                    }
+        </td>
+        <td>
             @if (supergrid.season.DriverTeam.Any())
             {
                 var hasTeam = supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).Any();
@@ -60,8 +68,9 @@
         <td>
             @Html.DisplayFor(modelItem => supergrid.totalPoints)
         </td>
-
-
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.finalPosition)
+        </td>
 
         @{
             foreach (var track in supergrid.allTracks.OrderBy(t => t.Abbreviation))
@@ -87,12 +96,15 @@
                                 {
                                     result = "DSQ";
                                 }
-                                else
+                                if (dr.Delta != null && dr.Delta.Trim() == "DNS")
                                 {
-                                    string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap ? "fl" : "");
-                                    <td><img class="icongrid" src=@postionLink></td>
-                                    hasvalue = true;
+                                    result = "DNS";
                                 }
+                                string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap ? "fl" : "");
+                                string racelink = string.Format("DriverResult?race={0}", race.ID.ToString());
+
+                                    <td><a href=~/@racelink><img class="icongrid" src=@postionLink></a></td>
+                                hasvalue = true;
 
                             }
                             if (!hasvalue)

@@ -56,22 +56,13 @@ namespace mowlds.github.io.Controllers
         [Route("DriverCareerResults")]
         public async Task<ActionResult> DriverCareerResults(int driverID)
         {
+            var allResults = _context.DriverResult.Include("Race1").Where(dr => dr.SessionType > 2).ToList();
+
             var driver = _context.Driver.Where(d => d.ID == driverID);
             var seasons = _context.Season.Include("DriverTeam").Include("DriverTeam.Team1");
             var races = _context.Race.Include("Track1").OrderBy(r => r.RaceNumber).ToList();
             var allTracks = _context.Track;
             var superGridContext = new List<DriverCareerResultModel>();
-            //var sprints = _context.DriverResult.Include("Race1").Where(dr => dr.SessionType == 4 && dr.Driver == driverID);
-            //List<int> sprintAdded = new List<int>();
-            //foreach (var sprintrace in sprints)
-            //{
-            //    if (!sprintAdded.Contains(sprintrace.Race1.ID))
-            //    {
-            //        sprintAdded.Add(sprintrace.Race1.ID);
-            //        races.Add(sprintrace.Race1);
-            //    }
-            //}
-            int maxpoints = 0;
             foreach (var season in seasons)
             {
                 var supergrid = new DriverCareerResultModel();
@@ -80,24 +71,41 @@ namespace mowlds.github.io.Controllers
                 supergrid.races = races.Where(r => r.Season == season.ID).OrderBy(r => r.RaceNumber).ToList();
                 supergrid.driverResults = _context.DriverResult.Include("Race1").Where(d => d.Race1.Season == season.ID && d.Driver == driverID && d.SessionType == 3).ToList();
                 supergrid.races = supergrid.races;
-                //supergrid.driverResults.AddRange(sprints.Where(s => s.Driver == supergrid.driver.ID));
                 supergrid.driverResults = supergrid.driverResults.OrderBy(dr => dr.Race1.Track1.Abbreviation).ToList();
                 supergrid.totalPoints = supergrid.driverResults.Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
+                supergrid.totalPoints = supergrid.totalPoints + allResults.Where(ar => ar.SessionType ==4 && ar.Driver == driverID && ar.Race1.Season == season.ID).Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
                 supergrid.diffPoints = 0;
-                supergrid.finalPosition = 0;
+                supergrid.finalPosition = CalculateFinalPosition(allResults, supergrid.driver.ID, season.ID);
                 supergrid.allTracks = allTracks.ToList();
-                if (supergrid.driverResults.Any())
-                {
-                    supergrid.highestPosition = supergrid.driverResults.Min(dr => dr.FinalPosition);
-                }
-                else
-                {
-                    supergrid.highestPosition = 999;
-                }
+                supergrid.highestPosition = 999;
                 superGridContext.Add(supergrid);
             }
 
             return PartialView(superGridContext.OrderByDescending(sg => sg.season.Year).ThenByDescending(sg => sg.season.Number));
+        }
+
+        private int CalculateFinalPosition(List<DriverResult> results, int driver, int season)
+        {
+            int result = 0;
+            var seasonResults = results.Where(dr => dr.Race1.Season == season).ToList();
+            Dictionary<int, int> driverPoints = new Dictionary<int, int>();
+            var allDrivers = _context.Driver;
+            foreach (var drivers in allDrivers)
+            {
+                driverPoints.Add(drivers.ID, seasonResults.Where(sr => sr.Driver == drivers.ID).Sum(sr => sr.RacePoints.HasValue ? sr.RacePoints : 0).Value);
+            }
+            var sortedresults =  driverPoints.OrderByDescending(dp => dp.Value).ToDictionary(dp => dp.Key, dp=> dp.Value);
+            int i = 1;
+            foreach (int d in sortedresults.Keys)
+            {
+                if (d == driver)
+                {
+                    break;
+                }
+                i++;
+            }
+            result = i;
+            return result;
         }
 
     }
