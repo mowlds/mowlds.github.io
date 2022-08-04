@@ -46,7 +46,10 @@
                     @Html.DisplayFor(modelItem => item.Number)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.isrealperformance)
+                   @if (supergrid.season.isrealperformance)
+                    {
+                        <img class="realperf" src="~/images/realperf.png">
+                    }
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.isoneshotqualy)
