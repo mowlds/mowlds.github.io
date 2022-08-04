@@ -617,8 +617,10 @@ margin-bottom: -4px;
 height: 25px;
 }
 .realperf{
-  margin-bottom: -4px;
+  margin-bottom: -3px;
   height: 15px;
+  margin-left: -15px;
+  margin-right: 5px;
   }
 .logogrid{
 height: 22px;
