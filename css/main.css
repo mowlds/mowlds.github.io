@@ -39,6 +39,7 @@ a:hover{
   display: flex;
   width: 99%;
   padding-bottom: 3%;
+  align-items: center;
 
 }
 
@@ -60,6 +61,7 @@ a:hover{
   flex: 2;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 
