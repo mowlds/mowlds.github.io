@@ -512,6 +512,9 @@ table#champtable tr:nth-child(even) {
 .supergrid{
   overflow-x: auto;
 }
+.careergrid{
+  overflow-x: auto;
+}
 .constable{
   overflow-x: auto;
 }
@@ -529,8 +532,28 @@ table#supergrid {
 
   
 }
+table#careergrid {
+  max-width: 82%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 8pt;
+  border-collapse: collapse;
+  background-color: rgb(43, 75, 52);
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  color:white
+
+  
+}
 
 table#supergrid th {
+  background-color: rgb(15, 26, 18);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  text-align: center;
+}
+table#careergrid th {
   background-color: rgb(15, 26, 18);
   padding-bottom: 2px;
   padding-top: 2px;
@@ -543,11 +566,26 @@ table#supergrid td {
   border-bottom: 1px solid white;
    
 }
+table#careergrid td {
+  text-align: center;
+  height: 25px;
+  border-bottom: 1px solid white;
+   
+}
 table#supergrid tr {
   border-left:  1px solid white;
    
 }
+table#careergrid tr {
+  border-left:  1px solid white;
+   
+}
 table#supergrid col {
+  border-top:  1px solid white;
+   
+}
+}
+table#careergrid col {
   border-top:  1px solid white;
    
 }
@@ -556,6 +594,14 @@ table#supergrid caption {
 
   font-size: 24pt;
 
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+}
+table#careergrid caption {
+
+  font-size: 24pt;
+color:black;
   padding-bottom: 5px;
   padding-top: 5px;
 
