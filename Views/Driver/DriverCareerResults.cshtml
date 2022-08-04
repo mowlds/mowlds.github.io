@@ -10,7 +10,7 @@
             <col span="1" class="drivername">
             <col span="1">
             <col span="1" class="points">
-            <col span="1" class="diff">
+
             @{string count = Model.First().allTracks.Count().ToString(); }
             <col span="@count" class="races">
         </colgroup>
@@ -19,7 +19,7 @@
             <th></th>
             <th></th>
             <th></th>
-            <th></th>
+
             @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
             {
                 <th scope="col"><img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Flag)"></th>
@@ -29,8 +29,8 @@
             <td>Year</td>
             <td>Season</td>
             <td>Team</td>
-            <td>Total points</td>
-            <td>&nbsp;</td>
+            <td>Total Points</td>
+
             @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
             {
                 <td>@Html.DisplayFor(modelItem => item.Abbreviation)</td>
@@ -62,9 +62,7 @@
         </td>
 
 
-        <td>
-            &nbsp;
-        </td>
+
         @{
             foreach (var track in supergrid.allTracks.OrderBy(t => t.Abbreviation))
             {
