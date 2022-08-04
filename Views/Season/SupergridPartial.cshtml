@@ -90,6 +90,10 @@
                         {
                             result = "DSQ";
                         }
+                        if (dr.Delta != null && dr.Delta.Trim() == "DNS")
+                        {
+                            result = "DNS";
+                        }
                         if (dr.SessionType == 4)
                         {
                             if (dr.FinalPosition < 9)
