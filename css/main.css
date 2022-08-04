@@ -14,7 +14,7 @@ body {
     color: white;
 }
 
-.mainbodywiki{
+.wikiparent{
   padding-bottom: 200px;
   background-color: #f7fff6e0;
   color: black;
@@ -217,13 +217,9 @@ margin-bottom: 5%;
 .raceresults{
   padding: 1%;
 }
-.wikiparent{
-box-shadow: 5px 5px 10px grey;
-margin-left: 2pc;
-margin-right: 2pc;
-background-color: rgba(39, 56, 44, 0.199);
 
-}
+
+
 .h2wiki{
   margin-left: 2pc;
   padding-top: 2pc;
