@@ -28,8 +28,8 @@
         <tr>
             <td>Year</td>
             <td>Season</td>
-            <td>Total Points</td>
-            <td>Final Position</td>
+            <td>Team</td>
+            <td>Total points</td>
             <td>&nbsp;</td>
             @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
             {
@@ -47,10 +47,7 @@
         <td>
             @Html.DisplayFor(modelItem => supergrid.season.Number)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => supergrid.totalPoints)
-        </td>
-        <td>
+                <td>
             @if (supergrid.season.DriverTeam.Any())
             {
                 var hasTeam = supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).Any();
@@ -60,6 +57,10 @@
                 }
             }
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.totalPoints)
+        </td>
+
 
         <td>
             &nbsp;
