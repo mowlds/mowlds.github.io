@@ -15,13 +15,12 @@ body {
 }
 
 .wikiparent{
+  padding-top:  20px;
   padding-bottom: 200px;
   background-color: #f7fff6e0;
   color: black;
 }
-.mainbody{
-  padding-bottom: 200px;
-}
+
 a:hover{
   color: rgb(12, 22, 13);;
 }
