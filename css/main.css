@@ -16,6 +16,8 @@ body {
 
 .mainbody{
   padding-bottom: 200px;
+  background-color: #f7fff6e0;
+  color: black;
 }
 
 a:hover{
