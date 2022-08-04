@@ -40,7 +40,8 @@ a:hover{
   width: 80%;
   padding-bottom: 3%;
   align-items: center;
-
+  margin-left: auto;
+margin-right: auto;
 }
 
 .column.side {
