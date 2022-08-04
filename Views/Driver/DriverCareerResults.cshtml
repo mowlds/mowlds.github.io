@@ -29,8 +29,8 @@
             <td>Season</td>
             <td>&nbsp;</td>
             <td>Team</td>
-            <td>Total Points</td>
-            <td>Final Position</td>
+            <td>Points</td>
+            <td>Position</td>
             @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
             {
                 <td>@Html.DisplayFor(modelItem => item.Abbreviation)</td>
