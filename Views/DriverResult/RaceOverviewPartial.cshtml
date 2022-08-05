@@ -18,7 +18,7 @@
 </div>
 
 <div class="row">
-    <div class="column">
+    <div class="columnrace">
         <div class="racewinner">
             <h2 class="racewinner">POLE POSITION</h2>
         </div>
@@ -34,7 +34,7 @@
             @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().BestLap)
         </h3>
     </div>
-    <div class="column">
+    <div class="columnrace">
         <div class="racewinner">
             <h2 class="racewinner">RACE WINNER</h2>
         </div>

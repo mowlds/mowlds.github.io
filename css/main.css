@@ -958,6 +958,13 @@ table#list tr:nth-child(even) {
           text-align: center;
           padding: 1%;
         }
+        .columnrace{
+          float: left;
+          width: 50%;
+          text-align: center;
+          padding: 1%;
+          align-items: flex-start;
+        }
         .raceresults{
           overflow-x:auto;
         }
