@@ -44,6 +44,15 @@ a:hover{
   margin-left: auto;
 margin-right: auto;
 }
+.rowrace {
+  display: -webkit-flex;
+  display: flex;
+  width: 80%;
+  padding-bottom: 3%;
+  padding-top:2pc;
+  margin-left: auto;
+margin-right: auto;
+}
 
 .column.side {
   -webkit-flex: 1;
@@ -957,13 +966,6 @@ table#list tr:nth-child(even) {
           width: 50%;
           text-align: center;
           padding: 1%;
-        }
-        .columnrace{
-          float: left;
-          width: 50%;
-          text-align: center;
-          padding: 1%;
-          align-items: flex-start;
         }
         .raceresults{
           overflow-x:auto;
