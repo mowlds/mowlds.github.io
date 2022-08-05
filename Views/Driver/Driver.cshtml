@@ -8,6 +8,7 @@
 <div class="row">
     <div class="column side">
         <img class="bio" src="@Html.DisplayFor(modelitem => Model.Driver.DriverImage)" height="100px">
+        <div class="quote">"@Html.DisplayFor(driver => Model.Driver.DriverQuote)"</div>
         <div class="biotable">
             <table id="biotable">
                 <caption style="font-weight: bolder ;">@Html.DisplayFor(driver => Model.Driver.Name)</caption>
@@ -67,7 +68,6 @@
         </div>
     </div>
     <div class="column middle">
-        <div class="quote">"@Html.DisplayFor(driver => Model.Driver.DriverQuote)"</div></br></br>
         <div class="bioquote">@Html.DisplayFor(driver => Model.Driver.Bio)</div></br>
     </div>
 </div>
