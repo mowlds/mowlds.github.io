@@ -51,6 +51,11 @@ margin-right: auto;
   flex: 1;
   text-align: center;
   margin-bottom:2pc;
+  background: #e4e4e4cc;
+    border-radius: 10px;
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    padding: 2pc;
    
 }
 
@@ -1023,7 +1028,7 @@ table#list tr:nth-child(even) {
    ========================================================================== */
 
    @media screen and ( max-width: 500px ) { 
-    .row { flex-direction: column; }
+    .row { flex-direction: column; width: 100%;}
     .timeline {display: none;}
     .calendar {font-size: 6pt;}
     .supergrid{font-size: 6pt;}
