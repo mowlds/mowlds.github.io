@@ -12,6 +12,7 @@
         <div class="biotable">
             <table id="biotable">
                 <caption style="font-weight: bolder ;">@Html.DisplayFor(driver => Model.Driver.Name)</caption>
+                <th colspan="2" class="infobox-header" style="background-color:gainsboro;">SRL World Championship career</th>
                 <tr>
                     <th>First Race</th>
                     <td>@Html.DisplayFor(driverItem => Model.FirstRace.Season1.Year) - Season @Html.DisplayFor(driverItem => Model.FirstRace.Season1.Number) Race @Html.DisplayFor(driverItem => Model.FirstRace.RaceNumber)</br>@Html.DisplayFor(driverItem => Model.FirstRace.RaceName)</td>
