@@ -41,7 +41,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Driver1.Name)
                     </td>
-                    <td>
+                    <td style="text-align:center;">
                          @if (item.Race1.Season1.DriverTeam.Any())
                         {
                             var hasTeam = item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).Any();
