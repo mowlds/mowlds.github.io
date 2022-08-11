@@ -927,7 +927,7 @@ table#list tr:nth-child(even) {
             margin-right: auto;
             padding: 5px;
             font-weight: bold;
-            
+            text-align: center;
             background-color: black;
 
         }
