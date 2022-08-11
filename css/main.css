@@ -742,7 +742,7 @@ table#list tr:nth-child(even) {
                 background-color: rgb(15, 26, 18);
                 padding-bottom: 2px;
                 padding-top: 2px;
-                text-align: center;
+                
                 font-size: 12pt;
                 padding-right: 5px;
                 padding-left: 5px;
@@ -752,7 +752,7 @@ table#list tr:nth-child(even) {
                 background-color: rgba(43, 75, 52, 0.75);
                 padding-left: 10px;
                 padding-right: 10px;
-                text-align: center;
+                
                 font-size: 10pt;
                
             
