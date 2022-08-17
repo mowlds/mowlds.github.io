@@ -94,6 +94,10 @@
                         {
                             result = "DNS";
                         }
+                        if (dr.Delta != null && dr.Delta.Trim() == "NC")
+                        {
+                            result = "NC";
+                        }
                         if (dr.SessionType == 4)
                         {
                             if (dr.FinalPosition < 9)

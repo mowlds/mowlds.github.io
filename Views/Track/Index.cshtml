@@ -1,8 +1,53 @@
-﻿
+﻿@model IEnumerable<mowlds.github.io.DAL.Track>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
+<div class="overflow">
+    <table id="list">
+        <caption>List Of Tracks</caption>
+        <thead>
+            <tr>
+                <th>
+                    Track
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    Country
+                </th>
+                <th>
+                    Abbreviation
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Abbreviation)
+                    </td>
+                    <td>
+                        @{string linkvalue = string.Format("Track/Track?track={0}", item.ID.ToString());
+                        }
+                        <a href=@linkvalue>View</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

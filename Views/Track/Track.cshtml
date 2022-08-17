@@ -1,0 +1,19 @@
+﻿@model mowlds.github.io.DAL.Track
+@{
+    ViewBag.Title = "Track";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="wikiparent">
+    <div class="row">
+        <div class="column side">
+            <img class="bio" src="@Html.DisplayFor(modelitem => Model.TrackMap)" height="100px">
+            <div class="biotable">
+                <table id="biotable">
+                    <caption style="font-weight: bolder ;">@Html.DisplayFor(driver => Model.Name)</caption>
+                    <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;"></th>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
