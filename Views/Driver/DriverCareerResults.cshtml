@@ -101,6 +101,10 @@
                                 {
                                     result = "DNS";
                                 }
+                                if (dr.Delta != null && dr.Delta.Trim() == "NC")
+                                {
+                                    result = "NC";
+                                }
                                 string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap ? "fl" : "");
                                 string racelink = string.Format("DriverResult?race={0}", race.ID.ToString());
 
