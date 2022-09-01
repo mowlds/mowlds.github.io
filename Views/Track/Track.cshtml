@@ -6,7 +6,9 @@
 
 <div class="wikiparent">
             
-            
+            <div class="row">
+                <div class="column side">
+
                 <div class="tracktable">
                     <img class="bio" src="@Html.DisplayFor(modelitem => Model.Track.TrackMap)" height="185px">
                     <table id="tracktable">
@@ -117,6 +119,10 @@
                     </tbody>
                 </table>
             </div>
+            </div>
+            <div class="column middle">
             <div class="bioquote">@Html.DisplayFor(track => Model.Track.About)</div></br>
+            </div>
+        </div>
         </div>
             
