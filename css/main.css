@@ -833,6 +833,8 @@ table#list tr:nth-child(even) {
                   border-spacing: 3px;
                   padding: 2pc;
                   width: fit-content;
+                  margin-left: auto;
+                  margin-right: auto;
 
             }
 
