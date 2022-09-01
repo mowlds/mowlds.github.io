@@ -1141,6 +1141,18 @@ table#list tr:nth-child(even) {
     .column{
       width: 100%;
     }
+    .tracktable{
+      margin-bottom:2pc;
+      background: #e4e4e4cc;
+        border-radius: 10px;
+        border: 1px solid #a2a9b1;
+        border-spacing: 3px;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+
+  }
+
   }
 
 table#nolayout {
