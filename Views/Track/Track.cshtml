@@ -7,47 +7,48 @@
 <div class="wikiparent">
     
             <img class="bio" src="@Html.DisplayFor(modelitem => Model.Track.TrackMap)" height="200px">
-            <div class="biotable">
-                <table id="tracktable">
-                    <caption style="font-weight: bolder ;">@Html.DisplayFor(track => Model.Track.Name)</caption>
-                    <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;"></th>
-                    <tbody>
-                        <tr>
-                            <th>First Race</th>
-                            <td>
-                                @{string firstrace = Model.AllRaces.Last().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
-                                }
-                                @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Number)
-                                Race @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => firstrace)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Last Race</th>
-                            <td>
-                                @{string lastrace = Model.AllRaces.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
-                                }
-                                @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Number)
-                                Race @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => lastrace)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Track Record Qualifying</th>
-                            <td>
-                                @{string qualy = String.Format("F1{0}-S{1} {2}", Model.LapRecordQualyHolder.Race1.Season1.Year, Model.LapRecordQualyHolder.Race1.Season1.Number, Model.LapRecordQualyHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
-                                }
-                                @Html.DisplayFor(trackitem => Model.LapRecordQualy) - @Html.DisplayFor(trackitem => Model.LapRecordQualyHolder.Driver1.Name) (@Html.DisplayFor(trackitem => qualy))
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Track Record Race</th>
-                            <td>
-                                @{string race = String.Format("F1{0}-S{1} {2}", Model.LapRecordRaceHolder.Race1.Season1.Year, Model.LapRecordRaceHolder.Race1.Season1.Number, Model.LapRecordRaceHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
-                                }
-                                @Html.DisplayFor(trackitem => Model.LapRecordRace) - @Html.DisplayFor(trackitem => Model.LapRecordRaceHolder.Driver1.Name) (@Html.DisplayFor(trackitem => race))
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Races</th>
+            <div class="column-side">
+                <div class="biotable">
+                    <table id="tracktable">
+                        <caption style="font-weight: bolder ;">@Html.DisplayFor(track => Model.Track.Name)</caption>
+                        <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;"></th>
+                        <tbody>
+                            <tr>
+                                <th>First Race</th>
+                                <td>
+                                    @{string firstrace = Model.AllRaces.Last().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+                                    }
+                                    @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Number)
+                                    Race @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => firstrace)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Last Race</th>
+                                <td>
+                                    @{string lastrace = Model.AllRaces.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+                                 }
+                                 @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Number)
+                                 Race @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => lastrace)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Track Record Qualifying</th>
+                                <td>
+                                    @{string qualy = String.Format("F1{0}-S{1} {2}", Model.LapRecordQualyHolder.Race1.Season1.Year, Model.LapRecordQualyHolder.Race1.Season1.Number, Model.LapRecordQualyHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
+                                    }
+                                 @Html.DisplayFor(trackitem => Model.LapRecordQualy) - @Html.DisplayFor(trackitem => Model.LapRecordQualyHolder.Driver1.Name) (@Html.DisplayFor(trackitem => qualy))
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Track Record Race</th>
+                                <td>
+                                 @{string race = String.Format("F1{0}-S{1} {2}", Model.LapRecordRaceHolder.Race1.Season1.Year, Model.LapRecordRaceHolder.Race1.Season1.Number, Model.LapRecordRaceHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
+                                 }
+                                 @Html.DisplayFor(trackitem => Model.LapRecordRace) - @Html.DisplayFor(trackitem => Model.LapRecordRaceHolder.Driver1.Name) (@Html.DisplayFor(trackitem => race))
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Races</th>
                             <td>
                                 @{var driverRaces = Model.AllRaces.Where(dr => dr.SessionType == 3).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
                                     string mostRaces = String.Format("{0} - {1}", driverRaces.First().Driver1.Name, driverRaces.Count());
@@ -116,5 +117,6 @@
                     </tbody>
                 </table>
             </div>
+        </div>
         </div>
             <div class="bioquote">@Html.DisplayFor(track => Model.Track.About)</div></br>
