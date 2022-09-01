@@ -824,6 +824,26 @@ table#list tr:nth-child(even) {
                   padding-top: 2px;
                   padding-bottom: 2px;
               }
+
+              table#tracktable{
+                margin-top: 10px;
+                table-layout: fixed;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+
+            table#tracktable caption {
+                padding-bottom: 10px;
+                padding-top: 10px;
+                font-size: 30px;
+            }
+            table#tracktable td{
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+
               table#drivertimeline {
                   table-layout: fixed;
                   width: 98%;
