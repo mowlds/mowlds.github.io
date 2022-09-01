@@ -828,7 +828,7 @@ table#list tr:nth-child(even) {
               table#tracktable{
                 margin-top: 10px;
                 table-layout: fixed;
-                width: 100%;
+                max-width: 90%;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: left;
