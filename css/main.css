@@ -843,6 +843,9 @@ table#list tr:nth-child(even) {
                 padding-top: 2px;
                 padding-bottom: 2px;
             }
+            table#tracktable th{
+              padding-right: 10px;
+          }
 
               table#drivertimeline {
                   table-layout: fixed;
