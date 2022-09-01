@@ -832,13 +832,13 @@ table#list tr:nth-child(even) {
                   border: 1px solid #a2a9b1;
                   border-spacing: 3px;
                   padding: 2pc;
+                  width: fit-content;
 
             }
 
               table#tracktable{
                 margin-top: 10px;
                 table-layout: fixed;
-                max-width: 90%;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: left;
