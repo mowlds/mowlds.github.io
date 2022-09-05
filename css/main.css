@@ -1116,7 +1116,7 @@ table#list tr:nth-child(even) {
 
     .topnav.responsive div {
       float: none;
-      display:contents;
+
       text-align: left;
      }
      .topnav.responsive .dropdown{
@@ -1222,7 +1222,7 @@ table#nolayout {
 
 
 /* ==========================================================================
-   Helper classes
+   Helper classesnav
    ========================================================================== */
 
 .hidden {
