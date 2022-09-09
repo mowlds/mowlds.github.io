@@ -10,7 +10,7 @@ background-color: rgb(188, 219, 197)
 
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.918)), url('../images/queenie.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/queenie.jpg');
     color: white;
 }
 
