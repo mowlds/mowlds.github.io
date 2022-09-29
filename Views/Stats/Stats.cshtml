@@ -1,0 +1,134 @@
+﻿
+@model IEnumerable<mowlds.github.io.Models.StatsModel>
+
+<div class="biotable">
+    <table id="biotable" style="border-color:black; border: solid;">
+                    <caption style="font-weight: bolder ;">Stats</caption>
+                    <colgroup>
+                        <col span="1" class="drivername">
+                        <col span="1" >
+                        <col span="1" >
+                        <col span="19" >
+                    </colgroup>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Driver</td>
+                        <td>Races</td>
+                        <td>Wins</td>
+                        <td>Win %</td>
+                        <td>Podiums</td>
+                        <td>Podium %</td>
+                        <td>Best Finish</td>
+                        <td>Worst Finish</td>
+                        <td>Points Finishes</td>
+                        <td>Points Finish %</td>
+                        <td>DNFs</td>
+                        <td>DNF %</td>
+                        <td>Poles</td>
+                        <td>Pole %</td>
+                        <td>Fastest Laps</td>
+                        <td>Fastest Laps %</td>
+                        <td>Driver of the Day</td>
+                        <td>Driver of the Day %</td>
+                        <td>Total Points</td>
+                        <td>Average Points Per Race</td>
+                        <td>Race DSQs</td>
+                        <td>Qualifying DSQs</td>
+                    </tr>
+                    @foreach (var statsModel in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.RaceStarts)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.RaceWins)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.RaceWinPerc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.Podiums)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.PodiumPerc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.BestFinish)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.WorstFinish)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.PointsFinish)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.PointsFinishPerc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.DNF)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.DNFPerc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.Poles)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.PolePerc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.FastestLaps)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.FastestLapsPerc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.DriveroftheDay)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.DriveroftheDayPerc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.TotalPoints)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.AvgPoints)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.RaceDSQ)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => statsModel.QualyDSQ)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
