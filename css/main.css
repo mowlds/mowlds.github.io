@@ -886,8 +886,13 @@ table#list tr:nth-child(even) {
         table#StatsTable th{
             background-color:#bab5b5;
             font-weight: bold;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
             
-      }
+      
 
 
               table#drivertimeline {
