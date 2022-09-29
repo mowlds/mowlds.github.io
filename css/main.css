@@ -860,7 +860,7 @@ table#list tr:nth-child(even) {
               padding-right: 10px;
           }
 
-          .statstable{
+          .StatsTable{
             overflow-x: auto;
           }
 
