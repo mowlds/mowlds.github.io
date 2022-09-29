@@ -892,6 +892,11 @@ table#list tr:nth-child(even) {
             padding-left: 5px;
             padding-right: 10px;
         }
+
+        table#StatsTable tr:nth-child(even){
+            background-color: #e4e4e4;
+    
+        }
             
       
 
