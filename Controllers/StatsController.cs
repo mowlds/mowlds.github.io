@@ -47,7 +47,7 @@ namespace mowlds.github.io.Controllers
             foreach (Track t in tracks)
             {
                 var driverresult = result.Where(dr => dr.Race1.Track == t.ID);
-                returnValue.Add(ConvertToStats(t.Name, driverresult.ToList()));
+                returnValue.Add(ConvertToStats(t.Abbreviation, driverresult.ToList()));
             }
 
             returnValue = returnValue.OrderByDescending(rv => rv.RaceWins).ThenByDescending(rv => rv.RaceStarts).ToList();
