@@ -865,7 +865,7 @@ table#list tr:nth-child(even) {
           }
           table#StatsTable{
             margin-top: 10px;
-            table-layout: fixed;
+            table-layout: auto;
             width: 100%;
             margin-left: auto;
             margin-right: auto;
