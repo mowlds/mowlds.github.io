@@ -5,122 +5,126 @@
 }
 
 <div class="wikiparent">
-            
-            <div class="row">
 
-                <div class="tracktable">
-                    <img class="bio" src="@Html.DisplayFor(modelitem => Model.Track.TrackMap)" height="185px">
-                    <table id="tracktable">
-                        <caption style="font-weight: bolder ;">@Html.DisplayFor(track => Model.Track.Name)</caption>
-                        <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;">SRL World Championship Records</th>
-                        <tbody>
-                            <tr>
-                                <th>First Race</th>
-                                <td>
-                                    @{string firstrace = Model.AllRaces.Last().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
-                                    }
-                                    @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Number)
-                                    Race @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => firstrace)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Last Race</th>
-                                <td>
-                                    @{string lastrace = Model.AllRaces.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
-                                 }
-                                 @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Number)
-                                 Race @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => lastrace)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Track Record Qualifying</th>
-                                <td>
-                                    @{string qualy = String.Format("F1{0}-S{1} {2}", Model.LapRecordQualyHolder.Race1.Season1.Year, Model.LapRecordQualyHolder.Race1.Season1.Number, Model.LapRecordQualyHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
-                                    }
-                                 @Html.DisplayFor(trackitem => Model.LapRecordQualy) - @Html.DisplayFor(trackitem => Model.LapRecordQualyHolder.Driver1.Name) (@Html.DisplayFor(trackitem => qualy))
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Track Record Race</th>
-                                <td>
-                                 @{string race = String.Format("F1{0}-S{1} {2}", Model.LapRecordRaceHolder.Race1.Season1.Year, Model.LapRecordRaceHolder.Race1.Season1.Number, Model.LapRecordRaceHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
-                                 }
-                                 @Html.DisplayFor(trackitem => Model.LapRecordRace) - @Html.DisplayFor(trackitem => Model.LapRecordRaceHolder.Driver1.Name) (@Html.DisplayFor(trackitem => race))
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Races</th>
-                            <td>
-                                @{var driverRaces = Model.AllRaces.Where(dr => dr.SessionType == 3).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
-                                    string mostRaces = String.Format("{0} - {1}", driverRaces.First().Driver1.Name, driverRaces.Count());
+    <div class="row">
+
+        <div class="tracktable">
+            <img class="bio" src="@Html.DisplayFor(modelitem => Model.Track.TrackMap)" height="185px">
+            <table id="tracktable">
+                <caption style="font-weight: bolder ;">@Html.DisplayFor(track => Model.Track.Name)</caption>
+                <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;">SRL World Championship Records</th>
+                <tbody>
+                    <tr>
+                        <th>First Race</th>
+                        <td>
+                            @{string firstrace = Model.AllRaces.Last().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+                            }
+                            @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.Season1.Number)
+                            Race @Html.DisplayFor(trackitem => Model.AllRaces.Last().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => firstrace)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Last Race</th>
+                        <td>
+                            @{string lastrace = Model.AllRaces.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+                            }
+                            @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Year) - Season @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.Season1.Number)
+                            Race @Html.DisplayFor(trackitem => Model.AllRaces.First().Race1.RaceNumber)</br>@Html.DisplayFor(trackitem => lastrace)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Track Record Qualifying</th>
+                        <td>
+                            @{string qualy = String.Format("F1{0}-S{1} {2}", Model.LapRecordQualyHolder.Race1.Season1.Year, Model.LapRecordQualyHolder.Race1.Season1.Number, Model.LapRecordQualyHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
+                            }
+                            @Html.DisplayFor(trackitem => Model.LapRecordQualy) - @Html.DisplayFor(trackitem => Model.LapRecordQualyHolder.Driver1.Name) (@Html.DisplayFor(trackitem => qualy))
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Track Record Race</th>
+                        <td>
+                            @{string race = String.Format("F1{0}-S{1} {2}", Model.LapRecordRaceHolder.Race1.Season1.Year, Model.LapRecordRaceHolder.Race1.Season1.Number, Model.LapRecordRaceHolder.Race1.RaceDate.Value.ToString("dd-MM-yyyy"));
+                            }
+                            @Html.DisplayFor(trackitem => Model.LapRecordRace) - @Html.DisplayFor(trackitem => Model.LapRecordRaceHolder.Driver1.Name) (@Html.DisplayFor(trackitem => race))
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Races</th>
+                        <td>
+                            @{var driverRaces = Model.AllRaces.Where(dr => dr.SessionType == 3).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
+                                string mostRaces = String.Format("{0} - {1}", driverRaces.First().Driver1.Name, driverRaces.Count());
+                            }
+                            @Html.DisplayFor(trackitem => mostRaces)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Wins</th>
+                        <td>
+                            @{var driverWins = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.FinalPosition == 1).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
+                                string mostWins = String.Format("{0} - {1}", driverWins.First().Driver1.Name, driverWins.Count());
+                            }
+                            @Html.DisplayFor(trackitem => mostWins)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Pole Positions</th>
+                        <td>
+                            @{var driverPoles = Model.AllRaces.Where(dr => dr.SessionType == 2 && dr.FinalPosition == 1).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
+                                string mostPoles = String.Format("{0} - {1}", driverPoles.First().Driver1.Name, driverPoles.Count());
+                            }
+                            @Html.DisplayFor(trackitem => mostPoles)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Fastest Laps</th>
+                        <td>
+                            @{var driverFL = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.HasFastestLap).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
+                                string mostFL = String.Format("{0} - {1}", driverFL.First().Driver1.Name, driverFL.Count());
+                            }
+                            @Html.DisplayFor(trackitem => mostFL)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>DotD</th>
+                        <td>
+                            @{var driverDotd = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.HasDriverOfTheDay).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).FirstOrDefault();
+                                string mostDotd = String.Empty;
+                                if (driverDotd != null)
+                                {
+                                    mostDotd = String.Format("{0} - {1}", driverDotd.First().Driver1.Name, driverDotd.Count());
                                 }
-                                @Html.DisplayFor(trackitem => mostRaces)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Wins</th>
-                            <td>
-                                @{var driverWins = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.FinalPosition == 1).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
-                                    string mostWins = String.Format("{0} - {1}", driverWins.First().Driver1.Name, driverWins.Count());
-                                }
-                                @Html.DisplayFor(trackitem => mostWins)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Pole Positions</th>
-                            <td>
-                                @{var driverPoles = Model.AllRaces.Where(dr => dr.SessionType == 2 && dr.FinalPosition == 1).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
-                                    string mostPoles = String.Format("{0} - {1}", driverPoles.First().Driver1.Name, driverPoles.Count());
-                                }
-                                @Html.DisplayFor(trackitem => mostPoles)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Fastest Laps</th>
-                            <td>
-                                @{var driverFL = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.HasFastestLap).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
-                                    string mostFL = String.Format("{0} - {1}", driverFL.First().Driver1.Name, driverFL.Count());
-                                }
-                                @Html.DisplayFor(trackitem => mostFL)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>DotD</th>
-                            <td>
-                                @{var driverDotd = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.HasDriverOfTheDay).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).FirstOrDefault();
-                                    string mostDotd = String.Empty;
-                                    if (driverDotd != null)
-                                    {
-                                        mostDotd = String.Format("{0} - {1}", driverDotd.First().Driver1.Name, driverDotd.Count());
-                                    }
-                                }
-                                @Html.DisplayFor(trackitem => mostDotd)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Podiums</th>
-                            <td>
-                                @{var driverResults = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.FinalPosition < 4).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
-                                    string mostPodium = String.Format("{0} - {1}", driverResults.First().Driver1.Name, driverResults.Count());
-                                }
-                                @Html.DisplayFor(trackitem => mostPodium)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>DNFs</th>
-                            <td>
-                                @{var driverDnf = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.HasDNF).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
-                                    string mostDnf = String.Format("{0} - {1}", driverDnf.First().Driver1.Name, driverDnf.Count());
-                                }
-                                @Html.DisplayFor(trackitem => mostDnf)
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="column middle">
+                            }
+                            @Html.DisplayFor(trackitem => mostDotd)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Podiums</th>
+                        <td>
+                            @{var driverResults = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.FinalPosition < 4).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
+                                string mostPodium = String.Format("{0} - {1}", driverResults.First().Driver1.Name, driverResults.Count());
+                            }
+                            @Html.DisplayFor(trackitem => mostPodium)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>DNFs</th>
+                        <td>
+                            @{var driverDnf = Model.AllRaces.Where(dr => dr.SessionType == 3 && dr.HasDNF).GroupBy(dr => dr.Driver).OrderByDescending(g => g.Count()).First();
+                                string mostDnf = String.Format("{0} - {1}", driverDnf.First().Driver1.Name, driverDnf.Count());
+                            }
+                            @Html.DisplayFor(trackitem => mostDnf)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column middle">
             <div class="bioquote">@Html.DisplayFor(track => Model.Track.About)</div></br>
-            </div>
         </div>
-        </div>
-            
+    </div>
+    <div id="championshipTable">
+        @* CDB: This loads the overview info from the provided model*@
+        @{Html.RenderAction("TrackStats", "Stats", new { track = Model.Track.ID });
+        }
+    </div>
+</div>  
