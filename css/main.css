@@ -861,7 +861,7 @@ table#list tr:nth-child(even) {
           }
 
           .StatsTable{
-            overflow-x: auto;
+            overflow-x: scroll;
           }
           table#StatsTable{
             margin-top: 10px;
