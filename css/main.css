@@ -813,6 +813,7 @@ table#list tr:nth-child(even) {
                   margin-left: auto;
                   margin-right: auto;
                   text-align: left;
+                  
               }
   
               table#biotable caption {
@@ -857,6 +858,10 @@ table#list tr:nth-child(even) {
             }
             table#tracktable th{
               padding-right: 10px;
+          }
+
+          .statstable{
+            overflow-x: auto;
           }
 
               table#drivertimeline {
