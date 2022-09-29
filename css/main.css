@@ -863,6 +863,25 @@ table#list tr:nth-child(even) {
           .StatsTable{
             overflow-x: auto;
           }
+          table#StatsTable{
+            margin-top: 10px;
+            table-layout: fixed;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            
+        }
+
+        table#StatsTable caption {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-size: 30px;
+        }
+        table#StatsTable td{
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
 
               table#drivertimeline {
                   table-layout: fixed;
