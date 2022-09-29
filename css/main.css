@@ -883,6 +883,11 @@ table#list tr:nth-child(even) {
             padding-bottom: 2px;
         }
 
+        table#StatsTable td{
+            background-color:#a2a9b1
+      }
+
+
               table#drivertimeline {
                   table-layout: fixed;
                   width: 98%;
