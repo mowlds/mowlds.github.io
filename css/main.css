@@ -881,6 +881,7 @@ table#list tr:nth-child(even) {
         table#StatsTable td{
             padding-top: 2px;
             padding-bottom: 2px;
+            background-color: #e4e4e4cc;
         }
 
         table#StatsTable th{
