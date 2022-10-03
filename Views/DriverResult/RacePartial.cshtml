@@ -4,7 +4,14 @@
     ViewData["Title"] = "Race";
     Layout = "~/Views/Shared/_PartialLayout.cshtml";
 }
-
+  <script>
+        $('tr.flstyle').each(function (index) {
+            var lastCol = $(this).children("td").eq(6).text();
+            if (lastCol == "False") {
+                $(this).css("background-color", "magenta");
+            }
+        });
+    </script>
 
 <div class="raceresults">
     <table id="raceresults">
@@ -41,7 +48,7 @@
         <tbody>
             @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 3))
             {
-                <tr style="FLstyle">
+                <tr style="flstyle">
                     <td>
                         @Html.DisplayFor(modelItem => item.FinalPosition)
                     </td>
