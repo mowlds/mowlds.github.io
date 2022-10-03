@@ -7,7 +7,7 @@
   <script>
         $('tr.flstyle').each(function (index) {
             var FLCol = $(this).children("td").eq(6).text();
-            if (FLCol !== "") {
+            if (FLCol == "1:31.368") {
                 $(this).css("background-color", "magenta");
             }
         });
