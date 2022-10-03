@@ -4,6 +4,13 @@
     ViewData["Title"] = "Race";
     Layout = "~/Views/Shared/_PartialLayout.cshtml";
 }
+@{
+   var FLstyle = "";
+   @if ((bool)item.HasFastestLap)
+   {
+       FLstyle = "background-color:magenta";
+   }
+}
 
 <div class="raceresults">
     <table id="raceresults">
@@ -40,7 +47,7 @@
         <tbody>
             @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 3))
             {
-                <tr>
+                <tr style="FLstyle">
                     <td>
                         @Html.DisplayFor(modelItem => item.FinalPosition)
                     </td>
