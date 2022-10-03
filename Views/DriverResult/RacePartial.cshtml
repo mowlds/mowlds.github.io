@@ -6,8 +6,8 @@
 }
   <script>
         $('tr.flstyle').each(function (index) {
-            var lastCol = $(this).children("td").eq(6).text();
-            if (lastCol == "False") {
+            var FLCol = $(this).children("td").eq(6).text();
+            if (FLCol !== "") {
                 $(this).css("background-color", "magenta");
             }
         });
