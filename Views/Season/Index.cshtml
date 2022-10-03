@@ -55,8 +55,16 @@
                     <img class="realperf" src="~/images/equal.png">
                     }
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.isoneshotqualy)
+                <td style="align-content: center">
+                    
+                    @if (item.isoneshotqualy)
+                    {
+                    <span>OSQ</span>
+                    }
+                    else {
+                    <span>Short</span>
+                    }
+
                 </td>
                 <td>
                     @{string linkvalue = string.Format("Season/season?season={0}", item.ID.ToString());
