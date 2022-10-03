@@ -100,7 +100,7 @@
     <Property Name="Number" Type="Int32" Nullable="false" />
     <Property Name="GameVersion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="isrealperformance" Type="Boolean" Nullable="false" />
-    <Property Name="isoneshotqualy" Type="Boolean" Nullable="false" />
+    <Property Name="isoneshotqualy" Type="Boolean" />
     <NavigationProperty Name="Race" Relationship="Self.Race_To_Season" FromRole="Season" ToRole="Race" />
     <NavigationProperty Name="DriverTeam" Relationship="Self.Season_To_DriverTeam" FromRole="Season" ToRole="DriverTeam" />
   </EntityType>
