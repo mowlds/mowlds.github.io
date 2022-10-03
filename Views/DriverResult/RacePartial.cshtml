@@ -4,13 +4,7 @@
     ViewData["Title"] = "Race";
     Layout = "~/Views/Shared/_PartialLayout.cshtml";
 }
-@{
-   var FLstyle = "";
-   @if ((bool)item.HasFastestLap)
-   {
-       FLstyle = "background-color:magenta";
-   }
-}
+
 
 <div class="raceresults">
     <table id="raceresults">
