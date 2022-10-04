@@ -152,14 +152,16 @@ margin-right: auto;
     text-align: left;
     background-color: rgb(116 146 124) ;
   }
-  
-  .dropdown-content a:hover {
-    background-color: rgb(43, 75, 52);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+
+@media screen and ( min-width: 500px ) {
+    .dropdown-content a:hover {
+        background-color: rgb(43, 75, 52);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
 
 
 
