@@ -39,8 +39,11 @@
         </thead>
         <tbody>
             @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 3))
+        {
+            @if ((bool)item.HasFastestLap)
+
             {
-                <tr>
+                <tr style="background-color:magenta;">
                     <td>
                         @Html.DisplayFor(modelItem => item.FinalPosition)
                     </td>
@@ -167,6 +170,7 @@
                    
                 </tr>
             }
+        }
         </tbody>
     </table>
 </div>
