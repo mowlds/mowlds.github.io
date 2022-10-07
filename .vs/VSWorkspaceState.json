@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Controllers",
+    "\\DAL",
+    "\\Models",
     "\\Views",
-    "\\Views\\Season"
+    "\\Views\\Track"
   ],
-  "SelectedNode": "\\Views\\Season\\Index.cshtml",
+  "SelectedNode": "\\Controllers\\TrackController.cs",
   "PreviewInSolutionExplorer": false
 }
