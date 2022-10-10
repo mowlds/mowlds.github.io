@@ -39,12 +39,13 @@
         </thead>
         <tbody>
             @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 3))
-            
-                string style = ((bool)(item.HasTimePenalty)) = true ? "background-color:magenta" : null;
-
+            {
+                var style = String.Empty;   
+                if (item.HasFastestLap)
                 {
-                    <tr style="@style">
+                    style = "background-color:magenta";
                 }
+                    <tr style="@style">
                 
                     <td>
                         @Html.DisplayFor(modelItem => item.FinalPosition)
