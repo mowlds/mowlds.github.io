@@ -4,6 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script>
+    $(function(){
+        $("#StatType").change(function(e){
+         var val=$(this).val();
+            $("#stats").load("/Stats/TrackStats?" + "track=" +@Model.Track.ID + "&StatType=" + val);
+       });
+    });
+</script>
+
 <div class="wikiparent">
 
     <div class="row">
@@ -123,8 +132,20 @@
         </div>
     </div>
     <div id="championshipTable">
+        <div class="row">
+        Select Stat Type: &nbsp;
+            @Html.DropDownList("StatType", new List<SelectListItem>
+            {
+                new SelectListItem { Text = "All", Value = "0", Selected = true },
+                new SelectListItem { Text = "Equal Performance", Value = "1" },
+                new SelectListItem { Text = "Real Performance", Value = "2" }
+            })
+        </div>
+
+        <div id="stats">
+            @{Html.RenderAction("TrackStats", "Stats", new { track = Model.Track.ID, StatType = 0 });
+            }
+        </div>
         @* CDB: This loads the overview info from the provided model*@
-        @{Html.RenderAction("TrackStats", "Stats", new { track = Model.Track.ID });
-        }
     </div>
-</div>  
+</div>

@@ -128,10 +128,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\DriverResultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RacesController.cs" />
     <Compile Include="Controllers\SeasonController.cs" />
+    <Compile Include="Controllers\StatsController.cs" />
+    <Compile Include="Controllers\TrackController.cs" />
     <Compile Include="DAL\Driver.cs">
       <DependentUpon>SRLModel.tt</DependentUpon>
     </Compile>
@@ -181,8 +184,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ConstructorsModel.cs" />
+    <Compile Include="Models\DriverCareerResultModel.cs" />
+    <Compile Include="Models\DriverDisplayModel.cs" />
+    <Compile Include="Models\StatsModel.cs" />
     <Compile Include="Models\SuperGridQualyModel.cs" />
     <Compile Include="Models\SupergridViewModel.cs" />
+    <Compile Include="Models\TrackHistoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1105,7 +1112,9 @@
     <Content Include="Race\2021\S4\7hungary.html" />
     <Content Include="Race\2021\S4\8sanmarino.html" />
     <Content Include="Race\2021\S4\9britain.html" />
+    <Content Include="Race\2021\S4\homepage.html" />
     <Content Include="Race\2021\S4\overview.html" />
+    <Content Include="Race\2022\S1\homepage.html" />
     <Content Include="Race\template.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1126,6 +1135,8 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1159,6 +1170,12 @@
     <Content Include="Views\DriverResult\SprintPartial.cshtml" />
     <Content Include="Views\Season\SupergridQualyPartial.cshtml" />
     <Content Include="Views\Season\ConstructorsTable.cshtml" />
+    <Content Include="Views\Driver\Driver.cshtml" />
+    <Content Include="Views\Driver\DriverCareerResults.cshtml" />
+    <Content Include="Views\Driver\Index.cshtml" />
+    <Content Include="Views\Stats\Stats.cshtml" />
+    <Content Include="Views\Track\Index.cshtml" />
+    <Content Include="Views\Track\Track.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -18,10 +18,23 @@ namespace mowlds.github.io.Controllers
             return View();
         }
 
-        public async Task<ActionResult> TrackStats(int track)
+        public async Task<ActionResult> TrackStats(int track, StatType StatType)
         {
             var drivers = _context.Driver.ToList();
             var result = _context.DriverResult.Include("Race1").Include("Race1.Season1").Include("Driver1").Where(dr => dr.Race1.Track == track);
+
+            if (StatType == StatType.EqualPerformance)
+            {
+                result = result.Where(dr => !dr.Race1.Season1.isrealperformance);
+            }
+            else if (StatType == StatType.RealPerformance)
+            {
+                result = result.Where(dr => dr.Race1.Season1.isrealperformance);
+            }
+            else
+            {
+                //do not filter
+            }
 
             List<StatsModel> returnValue = new List<StatsModel>();
 
@@ -36,11 +49,24 @@ namespace mowlds.github.io.Controllers
             return PartialView("Stats", returnValue);
         }
 
-        public async Task<ActionResult> DriverStats(int driver)
+        public async Task<ActionResult> DriverStats(int driver, StatType StatType)
         {
             var tracks = _context.Track.ToList();
             Driver d = _context.Driver.Where(dr => dr.ID == driver).First();
             var result = _context.DriverResult.Include("Race1").Include("Race1.Track1").Include("Race1.Season1").Include("Driver1").Where(dr => dr.Driver == driver);
+
+            if (StatType == StatType.EqualPerformance)
+            {
+                result = result.Where(dr => !dr.Race1.Season1.isrealperformance);
+            }
+            else if (StatType == StatType.RealPerformance)
+            {
+                result = result.Where(dr => dr.Race1.Season1.isrealperformance);
+            }
+            else
+            {
+                //do not filter
+            }
 
             List<StatsModel> returnValue = new List<StatsModel>();
 

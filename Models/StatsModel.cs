@@ -52,4 +52,11 @@ namespace mowlds.github.io.Models
 
         public int QualyDSQ { get; set; }
     }
+
+    public enum StatType : int
+    {
+        All = 0,
+        EqualPerformance = 1,
+        RealPerformance = 2
+    }
 }

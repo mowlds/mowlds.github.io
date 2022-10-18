@@ -3,6 +3,14 @@
     ViewBag.Title = "Driver";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+    $(function(){
+        $("#StatType").change(function(e){
+         var val=$(this).val();
+            $("#StatsTable").load("/Stats/DriverStats?" + "driver=" +@Model.Driver.ID + "&StatType=" + val);
+       });
+    });
+</script>
 
 <div class="wikiparent">
     <div class="row">
@@ -78,10 +86,19 @@
         @{Html.RenderAction("DriverCareerResults", "Driver", new { driverID = Model.Driver.ID });
         }
     </div>
+    <div class="row">
+        Select Stat Type: &nbsp;
+        @Html.DropDownList("StatType", new List<SelectListItem>
+        {
+            new SelectListItem { Text = "All", Value = "0", Selected = true },
+            new SelectListItem { Text = "Equal Performance", Value = "1" },
+            new SelectListItem { Text = "Real Performance", Value = "2" }
+        })
+    </div>
 
     <div id="StatsTable">
         @* CDB: This loads the overview info from the provided model*@
-        @{Html.RenderAction("DriverStats", "Stats", new { driver = Model.Driver.ID });
+        @{Html.RenderAction("DriverStats", "Stats", new { driver = Model.Driver.ID, StatType = 0 });
         }
     </div>
 </div>
