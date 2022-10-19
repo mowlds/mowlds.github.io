@@ -44,6 +44,16 @@ a:hover{
   margin-left: auto;
 margin-right: auto;
 }
+
+.bigstattable {
+  width: 80%;
+  padding-bottom: 3%;
+  padding-top:2pc;
+  align-items: center;
+  margin-left: auto;
+margin-right: auto;
+}
+
 .rowrace {
   display: -webkit-flex;
   display: flex;
