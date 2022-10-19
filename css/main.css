@@ -1153,7 +1153,7 @@ table#list tr:nth-child(even) {
     table#raceresults td {font-size: 6pt;}
     table#raceresults th {font-size: 7pt;}
     .collapse {display: none;}
-
+    .bigstatsfiltertable td {display: table-row}
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .topnav a:not(:first-child) {display: none;}
