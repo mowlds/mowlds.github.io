@@ -15,7 +15,71 @@ namespace mowlds.github.io.Controllers
         // GET: Stats
         public ActionResult Index()
         {
-            return View();
+            StatsViewModel svm = new StatsViewModel();
+            svm.Drivers = _context.Driver.OrderBy(d=> d.Name).ToList();
+            svm.Seasons = _context.Season.ToList();
+            svm.Sessions = _context.Session.ToList();
+            svm.Tracks = _context.Track.OrderBy(t=>t.Name).ToList();
+            List<GameVersion> version = new List<GameVersion>();
+            foreach (Season s in svm.Seasons)
+            {
+                string gameversion = s.GameVersion.Trim();
+                if (!version.Any(v => v.version == gameversion))
+                {
+                    GameVersion v = new GameVersion();
+                    v.version = gameversion;
+                    version.Add(v);
+                }   
+            }
+            svm.GameVersion = version.OrderBy(v => v.version).ToList();
+            return View(svm);
+        }
+
+        public async Task<ActionResult> AllStats(int driver, int track, StatType StatType, string version, int session)
+        {
+            var drivers = _context.Driver.ToList();
+            var tracks = _context.Track.ToList();
+            var result = _context.DriverResult.Include("Race1").Include("Race1.Track1").Include("Race1.Season1").Include("Driver1").ToList();
+            if (driver > 0)
+            {
+                result = result.Where(dr => dr.Driver == driver).ToList();
+                drivers = drivers.Where(d => d.ID == driver).ToList();
+            }
+            if (track > 0)
+            {
+                result = result.Where(dr => dr.Race1.Track == track).ToList();
+                tracks = tracks.Where(t => t.ID == track).ToList();
+            }
+            if (StatType != StatType.All)
+            {
+                if (StatType == StatType.EqualPerformance)
+                {
+                    result = result.Where(dr => !dr.Race1.Season1.isrealperformance).ToList();
+                }
+                else if (StatType == StatType.RealPerformance)
+                {
+                    result = result.Where(dr => dr.Race1.Season1.isrealperformance).ToList();
+                }
+            }
+            if (version != "0")
+            {
+                result = result.Where(dr => dr.Race1.Season1.GameVersion.Trim() == version).ToList();
+            }
+            if (session > 0)
+            {
+                result = result.Where(dr => dr.SessionType == session).ToList();
+            }
+
+            List<StatsModel> returnValue = new List<StatsModel>();
+
+            foreach (Driver d in drivers)
+            {
+                var driverresult = result.Where(dr => dr.Driver == d.ID);
+                returnValue.Add(ConvertToStats(d.Name, driverresult.ToList(), session));
+            }
+
+            returnValue = returnValue.OrderByDescending(rv => rv.RaceWins).ThenByDescending(rv => rv.RaceStarts).ToList();
+            return PartialView("Stats", returnValue);
         }
 
         public async Task<ActionResult> TrackStats(int track, StatType StatType)
@@ -41,7 +105,7 @@ namespace mowlds.github.io.Controllers
             foreach (Driver d in drivers)
             {
                 var driverresult = result.Where(dr => dr.Driver == d.ID);
-                returnValue.Add(ConvertToStats(d.Name, driverresult.ToList()));
+                returnValue.Add(ConvertToStats(d.Name, driverresult.ToList(), 3));
             }
 
             returnValue = returnValue.OrderByDescending(rv => rv.RaceWins).ThenByDescending(rv => rv.RaceStarts).ToList();
@@ -73,7 +137,7 @@ namespace mowlds.github.io.Controllers
             foreach (Track t in tracks)
             {
                 var driverresult = result.Where(dr => dr.Race1.Track == t.ID);
-                returnValue.Add(ConvertToStats(t.Abbreviation, driverresult.ToList()));
+                returnValue.Add(ConvertToStats(t.Abbreviation, driverresult.ToList(), 3));
             }
 
             returnValue = returnValue.OrderByDescending(rv => rv.RaceWins).ThenByDescending(rv => rv.RaceStarts).ToList();
@@ -82,33 +146,31 @@ namespace mowlds.github.io.Controllers
 
         }
 
-        //public async Task<ActionResult> TotalStats()
-        //{
-        //    var result = _context.DriverResult.Include("Race1").Include("Race1.Season1").Include("Driver1")
-        //}
-
-
-        private StatsModel ConvertToStats(string name, List<DriverResult> driverResults)
+        private StatsModel ConvertToStats(string name, List<DriverResult> driverResults, int sessionType)
         {
+            if (sessionType == 0)
+            {
+                sessionType = 3;
+            }
             StatsModel driverStat = new StatsModel();
-            driverStat.RaceStarts = driverResults.Where(dr => dr.SessionType == 3).Count();
+            driverStat.RaceStarts = driverResults.Where(dr => dr.SessionType == sessionType).Count();
             driverStat.BestFinish = 0;
             driverStat.WorstFinish = 0;
-            if (driverResults.Where(dr => dr.SessionType == 3).Any())
+            if (driverResults.Where(dr => dr.SessionType == sessionType).Any())
             {
-                driverStat.BestFinish = driverResults.Where(dr => dr.SessionType == 3).Min(dr => dr.FinalPosition);
-                driverStat.WorstFinish = driverResults.Where(dr => dr.SessionType == 3).Max(dr => dr.FinalPosition);
+                driverStat.BestFinish = driverResults.Where(dr => dr.SessionType == sessionType).Min(dr => dr.FinalPosition);
+                driverStat.WorstFinish = driverResults.Where(dr => dr.SessionType == sessionType).Max(dr => dr.FinalPosition);
             }
-            driverStat.DNF = driverResults.Where(dr => dr.SessionType == 3 && dr.HasDNF).Count();
+            driverStat.DNF = driverResults.Where(dr => dr.SessionType == sessionType && dr.HasDNF).Count();
             driverStat.Name = name;
-            driverStat.DriveroftheDay = driverResults.Where(dr => dr.HasDriverOfTheDay && dr.SessionType == 3).Count();
-            driverStat.FastestLaps = driverResults.Where(dr => dr.HasFastestLap && dr.SessionType == 3).Count();
-            driverStat.Podiums = driverResults.Where(dr => dr.FinalPosition <= 3 && dr.SessionType == 3).Count();
-            driverStat.PointsFinish = driverResults.Where(dr => dr.RacePoints > 0 && dr.SessionType == 3).Count();
+            driverStat.DriveroftheDay = driverResults.Where(dr => dr.HasDriverOfTheDay && dr.SessionType == sessionType).Count();
+            driverStat.FastestLaps = driverResults.Where(dr => dr.HasFastestLap && dr.SessionType == sessionType).Count();
+            driverStat.Podiums = driverResults.Where(dr => dr.FinalPosition <= 3 && dr.SessionType == sessionType).Count();
+            driverStat.PointsFinish = driverResults.Where(dr => dr.RacePoints > 0 && dr.SessionType == sessionType).Count();
             driverStat.Poles = driverResults.Where(dr => dr.FinalPosition == 1 && dr.SessionType == 2).Count();
             driverStat.QualyDSQ = driverResults.Where(dr => dr.HasDSQ && dr.SessionType == 2).Count();
-            driverStat.RaceDSQ = driverResults.Where(dr => dr.HasDSQ && dr.SessionType == 3).Count();
-            driverStat.RaceWins = driverResults.Where(dr => dr.FinalPosition == 1 && dr.SessionType == 3).Count();
+            driverStat.RaceDSQ = driverResults.Where(dr => dr.HasDSQ && dr.SessionType == sessionType).Count();
+            driverStat.RaceWins = driverResults.Where(dr => dr.FinalPosition == 1 && dr.SessionType == sessionType).Count();
             driverStat.TotalPoints = driverResults.Where(dr => dr.SessionType > 2).Sum(dr => dr.RacePoints).Value;
 
             if (driverStat.RaceStarts > 0)

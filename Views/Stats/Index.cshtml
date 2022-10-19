@@ -1,0 +1,66 @@
+﻿@model mowlds.github.io.Models.StatsViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>"Stats are like a miniskirt, and all that" - Tony-Y</h2>
+
+<script>
+    $(function(){
+        $("#ShowStats").click(function(e){
+            var driver = $("#Drivers").val();
+            var track = $("#Tracks").val();
+            var statType = $("#StatType").val();
+            var gameversion = $("#GameVersion").val();
+            var session = $("#Sessions").val();
+
+            if (!driver) { driver = 0; }
+            if (!track) { track = 0; }
+            if (!gameversion) { gameversion = 0; }
+            if (!session) { session = 0; }
+
+
+            $("#stats").load("/Stats/AllStats?" + "driver=" + driver + "&track=" +track + "&StatType=" + statType + "&version=" + gameversion + "&session=" +session);
+       });
+    });
+</script>
+
+<table>
+    <tr>
+
+        <td>
+            @Html.DropDownListFor(d => d.Drivers, new SelectList(Model.Drivers, "ID", "Name"), "All Drivers")
+        </td>
+        <td>
+            @Html.DropDownListFor(t => t.Tracks, new SelectList(Model.Tracks, "ID", "Name"), "All Tracks")
+        </td>
+        <td>
+            @Html.DropDownList("StatType", new List<SelectListItem>
+           {
+               new SelectListItem { Text = "All Performance", Value = "0", Selected = true },
+               new SelectListItem { Text = "Equal Performance", Value = "1" },
+               new SelectListItem { Text = "Real Performance", Value = "2" }
+           })
+        </td>
+        <td>
+            @Html.DropDownListFor(t => t.GameVersion, new SelectList(Model.GameVersion, "version", "version"), "All versions")
+        </td>
+        <td>
+            @Html.DropDownListFor(t => t.Sessions, new SelectList(Model.Sessions, "ID", "SessionType"), "All Sessions")
+        </td>
+        @*<td>
+            //Weather
+            fully wet, 90 of tyres used are wets/inters
+            changeable, 50% of drivers used wets or inters
+            dry, less than 10% of drivers used wets or inters
+        </td>*@
+        <td>
+           <input type="button" id="ShowStats" value="Show me the skirt!" />
+        </td>
+    </tr>
+</table>
+
+<div id="stats">
+   
+</div>
