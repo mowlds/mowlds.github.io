@@ -86,7 +86,7 @@
         @{Html.RenderAction("DriverCareerResults", "Driver", new { driverID = Model.Driver.ID });
         }
     </div>
-    <div class="row">
+    <div class="statfilter">
         Select Stat Type: &nbsp;
         @Html.DropDownList("StatType", new List<SelectListItem>
         {

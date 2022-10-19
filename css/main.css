@@ -334,6 +334,17 @@ table.driverrecords tr:nth-child(even) {
   padding-left: 2%;
 }
 
+.statfilter{
+  display: flex;
+    width: 80%;
+    padding-bottom: -200px;
+    padding-top: 3pc;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -40px;
+}
+
 .newsimage{
 align-content: center;
 padding-top: 2%;
