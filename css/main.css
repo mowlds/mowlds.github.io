@@ -1234,7 +1234,6 @@ table#list tr:nth-child(even) {
 table#nolayout {
     table-layout: fixed;
     max-width: 80%;
-    min-width: 60%;
     border-collapse: collapse;
     padding: 5px;
     font-weight: bold;
