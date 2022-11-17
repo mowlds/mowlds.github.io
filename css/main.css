@@ -69,10 +69,9 @@ margin-right: auto;
     background-color: rgb(193, 227, 193);
     border-radius: 10px;
     padding-left: 10px;
-    box-shadow: 3px 3px #180101;
-    align-items: left;
-    align-content: left;
-    text-align: left;
+    box-shadow: 2px 2px #180101;
+    text-decoration: none;
+
 }
 
 
