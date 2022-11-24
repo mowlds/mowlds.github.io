@@ -21,7 +21,7 @@
                     {
                         string linkvalue = string.Format("Driver/driver?driver={0}", driverItem.ID.ToString());
                         
-                        <li class="driverlist"><a href=@linkvalue>@Html.DisplayFor(modelitem => driverItem.Name)</a></li>
+                        <li class="driverlist"><a style="text-decoration:none" href=@linkvalue>@Html.DisplayFor(modelitem => driverItem.Name)</a><i class="fa-solid fa-chevron-right"></i></li>
                     }
                 </ul>
                 }
