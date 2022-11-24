@@ -73,8 +73,9 @@ margin-right: auto;
   display: flex;
   display: block;
   max-height: 40px;
-  width: 130px;
+  width: 150px;
   margin-bottom: 15px;
+  padding-bottom:5px;
 }
 
 
