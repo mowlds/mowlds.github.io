@@ -66,12 +66,15 @@ margin-right: auto;
 
 .driverlist {
   font-weight: bold;
-    background-color: rgb(193, 227, 193);
-    border-radius: 10px;
-    padding-left: 10px;
-    box-shadow: 2px 2px #180101;
-    text-decoration: none;
-
+  border-bottom-right-radius: 10px;
+  padding-left: 10px;
+  border-right: black 1px solid;
+  border-bottom: black 1px solid;
+  display: flex;
+  display: block;
+  max-height: 40px;
+  width: 130px;
+  margin-bottom: 15px;
 }
 
 
@@ -276,8 +279,10 @@ margin-bottom: 5%;
 
 
 ul.wikilist{
-list-style-type: none;
-padding-top: 5px;
+  list-style-type: none;
+  padding-top: 5px;
+  display: inline-grid;
+  flex-direction: row;
 }
 
 
