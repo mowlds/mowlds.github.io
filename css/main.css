@@ -179,6 +179,15 @@ margin-right: auto;
     background-color: rgb(116 146 124) ;
   }
 
+  .firstletter {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    border: none;
+    font-size: 30px;
+
+  }
+
 @media screen and ( min-width: 500px ) {
     .dropdown-content a:hover {
         background-color: rgb(43, 75, 52);
