@@ -16,7 +16,7 @@
                 {
                     firstLetter = item.Name.First().ToString();
                 <ul class="wikilist">
-                <li style="font-weight: bold;">@Html.DisplayFor(modelitem => firstLetter)</li>
+                <li class="firstletter" style="font-weight: bold;">@Html.DisplayFor(modelitem => firstLetter)</li>
                     
                     @foreach (var driverItem in Model.Where(d => d.Name.First().ToString() == firstLetter))
                     {
