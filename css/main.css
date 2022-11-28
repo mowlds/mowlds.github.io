@@ -277,6 +277,15 @@ margin-bottom: 5%;
   text-align: center;
 }
 
+#powerranking{
+width:50%;
+    border-collapse: collapse;
+    background-color: rgb(43, 75, 52);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .wiki{
   text-align: left;
