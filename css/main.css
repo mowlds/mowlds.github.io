@@ -278,12 +278,17 @@ margin-bottom: 5%;
 }
 
 #powerranking{
-width:50%;
-    border-collapse: collapse;
-    background-color: rgb(43, 75, 52);
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
+  width: 50%;
+  background-color: rgb(4 4 4 / 66%);
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 400px;
+  margin-bottom: 400px;
+}
+
+#powerranking tr{
+  padding:20px;
 }
 
 
