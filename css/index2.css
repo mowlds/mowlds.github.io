@@ -25,6 +25,15 @@ a:hover{
 
 }
 
+.mavmas
+{
+  height:500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  display:block;
+}
+
 .column.side {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -921,12 +930,16 @@ hr.solidblue {
       overflow: hidden;
       background-color: rgb(1, 39, 3);
       padding: 0%
+  
   }
     .topnav a.icon {
       float: right;
       display: block;
       padding-bottom: 33px;
       
+    }
+    .mavmas {
+      max-width: 380px;
     }
     table#driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .block {display: inline-block; text-decoration: none; padding: 1%; width: 100%; height: auto; vertical-align:top; border: 1px solid rgb(18, 14, 34); border-radius: 5px; margin: 5px; margin-bottom: 10px; background-color: rgba(99, 83, 190, 0.144) ; 
