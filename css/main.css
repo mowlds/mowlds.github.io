@@ -133,6 +133,11 @@ margin-right: auto;
   background-color: rgb(18, 14, 34)
 }
 
+.left {
+  display:block
+
+}
+
   .center {
     display: block;
     margin-left: auto;
