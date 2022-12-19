@@ -24,6 +24,7 @@ namespace mowlds.github.io.DAL
         public string Name { get; set; }
         public string About { get; set; }
         public string TeamLogo { get; set; }
+        public string Colour { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DriverTeam> DriverTeam { get; set; }

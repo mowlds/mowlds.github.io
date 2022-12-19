@@ -186,7 +186,9 @@
     <Compile Include="Models\ConstructorsModel.cs" />
     <Compile Include="Models\DriverCareerResultModel.cs" />
     <Compile Include="Models\DriverDisplayModel.cs" />
+    <Compile Include="Models\GameVersion.cs" />
     <Compile Include="Models\StatsModel.cs" />
+    <Compile Include="Models\StatsViewModel.cs" />
     <Compile Include="Models\SuperGridQualyModel.cs" />
     <Compile Include="Models\SupergridViewModel.cs" />
     <Compile Include="Models\TrackHistoryModel.cs" />
@@ -1166,16 +1168,17 @@
     <Content Include="Views\Season\Index.cshtml" />
     <Content Include="Views\Races\Index.cshtml" />
     <Content Include="Views\Season\Season.cshtml" />
-    <Content Include="Views\Season\SupergridPartial.cshtml" />
+    <Content Include="Views\Shared\SupergridPartial.cshtml" />
     <Content Include="Views\DriverResult\SprintPartial.cshtml" />
-    <Content Include="Views\Season\SupergridQualyPartial.cshtml" />
-    <Content Include="Views\Season\ConstructorsTable.cshtml" />
+    <Content Include="Views\Shared\SupergridQualyPartial.cshtml" />
+    <Content Include="Views\Shared\ConstructorsTable.cshtml" />
     <Content Include="Views\Driver\Driver.cshtml" />
     <Content Include="Views\Driver\DriverCareerResults.cshtml" />
     <Content Include="Views\Driver\Index.cshtml" />
     <Content Include="Views\Stats\Stats.cshtml" />
     <Content Include="Views\Track\Index.cshtml" />
     <Content Include="Views\Track\Track.cshtml" />
+    <Content Include="Views\Stats\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,6 +9,7 @@
 <table id="champtable">
     <caption style="font-weight: bolder ;">THE SAUCERLESS CYLINDRICAL CUP CONSTRUCTORS CHAMPIONSHIP</caption>
     <tr>
+        <th></th>
         <th>Team</th>
         <th>Driver 1</th>
         <th>Driver 2</th>
@@ -19,18 +20,21 @@
     {
 <tr>
     <td>
+        @Html.DisplayFor(modelItem => item.position)
+    </td>
+    <td>
         <img style="height: 75px;" src="@Html.DisplayFor(modelitem => item.team.TeamLogo)">
     </td>
-    
+
     <td>@Html.DisplayFor(modelItem => item.driver1.Name)</td>
     @if (item.driver2 != null)
-    { 
-    <td>@Html.DisplayFor(modelItem => item.driver2.Name)</td>
+    {
+        <td>@Html.DisplayFor(modelItem => item.driver2.Name)</td>
     }
-                    else
-                    {
-                        <td>&nbsp;</td>
-                    }
+    else
+    {
+        <td>&nbsp;</td>
+    }
     <td>@Html.DisplayFor(modelItem => item.totalPoints)</td>
     <td>@Html.DisplayFor(modelItem => item.totalWins)</td>
 </tr>

@@ -96,12 +96,15 @@ namespace mowlds.github.io.Controllers
                     maxpoints = supergrid.totalPoints;
                 }
             }
-
+            superGridContext = superGridContext.OrderByDescending(sg => sg.totalPoints).ThenBy(sg => sg.highestPosition).ToList();
+            int index = 0;
             foreach (var supergrid in superGridContext)
             {
-                supergrid.diffPoints = supergrid.totalPoints- maxpoints;   
+                index++;
+                supergrid.diffPoints = supergrid.totalPoints- maxpoints;
+                supergrid.currentTablePosition = index;
             }
-            return PartialView(superGridContext.OrderByDescending(sg => sg.totalPoints).ThenBy(sg => sg.highestPosition));
+            return PartialView(superGridContext);
         }
 
         [Route("SupergridQualyPartial")]
@@ -131,7 +134,19 @@ namespace mowlds.github.io.Controllers
                     supergrid.avgGridPosition = Math.Round(supergrid.driverResults.Average(dr => dr.FinalPosition), 2, MidpointRounding.AwayFromZero);
                 }
             }
-            return PartialView(superGridContext.OrderBy(sg => sg.avgGridPosition));
+
+            superGridContext = superGridContext.OrderBy(sg => sg.avgGridPosition).ToList();
+            int index = 0;
+            foreach (var supergrid in superGridContext)
+            {
+                if (supergrid.driverResults.Any())
+                {
+                    index++;
+                    supergrid.currentTablePosition = index;
+                }
+            }
+
+            return PartialView(superGridContext);
         }
 
         [Route("ConstructorsTable")]
@@ -175,7 +190,17 @@ namespace mowlds.github.io.Controllers
                     constructorTable.Add(constructor);
                 }
             }
-            return PartialView(constructorTable.OrderByDescending(ct => ct.totalPoints));
+
+            constructorTable = constructorTable.OrderByDescending(ct => ct.totalPoints).ToList();
+            int index = 0;
+            foreach (var constructor in constructorTable)
+            {
+                index++;
+                constructor.position = index;
+            }
+
+
+            return PartialView(constructorTable);
         }
 
     }

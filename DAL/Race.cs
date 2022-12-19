@@ -28,6 +28,8 @@ namespace mowlds.github.io.DAL
         public string RaceName { get; set; }
         public Nullable<System.DateTime> RaceDate { get; set; }
         public Nullable<int> Laps { get; set; }
+        public string Review { get; set; }
+        public string Highlights { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DriverResult> DriverResult { get; set; }

@@ -13,5 +13,7 @@ namespace mowlds.github.io.Models
         public Driver driver2 { get; set; }
         public int totalPoints { get; set; }
         public int totalWins { get; set; }
+
+        public int position { get; set; }
     }
 }

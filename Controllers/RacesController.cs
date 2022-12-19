@@ -1,4 +1,5 @@
 ﻿using mowlds.github.io.DAL;
+using mowlds.github.io.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,5 +32,6 @@ namespace mowlds.github.io.Controllers
                 OrderByDescending(r => r.Season1.GameVersion).ThenByDescending(r => r.Season1.Number).ThenByDescending(r => r.RaceNumber);
             return View(sRLContext);
         }
+
     }
 }
