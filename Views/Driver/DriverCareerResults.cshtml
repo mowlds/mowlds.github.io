@@ -49,12 +49,13 @@
         </td>
         <td>
             @if (supergrid.season.isrealperformance)
-                    {
-                        <img class="realperf" src="~/images/realperf.png">
-                    }
-                    else {
-<img class="realperf" src="~/images/equal.png">
-}
+            {
+                <img class="realperf" src="~/images/realperf.png">
+            }
+            else
+            {
+                <img class="realperf" src="~/images/equal.png">
+            }
         </td>
         <td>
             @if (supergrid.season.DriverTeam.Any())
@@ -108,7 +109,7 @@
                                 string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap ? "fl" : "");
                                 string racelink = string.Format("DriverResult?race={0}", race.ID.ToString());
 
-                                    <td><a href=~/@racelink><img class="icongrid" src=@postionLink></a></td>
+                                <td><a href=~/@racelink><img class="icongrid" src=@postionLink></a></td>
                                 hasvalue = true;
 
                             }
@@ -127,7 +128,8 @@
                 }
                 if (!trackWasRaced)
                 {
-                    <td>&nbsp;</td>
+                    string postionLink ="../../images/numbers/notheld.png";
+                    <td><img class="icongrid" src=@postionLink></td>
                 }
             }
         }
