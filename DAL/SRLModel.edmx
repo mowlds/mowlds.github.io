@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SRLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SRLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Driver">
           <Key>
             <PropertyRef Name="ID" />
@@ -69,13 +69,6 @@ warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key de
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="Event" Type="nchar" MaxLength="30" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="PositionPoints">
-          <Property Name="Position" Type="int" />
-          <Property Name="Points" Type="int" />
-          <Property Name="SessionType" Type="int" />
-        </EntityType>-->
         <EntityType Name="Race">
           <Key>
             <PropertyRef Name="ID" />
@@ -87,6 +80,8 @@ warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary ke
           <Property Name="RaceName" Type="nchar" MaxLength="50" />
           <Property Name="RaceDate" Type="date" />
           <Property Name="Laps" Type="int" />
+          <Property Name="Review" Type="varchar(max)" />
+          <Property Name="Highlights" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="RaceLaps">
           <Key>
@@ -126,6 +121,7 @@ warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary ke
           <Property Name="Name" Type="nchar" MaxLength="30" />
           <Property Name="About" Type="text" />
           <Property Name="TeamLogo" Type="text" />
+          <Property Name="Colour" Type="nchar" MaxLength="8" />
         </EntityType>
         <EntityType Name="Track">
           <Key>
@@ -179,9 +175,6 @@ warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_PositionPoints_SessionType" />-->
         <Association Name="FK_Race_DriverResult">
           <End Role="Race" Type="Self.Race" Multiplicity="1" />
           <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />
@@ -340,8 +333,7 @@ error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, 
             <End Role="DriverTeam" EntitySet="DriverTeam" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SRLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -420,6 +412,8 @@ error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, 
           <NavigationProperty Name="RaceLaps" Relationship="Self.Race_to_Racelaps" FromRole="Race" ToRole="RaceLaps" />
           <NavigationProperty Name="Season1" Relationship="Self.Race_To_Season" FromRole="Race" ToRole="Season" />
           <NavigationProperty Name="Track1" Relationship="Self.Race_to_Track" FromRole="Race" ToRole="Track" />
+          <Property Name="Review" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Highlights" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="RaceLaps">
           <Key>
@@ -466,6 +460,7 @@ error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, 
           <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="TeamLogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DriverTeam" Relationship="Self.Team_To_DriverTeam" FromRole="Team" ToRole="DriverTeam" />
+          <Property Name="Colour" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Track">
           <Key>
@@ -749,6 +744,8 @@ error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, 
           <EntitySetMapping Name="Race">
             <EntityTypeMapping TypeName="SRLModel.Race">
               <MappingFragment StoreEntitySet="Race">
+                <ScalarProperty Name="Highlights" ColumnName="Highlights" />
+                <ScalarProperty Name="Review" ColumnName="Review" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Season" ColumnName="Season" />
                 <ScalarProperty Name="Track" ColumnName="Track" />
@@ -795,6 +792,7 @@ error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, 
           <EntitySetMapping Name="Team">
             <EntityTypeMapping TypeName="SRLModel.Team">
               <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="Colour" ColumnName="Colour" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="About" ColumnName="About" />

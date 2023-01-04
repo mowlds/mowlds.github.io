@@ -33,7 +33,49 @@ namespace mowlds.github.io.Controllers
             var sRLContext = _context.Season.
                   Include("Race").
                    OrderByDescending(s => s.GameVersion).ThenByDescending(s => s.Number);
-            return View(sRLContext);
+            int currentSeason = sRLContext.First().ID;
+            var seasonChampion = new List<SeasonChampionModel>();
+            foreach (Season s in sRLContext)
+            {
+                SeasonChampionModel sc = new SeasonChampionModel();
+                sc.DriverTeam = s.DriverTeam;
+                sc.GameVersion = s.GameVersion;
+                sc.ID = s.ID;
+                sc.isoneshotqualy = s.isoneshotqualy;
+                sc.isrealperformance = s.isrealperformance;
+                sc.isrealteams = s.isrealteams;
+                sc.Number = s.Number;
+                sc.Race = s.Race;
+                sc.Year = s.Year;
+                sc.Champion = currentSeason == sc.ID ? "---": GetChampion(sc.ID);
+                seasonChampion.Add(sc);
+            }
+            return View(seasonChampion);
+        }
+
+        private string GetChampion(int seasonID)
+        {
+            string champion = String.Empty;
+
+            var srlContxt = _context.DriverResult.Include("Race1").Where(d => d.Race1.Season == seasonID && d.SessionType > 2).OrderBy(dr => dr.Driver).ToList();
+            int driverpoints = 0;
+            int winnerpoints = 0;
+            int driver = 0;
+            foreach (var dr in srlContxt)
+            {
+                if (dr.Driver != driver)
+                {
+                    driver = dr.Driver;
+                    driverpoints  = srlContxt.Where(drive => drive.Driver == dr.Driver).Sum(d=> d.RacePoints.HasValue ? d.RacePoints.Value: 0);
+                    if (driverpoints > winnerpoints)
+                    {
+                        winnerpoints = driverpoints;
+                        champion = dr.Driver1.Name;
+                    }
+                }
+            }
+
+            return champion;
         }
 
         [Route("SeasonOverview")]
@@ -48,7 +90,7 @@ namespace mowlds.github.io.Controllers
                   Include("DriverTeam.Team1").
                   Include("Race.DriverResult").
                   Where(s => s.ID == season);
-
+            ViewData["Champion"] = GetChampion(season);
             return View(sRLContext);
         }
 
@@ -56,7 +98,7 @@ namespace mowlds.github.io.Controllers
         public async Task<ActionResult> SupergridPartial(int seasonID)
         {
             var drivers = _context.Driver;
-            var season = _context.Season.Include("DriverTeam").Include("DriverTeam.Team1").Where(s=> s.ID == seasonID);
+            var season = _context.Season.Include("DriverTeam").Include("DriverTeam.Team1").Where(s => s.ID == seasonID);
             var races = _context.Race.Include("Track1").Where(r => r.Season == seasonID).OrderBy(r => r.RaceNumber).ToList();
             var superGridContext = new List<SupergridViewModel>();
             var sprints = _context.DriverResult.Include("Race1").Where(dr => dr.SessionType == 4 && dr.Race1.Season == seasonID);
@@ -83,7 +125,7 @@ namespace mowlds.github.io.Controllers
                 supergrid.driverResults = supergrid.driverResults.OrderBy(dr => dr.Race1.RaceNumber).ThenByDescending(dr => dr.SessionType).ToList();
                 supergrid.totalPoints = supergrid.driverResults.Sum(d => d.RacePoints.HasValue ? d.RacePoints.Value : 0);
                 if (supergrid.driverResults.Any())
-                { 
+                {
                     supergrid.highestPosition = supergrid.driverResults.Min(dr => dr.FinalPosition);
                 }
                 else
@@ -96,12 +138,15 @@ namespace mowlds.github.io.Controllers
                     maxpoints = supergrid.totalPoints;
                 }
             }
-
+            superGridContext = superGridContext.OrderByDescending(sg => sg.totalPoints).ThenBy(sg => sg.highestPosition).ToList();
+            int index = 0;
             foreach (var supergrid in superGridContext)
             {
-                supergrid.diffPoints = supergrid.totalPoints- maxpoints;   
+                index++;
+                supergrid.diffPoints = supergrid.totalPoints - maxpoints;
+                supergrid.currentTablePosition = index;
             }
-            return PartialView(superGridContext.OrderByDescending(sg => sg.totalPoints).ThenBy(sg => sg.highestPosition));
+            return PartialView(superGridContext);
         }
 
         [Route("SupergridQualyPartial")]
@@ -131,7 +176,19 @@ namespace mowlds.github.io.Controllers
                     supergrid.avgGridPosition = Math.Round(supergrid.driverResults.Average(dr => dr.FinalPosition), 2, MidpointRounding.AwayFromZero);
                 }
             }
-            return PartialView(superGridContext.OrderBy(sg => sg.avgGridPosition));
+
+            superGridContext = superGridContext.OrderBy(sg => sg.avgGridPosition).ToList();
+            int index = 0;
+            foreach (var supergrid in superGridContext)
+            {
+                if (supergrid.driverResults.Any())
+                {
+                    index++;
+                    supergrid.currentTablePosition = index;
+                }
+            }
+
+            return PartialView(superGridContext);
         }
 
         [Route("ConstructorsTable")]
@@ -175,7 +232,17 @@ namespace mowlds.github.io.Controllers
                     constructorTable.Add(constructor);
                 }
             }
-            return PartialView(constructorTable.OrderByDescending(ct => ct.totalPoints));
+
+            constructorTable = constructorTable.OrderByDescending(ct => ct.totalPoints).ToList();
+            int index = 0;
+            foreach (var constructor in constructorTable)
+            {
+                index++;
+                constructor.position = index;
+            }
+
+
+            return PartialView(constructorTable);
         }
 
     }

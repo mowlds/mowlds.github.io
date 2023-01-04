@@ -1,4 +1,4 @@
-﻿@model IEnumerable<mowlds.github.io.DAL.Season>
+﻿@model IEnumerable<mowlds.github.io.Models.SeasonChampionModel>
 
 @{
     ViewData["Title"] = "Seasons";
@@ -38,39 +38,48 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Year)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Number)
-                </td>
-                <td style="align-content: center">
-                    
-                    @if (item.isrealperformance)
-                    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td style="align-content: center">
+                @if (item.isrealperformance)
+                {
                     <img class="realperf" src="~/images/realperf.png">
-                    }
-                    else {
+                }
+                else
+                {
                     <img class="realperf" src="~/images/equal.png">
-                    }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.isoneshotqualy)
-                </td>
-                <td>
-                    @{string linkvalue = string.Format("Season/season?season={0}", item.ID.ToString());
-                    }
+                }
+            </td>
+            <td style="align-content: center">
+                @if (item.isoneshotqualy.Value)
+                {
+                    <img class="realperf" src="~/images/box_checked.png">
+                }
+                else
+                {
+                    <img class="realperf" src="~/images/box_unchecked.png">
+                }
+            </td>
+            <td>
+                @{string linkvalue = string.Format("Season/season?season={0}", item.ID.ToString());
+                }
 
-                    @{string parameterValue = item.Race.Count().ToString();
-                    }
-                    <a href=@linkvalue>@parameterValue races</a>
-                </td>
-                <td><img class="icongrid" src="~/images/champtrophy.png">
-                </td>
-                <td>
-                </td>
-            </tr>
+                @{string parameterValue = item.Race.Count().ToString();
+                }
+                <a href=@linkvalue>@parameterValue races</a>
+            </td>
+            <td>
+                <img class="icongrid" src="~/images/champtrophy.png">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Champion)
+            </td>
+        </tr>
         }
     </tbody>
 </table>

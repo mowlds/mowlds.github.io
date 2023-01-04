@@ -16,7 +16,9 @@ namespace mowlds.github.io.Models
         public int totalPoints { get; set; }
         public int diffPoints { get; set; }
         
-         public int highestPosition { get; set; }
+        public int highestPosition { get; set; }
+
+        public int currentTablePosition { get; set; }
        
     }
 }

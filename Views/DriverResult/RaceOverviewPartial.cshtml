@@ -17,6 +17,19 @@
     <h2>@Html.DisplayFor(raceItem => Model.First().Race1.Track1.Name), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.City), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.Country)</h2>
 </div>
 
+
+<div class="rowrace">
+    <div class="column">
+        <h2>Rob's Review</h2>
+        <br />
+        @Html.Raw(Model.First().Race1.Review)
+    </div>
+    <div class="column">
+        <iframe width="500" height="306" src="@Html.DisplayFor(modelitem => Model.First().Race1.Highlights)" title="Highlights" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
 <div class="rowrace">
     <div class="column">
         <div class="racewinner">
@@ -43,9 +56,10 @@
         </h2>
         <div class="racewinner">
             <h3 class="racewinner">DRIVER OF THE DAY</h3>
-            
-        <h3 class="racewin">@Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasDriverOfTheDay).FirstOrDefault().Driver1.Name)
-           
+
+            <h3 class="racewin">
+                @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasDriverOfTheDay).FirstOrDefault().Driver1.Name)
+
         </h3>
     </div>
 </div>

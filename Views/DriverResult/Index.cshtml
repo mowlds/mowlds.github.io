@@ -1,26 +1,46 @@
-﻿@model IEnumerable < mowlds.github.io.DAL.DriverResult>
+﻿@model IEnumerable<mowlds.github.io.DAL.DriverResult>
 @{
     ViewData["Title"] = "Race results";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@{ var url = string.Format("../../{0}", Model.First().Race1.Track1.Background);}
+ <div class="raceBackground" style="background: url('@Html.Raw(url)'">
+    <div id="raceOverview">
+        @* CDB: This loads the overview info from the provided model*@
+        @Html.Partial("RaceOverviewPartial", Model)
+    </div>
+    <div id="qualyResult">
+        @* CDB: This loads the qualifying result from the provided model *@
+        @Html.Partial("QualyPartial", Model)
+    </div>
+    @if (Model.Where(m => m.SessionType == 4).Any())
+    {
+        <div id="sprintresult">
+            @* CDB: This loads the qualifying result from the provided model *@
+            @Html.Partial("SprintPartial", Model)
+        </div>
+    }
+    <div id="raceResult">
+        @* CDB: This loads the qualifying result from the provided model *@
+        @Html.Partial("RacePartial", Model)
+    </div>
+
+    <div id="championshipTable">
+        @* CDB: This loads the overview info from the provided model*@
+        @{Html.RenderAction("SupergridPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
+        }
+    </div>
+
+    <div id="constructorsTable">
+        @* CDB: This loads the overview info from the provided model*@
+        @{Html.RenderAction("ConstructorsTable", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
+        }
+    </div>
 
 
-<div id="raceOverview">
-    @* CDB: This loads the overview info from the provided model*@
-    @Html.Partial("RaceOverviewPartial", Model)
-</div>
-<div id="qualyResult">
-    @* CDB: This loads the qualifying result from the provided model *@
-    @Html.Partial("QualyPartial", Model)
-</div>
-@if (Model.Where(m => m.SessionType == 4).Any())
-{ 
-<div id="sprintresult">
-    @* CDB: This loads the qualifying result from the provided model *@
-    @Html.Partial("SprintPartial", Model)
-</div>
-}
-<div id="raceResult">
-    @* CDB: This loads the qualifying result from the provided model *@
-    @Html.Partial("RacePartial", Model)
+    <div id="superGridTable">
+        @* CDB: This loads the overview info from the provided model*@
+        @{Html.RenderAction("SupergridQualyPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
+        }
+    </div>
 </div>
