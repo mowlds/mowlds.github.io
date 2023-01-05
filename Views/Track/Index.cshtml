@@ -10,6 +10,9 @@
         <thead>
             <tr>
                 <th>
+                    Abbreviation
+                </th>
+                <th>
                     Track
                 </th>
                 <th>
@@ -18,9 +21,7 @@
                 <th>
                     Country
                 </th>
-                <th>
-                    Abbreviation
-                </th>
+
                 <th>
                 </th>
             </tr>
@@ -28,8 +29,10 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    
+                <tr>                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Abbreviation)
+                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
@@ -38,9 +41,6 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Country)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Abbreviation)
                     </td>
                     <td>
                         @{string linkvalue = string.Format("Track/Track?track={0}", item.ID.ToString());
