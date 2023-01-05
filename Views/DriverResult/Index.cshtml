@@ -10,14 +10,14 @@
         @* CDB: This loads the overview info from the provided model*@
         @Html.Partial("RaceOverviewPartial", Model)
     </div>
-<div class="row">
-    <div class="column" id="qualyResult">
+<div class="rowraceresult">
+    <div class="columnraceresult" id="qualyResult">
         @* CDB: This loads the qualifying result from the provided model *@
         @Html.Partial("QualyPartial", Model)
-    </div class="column">
+    </div class="columnraceresult">
     @if (Model.Where(m => m.SessionType == 4).Any())
     {
-        <div class="column" id="sprintresult">
+        <div class="columnraceresult" id="sprintresult">
             @* CDB: This loads the qualifying result from the provided model *@
             @Html.Partial("SprintPartial", Model)
         </div>
