@@ -988,6 +988,20 @@ table#seasonlist tr:nth-child(even) {
                 padding-top: 10px;
                 font-size: 30px;
             }
+
+            table#tracktablerace {
+                table-layout: fixed;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+             
+
+                table#tracktablerace caption {
+                  padding-bottom: 10px;
+                  padding-top: 10px;
+                  font-size: 20px;
+            }
             table#tracktable td{
                 padding-top: 2px;
                 padding-bottom: 2px;
