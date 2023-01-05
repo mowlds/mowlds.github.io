@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @{ var url = string.Format("../../{0}", Model.First().Race1.Track1.Background);}
- <div class="raceBackground" style="background: url('@Html.Raw(url)'">
+ <div class="raceBackground" style="background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url('@Html.Raw(url)'">
     <div id="raceOverview">
         @* CDB: This loads the overview info from the provided model*@
         @Html.Partial("RaceOverviewPartial", Model)
