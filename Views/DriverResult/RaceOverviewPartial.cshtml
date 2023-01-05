@@ -59,8 +59,11 @@
         @Html.Raw(Model.First().Race1.Review)
     </div>
     <div class="column">
+        <div class="youtube">
         <iframe width="500" height="306" src="@Html.DisplayFor(modelitem => Model.First().Race1.Highlights)" title="Highlights" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
     </div>
 </div>
 
