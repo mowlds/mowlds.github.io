@@ -5,16 +5,47 @@
     Layout = "~/Views/Shared/_PartialLayout.cshtml";
 }
 
-<div class="raceinfo">
-    <img src="~/images/SRL.png" height="50px">
-    <H1>
-        F1 @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Year) Season @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Number),
-        Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber) - @Html.DisplayFor(raceItem => Model.First().Race1.RaceName)
-    </H1>
-    @{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+
+<div class="wikiparent">
+<div class="tracktable">
+                <img class="bio" src="~/images/SRL.png" height="185px">
+                <table id="tracktable">
+                    <caption style="font-weight: bolder ;">F1 @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Year) Season @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Number),
+        Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber) - @Html.DisplayFor(raceItem => Model.First().Race1.RaceName)</br>@{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
     }
-    <h2>@Html.DisplayFor(raceItem => parameterValue)</h2>
-    <h2>@Html.DisplayFor(raceItem => Model.First().Race1.Track1.Name), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.City), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.Country)</h2>
+    @Html.DisplayFor(raceItem => parameterValue)</caption>
+                    <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;">@Html.DisplayFor(raceItem => Model.First().Race1.Track1.Name), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.City), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.Country)</th>
+                    <tbody>
+                        <tr>
+                            <th>Race Winner</th>
+                            <td>
+                                @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.FinalPosition == 1).First().Driver1.Name)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Pole Position</th>
+                            <td>
+                                @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Driver1.Name) -
+                                @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Time)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Fastest Lap</th>
+                            <td>
+                               @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().Driver1.Name) -
+            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().BestLap)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Driver Of The Day</th>
+                            <td>
+                                @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasDriverOfTheDay).FirstOrDefault().Driver1.Name)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+    
 </div>
 
 <div class="rowrace">
