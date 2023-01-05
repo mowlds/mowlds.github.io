@@ -6,7 +6,7 @@
 @{ var url = string.Format("../../{0}", Model.First().Race1.Track1.Background);}
  <div class="raceBackground" style="background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url('@Html.Raw(url)'">
 
-        <div id="raceOverview">
+    <div id="raceOverview">
         @* CDB: This loads the overview info from the provided model*@
         @Html.Partial("RaceOverviewPartial", Model)
         </div>
@@ -14,7 +14,8 @@
         <div class="columnraceresult" id="qualyResult">
         @* CDB: This loads the qualifying result from the provided model *@
         @Html.Partial("QualyPartial", Model)
-        </div class="columnraceresult">
+        </div>
+        
     @if (Model.Where(m => m.SessionType == 4).Any())
     {
         <div class="columnraceresult" id="sprintresult">
