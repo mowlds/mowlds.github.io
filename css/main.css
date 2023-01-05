@@ -986,8 +986,9 @@ table#seasonlist tr:nth-child(even) {
                 border-radius: 10px;
                 border: 1px solid #a2a9b1;
                 border-spacing: 3px;
-                padding: 2pc;
+                padding: 5pc;
                 width: fit-content;
+                margin-top:50px;
 
                 margin-right: auto;
 
@@ -1041,10 +1042,10 @@ table#seasonlist tr:nth-child(even) {
             div#qualyResult{
               background-color: #e4e4e4cc;
             }
-            .sprintresult{
+            div#sprintresult{
               background-color: #e4e4e4cc;
             }
-            .raceResult{
+            div#raceResult{
               background-color: #e4e4e4cc;
             }
             .raceOverview{
