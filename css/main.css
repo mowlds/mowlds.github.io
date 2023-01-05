@@ -1025,6 +1025,10 @@ table#seasonlist tr:nth-child(even) {
                 padding-top: 2px;
                 padding-bottom: 2px;
             }
+            table#tracktablerace td{
+              padding:5px
+          }
+
             table#tracktable th{
               padding-right: 10px;
           }
