@@ -995,6 +995,10 @@ table#seasonlist tr:nth-child(even) {
             table#tracktable th{
               padding-right: 10px;
           }
+            .stats{
+              background-color: rgba(255, 255, 255, 0.792);
+            }
+
 
           .StatsTable{
             overflow-x: scroll;
