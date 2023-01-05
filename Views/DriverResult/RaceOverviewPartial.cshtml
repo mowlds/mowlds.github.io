@@ -46,7 +46,11 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>    
+            </div>
+            <div class="youtube">
+        <iframe width="500" height="306" src="@Html.DisplayFor(modelitem => Model.First().Race1.Highlights)" title="Highlights" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>  
         </div>
         <div class="column">
         <h2>Rob's Review</h2>
@@ -59,10 +63,7 @@
 
 <div class="rowrace">
     <div class="column">
-        <div class="youtube">
-        <iframe width="500" height="306" src="@Html.DisplayFor(modelitem => Model.First().Race1.Highlights)" title="Highlights" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        
 
     </div>
 </div>
