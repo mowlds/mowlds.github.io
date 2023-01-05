@@ -5,17 +5,19 @@
 }
 @{ var url = string.Format("../../{0}", Model.First().Race1.Track1.Background);}
  <div class="raceBackground" style="background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url('@Html.Raw(url)'">
+
     <div id="raceOverview">
         @* CDB: This loads the overview info from the provided model*@
         @Html.Partial("RaceOverviewPartial", Model)
     </div>
-    <div id="qualyResult">
+<div class="row">
+    <div class="column" id="qualyResult">
         @* CDB: This loads the qualifying result from the provided model *@
         @Html.Partial("QualyPartial", Model)
-    </div>
+    </div class="column">
     @if (Model.Where(m => m.SessionType == 4).Any())
     {
-        <div id="sprintresult">
+        <div class="column" id="sprintresult">
             @* CDB: This loads the qualifying result from the provided model *@
             @Html.Partial("SprintPartial", Model)
         </div>
@@ -24,7 +26,7 @@
         @* CDB: This loads the qualifying result from the provided model *@
         @Html.Partial("RacePartial", Model)
     </div>
-
+</div>
     <div id="championshipTable">
         @* CDB: This loads the overview info from the provided model*@
         @{Html.RenderAction("SupergridPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
