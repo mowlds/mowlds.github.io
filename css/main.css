@@ -1249,7 +1249,8 @@ table#seasonlist tr:nth-child(even) {
         }
 
         .columnraceresult{
-          float:left
+          float:left;
+          width:33.33%;
         }
 
         blockquote.twitter-timeline {
