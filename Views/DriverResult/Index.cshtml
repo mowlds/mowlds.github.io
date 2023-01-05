@@ -48,19 +48,3 @@
     </div>
 </div>
 
-<p><code>wrapAround: true</code></p>
-
-<!-- Flickity HTML init -->
-<div class="gallery js-flickity"
-  data-flickity-options='{ "wrapAround": true }'>
-  <div class="gallery-cell">@* CDB: This loads the qualifying result from the provided model *@
-        @Html.Partial("RacePartial", Model)</div>
-        @if (Model.Where(m => m.SessionType == 4).Any())
-    {
-  <div class="gallery-cell">@* CDB: This loads the qualifying result from the provided model *@
-            @Html.Partial("SprintPartial", Model)</div>
-    }
-  <div class="gallery-cell">@* CDB: This loads the qualifying result from the provided model *@
-        @Html.Partial("QualyPartial", Model)</div>
-
-</div>
