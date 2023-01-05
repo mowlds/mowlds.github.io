@@ -47,3 +47,26 @@
         }
     </div>
 </div>
+
+<body>
+  <input type="radio" name="position" checked />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <input type="radio" name="position" />
+  <main id="carousel">
+    <div class="item"> @* CDB: This loads the overview info from the provided model*@
+        @Html.Partial("RaceOverviewPartial", Model)</div>
+    <div class="item">        @* CDB: This loads the qualifying result from the provided model *@
+        @Html.Partial("QualyPartial", Model)</div>
+    @if (Model.Where(m => m.SessionType == 4).Any())
+    {
+        <div class="item">
+            @* CDB: This loads the qualifying result from the provided model *@
+            @Html.Partial("SprintPartial", Model)
+        </div>
+    }
+    <div class="item"></div>
+    <div class="item"></div>
+    <main>
+</body>
