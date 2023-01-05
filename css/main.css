@@ -20,6 +20,12 @@ body {
   background-color: #fcfcfcee;
   color: black;
 }
+.wikiparentrace{
+  padding-top:  20px;
+  padding-bottom: 200px;
+
+  color: black;
+}
 
 a:hover{
   color: rgb(12, 22, 13);;
