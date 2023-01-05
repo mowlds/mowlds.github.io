@@ -1248,6 +1248,10 @@ table#seasonlist tr:nth-child(even) {
           overflow-x:auto;
         }
 
+        .columnraceresult{
+          float:left
+        }
+
         blockquote.twitter-timeline {
           display: inline-block;
           font-family: 'exo';
