@@ -27,7 +27,7 @@
         @Html.Partial("RacePartial", Model)
         </div>
     </div>
-</diiv>
+</div>
     <div id="championshipTable">
         @* CDB: This loads the overview info from the provided model*@
         @{Html.RenderAction("SupergridPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
