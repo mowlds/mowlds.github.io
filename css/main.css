@@ -1205,6 +1205,7 @@ table#seasonlist tr:nth-child(even) {
             font-weight: bold;
             text-align: left;
             background-color: black;
+            font-size: 12px;;
 
         }
 
