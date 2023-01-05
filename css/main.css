@@ -1038,7 +1038,7 @@ table#seasonlist tr:nth-child(even) {
             .stats{
               background-color: #e4e4e4cc;
             }
-            .qualyResult{
+            div#qualyResult{
               background-color: #e4e4e4cc;
             }
             .sprintresult{
