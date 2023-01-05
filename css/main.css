@@ -1313,11 +1313,9 @@ table#seasonlist tr:nth-child(even) {
       }
       .youtube
 {
-            vertical-align: middle;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            padding-top: 10pc;}
+  display: block;
+  float: left;
+  margin-left: -20px;}
 
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 500 px
