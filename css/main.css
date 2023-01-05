@@ -701,6 +701,12 @@ border-right: 1px solid white;
 margin-bottom: -4px;
 height: 25px;
 }
+.iconseasonlist{
+  margin-bottom: -4px;
+  height: 25px;
+  margin-right: -20px;
+    margin-left: 20px;
+  }
 .realperf{
   margin-bottom: -3px;
   height: 15px;
