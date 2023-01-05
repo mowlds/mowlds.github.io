@@ -980,6 +980,18 @@ table#seasonlist tr:nth-child(even) {
                   margin-right: auto;
 
             }
+            .tracktablerace{
+              margin-bottom:2pc;
+              background: #e4e4e4cc;
+                border-radius: 10px;
+                border: 1px solid #a2a9b1;
+                border-spacing: 3px;
+                padding: 2pc;
+                width: fit-content;
+
+                margin-right: auto;
+
+          }
 
               table#tracktable{
                 margin-top: 10px;
