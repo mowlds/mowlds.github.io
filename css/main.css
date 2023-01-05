@@ -1038,6 +1038,18 @@ table#seasonlist tr:nth-child(even) {
             .stats{
               background-color: #e4e4e4cc;
             }
+            .qualyResult{
+              background-color: #e4e4e4cc;
+            }
+            .sprintresult{
+              background-color: #e4e4e4cc;
+            }
+            .raceResult{
+              background-color: #e4e4e4cc;
+            }
+            .raceOverview{
+              background-color: #e4e4e4cc;
+            }
 
 
           .StatsTable{
