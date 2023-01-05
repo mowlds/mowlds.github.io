@@ -13,7 +13,7 @@
                 <img src="~/images/SRL.png" height="100px">
                 <table id="tracktablerace">
                     <caption style="font-weight: bolder ;">F1 @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Year) Season @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Number),
-        Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber)</p>@Html.DisplayFor(raceItem => Model.First().Race1.RaceName)</br>@{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+        Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber)</p>@Html.DisplayFor(raceItem => Model.First().Race1.RaceName)</br><span style="font-size:14px">  @{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy")</span>;
     }
     @Html.DisplayFor(raceItem => parameterValue)</caption>
                     <th colspan="2" class="infobox-header" style="background-color: #a69898;text-align: center;">@Html.DisplayFor(raceItem => Model.First().Race1.Track1.Name), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.City), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.Country)</th>
