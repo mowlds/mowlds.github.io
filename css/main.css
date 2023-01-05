@@ -858,11 +858,17 @@ table#list tr:nth-child(even) {
               
               margin-left: auto;
               margin-right: auto;
-              max-width: 85%
-              ;
+              max-width: 85%;
             
-  
           }
+
+          .champwinner {
+              
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 85%;
+          
+        }
           .driverinfo {
             text-align: center;
                        padding-top: 10px;
@@ -1043,6 +1049,15 @@ table#list tr:nth-child(even) {
               border-radius: 100px;
 
           }
+
+
+          h2.champwinner {
+            padding-top: 5px;
+            border-style: outset;
+            background-color: rgb(140, 103, 40);
+            border-radius: 100px;
+
+        }
           h3.racewinner {
             padding-top: 5px;
             border-style: outset;
