@@ -13,7 +13,7 @@
                 <img src="~/images/SRL.png" height="100px">
                 <table id="tracktablerace">
                     <caption style="font-weight: bolder ;">F1 @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Year) Season @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Number),
-        Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber)</br>@Html.DisplayFor(raceItem => Model.First().Race1.RaceName)</br>@{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+        Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber)</p>@Html.DisplayFor(raceItem => Model.First().Race1.RaceName)</br>@{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
     }
     @Html.DisplayFor(raceItem => parameterValue)</caption>
                     <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;">@Html.DisplayFor(raceItem => Model.First().Race1.Track1.Name), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.City), @Html.DisplayFor(raceItem => Model.First().Race1.Track1.Country)</th>
@@ -48,43 +48,14 @@
                 </table>
             </div>    
         </div>
-    </div>
-</div>
-
-<div class="rowrace">
-    <div class="column">
-        <div class="racewinner">
-            <h2 class="racewinner">POLE POSITION</h2>
-        </div>
-        <h2 class="racewin">
-            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Driver1.Name) -
-            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Time)
-        </h2>
-        <div class="racewinner">
-            <h3 class="racewinner">FASTEST LAP</h3>
-        </div>
-        <h3 class="racewin">
-            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().Driver1.Name) -
-            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().BestLap)
-        </h3>
-    </div>
-    <div class="column">
-        <div class="racewinner">
-            <h2 class="racewinner">RACE WINNER</h2>
-        </div>
-        <h2 class="racewin">
-            @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.FinalPosition == 1).First().Driver1.Name)
-        </h2>
-        <div class="racewinner">
-            <h3 class="racewinner">DRIVER OF THE DAY</h3>
-
-            <h3 class="racewin">
-                @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasDriverOfTheDay).FirstOrDefault().Driver1.Name)
-
-        </h3>
+        <div class="column">
+        <h2>Rob's Review</h2>
+        <br />
+        @Html.Raw(Model.First().Race1.Review)
         </div>
     </div>
 </div>
+
 
 <div class="rowrace">
     <div class="column">
