@@ -1196,15 +1196,14 @@ table#seasonlist tr:nth-child(even) {
           
           table#raceresults {
             table-layout: fixed;
-            max-width: 80%;
-            min-width: 60%;
+
             border: 3px outset white;
             border-collapse: collapse;
             margin-left: auto;
             margin-right: auto;
             padding: 5px;
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             background-color: black;
 
         }
@@ -1213,7 +1212,8 @@ table#seasonlist tr:nth-child(even) {
             border-bottom: 2px rgb(255, 255, 255) solid;
             background-color: rgb(15, 26, 18);;
             padding: 10px;
-            width: max-content
+            width: max-content;
+            text-align: left;
         }
 
         table#raceresults td {
@@ -1229,7 +1229,7 @@ table#seasonlist tr:nth-child(even) {
         table#raceresults caption {
 
             font-size: 24pt;
-
+color:black;
             padding-bottom: 5px;
             padding-top: 5px;
 
