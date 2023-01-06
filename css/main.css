@@ -76,6 +76,16 @@ margin-right: auto;
 margin-right: auto;
 justify-content: space-evenly;
 }
+.rowraceresult {
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 3%;
+  padding-top:2pc;
+  margin-left: auto;
+margin-right: auto;
+justify-content: space-evenly;
+flex-direction: column;
+}
 
 .driverlist {
   font-weight: bold;

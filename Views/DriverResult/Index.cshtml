@@ -32,7 +32,9 @@
         </div>
     </div>
 
-    <div class="rowraceresult">
+    <h2>CHAMPIONSHIP STANDINGS AFTER RACE</h2>
+
+    <div class="rowchampionship">
         <div id="championshipTable">
         @* CDB: This loads the overview info from the provided model*@
         @{Html.RenderAction("SupergridPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
