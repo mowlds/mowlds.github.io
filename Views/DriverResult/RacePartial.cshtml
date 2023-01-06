@@ -26,7 +26,7 @@
                     @Html.DisplayNameFor(model => model.Time)
                 </th>
                 <th>
-                    Best Lap
+                    Lap
                 </th>
                 <th>
                     Pens
@@ -87,7 +87,7 @@
                     <td>
                         @if ((bool)(item.HasTimePenalty))
                         {
-                            @String.Format("+{0} secs", item.TimePenaltyDuration)
+                            @String.Format("+{0}s", item.TimePenaltyDuration)
                         }
                     </td>
                     <td>
