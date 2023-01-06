@@ -1203,22 +1203,22 @@ table#seasonlist tr:nth-child(even) {
             font-weight: bold;
             text-align: left;
             background-color: black;
-            font-size: 12px;;
+            font-size: 0.65vw;
 
         }
 
         table#raceresults th {
             border-bottom: 2px rgb(255, 255, 255) solid;
             background-color: rgb(15, 26, 18);;
-            padding: 10px;
+            padding: 0.5pc;
             width: max-content;
             text-align: left;
         }
 
         table#raceresults td {
             background-color: rgba(43, 75, 52, 0.75);
-            padding-right: 10px;
-            padding-left: 10px;
+            padding-right: 0.25pc;
+            padding-left: 0.5pc;
             height: 30px;
             width: max-content;
             vertical-align: middle;
