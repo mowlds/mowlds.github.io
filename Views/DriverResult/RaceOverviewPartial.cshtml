@@ -10,7 +10,7 @@
     <div class="rowrace">
         <div class="column">
             <div class="tracktablerace">
-                <img src="~/images/SRL.png" height="100px">
+                <img class="raceimage" src="~/images/SRL.png" height="100px">
                 <table id="tracktablerace">
                     <caption style="font-weight: bolder ;">F1 @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Year) Season @Html.DisplayFor(raceItem => Model.First().Race1.Season1.Number),
         Race @Html.DisplayFor(raceItem => Model.First().Race1.RaceNumber)</p>@Html.DisplayFor(raceItem => Model.First().Race1.RaceName)</br> <span style="font-size:16px"> @{string parameterValue = Model.First().Race1.RaceDate.Value.ToString("dd-MM-yyyy");
