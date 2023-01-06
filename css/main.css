@@ -1392,6 +1392,15 @@ color:black;
     margin-right: auto;
     flex-direction: column;
     }
+    .rowraceresult {
+      display: flex;
+      width: 80%;
+      padding-bottom: 3%;
+      padding-top:2pc;
+      margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    }
   }
 
     @media screen and ( max-width: 500px ) { 
