@@ -519,6 +519,9 @@ table#timeline td {
     min-width: 35px;
 
 }
+.tyre{
+  padding-left: 1pc;
+}
 
 table#timeline caption {
     padding-bottom: 10px;
