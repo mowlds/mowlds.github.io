@@ -67,6 +67,16 @@ margin-right: auto;
 margin-right: auto;
 }
 
+.rowraceresult {
+  display: -webkit-flex;
+  display: flex;
+  width: 95%;
+  padding-bottom: 3%;
+  padding-top:2pc;
+  margin-left: auto;
+margin-right: auto;
+}
+
 .driverlist {
   font-weight: bold;
   border-bottom-right-radius: 10px;
