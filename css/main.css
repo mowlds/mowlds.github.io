@@ -1055,7 +1055,10 @@ table#seasonlist tr:nth-child(even) {
               padding-right: 10px;
           }
             .stats{
-              background-color: #e4e4e4cc;
+              background-color: #e4e4e4ed;
+            }
+            .statschamp{
+              background-color: #555555ed;
             }
 
 
