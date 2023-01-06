@@ -1244,13 +1244,15 @@ color:black;
           text-align: center;
           padding: 1%;
         }
-        .raceresults{
-          overflow-x:auto;
-        }
+
 
         .columnraceresult{
           float:left;
-          width:33.33%;
+          width:37.5%;
+        }
+        .columnqualyresult{
+          float:left;
+          width:25%;
         }
 
         blockquote.twitter-timeline {
