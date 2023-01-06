@@ -223,7 +223,7 @@ flex-direction: column;
 
   }
 
-@media screen and ( min-width: 500px ) {
+@media screen and ( min-width: 800px ) {
     .dropdown-content a:hover {
         background-color: rgb(43, 75, 52);
     }
@@ -1395,10 +1395,10 @@ color:black;
   
 
 /* ==========================================================================
-   Your custom CSS styles for smartphones and screens smaller than 500 px
+   Your custom CSS styles for smartphones and screens smaller than 800 px
    ========================================================================== */
 
-   @media screen and ( max-width: 500px ) { 
+   @media screen and ( max-width: 800px ) { 
     .row { flex-direction: column; width: 100%;}
     .timeline {display: none;}
     .calendar {font-size: 6pt;}
@@ -1463,7 +1463,7 @@ color:black;
     }
   }
 
-    @media screen and ( max-width: 500px ) { 
+    @media screen and ( max-width: 800px ) { 
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
      position: absolute;
