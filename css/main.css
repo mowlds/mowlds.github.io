@@ -1062,7 +1062,7 @@ table#seasonlist tr:nth-child(even) {
               padding:5px
           }
           table#tracktablerace th{
-            padding-right:35px
+            padding-right:2pc
         }
 
             table#tracktable th{
@@ -1411,6 +1411,19 @@ color:black;
       padding-bottom: 32px;
       
     }
+    .tracktablerace{
+      margin-bottom:2pc;
+      background: #e4e4e4cc;
+        border-radius: 10px;
+        border: 1px solid #a2a9b1;
+        border-spacing: 3px;
+        padding: 2pc;
+        width: fit-content;
+        margin-top:50px;
+
+        margin-right: auto;
+
+  }
     table.driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .rowrace {
       display: flex;
