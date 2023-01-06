@@ -285,9 +285,6 @@ margin-bottom: 5%;
     float: right;
     text-align: center;
 }
-.raceresults{
-  padding: 1%;
-}
 
 
 
@@ -1203,7 +1200,7 @@ table#seasonlist tr:nth-child(even) {
             font-weight: bold;
             text-align: left;
             background-color: black;
-            font-size: 0.65vw;
+            font-size: 0.68vw;
 
         }
 
@@ -1480,8 +1477,8 @@ table#nolayout {
 
     table#nolayout td {
         background-color: inherit;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 5px;
+        padding-left: 5px;
         height: 30px;
         width: max-content;
         vertical-align: middle;
@@ -1489,14 +1486,14 @@ table#nolayout {
 
 
 .result-driver-tyres {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     padding-right: 2px;
 }
 
     .result-driver-tyres div {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         padding-top: 5px;
         background-size: contain;
         background-repeat: no-repeat;
