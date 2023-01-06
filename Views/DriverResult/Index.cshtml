@@ -9,7 +9,7 @@
     <div id="raceOverview">
         @* CDB: This loads the overview info from the provided model*@
         @Html.Partial("RaceOverviewPartial", Model)
-        </div>
+    </div>
     <div class="rowraceresult">
         <div class="columnraceresult" id="qualyResult">
         @* CDB: This loads the qualifying result from the provided model *@
@@ -29,6 +29,7 @@
         </div>
     </div>
 </div>
+<div class="rowraceresult">
     <div id="championshipTable">
         @* CDB: This loads the overview info from the provided model*@
         @{Html.RenderAction("SupergridPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
