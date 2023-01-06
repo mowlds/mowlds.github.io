@@ -1009,7 +1009,7 @@ table#seasonlist tr:nth-child(even) {
               border: 1px solid #a2a9b1;
               border-spacing: 3px;
               padding: 3vw;
-              width: 30vw;
+              width: 26vw;
               height: 30vw;
               margin-top: 50px;
               margin-right: auto;
@@ -1437,8 +1437,9 @@ color:black;
         padding: 2pc;
         width: fit-content;
         margin-top:50px;
-
         margin-right: auto;
+        height:fit-content;
+        font-size: initial;
 
   }
     table.driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
