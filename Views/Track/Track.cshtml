@@ -142,7 +142,7 @@
                 })
             </div>
 
-            <div class="stats">
+            <div id="stats" class="stats">
                 @{Html.RenderAction("TrackStats", "Stats", new { track = Model.Track.ID, StatType = 0 });
                 }
             </div>
