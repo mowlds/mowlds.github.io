@@ -15,6 +15,7 @@
             var statType = $("#StatType").val();
             var gameversion = $("#GameVersion").val();
             var session = $("#Sessions").val();
+            var sortOrder = $("#sortOrder").val();
 
             if (!driver) { driver = 0; }
             if (!track) { track = 0; }
@@ -22,7 +23,7 @@
             if (!session) { session = 0; }
 
 
-            $("#stats").load("/Stats/AllStats?" + "driver=" + driver + "&track=" +track + "&StatType=" + statType + "&version=" + gameversion + "&session=" +session);
+            $("#stats").load("/Stats/AllStats?" + "driver=" + driver + "&track=" +track + "&StatType=" + statType + "&version=" + gameversion + "&session=" +session + "&sortOrder=" + sortOrder);
        });
     });
 </script>
@@ -50,6 +51,31 @@
         <td>
             @Html.DropDownListFor(t => t.Sessions, new SelectList(Model.Sessions, "ID", "SessionType"), "All Sessions")
         </td>
+        <td>
+            @Html.DropDownList("sortOrder", new List<SelectListItem>
+           {
+               new SelectListItem { Text = "Racewins", Value = "RaceWins", Selected = true },
+               new SelectListItem { Text = "RaceStarts", Value = "RaceStarts" },
+               new SelectListItem { Text = "Name", Value = "Name" },
+               new SelectListItem { Text = "RaceWinPerc", Value = "RaceWinPerc" },
+               new SelectListItem { Text = "Podiums", Value = "Podiums" },
+               new SelectListItem { Text = "PodiumPerc", Value = "PodiumPerc" },
+               new SelectListItem { Text = "PointsFinish", Value = "PointsFinish" },
+               new SelectListItem { Text = "PointsFinishPerc", Value = "PointsFinishPerc" },
+               new SelectListItem { Text = "DNF", Value = "DNF" },
+               new SelectListItem { Text = "DNFPerc", Value = "DNFPerc" },
+               new SelectListItem { Text = "Poles", Value = "Poles" },
+               new SelectListItem { Text = "PolePerc", Value = "PolePerc" },
+               new SelectListItem { Text = "FastestLaps", Value = "FastestLaps" },
+               new SelectListItem { Text = "FastestLapsPerc", Value = "FastestLapsPerc" },
+               new SelectListItem { Text = "DriveroftheDay", Value = "DriveroftheDay" },
+               new SelectListItem { Text = "DriveroftheDayPerc", Value = "DriveroftheDayPerc" },
+               new SelectListItem { Text = "TotalPoints", Value = "TotalPoints" },
+               new SelectListItem { Text = "AvgPoints", Value = "AvgPoints" },
+               new SelectListItem { Text = "RaceDSQ", Value = "RaceDSQ" },
+               new SelectListItem { Text = "QualyDSQ", Value = "QualyDSQ" },
+           })
+        </td>
         @*<td>
             //Weather
             fully wet, 90 of tyres used are wets/inters
@@ -57,7 +83,7 @@
             dry, less than 10% of drivers used wets or inters
         </td>*@
         <td>
-           <input type="button" id="ShowStats" value="Show me the skirt!" />
+            <input type="button" id="ShowStats" value="Show me the skirt!" />
         </td>
     </tr>
 </table>

@@ -3,6 +3,7 @@ using mowlds.github.io.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -35,7 +36,7 @@ namespace mowlds.github.io.Controllers
             return View(svm);
         }
 
-        public async Task<ActionResult> AllStats(int driver, int track, StatType StatType, string version, int session)
+        public async Task<ActionResult> AllStats(int driver, int track, StatType StatType, string version, int session, string sortorder)
         {
             var drivers = _context.Driver.ToList();
             var tracks = _context.Track.ToList();
@@ -78,7 +79,8 @@ namespace mowlds.github.io.Controllers
                 returnValue.Add(ConvertToStats(d.Name, driverresult.ToList(), session));
             }
 
-            returnValue = returnValue.OrderByDescending(rv => rv.RaceWins).ThenByDescending(rv => rv.RaceStarts).ToList();
+            //TODO: Improve sorting performance by not refetching the data for every sort.
+            returnValue = returnValue.OrderByDescending(rv => rv.GetType().GetProperty(sortorder).GetValue(rv, null)).ThenByDescending(rv => rv.RaceStarts).ToList();
             return PartialView("Stats", returnValue);
         }
 
