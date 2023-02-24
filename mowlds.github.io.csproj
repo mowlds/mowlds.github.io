@@ -134,6 +134,7 @@
     <Compile Include="Controllers\RacesController.cs" />
     <Compile Include="Controllers\SeasonController.cs" />
     <Compile Include="Controllers\StatsController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\TrackController.cs" />
     <Compile Include="DAL\Driver.cs">
       <DependentUpon>SRLModel.tt</DependentUpon>
@@ -192,6 +193,7 @@
     <Compile Include="Models\StatsViewModel.cs" />
     <Compile Include="Models\SuperGridQualyModel.cs" />
     <Compile Include="Models\SupergridViewModel.cs" />
+    <Compile Include="Models\TeamDisplayModel.cs" />
     <Compile Include="Models\TrackHistoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1183,6 +1185,8 @@
     <Content Include="Views\Track\Index.cshtml" />
     <Content Include="Views\Track\Track.cshtml" />
     <Content Include="Views\Stats\Index.cshtml" />
+    <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Team\Team.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
