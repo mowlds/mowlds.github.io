@@ -1,0 +1,33 @@
+﻿
+@model IEnumerable<mowlds.github.io.DAL.Team>
+@{
+    ViewData["Title"] = "Team";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="wikiparent">
+    <h2 class="h2wiki">LIST OF Teams</h2>
+    <div class="wiki">
+        @{var firstLetter = String.Empty;
+            foreach (var item in Model)
+            {
+                if (firstLetter != item.Name.First().ToString())
+                {
+                    firstLetter = item.Name.First().ToString();
+                    <ul class="wikilist">
+                        <li class="firstletter" style="font-weight: bold;">@Html.DisplayFor(modelitem => firstLetter)</li>
+
+                        @foreach (var teamItem in Model.Where(d => d.Name.First().ToString() == firstLetter))
+                        {
+                            string linkvalue = string.Format("Team/Team?Team={0}", teamItem.ID.ToString());
+
+                            <li class="driverlist"><a style="text-decoration:none" href=@linkvalue>@Html.DisplayFor(modelitem => teamItem.Name)<i style="float:right" class="fas fa-chevron-right"></i></a></li>
+                        }
+                    </ul>
+                }
+            }
+
+        }
+    </div>
+</div>

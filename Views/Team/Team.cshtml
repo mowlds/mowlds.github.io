@@ -1,0 +1,78 @@
+﻿
+@model mowlds.github.io.Models.TeamDisplayModel
+@{
+    ViewBag.Title = "Driver";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="wikiparent">
+    <div class="row">
+        <div class="column side">
+            <img class="bio" src="@Html.DisplayFor(modelitem => Model.Team.TeamLogo)" height="100px">
+            <div class="quote">"@Html.DisplayFor(driver => Model.Team.Name)"</div>
+            <div class="biotable">
+                <table id="biotable">
+                    <caption style="font-weight: bolder ;">@Html.DisplayFor(team => Model.Team.Name)</caption>
+                    <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;">SRL World Championship career</th>
+                    <tr>
+                        <th>First Race</th>
+                        <td>@Html.DisplayFor(teamItem => Model.FirstRace.Season1.Year) - Season @Html.DisplayFor(teamItem => Model.FirstRace.Season1.Number) Race @Html.DisplayFor(teamItem => Model.FirstRace.RaceNumber)</br>@Html.DisplayFor(teamItem => Model.FirstRace.RaceName)</td>
+                    </tr>
+                    <tr>
+                        <th>Races</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.TotalRaces)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Wins</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.Wins)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Pole Positions</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.Poles)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Fastest Laps</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.Fls)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>DotD</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.Dotds)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Podiums</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.Podiums)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>DNFs</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.DNFs)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Points</th>
+                        <td>
+                            @Html.DisplayFor(teamItem => Model.TotalPoints)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="column middle">
+            <div class="bioquote">@Html.Raw(Model.Team.About)</div></br>
+        </div>
+    </div>
+
+</div>
