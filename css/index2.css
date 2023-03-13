@@ -180,21 +180,24 @@ main{
   }
 
   .block{
-display: inline-block ;
-text-decoration: none;
-padding: 1%;
-width: 30%;
-height: 425px;
-vertical-align:top;
-border: 1px solid rgb(18, 14, 34);
-border-radius: 5px;
-margin: 5px;
-margin-bottom: 10px;
-background-color: #485c4f26;
-transition: all .2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1%;
+    width: 30%;
+    height: 425px;
+    vertical-align: top;
+    border-right: 1px solid rgb(18, 14, 34);
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: all .2s ease-in-out;
+    border-bottom: 1px solid rgb(18, 14, 34);
   }
 .block:hover { 
-  transform: scale(1.1); 
+  transform: scale(1.1);
+  border-bottom: 1px solid rgb(43, 75, 52);
+  border-right: 1px solid rgb(43, 75, 52);
   }
   a {
     color:inherit;
