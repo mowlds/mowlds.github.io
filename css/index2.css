@@ -146,8 +146,7 @@ a:hover{
 
   header
   {
-    background: radial-gradient(ellipse at top, #fdffff, transparent),
-              radial-gradient(ellipse at bottom, #569263, transparent);
+    background: rgb(0 0 0);
             width: 100%;
             padding-top: 1%;
             
