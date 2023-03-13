@@ -196,12 +196,6 @@ transition: all .2s ease-in-out;
 .block:hover { 
   transform: scale(1.1); 
   }
-
-
-
-
-    
-  }
   a {
     color:inherit;
     text-decoration: none, 
