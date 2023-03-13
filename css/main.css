@@ -236,11 +236,9 @@ flex-direction: column;
 
   header
   {
-    background: radial-gradient(ellipse at top, #fdffff, transparent),
-              radial-gradient(ellipse at bottom, #569263, transparent);
+    background: black;
             width: 100%;
             padding-top: 1%;
-            color: black;
             }
 
 
