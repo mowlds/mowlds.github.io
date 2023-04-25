@@ -11,6 +11,20 @@
             $("#stats").load("/Stats/TrackStats?" + "track=" +@Model.Track.ID + "&StatType=" + val);
        });
     });
+
+    function showRace(race)
+    {
+
+        $(function(){
+            $("#qualyResult").load("/DriverResult/QualyPartial?race=" + race);
+        });
+        $(function () {
+            $("#sprintresult").load("/DriverResult/SprintPartial?race=" + race);
+        });
+        $(function () {
+            $("#raceResult").load("/DriverResult/RacePartial?race=" + race);
+        });
+    }
 </script>
 <div class="wikiparent">
     @{ var url = string.Format("../../{0}", Model.Track.Background);}
@@ -147,6 +161,88 @@
                 }
             </div>
             @* CDB: This loads the overview info from the provided model*@
+        </div>
+
+        <div class="overflow" style="color: white;">
+            <table id="list">
+                <caption>List Of Races</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AllRaces.First().Race1.Season)
+                        </th>
+                        <th>
+                            Race
+                        </th>
+                        <th>
+
+                        </th>
+                        <th>
+                            Grand Prix
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th class="collapse">
+                            @Html.DisplayNameFor(model => model.AllRaces.First().Race1.Laps)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.AllRaces.Where(dr=> dr.SessionType == 3 && dr.FinalPosition == 1).ToList())
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Race1.Season1.GameVersion) - Season @Html.DisplayFor(modelItem => item.Race1.Season1.Number)
+                            </td>
+                            <td style="text-align:center;">
+                                @Html.DisplayFor(modelItem => item.Race1.RaceNumber)
+                            </td>
+                            <td>
+                                <img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Race1.Track1.Flag)">
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Race1.RaceName)
+                            </td>
+                            <td>
+                                @{string racedate = item.Race1.RaceDate.Value.ToString("dd-MM-yyyy");
+                                }
+                                @racedate
+                            </td>
+                            <td class="collapse" style="text-align:center;">
+                                @Html.DisplayFor(modelItem => item.Race1.Laps)
+                            </td>
+                            <td>
+                                @{string parameterValue = string.Format("showRace({0});", item.Race.ToString());
+                                }
+                                <button id="loadResult" onclick="@parameterValue">View</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="result" class="stats" style="color: white;">
+            <div class="rowraceresult">
+                <div class="columnqualyresult" id="qualyResult">
+                    @* CDB: This loads the qualifying result from the provided model *@
+                    @{Html.RenderAction("QualyPartial", "DriverResult", new { race = 0 });
+                    }
+                </div>
+
+                <div class="columnraceresult" id="sprintresult">
+                    @* CDB: This loads the qualifying result from the provided model *@
+                    @{Html.RenderAction("SprintPartial", "DriverResult", new { race = 0 });
+                    }
+                </div>
+                <div class="columnraceresult" id="raceResult">
+                    @* CDB: This loads the qualifying result from the provided model *@
+                    @{Html.RenderAction("RacePartial", "DriverResult", new { race = 0 });
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </div>
