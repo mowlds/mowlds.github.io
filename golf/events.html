@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> History</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="../css/golf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'><link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+body {
+    text-align: center;
+}
+h3 {
+    padding-top: 20px;
+}
+
+@import url('https://fonts.cdnfonts.com/css/colus');
+
+    </style>
+
+</head>
+
+<body style="font-family: 'Exo'">
+    <header>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 100pt; color: rgb(133, 2, 2); margin: -30px;">
+            SGA</p>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 20pt; margin-top: -5px; color: rgb(133, 2, 2);">
+            The Serious Golfing Association</p>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $.get("/golfnav.html", function(data){
+                    $("#nav-placeholder").replaceWith(data);
+                });
+                </script>
+
+    </header>
+
+    <hr class="solidred">
+    <hr class="solidblue">
+
+    <div class="eventcard" style="width:500px; background-color: rgb(8, 37, 8); color: white; font-family: 'Colus', sans-serif;">
+        <p style="text-align: center; padding-bottom: 20px; padding-top: 20px;">SERIOUS GOLFING LEAGUE</p>
+        <p><span style="float: left">SEASON 2 </span><span style="float: right">EVENT 1</span></p>
+    </br> </br>
+        <div class="eventdetails" style="text-align: left; width: 300px; margin-left: auto; margin-right: auto;">
+        <p>THE OLD COURSE, ST ANDREWS, SCOTLAND</p>
+        <p style="margin-top:-10px">3 ROUNDS</p>
+        <p style="margin-top:-10px">MAJOR</p>
+        </div>
+    </div>
+   
+
+
+
+    
+       
