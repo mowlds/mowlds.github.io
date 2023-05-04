@@ -82,7 +82,7 @@
                     foreach (var dr in supergrid.driverResults.Where(r => r.Race == race.ID))
                     {
                         string result = dr.FinalPosition.ToString();
-                        if (dr.HasDNF)
+                        if (dr.HasDNF && !dr.IsClassified)
                         {
                             result = "DNF";
                         }
