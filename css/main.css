@@ -251,7 +251,7 @@ flex-direction: column;
     border-top: 3px dashed rgb((43, 75, 52));
   }
   body{
-  font-family: 'exo';
+  font-family: 'Russo One', sans-serif;
   }
   html, body{
     background-color: #e3e9e3;
@@ -774,7 +774,7 @@ text-decoration: underline rgb(43, 75, 52) 4px;
 }
 
 * {
-    font-family: 'exo';
+    font-family: 'Russo One', sans-serif;
 }
 table#list {
   table-layout: fixed;
