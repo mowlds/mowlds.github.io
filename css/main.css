@@ -2,7 +2,7 @@
    Your custom CSS styles
    ========================================================================== */
    * {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'exo';
 }
 main{
 background-color: rgb(188, 219, 197)
@@ -130,7 +130,7 @@ flex-direction: column;
   align-items: center;
   flex-direction: column;
 }
-adding text here
+
 
    .topnav {
   overflow: hidden;
@@ -251,7 +251,7 @@ adding text here
     border-top: 3px dashed rgb((43, 75, 52));
   }
   body{
-  font-family: 'Russo One', sans-serif;
+  font-family: 'exo';
   }
   html, body{
     background-color: #e3e9e3;
@@ -774,7 +774,7 @@ text-decoration: underline rgb(43, 75, 52) 4px;
 }
 
 * {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'exo';
 }
 table#list {
   table-layout: fixed;
