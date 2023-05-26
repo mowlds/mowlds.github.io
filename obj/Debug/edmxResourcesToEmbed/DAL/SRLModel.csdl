@@ -75,6 +75,8 @@
     <NavigationProperty Name="RaceLaps" Relationship="Self.Race_to_Racelaps" FromRole="Race" ToRole="RaceLaps" />
     <NavigationProperty Name="Season1" Relationship="Self.Race_To_Season" FromRole="Race" ToRole="Season" />
     <NavigationProperty Name="Track1" Relationship="Self.Race_to_Track" FromRole="Race" ToRole="Track" />
+    <Property Name="Review" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Highlights" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="RaceLaps">
     <Key>
@@ -121,6 +123,7 @@
     <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="TeamLogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="DriverTeam" Relationship="Self.Team_To_DriverTeam" FromRole="Team" ToRole="DriverTeam" />
+    <Property Name="Colour" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="Track">
     <Key>

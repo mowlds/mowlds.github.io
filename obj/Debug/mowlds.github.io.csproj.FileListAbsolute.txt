@@ -51,6 +51,8 @@ D:\Source\mowlds.github.io\bin\roslyn\vbc.rsp
 D:\Source\mowlds.github.io\bin\roslyn\VBCSCompiler.exe
 D:\Source\mowlds.github.io\bin\roslyn\VBCSCompiler.exe.config
 D:\Source\mowlds.github.io\bin\Antlr3.Runtime.dll
+D:\Source\mowlds.github.io\bin\EntityFramework.dll
+D:\Source\mowlds.github.io\bin\EntityFramework.SqlServer.dll
 D:\Source\mowlds.github.io\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Source\mowlds.github.io\bin\Microsoft.Web.Infrastructure.dll
 D:\Source\mowlds.github.io\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ D:\Source\mowlds.github.io\bin\System.Web.WebPages.Deployment.dll
 D:\Source\mowlds.github.io\bin\System.Web.WebPages.dll
 D:\Source\mowlds.github.io\bin\System.Web.WebPages.Razor.dll
 D:\Source\mowlds.github.io\bin\WebGrease.dll
+D:\Source\mowlds.github.io\bin\EntityFramework.xml
+D:\Source\mowlds.github.io\bin\EntityFramework.SqlServer.xml
 D:\Source\mowlds.github.io\bin\System.Web.Helpers.xml
 D:\Source\mowlds.github.io\bin\System.Web.Mvc.xml
 D:\Source\mowlds.github.io\bin\System.Web.Optimization.xml
@@ -76,8 +80,3 @@ D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.CoreCompileInputs.c
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.CopyComplete
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.dll
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.pdb
-D:\Source\mowlds.github.io\bin\EntityFramework.dll
-D:\Source\mowlds.github.io\bin\EntityFramework.SqlServer.dll
-D:\Source\mowlds.github.io\bin\EntityFramework.xml
-D:\Source\mowlds.github.io\bin\EntityFramework.SqlServer.xml
-D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.AssemblyReference.cache

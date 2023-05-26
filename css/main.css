@@ -21,6 +21,9 @@ body {
   background-color: #fcfcfcee;
   color: black;
 }
+.wikiparentrace{
+  padding-top:  20px;
+}
 
 a:hover{
   color: rgb(12, 22, 13);;
@@ -45,6 +48,10 @@ a:hover{
   margin-left: auto;
 margin-right: auto;
 }
+.raceimage
+{
+  height:6vw;
+}
 
 .bigstatfilter {
   width: 80%;
@@ -65,6 +72,26 @@ margin-right: auto;
 margin-right: auto;
 }
 
+.rowraceresult {
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 3%;
+  margin-left: auto;
+margin-right: auto;
+justify-content: space-evenly;
+}
+.rowchampionship {
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 3%;
+  padding-top:2pc;
+  margin-left: auto;
+margin-right: auto;
+justify-content: space-evenly;
+flex-direction: column;
+}
+
+
 .driverlist {
   font-weight: bold;
   border-bottom-right-radius: 10px;
@@ -73,7 +100,6 @@ margin-right: auto;
   border-bottom: black 1px solid;
   display: flex;
   display: block;
-  max-height: 40px;
   width: 150px;
   margin-bottom: 15px;
   padding-bottom:5px;
@@ -196,7 +222,7 @@ margin-right: auto;
 
   }
 
-@media screen and ( min-width: 500px ) {
+@media screen and ( min-width: 800px ) {
     .dropdown-content a:hover {
         background-color: rgb(43, 75, 52);
     }
@@ -210,11 +236,9 @@ margin-right: auto;
 
   header
   {
-    background: radial-gradient(ellipse at top, #fdffff, transparent),
-              radial-gradient(ellipse at bottom, #569263, transparent);
+    background: black;
             width: 100%;
             padding-top: 1%;
-            color: black;
             }
 
 
@@ -272,9 +296,6 @@ margin-bottom: 5%;
   #header-right {
     float: right;
     text-align: center;
-}
-.raceresults{
-  padding: 1%;
 }
 
 
@@ -509,6 +530,9 @@ table#timeline td {
     border-radius: 12px;
     min-width: 35px;
 
+}
+.tyre{
+  padding-left: 1pc;
 }
 
 table#timeline caption {
@@ -915,6 +939,7 @@ table#seasonlist tr:nth-child(even) {
               margin-left: auto;
               margin-right: auto;
               max-width: 85%;
+              
             
           }
 
@@ -922,7 +947,8 @@ table#seasonlist tr:nth-child(even) {
               
             margin-left: auto;
             margin-right: auto;
-            max-width: 85%;
+            max-width: fit-content;
+
           
         }
           .driverinfo {
@@ -973,6 +999,20 @@ table#seasonlist tr:nth-child(even) {
                   margin-right: auto;
 
             }
+            .tracktablerace{
+              margin-bottom: 2pc;
+              background: #e4e4e4cc;
+              border-radius: 10px;
+              border: 1px solid #a2a9b1;
+              border-spacing: 3px;
+              padding: 3vw;
+              width: 26vw;
+              height: 30vw;
+              margin-top: 50px;
+              margin-right: auto;
+              font-size: 1vw;
+
+          }
 
               table#tracktable{
                 margin-top: 10px;
@@ -987,15 +1027,54 @@ table#seasonlist tr:nth-child(even) {
                 padding-top: 10px;
                 font-size: 30px;
             }
+
+            table#tracktablerace {
+                table-layout: fixed;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+                color:black;
+            }
+
+            .wrapper {
+              position: relative;
+              padding-bottom: 56.25%; /* 16:9 */
+              padding-top: 25px;
+              height: 0;
+          }
+          .wrapper iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+          }
+             
+
+                table#tracktablerace caption {
+                  padding-bottom: 10px;
+                  padding-top: 10px;
+
+            }
             table#tracktable td{
                 padding-top: 2px;
                 padding-bottom: 2px;
             }
+            table#tracktablerace td{
+              padding:5px;
+              padding-left:20px;
+          }
+
+
             table#tracktable th{
               padding-right: 10px;
           }
             .stats{
-              background-color: #e4e4e4cc;
+              background-color: #e4e4e4c2;
+            }
+            .statschamp{
+              background-color: #2a0606b8;
+              padding-top: 10px;
             }
 
 
@@ -1116,6 +1195,8 @@ table#seasonlist tr:nth-child(even) {
             border-style: outset;
             background-color: rgb(140, 103, 40);
             border-radius: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
 
         }
           h3.racewinner {
@@ -1147,24 +1228,26 @@ table#seasonlist tr:nth-child(even) {
             table-layout: fixed;
             max-width: 80%;
             min-width: 60%;
+            border: 3px outset white;
             border-collapse: collapse;
             margin-left: auto;
             margin-right: auto;
             padding: 5px;
             font-weight: bold;
             text-align: center;
-
+            background-color: black;
 
         }
 
         table#raceresults th {
-                        background-color: rgba(0, 0, 0, 0.5);;
+            border-bottom: 2px rgb(255, 255, 255) solid;
+            background-color: rgb(15, 26, 18);;
             padding: 10px;
             width: max-content
         }
 
         table#raceresults td {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(43, 75, 52, 0.75);
             padding-right: 10px;
             padding-left: 10px;
             height: 30px;
@@ -1176,8 +1259,8 @@ table#seasonlist tr:nth-child(even) {
         table#raceresults caption {
 
             font-size: 24pt;
-            color: #b62f2f;
-            background-color: rgba(0, 0, 0, 0.5);
+
+            padding-bottom: 5px;
             padding-top: 5px;
             border-bottom: 2px #b62f2f solid;
 
@@ -1191,8 +1274,15 @@ table#seasonlist tr:nth-child(even) {
           text-align: center;
           padding: 1%;
         }
-        .raceresults{
-          overflow-x:auto;
+
+
+        .columnraceresult{
+          float:left;
+          width:37.5%;
+        }
+        .columnqualyresult{
+          float:left;
+          width:25%;
         }
 
         blockquote.twitter-timeline {
@@ -1256,19 +1346,58 @@ table#seasonlist tr:nth-child(even) {
         margin-top: 10px;
         font-style: italic;
       }
-      .youtube
+      .videowrapper
 {
-            vertical-align: middle;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            padding-top: 10pc;}
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  width:80%;
+}
+  .videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* external css: flickity.css */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+  
 
 /* ==========================================================================
-   Your custom CSS styles for smartphones and screens smaller than 500 px
+   Your custom CSS styles for smartphones and screens smaller than 800 px
    ========================================================================== */
 
-   @media screen and ( max-width: 500px ) { 
+   @media screen and ( max-width: 800px ) { 
     .row { flex-direction: column; width: 100%;}
     .timeline {display: none;}
     .calendar {font-size: 6pt;}
@@ -1293,6 +1422,24 @@ table#seasonlist tr:nth-child(even) {
       padding-bottom: 32px;
       
     }
+    .raceimage
+{
+  height:20vw
+}
+    .tracktablerace{
+      margin-bottom:2pc;
+      background: #e4e4e4cc;
+        border-radius: 10px;
+        border: 1px solid #a2a9b1;
+        border-spacing: 3px;
+        padding: 2pc;
+        width: fit-content;
+        margin-top:50px;
+        margin-right: auto;
+        height:fit-content;
+        font-size: initial;
+
+  }
     table.driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .rowrace {
       display: flex;
@@ -1302,10 +1449,20 @@ table#seasonlist tr:nth-child(even) {
       margin-left: auto;
     margin-right: auto;
     flex-direction: column;
+
+    }
+    .rowraceresult {
+      display: flex;
+      width: 80%;
+      padding-bottom: 3%;
+      margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    overflow-x: auto;
     }
   }
 
-    @media screen and ( max-width: 500px ) { 
+    @media screen and ( max-width: 800px ) { 
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
      position: absolute;
@@ -1380,8 +1537,8 @@ table#nolayout {
 
     table#nolayout td {
         background-color: inherit;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 5px;
+        padding-left: 5px;
         height: 30px;
         width: max-content;
         vertical-align: middle;
@@ -1389,14 +1546,14 @@ table#nolayout {
 
 
 .result-driver-tyres {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     padding-right: 2px;
 }
 
     .result-driver-tyres div {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         padding-top: 5px;
         background-size: contain;
         background-repeat: no-repeat;

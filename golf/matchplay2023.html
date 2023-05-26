@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2023 SGA WORLD MATCHPLAY</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="../css/golf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'><link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+body {
+    text-align: center;
+}
+h3 {
+    padding-top: 20px;
+}
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700';
+html {
+  font-size: 1rem;
+}
+
+body {
+  background: #f0f2f2;
+}
+
+
+.bracket .round {
+  display: inline-block;
+  vertical-align: middle;
+}
+.bracket .round .title
+{
+box-sizing: border-box;
+  color: #000000;
+  width: 14rem;
+  height: 3rem;
+  vertical-align: middle;
+  font-weight: bolder;
+  margin-top: 3rem;
+  }
+
+.title .span {
+margin: 0 1.25rem;
+  line-height: 3;
+  font-size: 2rem;
+  font-family: "Roboto Slab";
+  color: #000000;
+  vertical-align: middle;
+}
+
+.bracket .round .winners > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.bracket .round .winners > div.matchups .matchup:last-child {
+  margin-bottom: 0 !important;
+}
+.bracket .round .winners > div.matchups .matchup .participants {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant {
+  box-sizing: border-box;
+  color: #858585;
+  border-left: 0.25rem solid #858585;
+  background: white;
+  width: 14rem;
+  height: 3rem;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.winner {
+  color: rgb(18, 14, 34);
+  border-color: rgb(107, 45, 45);
+  background: rgb(207, 207, 233);
+  font-weight: bolder;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.NA {
+  color: rgb(233, 233, 233);
+  border-color: rgb(18, 14, 34);
+  background: rgb(0, 0, 0);
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant.loser {
+  color: #dc563f;
+  border-color: #dc563f;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant:not(:last-child) {
+  border-bottom: thin solid #f0f2f2;
+}
+.bracket .round .winners > div.matchups .matchup .participants .participant span {
+  margin: 0 1.25rem;
+  line-height: 3;
+  font-size: 1rem;
+  font-family: "Roboto Slab";
+}
+.bracket .round .winners > div.connector.filled .line, .bracket .round .winners > div.connector.filled.bottom .merger:after, .bracket .round .winners > div.connector.filled.top .merger:before {
+  border-color: rgb(18, 14, 34);
+}
+.bracket .round .winners > div.connector .line, .bracket .round .winners > div.connector .merger {
+  box-sizing: border-box;
+  width: 2rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.bracket .round .winners > div.connector .line {
+  border-bottom: thin solid #c0c0c8;
+  height: 4rem;
+}
+.bracket .round .winners > div.connector .merger {
+  position: relative;
+  height: 8rem;
+}
+.bracket .round .winners > div.connector .merger:before, .bracket .round .winners > div.connector .merger:after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  border: 0 solid;
+  border-color: #c0c0c8;
+}
+.bracket .round .winners > div.connector .merger:before {
+  border-right-width: thin;
+  border-top-width: thin;
+}
+.bracket .round .winners > div.connector .merger:after {
+  border-right-width: thin;
+  border-bottom-width: thin;
+}
+.bracket .round.sixteen .winners:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.sixteen .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.quarterfinals .winners:not(:last-child) {
+  margin-bottom: 10rem;
+}
+.bracket .round.quarterfinals .winners .connector .merger {
+  height: 16rem;
+}
+.bracket .round.quarterfinals .winners .connector .line {
+  height: 8rem;
+}
+.bracket .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 10rem;
+}
+.bracket .round.semifinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 26rem;
+}
+.bracket .round.semifinals .winners:not(:last-child) {
+  margin-bottom: 180rem;
+}
+.bracket .round.semifinals .winners .connector .merger {
+  height: 32rem;
+}
+.bracket .round.semifinals .winners .connector .line {
+  height: 16rem;
+}
+.bracket .round.finals .winners .connector .merger {
+  height: 20rem;
+}
+.bracket .round.finals .winners .connector .line {
+  height: 20rem;
+}
+@media screen and ( max-width: 750px ) {
+    .bracket .round {display:unset  ; vertical-align: middle;}
+.bracket .round.semifinals .winners .connector .merger {
+  display: none;
+}
+.bracket .round.semifinals .winners .connector .line {
+    display: none;
+}
+.bracket .round.finals .winners .connector .merger {
+    display: none;
+}
+.bracket .round.finals .winners .connector .line {
+    display: none;
+}
+.bracket .round.quarterfinals .winners .connector .merger {
+    display: none;
+}
+.bracket .round.quarterfinals .winners .connector .line {
+    display: none;
+}
+.bracket .round .winners > div.connector{
+display: none;
+}
+.bracket .round.sixteen .winners:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.sixteen .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.quarterfinals .winners:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.quarterfinals .winners:first-child {
+  margin-top: 4rem;
+}
+.bracket .round.semifinals .winners:first-child {
+  margin-top: 4rem;
+}
+.bracket .round.finals .winners:first-child {
+  margin-top: 4rem;
+}
+.bracket .round.quarterfinals .winners .connector .merger {
+  height: 2rem;
+}
+.bracket .round.quarterfinals .winners .connector .line {
+  height: 2rem;
+}
+.bracket .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.semifinals .winners .matchups .matchup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.semifinals .winners:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.bracket .round.finals .winners:last-child{
+    margin-bottom: 20px;
+    border: 5px, solid, black;
+}
+}
+
+
+    </style>
+
+</head>
+
+<body style="font-family: 'Exo'">
+    <header>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 100pt; color: rgb(133, 2, 2); margin: -30px;">
+            </p>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 20pt; margin-top: -5px; color: rgb(133, 2, 2);">
+            The Serious Golfing League</p>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $.get("/golfnav.html", function(data){
+                    $("#nav-placeholder").replaceWith(data);
+                });
+                </script>
+
+    </header>
+
+    <hr class="solidred">
+    <hr class="solidblue">
+    <div class="container">
+        <img class="responsive" src="../images/worldmp.png">
+        <div stlye="font-size: 50%" class="centered">2023 SGA WORLD MATCHPLAY CHAMPIONSHIP</div>
+    </div>
+
+    <hr class="solidred">
+    <hr class="solidblue">
+</br>
+<h3>TOURNAMENT BRACKET</h3>
+</br>
+<H4>Chiang Mai, Thailand </H4>
+<table class="teamsouth">
+  <thead><tr><th colspan="7">GROUP 1</th></tr>
+   <tr><td>PLAYER</td><td>P</td><td>W</td><td>D</td><td>L</td><td>BP</td><td>PTS</td></tr>
+   <tr><td>FRANKIE</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>4</td></tr>
+   <tr><td>BECKFORD</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>2</td></tr>
+   <tr><td>DEAFPARROT</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td></tr>
+
+   
+   
+   </table>
+
+   <table class="presidents">
+    <thead><tr><th style="background-color: rgb(78, 1, 1)" colspan="3">GROUP 1 MATCHES</th></tr></thead>
+     <tr><td>BECKFORD</td><td style="background-color: rgb(180, 162, 162)">2 UP</td><td>DEAFPARROT</td></tr>
+     <tr><td>BECKFORD</td><td style="background-color: rgb(163, 162, 180)">1 UP</td><td>FRANKIE</td></tr>
+     <tr><td>DEAFPARROT</td><td style="background-color: rgb(163, 162, 180)">2&1</td><td>FRANKIE</td></tr>
+    </table>
+
+   <table class="teamsouth">
+    <thead><tr><th colspan="7">GROUP 2</th></tr>
+      <tr><td>PLAYER</td><td>P</td><td>W</td><td>D</td><td>L</td><td>BP</td><td>PTS</td></tr>
+    <tr><td>WIGGINS</td><td>2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+    <tr><td>MONTY</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>2</td></tr>
+     <tr><td>GAZZA</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+     
+     </table>
+
+     <table class="presidents">
+      <thead><tr><th style="background-color: rgb(78, 1, 1)" colspan="3">GROUP 2 MATCHES</th></tr></thead>
+       <tr><td>MONTY</td><td style="background-color: rgb(180, 162, 162)">1 UP</td><td>GAZZA</td></tr>
+       <tr><td>MONTY</td><td style="background-color: rgb(163, 162, 180)">7&5</td><td>WIGGINS</td></tr>
+       <tr><td>GAZZA</td><td style="background-color: rgb(126, 123, 123)">A/S</td><td>WIGGINS</td></tr>
+      </table>
+
+     <table class="teamsouth">
+      <thead><tr><th colspan="7">GROUP 3</th></tr>
+      <tr><td>PLAYER</td><td>P</td><td>W</td><td>D</td><td>L</td><td>BP</td><td>PTS</td></tr>
+      <tr><td>HAGUEY</td><td>2</td><td>2</td><td>0</td><td>0</td><td>2</td><td>6</td></tr> 
+      <tr><td>TONY</td><td>2</td><td>1</td><td>0</td><td>1</td><td>1</td><td>3</td></tr>
+       <tr><td>HOM</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td></tr>
+       </table>
+
+       <table class="presidents">
+        <thead><tr></tr><th style="background-color: rgb(78, 1, 1)" colspan="3">GROUP 3 MATCHES</th></tr></thead>
+         <tr><td>TONY</td><td style="background-color: rgb(163, 162, 180)">3&1</td><td>HAGUEY</td></tr>
+         <tr><td>TONY</td><td style="background-color: rgb(180, 162, 162)">6&5</td><td>HOM</td></tr>
+         <tr><td>HAGUEY</td><td style="background-color: rgb(180, 162, 162)">3&2</td><td>HOM</td></tr>
+        </table>
+
+       <table class="teamsouth">
+        <thead><tr><th colspan="7">GROUP 4</th></tr>
+          <tr><td>PLAYER</td><td>P</td><td>W</td><td>D</td><td>L</td><td>BP</td><td>PTS</td></tr>
+          <tr><td>BULLY</td><td>2</td><td>1</td><td>0</td><td>1</td><td>1</td><td>3</td></tr>
+          <tr><td>ROB</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td></tr>
+         
+         <tr><td>MAV</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+
+         </table>
+
+         <table class="presidents">
+          <thead><tr><th style="background-color: rgb(78, 1, 1)" colspan="3">GROUP 4 MATCHES</th></tr></thead>
+           <tr><td>ROB</td><td style="background-color: rgb(126, 123, 123)">A/S</td><td>MAV</td></tr>
+           <tr><td>ROB</td><td style="background-color: rgb(180, 162, 162)">2&1</td><td>BULLY</td></tr>
+           <tr><td>MAV</td><td style="background-color: rgb(163, 162, 180)">4&3</td><td>BULLY</td></tr>
+          </table>
+        </br> </br> </br>
+    <div class="bracket">
+    
+
+      <h3 style="background-color: rgba(160, 139, 5, 0.803); width:300px; margin-right: auto;margin-left: auto; text-align: center; border-radius: 20px; padding-bottom: 15px; font-weight: bolder; font-size: x-large; border: #000000 solid 3px;">CHAMPIONS PATH</h3>
+
+        <section class="round semifinals">
+            <div class="title"><span>SEMI FINALS</span></div>
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant loser"><span>FRANKIE</span></div>
+                  <div class="participant winner"><span>BULLY - 'a big score'</span></div>
+                </div>
+              </div>
+         
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant winner"><span>WIGGINS - A/S (Tie Break)</span></div>
+                  <div class="participant loser"><span>HAGUEY</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="connector">
+              <div class="merger"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </section>
+        <section class="round finals">
+            <div class="title"><span>FINAL</span></div>
+          <div class="winners">
+            <div class="matchups">
+              <div class="matchup">
+                <div class="participants">
+                  <div class="participant"><span>BULLY </span></div>
+                  <div class="participant"><span>WIGGINS</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </br> </br> </br></br> </br> </br>
+      <div class="bracket">
+    
+
+        <h3 style="background-color: rgba(174, 172, 160, 0.803); width:300px; margin-right: auto;margin-left: auto; text-align: center; border-radius: 20px; padding-bottom: 15px; font-weight: bolder; font-size: x-large; border: #000000 solid 3px;">JOBBERS PATH</h3>
+  
+          <section class="round semifinals">
+              <div class="title"><span>SEMI FINALS</span></div>
+            <div class="winners">
+              <div class="matchups">
+                <div class="matchup">
+                  <div class="participants">
+                    <div class="participant loser"><span>BECKFORD</span></div>
+                    <div class="participant winner"><span>ROB - 1 UP</span></div>
+                  </div>
+                </div>
+           
+                <div class="matchup">
+                  <div class="participants">
+                    <div class="participant loser"><span>MONTY</span></div>
+                    <div class="participant winner"><span>TONY - 5&3</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="connector">
+                <div class="merger"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </section>
+          <section class="round finals">
+              <div class="title"><span>FINAL</span></div>
+            <div class="winners">
+              <div class="matchups">
+                <div class="matchup">
+                  <div class="participants">
+                    <div class="participant loser"><span>ROB</span></div>
+                    <div class="participant winner"><span>TONY - 1 UP</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </br> </br> </br></br> </br> </br>
+      <div class="bracket">
+    
+
+        <h3 style="background-color: rgba(66, 48, 7, 0.878); width:300px; margin-right: auto;margin-left: auto; text-align: center; border-radius: 20px; padding-bottom: 15px; font-weight: bolder; font-size: x-large; border: #000000 solid 3px;">FARMERS PATH</h3>
+  
+          <section class="round semifinals">
+              <div class="title"><span>SEMI FINALS</span></div>
+            <div class="winners">
+              <div class="matchups">
+                <div class="matchup">
+                  <div class="participants">
+                    <div class="participant winner"><span>DEAFPARROT 5&3</span></div>
+                    <div class="participant loser"><span>MAV</span></div>
+                  </div>
+                </div>
+           
+                <div class="matchup">
+                  <div class="participants">
+                    <div class="participant loser"><span>GAZZA</span></div>
+                    <div class="participant winner"><span>HOM 8&6</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="connector">
+                <div class="merger"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </section>
+          <section class="round finals">
+              <div class="title"><span>FINAL</span></div>
+            <div class="winners">
+              <div class="matchups">
+                <div class="matchup">
+                  <div class="participants">
+                    <div class="participant loser"><span>DEAFPARROT</span></div>
+                    <div class="participant winner"><span>HOM - 7&6</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </body>
+      </html>

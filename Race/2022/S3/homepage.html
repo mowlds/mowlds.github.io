@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Serious Racing League</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="css/index2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'><link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+
+    <style>
+        #grad1 {
+            background-image: linear-gradient(to bottom right, rgb(17, 9, 9), rgb(157, 201, 202));
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body style="font-family: 'Exo'">
+    <header>
+      
+        <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+        <p>
+            <h1 style="text-align: center;font-family: 'Bayon', sans-serif;">THE SERIOUS RACING LEAGUE</h1>
+        </p>
+        
+        <div id="nav-placeholder">
+        </div>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("/nav.html");
+            });</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </header>
+    <main>
+    
+
+    
+  <div class="row">
+
+
+   <div class="column side">
+      <fieldset class="sideborder">
+      <h3>Standings</h3>
+      <hr class="solid">
+      <table id="shortcalendar">
+        <tr>
+          <td>Haguey</td>
+          <td>165</td>
+      </tr>
+      <tr>
+          <td>Tony</td>
+          <td>157</td>
+      </tr>
+      <tr>
+          <td>CJ</td>
+          <td>118</td>
+      </tr>
+      <tr>
+          <td>Rob</td>
+          <td>111</td>
+      </tr>
+      <tr>
+          <td>Blarg</td>
+          <td>96</td>
+      </tr>
+      <tr>
+          <td>Nick</td>
+          <td>83</td>
+      </tr>
+      <tr>
+          <td>RFM</td>
+          <td>56</td>
+      </tr>
+      <tr>
+          <td>Wiggins</td>
+          <td>53</td>
+      </tr>
+      <tr>
+          <td>MavReck</td>
+          <td>52</td>
+      </tr>
+      <tr>
+          <td>Beckford</td>
+          <td>48</td>
+      </tr>
+      <tr>
+          <td>Stefarno</td>
+          <td>45</td>
+      </tr>
+      <tr>
+          <td>Bully</td>
+          <td>41</td>
+      </tr>
+      <tr>
+          <td>Jehrome</td>
+          <td>36</td>
+      </tr>
+      <tr>
+          <td>Monty</td>
+          <td>36</td>
+      </tr>
+      <tr>
+          <td>Maxey</td>
+          <td>32</td>
+      </tr>
+      <tr>
+          <td>Frankie</td>
+          <td>28</td>
+      </tr>
+      <tr>
+          <td>Dale</td>
+          <td>25</td>
+      </tr>
+      <tr>
+          <td>Homer</td>
+          <td>18</td>
+      </tr>
+      <tr>
+          <td>Owl</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>DeafParrot</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>Asta</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>FG</td>
+          <td>0</td>
+      </tr>
+    </table>
+      <h3>Twitter</h3>
+      <hr class="solid">
+      <a class="twitter-timeline" href="https://twitter.com/OTF_SRL" data-tweet-limit="1"
+        data-chrome="nofooter noheader transparent" data-width="80%">
+        Tweets by @OTF_SRL</a>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </fieldset> 
+    </div>
+    <div class="column middle news">
+      <h3 style="text-align: center;">League Updates</h3>
+      <hr class="solid">
+      <a class="block" href="/DriverResult?race=463">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>EY UP, WORLD CHAMPION 'ERE</h3>
+          <h4 class="news">Second place in the netherlands and third at Imola is enough for the Breadcake banger win the title in the best thing to happen to Sheffield since inside toilets</h4>
+        </article>
+      <a class="block" href="/DriverResult?race=461">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>RFM TASTES A BRIT OF GLORY!</h3>
+          <h4 class="news">RFM gains his maiden SRL win while marvellous Mav claims second place off pole</h4>
+        </article>
+      <a class="block" href="/DriverResult?race=460">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>HAGS GOES FROM WHINGER TO WINNER</h3>
+          <h4 class="news">Tears were shed in Monza but the Sheffield native comes back strongly to win in Brazil</h4>
+        </article>
+      <a class="block" href="/DriverResult?race=458">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>TONY TAKES TO THE STREETS</h3>
+          <h4 class="news">Has it come to this? Tony wins 2 in a row and could well be in, but dry your eyes, we wouldn't have it any other way</h4>
+        </article>
+      <a class="block" href="/DriverResult?race=456">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>HAGS AND ROB CHARGE UP THE STANDINGS</h3>
+          <h4 class="news">Medium traction control victories on unfriendly circuits SHAME the rest of the easy mode drivers in the paddock</h4>
+        </article>
+      <a class="block" href="/DriverResult?race=454">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>CJ COMES ALIVE WITH THE SOUND OF MUSIC</h3>
+          <h4 class="news">After a second place finish in Japan and a win in Austria CJ is storming away with the lead which can only result in him landing himself a drive in the williams</h4>
+        </article>
+      <a class="block" href="/DriverResult?race=452">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>THE RAIN IN SPA, FALLS MAINLY ON THE CAR</h3>
+          <h4 class="news">But it apparently does not worsen the track conditions in qualifying as CJ takes a gamble on a dry setup and ends up winning the first race of the season, magical</h4>
+        </article>
+      </a>
+      <a class="block" href="/Season/season?season=23">
+        <article>
+          <h5 class="newstype">NEWS</h5>
+          <h3>TRADITION DICTATES THE THIRD SEASON OF THE SRL BE ONE OF REAL PERFORMANCE</h3>
+          <h4 class="news">it's the only way we could stop DP retiring... for the next 12 races at least.</h4>
+        </article>
+      </a>
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</main>
+</body>
+
+</html>

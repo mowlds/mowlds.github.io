@@ -1,0 +1,91 @@
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'><link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+</head>
+<STYLE>
+
+.staticwgns{
+text-align: center;
+background-color: #bbbce8;
+font-size: 35px;
+color: rgb(133, 2, 2);
+display: flex;
+border: 5px #bbbce8 solid;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+padding-top: 8px;
+padding-left: 5px;
+font-family:'Monoton';
+
+}
+.row{
+display: -webkit-flex;
+  display: flex;
+  width: 99%;
+}
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+  overflow: hidden; /* HIDE SCROLL BAR */
+  background: #d2d3e1;
+  border: 5px #bbbce8 solid;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #fbfbfd;
+
+  
+}
+ 
+/* (B) MOVING TICKER WRAPPER */
+.hmove { display: flex; }
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+  flex-shrink: 0;
+  width: 250%;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-top: 15px;
+  text-align: center;
+  font-family: 'exo';
+  font-size:x-large;
+  font-weight:bolder;
+  color: rgb(133, 2, 2);
+  vertical-align: middle;
+}
+ 
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-5000%, 0, 0); }
+}
+.hmove { animation: tickerh linear 300s infinite; }
+.hmove:hover { animation-play-state: paused; }
+</STYLE>
+<div class="row">
+<div class="staticwgns">SGA</div><div class="hwrap"><div class="hmove">  
+    <div class="hitem">2023 SGA Match Play Draw LIVE Tonight!                                                </div>
+    <div class="hitem">Bully given his first major win on appeal - "what a massive fanny" quotes one anonymous SGA member                          </div>
+    <div class="hitem">SGL and SSGS Commissioners to battle it out with a charity arm wrestle (bicep emoji)                          </div>
+    <div class="hitem">"What the fuck is up with this wind" says man who is routinely battered by gales from the North Sea                          </div>
+    <div class="hitem">Chili is off the menu at the SGA annual awards ceremony as Watford based caterer given the boot after horse meat scandal                          </div>
+    <div class="hitem">But seriously... don't try the wings                                                     </div>
+    <div class="hitem">The gentleman thug returns! Beckford makes comeback to be 12th man in the 2023 SGA Match Play                          </div>
+    <div class="hitem">Latest DPbet Match Play Odds - Frankie 4/1, Bully 9/2, DeafParrot 8/1, Rob 10/1, Tony 10/1, Wiggins 12/1 and then some other cunts not worth betting on                          </div>
+    <div class="hitem">Wiggins sets us straight on the legendary triple albatross round, The Big Wiggins Interview with Martin Bashir - 9pm Friday                          </div>
+    <div class="hitem">Don't blame it on the swing plane, don't blame it on the ball lie, don't blame it on the archetype, blame it on the fittings                          </div>
+    <div class="hitem">Sunny will "Never ever return to that hellhole golf association" says source close to the rabid welshman                          </div>
+    <div class="hitem">Masters Look Ahead - Fans praying for some wind at AuGUSTa                                                   </div>
+    <div class="hitem">Don't forget the Serious Racing League! Every Sunday and Wednesday Night!                                                  </div>
+    <div class="hitem">Previous SGA Matchplay Winners: 2021 - DeafParrot, 2022 - Sunny.                                                     </div>
+    <div class="hitem">Mavs got wood! - Mav goes back to basics and explores his stroke technique as he looks to find early SGA form that led to two major wins                          </div>
+    <div class="hitem">SGA Sounds: Charli XCX, Abba, Miley Cyrus & Gary Glitter. download the Spotify Playlist curated specially by our SGA Music Experts                          </div>
+    <div class="hitem">SPARE: Rob tells all about his goings on whilst on hiatus from the tour - "Time fixed my todger, when would it work its magic on my heart?"                          </div>
+    <div class="hitem">GAZZA - "I have zero respect for most of my competitors"                               </div>
+    <div class="hitem">"Ey, up. Breadcakes shall be ont'house if Hags wins MatchPlay"                              </div>
+  </div></div>
+</div>

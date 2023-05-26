@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> HistoryY</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="../css/golf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'><link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/colus" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+                
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+body {
+    text-align: center;
+}
+h3 {
+    padding-top: 20px;
+}
+
+td:nth-child(1) {
+    width: 31px;
+    color: rgb(18, 14, 34);
+    background-color: antiquewhite;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+td:nth-child(2) {
+    text-align: left;
+    padding-left: 20px;
+}
+table { border-collapse: collapse;
+}
+tr:nth-child(odd) {background-color: rgb(83, 83, 15)}
+
+@import url('https://fonts.cdnfonts.com/css/colus');
+
+    </style>
+
+</head>
+
+<body style="font-family: 'Exo'">
+    <header>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 100pt; color: rgb(133, 2, 2); margin: -30px;">
+            SGA</p>
+        <p
+            style="text-align: center;font-family:'Monoton', cursive; font-size: 20pt; margin-top: -5px; color: rgb(133, 2, 2);">
+            The Serious Golfing Association</p>
+            <div id="nav-placeholder">
+            </div>
+            <script>
+                $.get("/golfnav.html", function(data){
+                    $("#nav-placeholder").replaceWith(data);
+                });
+                </script>
+
+    </header>
+
+    <hr class="solidred">
+    <hr class="solidblue">
+
+    <div class="eventcard" style="width:800px; background-color: rgb(113, 113, 19); color: antiquewhite; font-family: 'Righteous', cursive;">
+        <img style="width: 100px; float: left; padding-top:20px; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;" src="/images/SGAAFFILIATE.png">
+        <img style="width: 100px; float: right; padding: 10px;" src="/images/headslogo.png">
+    </br>
+    </br>
+        <p style="text-align: center; padding-bottom: 20px; padding-top: 20px; font-size: 40px">THE SERIOUS GOLFING LEAGUE</p>
+        <hr class="solidblue" style="margin-top:-50px; width: 80%; margin-left: auto; margin-right: auto;">
+    </br>
+        <p><span style="background-color: antiquewhite; color: rgb(91, 89, 96);border-radius: 20px; padding: 10px; font-size: 20px;">SEASON 1 FINALS</span></p>
+        <!--EVENT NAME HERE--><p style="font-size: 48px;font-family: 'Permanent Marker', cursive;">THE HATEFUL EIGHT</p>
+        <!--COURSE NAME HERE--><p style="font-size: 20px; margin-top:-35px;">@ VIKEN GOLF LINKS, NORTHERN ISLES</p>
+        <!--SETTINGS HERE--><p style="margin-top:-10px; font-size: 10px;">4 ROUNDS / STROKE PLAY / FINALS</p>
+    </br>
+    <img style="width: 200px;" src="/images/championgolfer.png">
+    <p><span style="color: rgb(255, 255, 255);border-radius: 20px; padding: 10px; font-size: 30px; font-style: italic; text-decoration: underline;">BULLY</span></p>
+
+   <!-- <hr class="solidblue" style="margin-top: 20px; width: 80%; margin-left: auto; margin-right: auto;">
+</br>
+
+         <!--DESCRIPTION HERE<p style="width: 75%; margin-left: auto; margin-right: auto;">It's taken a long time to get here but the long awaited season finals are upon us and hosted at the stunning Viken Golf Links. Being based in the Northern Isles, expect rain and wind galore over 4 rounds of rugged terrain.</p><p style="width: 75%; margin-left: auto; margin-right: auto;">As season leader Bully will start off with an 8 shot advantage, with frankie starting off at -7 going down to Monty with a one shot advantage. May the most hateful of the eight be crowned season champion!</P>
+        <hr class="solidblue" style="margin-top: 20px; width: 80%; margin-left: auto; margin-right: auto;">-->
+    </br>
+    <h3 style="padding-bottom: 10px;">THE HATEFUL EIGHT</h3>
+    <table style="width:40%; margin-left: auto; margin-right: auto;">
+        <colgroup>
+        <col>
+        <col>
+        <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>BULLY</td>
+                <td>-58 (-50)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>FRANKIE</td>
+                <td>-45 (-38)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>TONY</td>
+                <td>-38 (-33)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>HAGUEY</td>
+                <td>-38 (-34)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>DEAFPARROT</td>
+                <td>-36 (-30)</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>ROB</td>
+                <td>-24 (-22)</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>MONTY</td>
+                <td>-21 (-20)</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>HOM</td>
+                <td>-9 (-6)</td>
+            </tr>
+            
+    </tbody>
+    </table>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+        
+    </div>
+   
+
+
+
+    
+       

@@ -134,6 +134,7 @@
     <Compile Include="Controllers\RacesController.cs" />
     <Compile Include="Controllers\SeasonController.cs" />
     <Compile Include="Controllers\StatsController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\TrackController.cs" />
     <Compile Include="DAL\Driver.cs">
       <DependentUpon>SRLModel.tt</DependentUpon>
@@ -186,12 +187,14 @@
     <Compile Include="Models\ConstructorsModel.cs" />
     <Compile Include="Models\DriverCareerResultModel.cs" />
     <Compile Include="Models\DriverDisplayModel.cs" />
+    <Compile Include="Models\DriverResultExtra.cs" />
     <Compile Include="Models\GameVersion.cs" />
     <Compile Include="Models\SeasonChampionModel.cs" />
     <Compile Include="Models\StatsModel.cs" />
     <Compile Include="Models\StatsViewModel.cs" />
     <Compile Include="Models\SuperGridQualyModel.cs" />
     <Compile Include="Models\SupergridViewModel.cs" />
+    <Compile Include="Models\TeamDisplayModel.cs" />
     <Compile Include="Models\TrackHistoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1041,6 +1044,7 @@
     <Content Include="js\main.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\vendor\jquery-1.10.2.min.js" />
+    <Content Include="live.html" />
     <Content Include="nav.html" />
     <Content Include="Race\2016\S1\overview.html" />
     <Content Include="Race\2016\S2\overview.html" />
@@ -1165,15 +1169,15 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\DriverResult\Index.cshtml" />
-    <Content Include="Views\DriverResult\QualyPartial.cshtml" />
+    <Content Include="Views\Shared\QualyPartial.cshtml" />
     <Content Include="Views\Shared\_PartialLayout.cshtml" />
-    <Content Include="Views\DriverResult\RaceOverviewPartial.cshtml" />
-    <Content Include="Views\DriverResult\RacePartial.cshtml" />
+    <Content Include="Views\Shared\RaceOverviewPartial.cshtml" />
+    <Content Include="Views\Shared\RacePartial.cshtml" />
     <Content Include="Views\Season\Index.cshtml" />
     <Content Include="Views\Races\Index.cshtml" />
     <Content Include="Views\Season\Season.cshtml" />
     <Content Include="Views\Shared\SupergridPartial.cshtml" />
-    <Content Include="Views\DriverResult\SprintPartial.cshtml" />
+    <Content Include="Views\Shared\SprintPartial.cshtml" />
     <Content Include="Views\Shared\SupergridQualyPartial.cshtml" />
     <Content Include="Views\Shared\ConstructorsTable.cshtml" />
     <Content Include="Views\Driver\Driver.cshtml" />
@@ -1183,6 +1187,8 @@
     <Content Include="Views\Track\Index.cshtml" />
     <Content Include="Views\Track\Track.cshtml" />
     <Content Include="Views\Stats\Index.cshtml" />
+    <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Team\Team.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

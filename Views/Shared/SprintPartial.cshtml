@@ -1,4 +1,5 @@
-﻿@model IEnumerable<mowlds.github.io.DAL.DriverResult>
+﻿
+@model IEnumerable<mowlds.github.io.Models.DriverResultExtra>
 
 @{
     ViewData["Title"] = "Race";
@@ -7,17 +8,17 @@
 
 <div class="raceresults">
     <table id="raceresults">
-        <caption style="font-weight: bolder ;">RACE RESULTS</caption>
+        <caption style="font-weight: bolder ;">SPRINT</caption>
         <thead>
             <tr>
                 <th>
-                    
+
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Driver1.Name)
                 </th>
                 <th>
-                    
+
                 </th>
                 <th>
                     Points
@@ -26,27 +27,21 @@
                     @Html.DisplayNameFor(model => model.Time)
                 </th>
                 <th>
-                    Fastest Lap
+                    Lap
                 </th>
                 <th>
                     Pens
                 </th>
-                <th>
+                <th style="padding-left:1pc">
                     Tyres
                 </th>
-                
+
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 3))
+            @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 4))
             {
-                var style = String.Empty;   
-                if (item.HasFastestLap)
-                {
-                    style = "background-color:magenta";
-                }
-                    <tr style="@style">
-                
+                <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.FinalPosition)
                     </td>
@@ -62,8 +57,8 @@
                                 <img class="logogrid" src="@Html.DisplayFor(modelitem => item.Race1.Season1.DriverTeam.Where(dt => dt.Driver == item.Driver).First().Team1.TeamLogo)">
                             }
                         }
-                        </td>
-                     <td>
+                    </td>
+                    <td>
                         <div class="result-driver-info">
                             @Html.DisplayFor(modelItem => item.RacePoints)
                         </div>
@@ -87,92 +82,107 @@
                     <td>
                         @if ((bool)(item.HasTimePenalty))
                         {
-                            @String.Format("+{0} secs", item.TimePenaltyDuration)
+                            @String.Format("+{0}s", item.TimePenaltyDuration)
                         }
                     </td>
                     <td>
                         <table id="nolayout">
-                            <tr>
-                                <td>
+                           <tr>
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre1))
+                                    
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre1.Trim()">
                                             </div>
                                         </div>
+                                        </td>
                                     }
-                                </td>
-                                <td>
+                                
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre2))
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre2.Trim()">
                                             </div>
                                         </div>
+                                        </td>
                                     }
-                                </td>
-                                <td>
+                                
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre3))
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre3.Trim()">
                                             </div>
                                         </div>
-
+                                        </td>
                                     }
-                                </td>
-                                <td>
+                                
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre4))
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre4.Trim()">
                                             </div>
                                         </div>
+                                        </td>
                                     }
-                                </td>
-                                <td>
+                                
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre5))
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre5.Trim()">
                                             </div>
                                         </div>
+                                        </td>
 
                                     }
-                                </td>
-                                <td>
+                                
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre6))
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre6.Trim()">
                                             </div>
                                         </div>
+                                        </td>
                                     }
-                                </td>
-                                <td>
+                                
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre7))
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre7.Trim()">
                                             </div>
                                         </div>
+                                        </td>
                                     }
-                                </td>
-                                <td>
+                                
+                                
                                     @if (!string.IsNullOrEmpty(item.Tyre8))
                                     {
+                                        <td>
                                         <div class="result-driver-info result-driver-tyres">
                                             <div class="result-driver-tyres-@item.Tyre8.Trim()">
                                             </div>
                                         </div>
+                                        </td>
                                     }
-                                </td>
+                                
                             </tr>
                         </table>
                     </td>
-                   
+
                 </tr>
-                
             }
         </tbody>
     </table>

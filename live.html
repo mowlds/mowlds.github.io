@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SRL LIVE</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../images/stewards.jpg');
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+            font-family: 'exo';
+            color: white;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body style="font-family: 'Exo'">
+    <header>
+        <img src="images\SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
+        <p>
+            <h2 style="text-align: center;font-family:'Bayon';">THE SERIOUS RACING LEAGUE</h2>
+        </p>
+        <div id="nav-placeholder">
+        </div>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("/nav.html");
+            });</script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </header>
+    <center>
+        <h3 style="text-align: center;">Live Streams</h3>
+        <table style="text-align:center; align-content:center; width: 80%">
+            <tr>
+                <td style="align-content:center;">
+                    <iframe src="https://player.twitch.tv?channel=alfredbulbasaur&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    Nick
+                </td>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=coulthardsjaw&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    CJ
+                </td>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=DeafParrot&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    DP
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=stefarno88&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    IMM
+                </td>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=JehromeZone&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    Jeh
+                </td>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=maxeyshikari&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    Maxey
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=monty99_&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    Monty
+                </td>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=TheMavReck&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    Mav
+                </td>
+                <td>
+                    <iframe src="https://player.twitch.tv?channel=wigginstopboys&parent=www.seriousracingleague.com" frameborder="0" allowfullscreen="true" scrolling="no" height="306" width="500"></iframe>
+                    Wiggins
+                </td>
+            </tr>
+        </table>
+    </center>  
+</body>
