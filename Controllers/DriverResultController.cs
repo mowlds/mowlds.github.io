@@ -33,7 +33,24 @@ namespace mowlds.github.io.Controllers
 
             var sRLContext = _context.DriverResult.
                   Where(grandprix => grandprix.Race == race);
-            return View(sRLContext);
+
+
+            var result = new List<DriverResultExtra>();
+            foreach (DriverResult dr in sRLContext)
+            {
+                DriverResultExtra dre = new DriverResultExtra(dr);
+                if (dr.SessionType == 3)
+                {
+                    var qualyResult = sRLContext.Where(q => q.Driver == dr.Driver && q.SessionType == 2).FirstOrDefault();
+                    if (qualyResult != null)
+                    {
+                        dre.PositionsGained = qualyResult.FinalPosition - dre.FinalPosition;
+                    }
+                }
+                result.Add(dre);
+            }
+
+            return View(result);
         }
 
         // GET: DriverResults
@@ -45,7 +62,15 @@ namespace mowlds.github.io.Controllers
                Include("Race1").
                Include("Race1.Season1").
                Where(grandprix => grandprix.Race == race);
-            return PartialView(sRLContext);
+
+            var result = new List<DriverResultExtra>();
+            foreach (DriverResult dr in sRLContext)
+            {
+                DriverResultExtra dre = new DriverResultExtra(dr);
+                result.Add(dre);
+            }
+
+            return PartialView(result);
         }
 
         // GET: DriverResults
@@ -57,7 +82,15 @@ namespace mowlds.github.io.Controllers
               Include("Race1").
               Include("Race1.Season1").Include("Race1.Season1.DriverTeam").Include("Race1.Season1.DriverTeam.Team1").
               Where(grandprix => grandprix.Race == race && grandprix.SessionType == 2);
-            return PartialView(sRLContext);
+
+            var result = new List<DriverResultExtra>();
+            foreach (DriverResult dr in sRLContext)
+            {
+                DriverResultExtra dre = new DriverResultExtra(dr);
+                result.Add(dre);
+            }
+
+            return PartialView(result);
 
         }
 
@@ -70,7 +103,15 @@ namespace mowlds.github.io.Controllers
                Include("Race1").
                Include("Race1.Season1").Include("Race1.Season1.DriverTeam").Include("Race1.Season1.DriverTeam.Team1").
                Where(grandprix => grandprix.Race == race && grandprix.SessionType == 4);
-            return PartialView(sRLContext);
+
+            var result = new List<DriverResultExtra>();
+            foreach (DriverResult dr in sRLContext)
+            {
+                DriverResultExtra dre = new DriverResultExtra(dr);
+                result.Add(dre);
+            }
+
+            return PartialView(result);
         }
 
         // GET: DriverResults
@@ -82,7 +123,27 @@ namespace mowlds.github.io.Controllers
                Include("Race1").
                Include("Race1.Season1").Include("Race1.Season1.DriverTeam").Include("Race1.Season1.DriverTeam.Team1").
                Where(grandprix => grandprix.Race == race && grandprix.SessionType == 3);
-            return PartialView(sRLContext);
+
+
+            var qualyContext = _context.DriverResult.
+               Include("Driver1").
+               Include("Race1").
+               Include("Race1.Season1").Include("Race1.Season1.DriverTeam").Include("Race1.Season1.DriverTeam.Team1").
+               Where(grandprix => grandprix.Race == race && grandprix.SessionType == 2);
+
+
+            var result = new List<DriverResultExtra>();
+            foreach (DriverResult dr in sRLContext)
+            {
+                DriverResultExtra dre = new DriverResultExtra(dr);
+                var qualyResult = qualyContext.Where(q => q.Driver == dr.Driver).FirstOrDefault();
+                if (qualyResult != null)
+                {
+                    dre.PositionsGained = qualyResult.FinalPosition - dre.FinalPosition;
+                }
+                result.Add(dre);
+            }
+            return PartialView(result);
         }
 
         [Route("SupergridPartial")]
