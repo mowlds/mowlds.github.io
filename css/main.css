@@ -1227,7 +1227,7 @@ table#seasonlist tr:nth-child(even) {
         }
   
           
-          .raceresultsdiv {
+          .raceresults {
             table-layout: fixed;
             max-width: 80%;
             min-width: 60%;
