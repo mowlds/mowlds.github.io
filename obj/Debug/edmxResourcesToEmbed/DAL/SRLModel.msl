@@ -60,6 +60,8 @@
     <EntitySetMapping Name="Race">
       <EntityTypeMapping TypeName="SRLModel.Race">
         <MappingFragment StoreEntitySet="Race">
+          <ScalarProperty Name="Highlights" ColumnName="Highlights" />
+          <ScalarProperty Name="Review" ColumnName="Review" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Season" ColumnName="Season" />
           <ScalarProperty Name="Track" ColumnName="Track" />
@@ -106,6 +108,7 @@
     <EntitySetMapping Name="Team">
       <EntityTypeMapping TypeName="SRLModel.Team">
         <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="About" ColumnName="About" />

@@ -64,13 +64,6 @@ warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key de
     <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="Event" Type="nchar" MaxLength="30" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="PositionPoints">
-          <Property Name="Position" Type="int" />
-          <Property Name="Points" Type="int" />
-          <Property Name="SessionType" Type="int" />
-        </EntityType>-->
   <EntityType Name="Race">
     <Key>
       <PropertyRef Name="ID" />
@@ -82,6 +75,8 @@ warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary ke
     <Property Name="RaceName" Type="nchar" MaxLength="50" />
     <Property Name="RaceDate" Type="date" />
     <Property Name="Laps" Type="int" />
+    <Property Name="Review" Type="varchar(max)" />
+    <Property Name="Highlights" Type="varchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="RaceLaps">
     <Key>
@@ -121,6 +116,7 @@ warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary ke
     <Property Name="Name" Type="nchar" MaxLength="30" />
     <Property Name="About" Type="text" />
     <Property Name="TeamLogo" Type="text" />
+    <Property Name="Colour" Type="nchar" MaxLength="8" />
   </EntityType>
   <EntityType Name="Track">
     <Key>
@@ -174,9 +170,6 @@ warning 6013: The table/view 'SRL.dbo.PositionPoints' does not have a primary ke
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <!--Errors Found During Generation:
-error 6004: The table 'SRL.dbo.PositionPoints' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_PositionPoints_SessionType" />-->
   <Association Name="FK_Race_DriverResult">
     <End Role="Race" Type="Self.Race" Multiplicity="1" />
     <End Role="DriverResult" Type="Self.DriverResult" Multiplicity="*" />

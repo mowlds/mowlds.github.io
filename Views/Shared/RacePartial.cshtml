@@ -59,6 +59,10 @@
                         <text>&#8593;</text>
                         @Html.DisplayFor(modelitem => item.PositionsGained);
                     }
+                    else if (item.PositionsGained == 0)
+                    {
+                        <text>&#61;</text>
+                    }
                     else
                     {
                         <text>&#8595;</text>
