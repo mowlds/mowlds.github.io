@@ -56,7 +56,25 @@ table { border-collapse: collapse;
 }
 tr:nth-child(5) { border-bottom: 2px antiquewhite dashed; }
 tr:nth-child(odd) {background-color: rgb(81, 16, 16)}
-.backimage{background: url(/images/mavvy.png); width: 800px}
+.backimage{
+    position: relative; 
+    width: 100%;
+
+}
+.backimage::before {    
+      content: "";
+      background-image: url('/images/mavvy.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 @import url('https://fonts.cdnfonts.com/css/colus');
 
