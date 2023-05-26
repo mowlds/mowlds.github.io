@@ -187,6 +187,7 @@
     <Compile Include="Models\ConstructorsModel.cs" />
     <Compile Include="Models\DriverCareerResultModel.cs" />
     <Compile Include="Models\DriverDisplayModel.cs" />
+    <Compile Include="Models\DriverResultExtra.cs" />
     <Compile Include="Models\GameVersion.cs" />
     <Compile Include="Models\SeasonChampionModel.cs" />
     <Compile Include="Models\StatsModel.cs" />
@@ -1043,6 +1044,7 @@
     <Content Include="js\main.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\vendor\jquery-1.10.2.min.js" />
+    <Content Include="live.html" />
     <Content Include="nav.html" />
     <Content Include="Race\2016\S1\overview.html" />
     <Content Include="Race\2016\S2\overview.html" />
