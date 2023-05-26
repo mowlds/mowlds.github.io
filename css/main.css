@@ -2,8 +2,8 @@
    Your custom CSS styles
    ========================================================================== */
 @font-face {
-  font-family: "f1 bold" ;
-  src: url(/fonts/Formula1-Bold.ttf);
+  font-family: "f1bold";
+  src: url(/fonts/Formula1-Bold.ttf)
 }
 main{
 background-color: rgb(188, 219, 197)
@@ -910,7 +910,7 @@ table#seasonlist tr:nth-child(even) {
                
             
             }
-            
+
             table#calendar caption {
 
                 font-size: 24pt;
