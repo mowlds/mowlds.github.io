@@ -1072,8 +1072,11 @@ table#seasonlist tr:nth-child(even) {
             .stats{
               background-color: #e4e4e4c2;
             }
+            .statsresults{
+                background-color: #e4e4e448;
+            }
             .statschamp{
-              background-color: #2a0606b8;
+              background-color: #2a060652;
               padding-top: 10px;
             }
 
@@ -1235,19 +1238,19 @@ table#seasonlist tr:nth-child(even) {
             padding: 5px;
             font-weight: bold;
             text-align: center;
-            background-color: black;
+            
 
         }
 
         table#raceresults th {
             border-bottom: 2px rgb(255, 255, 255) solid;
-            background-color: rgb(15, 26, 18);;
+            background-color: rgb(0,0,0,0.5);
             padding: 10px;
             width: max-content
         }
 
         table#raceresults td {
-            background-color: rgba(43, 75, 52, 0.75);
+            background-color: rgb(0,0,0,0.5);
             padding-right: 10px;
             padding-left: 10px;
             height: 30px;
