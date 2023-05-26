@@ -1251,8 +1251,8 @@ table#seasonlist tr:nth-child(even) {
 
         .raceresults td {
             
-            padding-right: 10px;
-            padding-left: 10px;
+            padding-right: 8px;
+            padding-left: 8px;
             height: 30px;
             width: max-content;
             vertical-align: middle;
@@ -1263,6 +1263,8 @@ table#seasonlist tr:nth-child(even) {
           border-radius: 10px;
           background-color: #ffff007a;
           text-align: center;
+          padding-right: 5px;
+            padding-left: 5px;
       }
 
         .raceresults caption {
