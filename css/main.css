@@ -1257,8 +1257,9 @@ table#seasonlist tr:nth-child(even) {
             vertical-align: middle;
         }
         table#raceresults td:nth-child(1) {
-          color: rgb(144, 135, 53);
-          border-radius: 20px;
+          color: rgb(255, 255, 255);
+          border-radius: 10px;
+          background-color: #ffff007a;
       }
 
         table#raceresults caption {
