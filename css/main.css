@@ -1245,7 +1245,8 @@ table#seasonlist tr:nth-child(even) {
         .raceresults th {
 
             padding: 10px;
-            width: max-content
+            width: max-content;
+            text-align: left;
         }
 
         .raceresults td {
