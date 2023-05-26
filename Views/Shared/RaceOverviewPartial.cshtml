@@ -26,21 +26,21 @@
                         </tr>
                         <tr>
                             <th>Pole Position</th>
-                            <td>
+                            <td style="font-family: 'f1reg';">
                                 @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Driver1.Name) -
                                 @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 2 && r.FinalPosition == 1).First().Time)
                             </td>
                         </tr>
                         <tr>
                             <th>Fastest Lap</th>
-                            <td>
+                            <td style="font-family: 'f1reg';">
                                @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().Driver1.Name) -
             @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasFastestLap).First().BestLap)
                             </td>
                         </tr>
                         <tr>
                             <th>Driver Of The Day</th>
-                            <td>
+                            <td style="font-family: 'f1reg';">
                                 @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.HasDriverOfTheDay).FirstOrDefault().Driver1.Name)
                             </td>
                         </tr>
