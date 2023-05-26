@@ -1553,10 +1553,9 @@ table#nolayout {
     }
 
    table#nolayout td:nth-child(1) {
-      color: rgb(255, 255, 255);
-      border-radius: 10px;
-      background-color: #ffff007a;
-      text-align: center;
+
+      background-color: #ffffff00;
+
   }
 
 
