@@ -20,7 +20,7 @@
                     <tbody>
                         <tr>
                             <th>Race Winner</th>
-                            <td>
+                            <td style="font-family: 'f1reg';">
                                 @Html.DisplayFor(raceItem => Model.Where(r => r.SessionType == 3 && r.FinalPosition == 1).First().Driver1.Name)
                             </td>
                         </tr>
