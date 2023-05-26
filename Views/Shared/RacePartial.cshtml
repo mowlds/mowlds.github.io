@@ -56,8 +56,7 @@
                 <td>
                     @if (item.PositionsGained > 0)
                     {
-                        <text>&#8593;</text>
-                        @Html.DisplayFor(modelitem => item.PositionsGained);
+                        <text>&#8593;</text>@Html.DisplayFor(modelitem => item.PositionsGained);
                     }
                     else if (item.PositionsGained == 0)
                     {
