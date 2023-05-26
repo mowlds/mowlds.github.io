@@ -1,8 +1,9 @@
 /* ==========================================================================
    Your custom CSS styles
    ========================================================================== */
-   * {
-    font-family: 'exo';
+@font-face {
+  font-family: "f1 bold" ;
+  src: url(/fonts/Formula1-Bold.ttf);
 }
 main{
 background-color: rgb(188, 219, 197)
@@ -227,7 +228,7 @@ margin-right: auto;
     border-top: 3px dashed rgb((43, 75, 52));
   }
   body{
-  font-family: 'exo';
+  font-family: 'f1bold';
   }
   html, body{
     background-color: #e3e9e3;
@@ -749,9 +750,7 @@ font-weight: bold;
 text-decoration: underline rgb(43, 75, 52) 4px;
 }
 
-* {
-    font-family: 'exo';
-}
+
 table#list {
   table-layout: fixed;
   max-width: 90%;
