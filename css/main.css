@@ -1334,7 +1334,7 @@ table#seasonlist tr:nth-child(even) {
       }
       .fastestlap{
         border: 3px;
-        border-color: purple;
+        border-color: rgb(79, 8, 79);
         border-style: solid;
         padding: 3px;
         border-radius: 50%;
