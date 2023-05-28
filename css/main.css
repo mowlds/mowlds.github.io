@@ -748,7 +748,7 @@ height: 22px;
 }
 .races{
 width: 35px;
-background-color: grey;
+background-color: rgba(48, 48, 48, 0.764);
 
 }
 .points{
@@ -763,7 +763,7 @@ background-color: grey;
 .diff{
   width: 30px;
 
-  color: rgba(255, 255, 255, 0.163);
+  color: rgb(160, 157, 157);
   font-weight: lighter;
   font-size: x-small;
 }
