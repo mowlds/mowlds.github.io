@@ -749,11 +749,11 @@ height: 22px;
 .races{
 width: 35px;
 border: 1px solid white;
-background-color: rgb(59, 59, 56);
+
 }
 .points{
   width: 50px;
-  background-color:rgba(0,0,0,0.85) ;
+
   color: rgb(255, 255, 255);
 }
 .drivername{
@@ -762,8 +762,8 @@ background-color: rgb(59, 59, 56);
 }
 .diff{
   width: 30px;
-  background-color:rgba(131, 150, 136, 0.87) ;
-  color: rgba(0, 0, 0, 0.163);
+
+  color: rgba(255, 255, 255, 0.163);
   font-weight: lighter;
   font-size: x-small;
 }
