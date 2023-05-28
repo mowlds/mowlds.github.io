@@ -707,17 +707,20 @@ table#careergrid col {
 table#supergrid caption {
 
   font-size: 24pt;
+  border-bottom: 2px #b62f2f solid;
 
   padding-bottom: 5px;
   padding-top: 5px;
+  background-color: rgb(0,0,0,0.85);
 
 }
 table#careergrid caption {
 
   font-size: 24pt;
-color:black;
+color:rgb(0, 0, 0);
   padding-bottom: 5px;
   padding-top: 5px;
+
 
 }
 .grid{
