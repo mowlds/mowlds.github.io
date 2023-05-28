@@ -679,7 +679,6 @@ table#careergrid th {
 table#supergrid td {
   text-align: center;
   height: 25px;
-  border-bottom: 1px solid white;
    
 }
 table#careergrid td {
@@ -689,7 +688,7 @@ table#careergrid td {
    
 }
 table#supergrid tr {
-  border-left:  1px solid white;
+
    
 }
 table#careergrid tr {
