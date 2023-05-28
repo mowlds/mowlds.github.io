@@ -672,7 +672,7 @@ table#supergrid th {
 table#careergrid th {
   background-color: rgb(15, 26, 18);
   padding-bottom: 2px;
-  padding-top: 2px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -680,6 +680,10 @@ table#supergrid td {
   text-align: center;
   height: 25px;
    
+}
+
+table#supergrid td td:nth-child(5) {
+  color:grey;
 }
 table#careergrid td {
   text-align: center;
