@@ -516,6 +516,8 @@ table#timeline {
     
 }
 
+.champtableimage {height: 65px;}
+
 table#timeline colgroup {
   width: 100%;
 }
@@ -1457,6 +1459,7 @@ table#seasonlist tr:nth-child(even) {
     .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .topnav a:not(:first-child) {display: none;}
     .topnav div:not(:first-child) {display: none;}
+    .champtableimage {height: 35px;}
     .topnav a.icon {
       float: right;
       display: block;
