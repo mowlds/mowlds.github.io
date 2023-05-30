@@ -668,6 +668,7 @@ table#careergrid {
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 table#supergrid th {
