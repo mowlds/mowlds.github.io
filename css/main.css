@@ -592,6 +592,16 @@ table#champtable td {
 
 }
 
+table#champtable td :nth-child(1){
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: #ffff007a;
+  text-align: center;
+  padding-right: 5px;
+    padding-left: 5px;
+}
+
+
 table#champtable caption {
     font-size: 24pt;
     background-color: rgb(0,0,0,0.85);
