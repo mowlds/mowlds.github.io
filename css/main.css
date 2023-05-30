@@ -870,7 +870,7 @@ table#seasonlist th {
 table#seasonlist td {
   padding-left: 10px;
   padding-right: 10px;
-font-family:'fireg';
+font-family:'f1reg';
   font-size: 10pt;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -915,7 +915,7 @@ border-bottom: 1px solid #b62f2f;
 
                 padding-left: 10px;
                 padding-right: 10px;
-                
+                font-family: 'f1reg';
                 font-size: 10pt;
                
             
@@ -996,6 +996,7 @@ border-bottom: 1px solid #b62f2f;
               table#biotable td{
                   padding-top: 2px;
                   padding-bottom: 2px;
+                  font-family: 'f1reg';
               }
 
               .tracktable{
@@ -1370,6 +1371,7 @@ border-bottom: 1px solid #b62f2f;
         margin-left: auto;
         margin-right: auto;
         text-align: left;
+        font-family: 'f1reg';
       }
       .quote{
         width: 80%;
