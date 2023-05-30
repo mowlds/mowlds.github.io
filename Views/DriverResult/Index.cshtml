@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<mowlds.github.io.Models.DriverResultExtra>
 @{
-    ViewData["Title"] = "Race results";
+    ViewData["Title"] = "Race Results";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @{ var url = string.Format("../../{0}", Model.First().Race1.Track1.Background);}
