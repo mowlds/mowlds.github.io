@@ -1033,6 +1033,9 @@ border-bottom: 1px solid #b62f2f;
                 margin-right: auto;
                 text-align: left;
             }
+            table#tracktable td{
+                font-family: 'f1reg';
+          }
 
             table#tracktable caption {
                 padding-bottom: 10px;
