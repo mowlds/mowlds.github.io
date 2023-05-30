@@ -19,7 +19,14 @@
         @Html.Partial("QualyPartial", Model)
             </div>
         
-        
+
+            <div class="columnraceresult" id="raceResult">
+            @* CDB: This loads the qualifying result from the provided model *@
+            @Html.Partial("RacePartial", Model)
+            </div>
+        </div>
+
+    <div class="rowraceresult">          
     @if (Model.Where(m => m.SessionType == 4).Any())
     {
             <div class="columnraceresult" id="sprintresult">
@@ -27,11 +34,7 @@
             @Html.Partial("SprintPartial", Model)
             </div>
     }
-            <div class="columnraceresult" id="raceResult">
-            @* CDB: This loads the qualifying result from the provided model *@
-            @Html.Partial("RacePartial", Model)
-            </div>
-        </div>
+    </div>  
     </div>
     <div class="statschamp">
     <h1 style="text-align: center; color:#e3caa8; font-size:4vw; padding-top:5pc">CHAMPIONSHIP STANDINGS</h1>
