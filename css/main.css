@@ -713,6 +713,10 @@ table#supergrid td:nth-child(2) {
 
             padding-left: 15px;
 }
+table#careergrid td:nth-child(6)
+{
+  color: #ffff007a
+}
 
 table#supergrid tr {
 
