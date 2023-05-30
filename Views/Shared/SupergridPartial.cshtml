@@ -25,14 +25,14 @@
             }
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td>Driver</td>
-            <td></td>
-            <td>Points</td>
-            <td>Diff</td>
+            <th>&nbsp;</th>
+            <th>Driver</th>
+            <th></th>
+            <th>Points</th>
+            <th>Diff</th>
             @foreach (var item in Model.First().races.OrderBy(r => r.RaceNumber))
             {
-                <td>@Html.DisplayFor(modelItem => item.Track1.Abbreviation)</td>
+                <th>@Html.DisplayFor(modelItem => item.Track1.Abbreviation)</th>
             }
         </tr>
         @foreach (var supergrid in Model)
