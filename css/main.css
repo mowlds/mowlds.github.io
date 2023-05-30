@@ -826,10 +826,14 @@ table#list td {
 
   padding-left: 10px;
   padding-right: 10px;
-
+  font-family: 'f1reg';
   font-size: 10pt;
   padding-top: 5px;
   padding-bottom: 5px;
+ }
+
+ table#list td :nth-child(1){
+  font-family: 'f1bold';
  }
 
 table#list caption {
