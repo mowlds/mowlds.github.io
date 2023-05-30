@@ -852,7 +852,6 @@ table#list tr:nth-child(even) {
 table#seasonlist {
   table-layout: fixed;
   max-width: 90%;
-  border: 3px outset white;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
