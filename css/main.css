@@ -1460,8 +1460,7 @@ border-bottom: 1px solid #b62f2f;
     .bigstatsfiltertable td {display: table-row}
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
     .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
-    .topnav a:not(:first-child) {display: none;}
-    .topnav div:not(:first-child) {display: none;}
+
     .champtableimage {height: 35px;}
     .topnav a.icon {
       float: right;
