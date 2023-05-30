@@ -858,7 +858,7 @@ table#seasonlist {
   margin-right: auto;
   margin-top: 2pc;
   font-weight: bold;
-  background-color: (0,0,0,0.85);
+  background-color: rgb(0,0,0,0.85);
 
 
 }
