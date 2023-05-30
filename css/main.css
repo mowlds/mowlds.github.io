@@ -568,7 +568,6 @@ table#champtable {
     table-layout: fixed;
     max-width: 80%;
     min-width: 40%;
-    border: 3px outset white;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -576,19 +575,16 @@ table#champtable {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
-    background-color: rgb(43, 75, 52);
+    background-color: rgb(0,0,0,0.85);
 
 }
 
 table#champtable th {
-    border-bottom: 2px rgb(255, 255, 255) solid;
-    background-color: rgb(15, 26, 18);
 padding-left: 10px;
 padding-right: 10px;
 }
 
 table#champtable td {
-    background-color: rgba(59, 59, 56, 0.5);
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 7px;
@@ -598,7 +594,8 @@ table#champtable td {
 
 table#champtable caption {
     font-size: 24pt;
-
+    background-color: rgb(0,0,0,0.85);
+    border-bottom: 1px solid #b62f2f;
 padding: 5px;
 
 }
