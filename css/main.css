@@ -97,7 +97,7 @@ flex-direction: column;
 .driverlist {
 
   border-bottom-right-radius: 10px;
-  padding-left: 10px;
+  padding-left: 2px;
   border-right: black 1px solid;
   border-bottom: black 1px solid;
   display: flex;
@@ -106,6 +106,7 @@ flex-direction: column;
   margin-bottom: 15px;
   padding-bottom:5px;
   font-family: 'f1reg';
+  padding-right: 5px;
 }
 .raceBackground{
   padding-top:1px;
