@@ -600,9 +600,7 @@ padding: 5px;
 
 }
 
-table#champtable tr:nth-child(even) {
-    background-color: rgba(115, 156, 126, 0.5)
-}
+
 
 
 
