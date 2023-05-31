@@ -66,6 +66,11 @@ margin-right: auto;
 margin-right: auto;
 }
 
+.twitchembed
+{
+  padding:10px;
+}
+
 .rowrace {
   display: -webkit-flex;
   display: flex;
