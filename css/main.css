@@ -899,7 +899,9 @@ border-bottom: 1px solid #b62f2f;
 
 }
 
-
+table#seasonlist td :nth-child(7){
+  color:gold;
+}
 
 
 
