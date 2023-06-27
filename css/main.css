@@ -723,17 +723,12 @@ table#careergrid td:nth-child(6)
   color: #ffff007a
 }
 
-table#supergrid tr {
 
-   
-}
 table#careergrid tr {
   border-left:  1px solid white;
    
 }
-table#supergrid col {
-   
-}
+
 
 table#careergrid col {
   border-top:  1px solid white;
@@ -1103,9 +1098,7 @@ table#seasonlist td:nth-child(7){
             .stats{
               background-color: #e4e4e4c2;
             }
-            .statsresults{
 
-            }
             .statschamp{
               background-color: #2a060652;
               padding-top: 10px;
@@ -1318,8 +1311,6 @@ table#seasonlist td:nth-child(7){
 
         }
 
-        .raceresults tr:nth-child(even) {
-        }
         .column{
           float: left;
           width: 50%;
