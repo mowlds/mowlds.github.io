@@ -1,8 +1,18 @@
 /* ==========================================================================
    Your custom CSS styles
    ========================================================================== */
+   @font-face {
+    font-family: "f1bold";
+    src: url(/fonts/Formula1-Bold.ttf)
+  }
+  @font-face {
+    font-family: "f1reg";
+    src: url(/fonts/Formula1-Regular.ttf)
+  }
+   
+   
    * {
-    font-family: 'exo';
+    font-family: 'f1reg';
 }
 
 a:hover{
