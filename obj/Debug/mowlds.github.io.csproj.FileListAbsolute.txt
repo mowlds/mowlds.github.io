@@ -80,3 +80,4 @@ D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.CoreCompileInputs.c
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.CopyComplete
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.dll
 D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.pdb
+D:\Source\mowlds.github.io\obj\Debug\mowlds.github.io.csproj.AssemblyReference.cache

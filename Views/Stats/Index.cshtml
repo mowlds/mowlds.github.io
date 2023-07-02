@@ -15,6 +15,7 @@
             var statType = $("#StatType").val();
             var gameversion = $("#GameVersion").val();
             var session = $("#Sessions").val();
+            var weather = $("#Weather").val();
             var sortOrder = $("#sortOrder").val();
 
             if (!driver) { driver = 0; }
@@ -23,7 +24,7 @@
             if (!session) { session = 0; }
 
 
-            $("#stats").load("/Stats/AllStats?" + "driver=" + driver + "&track=" +track + "&StatType=" + statType + "&version=" + gameversion + "&session=" +session + "&sortOrder=" + sortOrder);
+            $("#stats").load("/Stats/AllStats?" + "driver=" + driver + "&track=" +track + "&StatType=" + statType + "&version=" + gameversion + "&session=" +session + "&weather=" + weather  + "&sortOrder=" + sortOrder);
        });
     });
 </script>
@@ -50,6 +51,15 @@
         </td>
         <td>
             @Html.DropDownListFor(t => t.Sessions, new SelectList(Model.Sessions, "ID", "SessionType"), "All Sessions")
+        </td>
+        <td>
+            @Html.DropDownList("Weather", new List<SelectListItem>
+           {
+               new SelectListItem { Text = "All weather", Value = "0", Selected = true },
+               new SelectListItem { Text = "Dry", Value = "1" },
+               new SelectListItem { Text = "Changable", Value = "2" },
+               new SelectListItem { Text = "Wet", Value = "3" }
+           })
         </td>
         <td>
             @Html.DropDownList("sortOrder", new List<SelectListItem>
