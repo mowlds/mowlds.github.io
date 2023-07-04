@@ -36,7 +36,7 @@ namespace mowlds.github.io.Controllers
             return View(svm);
         }
 
-        public async Task<ActionResult> AllStats(int driver, int track, StatType StatType, string version, int session, string sortorder)
+        public async Task<ActionResult> AllStats(int driver, int track, StatType StatType, string version, int session, int weather, string sortorder)
         {
             var drivers = _context.Driver.ToList();
             var tracks = _context.Track.ToList();
@@ -69,6 +69,42 @@ namespace mowlds.github.io.Controllers
             if (session > 0)
             {
                 result = result.Where(dr => dr.SessionType == session).ToList();
+            }
+
+            if (weather > 0)
+            {
+                List<string> dryTyres = new List<string>(){ "S", "M", "H" };
+                List<string> wetTyres = new List<string>() { "I", "W" };
+                if (weather == 1)
+                {
+
+                    result = result.Where(dr => (dryTyres.Contains(dr.Tyre1.Trim())) &&
+                      (dr.Tyre2 == null || dryTyres.Contains(dr.Tyre2.Trim())) &&
+                       (dr.Tyre3 == null || dryTyres.Contains(dr.Tyre3.Trim())) &&
+                        (dr.Tyre4 == null || dryTyres.Contains(dr.Tyre4.Trim())) &&
+                         (dr.Tyre5 == null || dryTyres.Contains(dr.Tyre5.Trim())) &&
+                          (dr.Tyre6 == null || dryTyres.Contains(dr.Tyre6.Trim())) &&
+                           (dr.Tyre7 == null || dryTyres.Contains(dr.Tyre7.Trim())) &&
+                            (dr.Tyre8 == null || dryTyres.Contains(dr.Tyre8.Trim()))).ToList();
+                }
+
+                if (weather == 2)
+                {
+
+                }
+
+                if (weather == 3)
+                {
+
+                    result = result.Where(dr => (dr.Tyre1 != null && wetTyres.Contains(dr.Tyre1.Trim())) &&
+                      (dr.Tyre2 == null || wetTyres.Contains(dr.Tyre2.Trim())) &&
+                       (dr.Tyre3 == null || wetTyres.Contains(dr.Tyre3.Trim())) &&
+                        (dr.Tyre4 == null || wetTyres.Contains(dr.Tyre4.Trim())) &&
+                         (dr.Tyre5 == null || wetTyres.Contains(dr.Tyre5.Trim())) &&
+                          (dr.Tyre6 == null || wetTyres.Contains(dr.Tyre6.Trim())) &&
+                           (dr.Tyre7 == null || wetTyres.Contains(dr.Tyre7.Trim())) &&
+                            (dr.Tyre8 == null || wetTyres.Contains(dr.Tyre8.Trim()))).ToList();
+                }
             }
 
             List<StatsModel> returnValue = new List<StatsModel>();
