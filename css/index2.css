@@ -929,7 +929,8 @@ hr.solidblue {
       }
       .footer {
         background-color: black;
-        color: white
+        color: white;
+        text-align: center;
       }
 
 /* ==========================================================================
