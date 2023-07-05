@@ -927,6 +927,10 @@ hr.solidblue {
         margin-left: auto ;
         margin-right: auto;
       }
+      .footer {
+        background-color: black;
+        color: white
+      }
 
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 500 px
