@@ -18,6 +18,11 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/srlhq.jpg');
     color: white;
 }
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
 
 .wikiparent{
   padding-top:  20px;
