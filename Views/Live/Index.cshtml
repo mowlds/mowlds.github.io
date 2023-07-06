@@ -1,0 +1,25 @@
+﻿@model IEnumerable<mowlds.github.io.DAL.Driver>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<center></center>
+<h3 style="text-align: center;">Live Streams</h3>
+
+@for (int i=0; i < Model.Count(); i=i+3)
+{
+    <div class="row">
+    @for (int j = 0; j < 3; j++)
+    {
+        if (i+j < Model.Count())
+        {
+            var driver = Model.ElementAt(i + j);
+            var link = string.Format("https://player.twitch.tv?channel={0}&parent=www.seriousracingleague.com", driver.TwitchName);
+        <div class="twitchembed">
+            <iframe src="@(link)" frameborder="0" allowfullscreen="true" scrolling="no" height="244" width="400"></iframe>
+            <p>@driver.Name</p>
+        </div>
+        }
+    }
+    </div>
+}
