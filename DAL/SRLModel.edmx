@@ -18,6 +18,7 @@
           <Property Name="Bio" Type="text" />
           <Property Name="DriverQuote" Type="text" />
           <Property Name="DriverImage" Type="text" />
+          <Property Name="TwitchName" Type="nchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="DriverResult">
           <Key>
@@ -353,6 +354,7 @@ warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key de
           <NavigationProperty Name="DriverTeam" Relationship="Self.Driver_to_DriverTeam" FromRole="Driver" ToRole="DriverTeam" />
           <NavigationProperty Name="DriverResult" Relationship="Self.FK_Driver_DriverResult" FromRole="Driver" ToRole="DriverResult" />
           <NavigationProperty Name="RaceLaps" Relationship="Self.Lead_Driver_to_RaceLaps" FromRole="Driver" ToRole="RaceLaps" />
+          <Property Name="TwitchName" Type="String" FixedLength="true" Nullable="true" MaxLength="250" />
         </EntityType>
         <EntityType Name="DriverResult">
           <Key>
@@ -697,6 +699,7 @@ warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key de
                 <ScalarProperty Name="Bio" ColumnName="Bio" />
                 <ScalarProperty Name="DriverQuote" ColumnName="DriverQuote" />
                 <ScalarProperty Name="DriverImage" ColumnName="DriverImage" />
+                <ScalarProperty Name="TwitchName" ColumnName="TwitchName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
