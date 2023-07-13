@@ -1047,6 +1047,8 @@
     <Content Include="js\vendor\jquery-1.10.2.min.js" />
     <Content Include="live.html" />
     <Content Include="nav.html" />
+    <Content Include="pokernav.html" />
+    <Content Include="poker\PokerHome.html" />
     <Content Include="Race\2016\S1\overview.html" />
     <Content Include="Race\2016\S2\overview.html" />
     <Content Include="Race\2016\S3\overview.html" />
