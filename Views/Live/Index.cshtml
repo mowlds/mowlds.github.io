@@ -5,9 +5,10 @@
 }
 <center></center>
 <h3 style="text-align: center;">Live Streams</h3>
-
-<p style="text-align: center; margin-top:200px;">See no streams? Check back again on Wednesday and Sunday nights!</p>
-
+@if (Model.Count() == 0)
+{
+    <p style="text-align: center; margin-top:200px;">See no streams? Check back again on Wednesday and Sunday nights!</p>
+}
 <!--Add latest date here-->
 
 @for (int i=0; i < Model.Count(); i=i+3)
