@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+    <meta name="viewport" content="width=device-width" />
+    <style>
+    </style>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<header>
+    <p>
+        <h2 style="text-align: center;color:#cdc7be;">THE SERIOUS RACING LEAGUE</h2>
+    </p>
+    <img style="width:250px; margin-left:auto; margin-right:auto; display:block; padding-bottom:20px;" src="/images/WAAH.png">
+
+    <div class="topnav" id="topnav">
+        <a href="/index.html">Home</a>
+        <a href="/Season/season?season=25">Current Season</a>
+        <a href="/stewards.html">Stewarding</a>
+        <a href="/refund.html">Refunds</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Wiki
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/Season">Seasons</a>
+                <a href="/Races">Races</a>
+                <a href="/Driver">Drivers</a>
+                <a href="/Team">Teams</a>
+                <a href="/Track">Tracks</a>
+            </div>
+        </div>
+        <a href="/Stats">Stats</a>
+        <a href="/live">LIVE</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            &#9776;
+        </a>
+        <div class="topnav-right">
+            <a href="/golf/home.html">Serious Golfing Association</a>
+        </div>
+    </div>
+    <script>
+function myFunction() {
+  var x = document.getElementById("topnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+        }
+       
+</script>
+    </header>
+<body>
+
+    <div class="raceresultsdiv">
+        <table class="raceresults">
+            <caption style="font-weight: bolder ;">RACE</caption>
+            <thead>
+                <tr>
+
+                        <td>Position</td>
+                        <td>Driver</td>
+                        <td>Points</td>
+    
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Tony</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nick</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Haguey</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dale</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>CJ</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Blarg</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Rob</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Frankie</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Wiggins</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Beckford</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Hom</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Bully</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Asta</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Stefarno</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Monty</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>DeafParrot</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DNF</td>
+                    <td>Jehrome</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DNF</td>
+                    <td>RFM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DNF</td>
+                    <td>Mav</td>
+                </tr>
+                    
+                
+            </tbody>
+        </table>
+    </div>
+
+</body>
+    <div class="footer">
+</br></br><span style="margin-top: 50px;">Our Partners</span></br>
+<img style="height:75px; margin-top: 25px;" src="/images/beres.png"></br>
+<img style="height:75px; margin-top: 25px;" src="/images/huski.png"></br>
+<img style="height:75px; margin-top: 25px;" src="/images/robinsons.png"></br>
+<img style="height:75px; margin-top: 25px;" src="/images/headsgone.png">
+    
+  </div>
+</html>
