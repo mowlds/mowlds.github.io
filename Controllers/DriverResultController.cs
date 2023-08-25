@@ -31,14 +31,34 @@ namespace mowlds.github.io.Controllers
             //Collect the results for a particular race and all related tables and return it as a view.
             //This will get passed on to the partials in each page.
 
-            var sRLContext = _context.DriverResult.
-                  Where(grandprix => grandprix.Race == race);
+            var allRaces = _context.DriverResult;
 
+            int counter = 1;
+            var previousRace = 0;
+            var nextRace = 0;
+
+            while (previousRace == 0 || nextRace == 0)
+            {
+                if (allRaces.Where(r=> r.ID == race-counter).Any() && previousRace == 0)
+                {
+                    previousRace = allRaces.Where(r => r.ID == race - counter).First().ID;
+                }
+                if (allRaces.Where(r => r.ID == race + counter).Any() && nextRace == 0)
+                {
+                    nextRace = allRaces.Where(r => r.ID == race + counter).First().ID;
+                }
+                counter++;
+            }
+
+            var sRLContext = allRaces.
+                  Where(grandprix => grandprix.Race == race);
 
             var result = new List<DriverResultExtra>();
             foreach (DriverResult dr in sRLContext)
             {
                 DriverResultExtra dre = new DriverResultExtra(dr);
+                dre.NextRace = nextRace;
+                dre.PreviousRace = previousRace;
                 if (dr.SessionType == 3)
                 {
                     var qualyResult = sRLContext.Where(q => q.Driver == dr.Driver && q.SessionType == 2).FirstOrDefault();

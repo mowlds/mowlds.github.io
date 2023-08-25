@@ -1,0 +1,141 @@
+﻿
+@model IEnumerable<mowlds.github.io.Models.DriverCareerSupergridModel>
+
+
+<div class="supergrid">
+    <table id="careergrid" class="drivergrid">
+        <caption style="font-weight: bolder ;">Career Qualifying</caption>
+        <colgroup>
+            <col span="4">
+            <col span="1" class="points">
+            <col span="1" class="diff">
+            @{string count = Model.First().allTracks.Count().ToString(); }
+            <col span="@count" class="races">
+        </colgroup>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
+            {
+                <th scope="col"><img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Flag)"></th>
+            }
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td>Season</td>
+            <td>&nbsp;</td>
+            <td>Team</td>
+            <td>Avg.</td>
+            <td>Position</td>
+            @foreach (var item in Model.First().allTracks.OrderBy(t => t.Abbreviation))
+            {
+                <td>@Html.DisplayFor(modelItem => item.Abbreviation)</td>
+            }
+        </tr>
+        @foreach (var supergrid in Model)
+        {
+            if (supergrid.driverResults.Any())
+            {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.season.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.season.Number)
+        </td>
+        <td>
+            @if (supergrid.season.isrealperformance)
+            {
+                <img class="realperf" src="~/images/realperf.png">
+            }
+            else
+            {
+                <img class="realperf" src="~/images/equal.png">
+            }
+        </td>
+        <td>
+            @if (supergrid.season.DriverTeam.Any())
+            {
+                var hasTeam = supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).Any();
+                if (hasTeam)
+                {
+                    <img class="logogrid" src="@Html.DisplayFor(modelitem => supergrid.season.DriverTeam.Where(dt => dt.Driver == supergrid.driver.ID).First().Team1.TeamLogo)">
+                }
+            }
+        </td>
+        <td>
+            @{var avgPosition = supergrid.avgGridPosition.ToString("#.00", System.Globalization.CultureInfo.InvariantCulture);}
+            @Html.DisplayFor(modelItem => avgPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => supergrid.finalPosition)
+        </td>
+
+        @{
+            foreach (var track in supergrid.allTracks.OrderBy(t => t.Abbreviation))
+            {
+                bool trackWasRaced = false;
+                foreach (var race in supergrid.races.OrderBy(r => r.Track1.Abbreviation))
+                {
+                    if (race.Track1.ID == track.ID)
+                    {
+                        trackWasRaced = true;
+                        bool hasvalue = false;
+                        bool hasResults = supergrid.driverResults.Where(r => r.Race == race.ID).Any();
+                        if (hasResults)
+                        {
+                            foreach (var dr in supergrid.driverResults.Where(r => r.Race == race.ID))
+                            {
+                                string result = dr.FinalPosition.ToString();
+                                if (dr.HasDNF)
+                                {
+                                    result = "DNF";
+                                }
+                                if (dr.HasDSQ)
+                                {
+                                    result = "DSQ";
+                                }
+                                if (dr.Delta != null && dr.Delta.Trim() == "DNS")
+                                {
+                                    result = "DNS";
+                                }
+                                if (dr.Delta != null && dr.Delta.Trim() == "NC")
+                                {
+                                    result = "NC";
+                                }
+                                string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap ? "fl" : "");
+                                string racelink = string.Format("DriverResult?race={0}", race.ID.ToString());
+
+                                <td><a href=~/@racelink><img class="icongrid" src=@postionLink></a></td>
+                                hasvalue = true;
+
+                            }
+                            if (!hasvalue)
+                            {
+                                <td>&nbsp;</td>
+                            }
+                        }
+                        if (!hasResults)
+                        {
+                            <td>&nbsp;</td>
+                        }
+
+                    }
+
+                }
+                if (!trackWasRaced)
+                {
+                    string postionLink = "../../images/numbers/notheld.png";
+                    <td><img class="icongrid" src=@postionLink></td>
+                }
+            }
+        }
+    </tr>
+                }
+            }
+    </table>
+</div>

@@ -43,5 +43,7 @@ namespace mowlds.github.io.Models
         }
 
         public int PositionsGained { get; set; }
+        public int NextRace { get; set; }
+        public int PreviousRace { get; set; }
     }
 }

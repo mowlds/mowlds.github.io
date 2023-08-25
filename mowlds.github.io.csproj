@@ -186,6 +186,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ConstructorsModel.cs" />
+    <Compile Include="Models\DriverCareerSupergridModel.cs" />
     <Compile Include="Models\DriverCareerResultModel.cs" />
     <Compile Include="Models\DriverDisplayModel.cs" />
     <Compile Include="Models\DriverResultExtra.cs" />
@@ -1193,6 +1194,7 @@
     <Content Include="Views\Team\Index.cshtml" />
     <Content Include="Views\Team\Team.cshtml" />
     <Content Include="Views\Live\Index.cshtml" />
+    <Content Include="Views\Driver\DriverSupergridQualyPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

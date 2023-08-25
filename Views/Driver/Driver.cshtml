@@ -86,6 +86,11 @@
         @{Html.RenderAction("DriverCareerResults", "Driver", new { driverID = Model.Driver.ID });
         }
     </div>
+    <div id="championshipTable">
+        @* CDB: This loads the overview info from the provided model*@
+        @{Html.RenderAction("DriverSupergridQualyPartial", "Driver", new { driverID = Model.Driver.ID });
+        }
+    </div>
     <div class="statfilter">
         Performance Filter: &nbsp;
         @Html.DropDownList("StatType", new List<SelectListItem>

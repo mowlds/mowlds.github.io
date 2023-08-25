@@ -5,60 +5,68 @@
 }
 @{ var url = string.Format("../../{0}", Model.First().Race1.Track1.Background);}
 <div class="raceBackground" style="background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url('@Html.Raw(url)'">
-    
-    <div id="raceOverview">
-        @* CDB: This loads the overview info from the provided model*@
-        @Html.Partial("RaceOverviewPartial", Model)
-    </div>
-    
-    <div class="statsresults">
-        <h1 style="text-align: center; color:#ffffff; font-size:4vw; padding-top:5pc;">CLASSIFIED RESULTS</h1>
-        <div class="rowraceresult">
-            <div class="columnqualyresult" id="qualyResult">
-        @* CDB: This loads the qualifying result from the provided model *@
-        @Html.Partial("QualyPartial", Model)
-            </div>
-        
-
-            <div class="columnraceresult" id="raceResult">
-            @* CDB: This loads the qualifying result from the provided model *@
-            @Html.Partial("RacePartial", Model)
-            </div>
-        </div>
-
-    <div class="rowraceresult">          
-    @if (Model.Where(m => m.SessionType == 4).Any())
-    {
-            <div class="columnraceresult" id="sprintresult">
-            @* CDB: This loads the qualifying result from the provided model *@
-            @Html.Partial("SprintPartial", Model)
-            </div>
+    @{string nextRace = string.Format("DriverResult?race={0}", Model.First().NextRace.ToString());
+        string previousRace = string.Format("DriverResult?race={0}", Model.First().PreviousRace.ToString());
     }
-    </div>  
-    </div>
-    <div class="statschamp">
-    <h1 style="text-align: center; color:#e3caa8; font-size:4vw; padding-top:5pc">CHAMPIONSHIP STANDINGS</h1>
+        <div id="raceOverview">
+            <div style="padding: 5px;">
+                <a href=@previousRace>Previous</a>
+            </div>
+            <div style="text-align: right; padding: 5px;">
+                <a href=@nextRace>Next</a>
+            </div>
+            @* CDB: This loads the overview info from the provided model*@
+            @Html.Partial("RaceOverviewPartial", Model)
+        </div>
 
-        <div class="rowchampionship">
-            <div id="championshipTable">
-        @* CDB: This loads the overview info from the provided model*@
-        @{Html.RenderAction("SupergridPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
-        }
+        <div class="statsresults">
+            <h1 style="text-align: center; color:#ffffff; font-size:4vw; padding-top:5pc;">CLASSIFIED RESULTS</h1>
+            <div class="rowraceresult">
+                <div class="columnqualyresult" id="qualyResult">
+                    @* CDB: This loads the qualifying result from the provided model *@
+                    @Html.Partial("QualyPartial", Model)
+                </div>
+
+
+                <div class="columnraceresult" id="raceResult">
+                    @* CDB: This loads the qualifying result from the provided model *@
+                    @Html.Partial("RacePartial", Model)
+                </div>
             </div>
 
-            <div id="constructorsTable">
-        @* CDB: This loads the overview info from the provided model*@
-        @{Html.RenderAction("ConstructorsTable", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
-        }
+            <div class="rowraceresult">
+                @if (Model.Where(m => m.SessionType == 4).Any())
+                {
+                    <div class="columnraceresult" id="sprintresult">
+                        @* CDB: This loads the qualifying result from the provided model *@
+                        @Html.Partial("SprintPartial", Model)
+                    </div>
+                }
             </div>
+        </div>
+        <div class="statschamp">
+            <h1 style="text-align: center; color:#e3caa8; font-size:4vw; padding-top:5pc">CHAMPIONSHIP STANDINGS</h1>
+
+            <div class="rowchampionship">
+                <div id="championshipTable">
+                    @* CDB: This loads the overview info from the provided model*@
+                    @{Html.RenderAction("SupergridPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
+                    }
+                </div>
+
+                <div id="constructorsTable">
+                    @* CDB: This loads the overview info from the provided model*@
+                    @{Html.RenderAction("ConstructorsTable", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
+                    }
+                </div>
 
 
-            <div id="superGridTable">
-        @* CDB: This loads the overview info from the provided model*@
-        @{Html.RenderAction("SupergridQualyPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
-        }
+                <div id="superGridTable">
+                    @* CDB: This loads the overview info from the provided model*@
+                    @{Html.RenderAction("SupergridQualyPartial", "DriverResult", new { seasonID = Model.First().Race1.Season, raceNo = Model.First().Race1.RaceNumber });
+                    }
+                </div>
             </div>
         </div>
     </div>
-</div>
 
