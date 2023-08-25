@@ -11,9 +11,8 @@
         <div id="raceOverview">
             <div style="padding: 5px;">
                 <a href=@previousRace>Previous</a>
-            </div>
-            <div style="text-align: right; padding: 5px;">
-                <a href=@nextRace>Next</a>
+            <span style="float: right; padding: 5px;">
+                <a href=@nextRace>Next</a></span>
             </div>
             @* CDB: This loads the overview info from the provided model*@
             @Html.Partial("RaceOverviewPartial", Model)
