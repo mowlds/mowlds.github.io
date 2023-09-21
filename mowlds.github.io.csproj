@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+	<IncludeSetACLProviderOnDestination>False</IncludeSetACLProviderOnDestination>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -836,7 +837,6 @@
     <Content Include="images\northsouth %282%29.png" />
     <Content Include="images\numbers\1.png" />
     <Content Include="images\numbers\10.png" />
-    <Content Include="images\numbers\10b.png" />
     <Content Include="images\numbers\10fl.png" />
     <Content Include="images\numbers\11.png" />
     <Content Include="images\numbers\11fl.png" />
@@ -864,22 +864,16 @@
     <Content Include="images\numbers\3.png" />
     <Content Include="images\numbers\3fl.png" />
     <Content Include="images\numbers\4.png" />
-    <Content Include="images\numbers\4b.png" />
     <Content Include="images\numbers\4fl.png" />
     <Content Include="images\numbers\5.png" />
-    <Content Include="images\numbers\5b.png" />
     <Content Include="images\numbers\5fl.png" />
     <Content Include="images\numbers\6.png" />
-    <Content Include="images\numbers\6b.png" />
     <Content Include="images\numbers\6fl.png" />
     <Content Include="images\numbers\7.png" />
-    <Content Include="images\numbers\7b.png" />
     <Content Include="images\numbers\7fl.png" />
     <Content Include="images\numbers\8.png" />
-    <Content Include="images\numbers\8b.png" />
     <Content Include="images\numbers\8fl.png" />
     <Content Include="images\numbers\9.png" />
-    <Content Include="images\numbers\9b.png" />
     <Content Include="images\numbers\9fl.png" />
     <Content Include="images\numbers\dnf.png" />
     <Content Include="images\numbers\dnffl.png" />
@@ -930,7 +924,6 @@
     <Content Include="images\teams\ecosse.png" />
     <Content Include="images\teams\excel.png" />
     <Content Include="images\teams\ferrari.png" />
-    <Content Include="images\teams\forceindia.jpeg" />
     <Content Include="images\teams\forceindia.png" />
     <Content Include="images\teams\frankierelax.png" />
     <Content Include="images\teams\haas.png" />
@@ -974,7 +967,6 @@
     <Content Include="images\teams\temporo.png" />
     <Content Include="images\teams\tonry.png" />
     <Content Include="images\teams\topboys.png" />
-    <Content Include="images\teams\tororosso.jpg" />
     <Content Include="images\teams\tororosso.png" />
     <Content Include="images\teams\unassigned.png" />
     <Content Include="images\teams\unbearables.png" />
@@ -1143,6 +1135,7 @@
     <Content Include="DAL\SRLModel.edmx.diagram">
       <DependentUpon>SRLModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\seriousracingleague.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
