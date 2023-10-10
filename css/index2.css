@@ -730,8 +730,9 @@ table#calendar td {
   padding-right: 10px;
   font-family: 'f1reg';
   font-size: 10pt;
+  padding-bottom: 10px;
+  text-align: left;
  
-
 }
 
 table#calendar caption {
