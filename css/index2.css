@@ -703,58 +703,48 @@ hr.solidblue {
   
 }
 
+table#calendar {
+  table-layout: fixed;
+  max-width: 90%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: rgb(0,0,0,0.85);
+  color: white;
+
+
+}
+
+table#calendar th {
+
+  padding:8px;
+  font-size: 10pt;
+
+}
+
+table#calendar td {
+
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'f1reg';
+  font-size: 10pt;
+ 
+
+}
+
+table#calendar caption {
+
+  font-size: 24pt;
+  background-color: rgb(0,0,0,0.85);
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 2px #b62f2f solid;
 
 
 
-              table#calendar {
-                table-layout: fixed;
-                max-width: 90%;
-                border: 3px outset white;
-                border-collapse: collapse;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 2pc;
-                font-weight: bold;
-       
-            
-            }
-            
-            table#calendar th {
-                border-bottom: 2px rgb(255, 255, 255) solid;
-                background-color: rgba(43, 75, 52, 0.5);
-                padding-bottom: 2px;
-                padding-top: 2px;
-                text-align: center;
-                font-size: 12pt;
-                padding-right: 5px;
-                padding-left: 5px;
-            }
-            
-            table#calendar td {
-                background-color: rgba(43, 75, 52, 0.5);
-                padding-left: 10px;
-                padding-right: 10px;
-                text-align: center;
-                font-size: 10pt;
-               
-            
-            }
-            
-            table#calendar caption {
-                background-color: rgba(12, 22, 13, 0.5);
-                font-style: italic;
-                font-size: 18pt;
-                border-top: 2px solid rgb(255, 255, 255);
-                border-left: 2px solid rgb(255, 255, 255);
-                border-right: 2px solid white;
-                padding-bottom: 5px;
-                padding-top: 5px;
-            
-            }
-            
-            table#calendar tr:nth-child(even) {
-                background-color: rgba(90, 156, 108, 0.5)
-            }
+}
             .calendar {
                 text-align: center;
                 padding-bottom: 5%;
