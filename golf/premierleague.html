@@ -51,18 +51,29 @@ td:nth-child(1) {
     background-color: antiquewhite;
     font-weight: bolder;
     border-radius: 20px;
+    text-align: center;
 }
-td:nth-child(3) {
-    text-align: left;
-width:10px;
+td:nth-child(2) {
+padding-left: 5px;
+text-align: left;
 }
+
 table { border-collapse: collapse;
 }
 table.sglpl tr:nth-child(odd)
-{background-color: rgb(35, 20, 38)}
-
+{background-color: rgb(57, 31, 59)
+}
 caption
 {padding-bottom: 5px;}
+ul {
+  list-style-type: circle;
+  text-align: left;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+  margin-bottom: 60px;
+}
 
 
 @import url('https://fonts.cdnfonts.com/css/colus');
@@ -92,9 +103,9 @@ caption
     <hr class="solidred">
     <hr class="solidblue">
 
-    <div class="eventcard" style="width:400px; background-color: rgb(61, 35, 66); color: antiquewhite; font-family: 'Righteous', cursive;">
+    <div class="eventcard" style="width:400px; background-color:  #3D195B; color: antiquewhite; font-family: 'Righteous', cursive;">
         <img style="width: 100px; float: left; padding-top:20px; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;" src="/images/SGAAFFILIATE.png">
-        <img style="width: 100px; float: right; padding: 10px;" src="/images/headslogo.png">
+        <img style="width: 100px; float: right; padding: 10px;" src="/images/headsgonepl.png">
     </br>
     </br>
         <p style="text-align: center; padding-bottom: 20px; padding-top: 20px; font-size: 20px">THE SERIOUS GOLFING LEAGUE</p>
@@ -103,7 +114,16 @@ caption
     <p><span style="background-color: antiquewhite; color: rgb(18, 14, 34);border-radius: 20px; padding: 10px; font-size: 10px;">SGL PREMIER LEAGUE SEASON 1</span></p>
 
 
-    <h3 style="padding-bottom: 30px;">AFTER MATCHWEEK 1</h3>
+    <h3 style="padding-bottom: 30px;">THE RULES</h3>
+    <ul>
+        <li>Each Premier League &apos;Season&apos; Will consist of three 4 round events, once per week on a thursday</li>
+        <li>Every participant will play their rounds as normal</li>
+        <li>The top finishing participant within their division will receive 3 points</li>
+        <li>The second best finishing participant will receive 2 points and the third best 1 point</li>
+        <li>The participant finishing lowest will be relegated to the division below and the person in league two will be awarded the &apos;Fucks sake Wiggins what a shit course&apos; wooden spoon</li>
+        <li>In the event of a points tie, the participants overall SGL ranking will be used as a tiebreaker, so play the 2 round monday events for that ranking boost!</li>
+        <li>Any new participant (ie. if nick has a change of heart) they will be automatically entered into an expanded league two&nbsp;</li>
+    </ul>
     <table class="sglpl"; style="width:70%; margin-left: auto; margin-right: auto;">
         <colgroup>
         <col>
@@ -112,37 +132,53 @@ caption
         </colgroup>
         <tbody>
 <caption>PREMIER LEAGUE</caption>
-            <tr>
-                <th></th>
-                <th></th>
-                <th>1st</th>
-                <th>2nd</th>
-                <th>Points</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Bully</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Frankie</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Rob</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-            </tr>
+<tr>
+    <th></th>
+    <th>Player</th>
+    <th>Wins</th>
+    <th>2nd</th>
+    <th>3rd</th>
+    <th>Pts</th>
+    <th>SGL Rank</th>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Bully</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Frankie</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>Rob</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>Hom</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
             </table>
-            <table class="sglpl"; style="width:70%; margin-left: auto; margin-right: auto;">
+            <table class="sglpl"; style="width:70%; margin-left: auto; margin-right: auto; text-align: left;">
                 <colgroup>
                 <col>
                 <col>
@@ -153,35 +189,51 @@ caption
         <caption>CHAMPIONSHIP</caption>
         <tr>
             <th></th>
-            <th></th>
-            <th>1st</th>
+            <th>Player</th>
+            <th>Wins</th>
             <th>2nd</th>
-            <th>Points</th>
+            <th>3rd</th>
+            <th>Pts</th>
+            <th>SGL Rank</th>
         </tr>
         <tr>
             <td>1</td>
-            <td>DP</td>
+            <td>DeafParrot</td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>2</td>
-            <td>Hom</td>
+            <td>Wiggins</td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>3</td>
-            <td>Wiggins</td>
+            <td>Mav</td>
             <td></td>
             <td></td>
             <td></td>
-            
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Tony</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
-        <table class="sglpl"; style="width:70%; margin-left: auto; margin-right: auto;">
+    <table class="sglpl"; style="width:70%; margin-left: auto; margin-right: auto; text-align: left;">
             <colgroup>
             <col>
             <col>
@@ -192,36 +244,52 @@ caption
     <caption>LEAGUE ONE</caption>
     <tr>
         <th></th>
-        <th></th>
-        <th>1st</th>
+        <th>Player</th>
+        <th>Wins</th>
         <th>2nd</th>
-        <th>Points</th>
+        <th>3rd</th>
+        <th>Pts</th>
+        <th>SGL Rank</th>
     </tr>
     <tr>
         <td>1</td>
-        <td>Mav</td>
+        <td>Hags</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>2</td>
-        <td>Hags</td>
+        <td>Monty</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>3</td>
-        <td>Tony</td>
+        <td>Port</td>
         <td></td>
         <td></td>
         <td></td>
-        
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Gazza</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
             </table>
 
-            <table class="sglpl"; style="width:70%; margin-left: auto; margin-right: auto;">
+            <table class="sglpl"; style="width:70%; margin-left: auto; margin-right: auto; text-align: left;">
                 <colgroup>
                 <col>
                 <col>
@@ -232,40 +300,57 @@ caption
         <caption>LEAGUE TWO</caption>
         <tr>
             <th></th>
-            <th></th>
-            <th>1st</th>
+            <th>Player</th>
+            <th>Wins</th>
             <th>2nd</th>
-            <th>Points</th>
+            <th>3rd</th>
+            <th>Pts</th>
+            <th>SGL Rank</th>
         </tr>
         <tr>
             <td>1</td>
-            <td>Monty</td>
+            <td>Chris J</td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>2</td>
-            <td>Nick</td>
+            <td>Maxey</td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>3</td>
-            <td>Port</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-        </tr>
-        <tr>
-            <td>4</td>
             <td>Sunny</td>
             <td></td>
             <td></td>
             <td></td>
-            
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Beckford</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>CJ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
                 </table>
 
