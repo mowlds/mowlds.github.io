@@ -24,82 +24,8 @@
 </div>
 
 <div class="overflow">
-    <table id="calendar">
-        <caption style="font-weight: bolder;">F1 @Html.DisplayFor(seasonItem => Model.First().Year) Season @Html.DisplayFor(seasonItem => Model.First().Number) Calendar</caption>
-        <thead>
-            <tr>
-                <th></th>
-                <th>&nbsp;</th>
-                <th class="collapse">Country</th>
-                <th class="collapse">Circuit</th>
-                <th>Grand Prix</th>
-                <th>Date</th>
-
-                <th>Winner</th>
-                <th>Pole</th>
-                <th>Fastest Lap</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.First().Race.OrderBy(r=>r.RaceNumber))
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.RaceNumber)
-                    </td>
-                    <td>
-                        <img class="icongrid" src="~/@Html.DisplayFor(modelItem => item.Track1.Flag)">
-                    </td>
-                    <td class="collapse">
-                        @Html.DisplayFor(modelItem => item.Track1.Country)
-                    </td>
-                    <td class="collapse">
-                        @Html.DisplayFor(modelItem => item.Track1.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.RaceName)
-                    </td>
-                    <td>
-                        @{string parameterValue = item.RaceDate.Value.ToString("dddd MMMM d");
-                        }
-                        @Html.DisplayFor(modelItem => parameterValue)
-                    </td>
-
-                    <td>
-                        @{string winnername = String.Empty;
-                            string winnerlink = String.Empty;
-                            if (item.DriverResult.Any())
-                            {
-                                winnername = item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Driver1.Name;
-                                winnerlink = string.Format("DriverResult?race={0}", item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 3).FirstOrDefault().Race.ToString());
-                            }
-                        }
-                        <a href=~/@winnerlink>@winnername</a>
-                    </td>
-                    <td>
-                        @{
-                            string polename = String.Empty;
-                            if (item.DriverResult.Any())
-                            {
-                                polename = item.DriverResult.Where(d => d.FinalPosition == 1 && d.SessionType == 2).FirstOrDefault().Driver1.Name;
-                            }
-                        }
-                        @polename
-                    </td>
-                    <td>
-                        @{
-                            string flname = String.Empty;
-                            if (item.DriverResult.Any() && item.DriverResult.Where(d => d.SessionType == 3 && d.HasFastestLap).Any())
-                            {
-                                flname = item.DriverResult.Where(d => d.SessionType == 3 && d.HasFastestLap).FirstOrDefault().Driver1.Name;
-                            }
-                        }
-                        @flname
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    @{Html.RenderAction("SeasonDetails", "Season", new { seasonID = Model.First().ID });
+    }
 </div>
 <div id="championshipTable">
     @* CDB: This loads the overview info from the provided model*@

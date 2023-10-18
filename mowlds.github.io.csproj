@@ -1328,6 +1328,9 @@
     <Content Include="Views\Team\Team.cshtml" />
     <Content Include="Views\Live\Index.cshtml" />
     <Content Include="Views\Driver\DriverSupergridQualyPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Season\SeasonDetails.cshtml" />
+    <Content Include="Views\Shared\TableNarrow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

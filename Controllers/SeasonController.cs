@@ -94,6 +94,35 @@ namespace mowlds.github.io.Controllers
             return View(sRLContext);
         }
 
+        private int CurrentSeasonDetails()
+        {
+            var sRLContext = _context.Season.
+                  Include("Race").
+                   OrderByDescending(s => s.GameVersion).ThenByDescending(s => s.Number);
+            int currentSeason = sRLContext.First().ID;
+            return currentSeason;
+        }
+
+        [Route("SeasonDetails")]
+        public async Task<ActionResult> SeasonDetails(int season)
+        {
+            if (season == 0)
+            {
+                season = CurrentSeasonDetails();
+            }
+            //Collect the results for a particular race and all related tables and return it as a view.
+            //This will get passed on to the partials in each page.
+            var sRLContext = _context.Season.
+                  Include("Race").
+                  Include("Race.Track1").
+                  Include("DriverTeam").
+                  Include("DriverTeam.Team1").
+                  Include("Race.DriverResult").
+                  Where(s => s.ID == season);
+            ViewData["Champion"] = GetChampion(season);
+            return View(sRLContext);
+        }
+
         [Route("SupergridPartial")]
         public async Task<ActionResult> SupergridPartial(int seasonID)
         {
