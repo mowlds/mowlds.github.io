@@ -3,6 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="wikiparent">
 <div class="row">
     <div style="font-family: 'f1reg';" class="column side">
         <img style="width:250px" src="/images/WAAH.png">
@@ -25,4 +26,5 @@
         @{Html.RenderAction("SeasonDetails", "Season", new { season = 0 });
         }
     </div>
+</div>
 </div>
