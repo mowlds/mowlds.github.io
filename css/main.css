@@ -1501,13 +1501,13 @@ table#seasonlist td:nth-child(7){
 {
   height:20vw
 }
-.first-column {
+.firstcolumn {
   width: 100%;
   padding-bottom: 10px;
   float: none;
 }
 
-.second-column {
+.secondcolumn {
   width: 100%;
   padding-bottom: 10px;
   float: none;
