@@ -170,8 +170,6 @@ flex-direction: column;
 .secondcolumn {
   flex: 1 0 0%;
   padding: 0 10px 0 0;
-  float: right;
-  margin-top: -2500px;
 }
 
 
