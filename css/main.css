@@ -154,6 +154,7 @@ flex-direction: column;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-left: 100px;
 }
 
 .firstcolumn {
