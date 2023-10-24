@@ -769,8 +769,8 @@ table#supergrid caption {
   font-size: 24pt;
   border-bottom: 2px #b62f2f solid;
 
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 5px;
+
   background-color: rgb(0,0,0,0.85);
 
 }
@@ -1500,6 +1500,17 @@ table#seasonlist td:nth-child(7){
     .raceimage
 {
   height:20vw
+}
+.first-column {
+  width: 100%;
+  padding-bottom: 10px;
+  float: none;
+}
+
+.second-column {
+  width: 100%;
+  padding-bottom: 10px;
+  float: none;
 }
     .tracktablerace{
       margin-bottom:2pc;
