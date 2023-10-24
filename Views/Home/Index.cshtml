@@ -5,20 +5,9 @@
 }
 <div class="homeparent">
 <div class="row">
-    <div style="font-family: 'f1reg';" class="column side">
-
-
-        <div>
-            @{Html.RenderAction("TableNarrow", "Home", new { seasonID = 0 });
-            }
-        </div>
-
-    <div>
-
-        @{Html.RenderAction("SeasonDetails", "Season", new { season = 0 });
-        }
-    </div>
-            <fieldset class="sideborder">
+    <div style="font-family: 'f1reg';" class="firstcolumn">
+        <img style="width:250px" src="/images/WAAH.png">
+        <fieldset class="sideborder">
             <h3>Twitter</h3>
             <hr class="solid">
             <a class="twitter-timeline" href="https://x.com/OTF_SRL" data-tweet-limit="1"
@@ -27,5 +16,15 @@
             </a>
             <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </fieldset>
+        <div>
+            @{Html.RenderAction("TableNarrow", "Home", new { seasonID = 0 });
+            }
+        </div>
+    </div>
+    <div class="secondcolumn">
+        <h3 style="text-align: center;">Schedule</h3>
+        @{Html.RenderAction("SeasonDetails", "Season", new { season = 0 });
+        }
+    </div>
 </div>
 </div>

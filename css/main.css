@@ -156,6 +156,19 @@ flex-direction: column;
   flex-direction: column;
 }
 
+.firstcolumn {
+  width: 25%;
+  padding: 0 10px 0 0;
+  float: left;
+}
+
+.second-column {
+  width: 75%;
+  padding: 0 10px 0 0;
+  float: right;
+}
+
+
 
    .topnav {
   overflow: hidden;
