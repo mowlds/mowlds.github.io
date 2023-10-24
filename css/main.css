@@ -157,9 +157,14 @@ flex-direction: column;
 }
 
 .firstcolumn {
-  width: 25%;
+  width: 30%;
   padding: 0 10px 0 0;
   float: left;
+  border-right: 10px solid #b62f2f;
+  border-top: 10px solid #b62f2f;
+  border-top-right-radius: 10px;
+  padding-top: 3vw;
+  padding-right: 3vw;
 }
 
 .secondcolumn {
