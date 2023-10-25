@@ -1476,7 +1476,7 @@ table#seasonlist td:nth-child(7){
    @media screen and ( max-width: 800px ) { 
     .row { flex-direction: column; width: 100%;}
     .timeline {display: none;}
-    .calendar {font-size: 6pt; overflow-x: auto;}
+    .calendar {font-size: 6pt; overflow-x: auto; min-width: 0;}
     .supergrid{font-size: 6pt;}
     table#supergrid td {font-size: 6pt;}
     table#supergrid th {font-size: 7pt;}
