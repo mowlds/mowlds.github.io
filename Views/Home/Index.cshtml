@@ -4,8 +4,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="homeparent">
-<div class="row">
-    <div style="font-family: 'f1reg';" class="column side">
+    <div class="row">
+        <div style="font-family: 'f1reg';" class="column side">
 
 <h2 style="color:black; text-align: center">LATEST UPDATES</h2>
       <fieldset class="sideborder">
@@ -17,17 +17,17 @@
         Tweets by OTF_SRL</a>
       <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </fieldset> 
-        <div>
-            @{Html.RenderAction("TableNarrow", "Home", new { seasonID = 0 });
-            }
+            <div>
+                @{Html.RenderAction("TableNarrow", "Home", new { seasonID = 0 });
+                }
+            </div>
         </div>
-    </div>
-    <div class="column middle">
+        <div class="column middle">
         <img class="banner" src="/images/srllive.png">
-<div class="calendar">
+            <div class="calendar">
         @{Html.RenderAction("SeasonDetails", "Season", new { season = 0 });
         }
+            </div>
         </div>
     </div>
-</div>
 </div>
