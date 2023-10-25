@@ -1489,7 +1489,7 @@ table#seasonlist td:nth-child(7){
     .collapse {display: none;}
     .robsreview {font-size: 8pt;}
     .banner{
-      width:500px;
+      width:350px;
     }
     .bigstatsfiltertable td {display: table-row}
     .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
