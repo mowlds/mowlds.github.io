@@ -1478,6 +1478,7 @@ table#seasonlist td:nth-child(7){
     .timeline {display: none;}
     .calendar {font-size: 6pt; overflow-x: auto; min-width: 0;}
     .supergrid{font-size: 6pt;}
+    .column.middle {padding-left: 1px;}
     table#supergrid td {font-size: 6pt;}
     table#supergrid th {font-size: 7pt;}
     table#calendar td {font-size: 6pt;}
