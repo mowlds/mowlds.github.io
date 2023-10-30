@@ -475,6 +475,9 @@ table.hateful td{
       width: 45%;
       }
 
+      table.sglpl td:nth-child(2){
+        width: 100px;
+        }
 
 article{
     box-shadow:3px 3px 1.5px rgb(61, 33, 33);
