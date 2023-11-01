@@ -1,1723 +1,1714 @@
 /* ==========================================================================
    Your custom CSS styles
    ========================================================================== */
-@font-face {
-  font-family: "f1bold";
-  src: url(/fonts/Formula1-Bold.ttf)
-}
-@font-face {
-  font-family: "f1reg";
-  src: url(/fonts/Formula1-Regular.ttf)
-}
-main{
-background-color: rgb(188, 219, 197)
-}
-
-
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/srlhq.jpg');
+   @font-face {
+    font-family: "f1bold";
+    src: url(/fonts/Formula1-Bold.ttf)
+  }
+  @font-face {
+    font-family: "f1reg";
+    src: url(/fonts/Formula1-Regular.ttf)
+  }
+  main{
+  background-color: rgb(188, 219, 197)
+  }
+  
+  
+  body {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/srlhq.jpg');
+      color: white;
+  }
+  .footer {
+    background-color: black;
     color: white;
-}
-.footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-size: x-large;
-}
-
-.wikiparent{
-  padding-top:  20px;
-  padding-bottom: 200px;
-  background-color: #e3e9e3;
-  color: black;
-}
-.homeparent{
-  padding-top:  20px;
-  padding-bottom: 200px;
-  background-color: #e3e9e3;
-}
-.wikiparentrace{
-  padding-top:  20px;
-}
-
-a:hover{
-  color: rgb(12, 22, 13);;
-}
-
-.icon{
-  height: 25px;
-  padding-top: 5px;
-}
-.trophy{
-  height: 25px;
-  vertical-align: middle;
-}
-
-.row {
-  display: -webkit-flex;
-  display: flex;
-  width: 90%;
-  padding-bottom: 3%;
-  padding-top:2pc;
-
-  margin-left: auto;
-margin-right: auto;
-}
-.raceimage
-{
-  height:6vw;
-}
-
-.bigstatfilter {
-  width: 80%;
-  padding-bottom: 3%;
-  padding-top:2pc;
-  align-items: center;
-  margin-left: auto;
-margin-right: auto;
-}
-
-.twitchembed
-{
-  padding:10px;
-}
-
-.rowrace {
-  display: -webkit-flex;
-  display: flex;
-  width: 80%;
-  padding-bottom: 3%;
-  padding-top:2pc;
-  margin-left: auto;
-margin-right: auto;
-}
-
-.rowraceresult {
-  display: -webkit-flex;
-  display: flex;
-  padding-bottom: 3%;
-  margin-left: auto;
-margin-right: auto;
-justify-content: space-evenly;
-}
-.rowchampionship {
-  display: -webkit-flex;
-  display: flex;
-  margin-left: auto;
-margin-right: auto;
-justify-content: space-evenly;
-flex-direction: column;
-}
-
-
-.driverlist {
-
-  border-bottom-right-radius: 10px;
-  padding-left: 2px;
-  border-right: black 1px solid;
-  border-bottom: black 1px solid;
-  display: flex;
-  display: block;
-  width: 150px;
-  margin-bottom: 15px;
-  padding-bottom:5px;
-  font-family: 'f1reg';
-  padding-right: 5px;
-}
-.raceBackground{
-  padding-top:1px;
-}
-
-.robsreview{
- font-size:0.8vw; 
- font-family:'f1reg';
-}
-
-.column.side {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  text-align: center;
-  margin-bottom:2pc;
-    border-top-right-radius: 10px;
-    border-right: 10px solid #b62f2f;
-    border-top: 10px solid #b62f2f;
-    border-spacing: 3px;
-    padding: 2pc;
-   
-}
-
-.column.middle {
-  -webkit-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-left: 100px;
-}
-
-.firstcolumn {
-  width: 30%;
-  padding: 0 10px 0 0;
-  float: left;
-  border-right: 10px solid #b62f2f;
-  border-top: 10px solid #b62f2f;
-  border-top-right-radius: 10px;
-  padding-top: 3vw;
-  padding-right: 3vw;
-}
-
-.secondcolumn {
-  flex: 1 0 0%;
-  padding: 0 10px 0 0;
-}
-
-
-
-   .topnav {
-  overflow: hidden;
-  background-color: rgb(43, 75, 52);
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.topnav a:hover {
-  background-color: rgb(69, 121, 83);
-  color: rgb(255, 255, 255);
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav-right {
-  float: right;
-  background-color: rgb(18, 14, 34)
-}
-
-.left {
-  display:block
-
-}
-
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-  }
-
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown .dropbtn {
-    font-size: 14px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: rgb(43, 75, 52);
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(90, 156, 108);
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(90, 156, 108);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: rgb(255, 255, 255);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    background-color: rgb(116 146 124) ;
-  }
-
-  .firstletter {
-    font-weight: bold;
     text-align: center;
-    padding-bottom: 20px;
-    border: none;
-    font-size: 30px;
-
+    font-size: x-large;
   }
-
-@media screen and ( min-width: 800px ) {
-    .dropdown-content a:hover {
-        background-color: rgb(43, 75, 52);
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-}
-
-
-
-  header
-  {
-    background: black;
-            width: 100%;
-            padding-top: 1%;
-            }
-
-
-  hr.solid {
-    border-top: 5px solid rgb(43, 75, 52);
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  
+  .wikiparent{
+    padding-top:  20px;
+    padding-bottom: 200px;
+    background-color: #e3e9e3;
+    color: black;
   }
-  hr.dashed{
-    border-top: 3px dashed rgb((43, 75, 52));
-  }
-  body{
-  font-family: 'f1bold';
-  }
-  html, body{
+  .homeparent{
+    padding-top:  20px;
+    padding-bottom: 200px;
     background-color: #e3e9e3;
   }
-  .block{
-    display: block;
-    text-decoration: none;
-padding-right: 5%;
-padding-left: 5%;
-    
-  }
-  a {
-    color:inherit;
-    text-decoration: none, 
-  }
-  a:hover{
-    color: rgb((43, 75, 52));
-  }
-  article{
-        box-shadow:3px 3px 1.5px rgb(43, 75, 52);
-    background-color: rgba(90, 156, 108, 0.212);
-    border-radius: 5% 5%;
-    padding: 1%;
-    margin-bottom: 5%;
-    align-content: center;
-    text-align: center;
-    
+  .wikiparentrace{
+    padding-top:  20px;
   }
   
-  .newsarticle{
-background-color: rgba(90, 156, 108, 0.212);
-
-padding: 2%;
-margin-bottom: 5%;
-
-
-}
-  h4{
-    text-decoration: none;
+  a:hover{
+    color: rgb(12, 22, 13);;
   }
-  #header-right {
-    float: right;
-    text-align: center;
-}
-
-.banner{
-  width:55vw;
-}
-
-.h2wiki{
-  margin-left: 2pc;
-  padding-top: 2pc;
-  text-align: center;
-}
-
-#powerranking{
-  width: 50%;
-  background-color: rgb(4 4 4 / 66%);
-  font-weight: bold;
-  margin-left: auto;
+  
+  .icon{
+    height: 25px;
+    padding-top: 5px;
+  }
+  .trophy{
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .row {
+    display: -webkit-flex;
+    display: flex;
+    width: 90%;
+    padding-bottom: 3%;
+    padding-top:2pc;
+  
+    margin-left: auto;
   margin-right: auto;
-  margin-top: 400px;
-  margin-bottom: 400px;
-}
-
-#powerranking td{
-  padding:15px;
-}
-
-
-.wiki{
-  text-align: left;
-  padding-bottom: 5%;
-
-}
-.wikia{
-  display: flex;
-  text-align: left;
-}
-
-
-ul.wikilist{
-  list-style-type: none;
-  padding-top: 5px;
-  display: inline-grid;
-  flex-direction: row;
-}
-
-
-ul.wikilist > li{
-  display:inline-block;
-}
-
-
-li{
-  display: inline;
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid grey;
-}
-
-.driverrecords{
-  text-align: center;
-
-}
-img.bio{border: 3px solid rgb(0, 0, 0);
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 10px;}
-
-img.table{
-  width: auto ;
-  max-width: 100% ;
-  height: auto ;
-}
-
-
-table.driverrecords{
-table-layout: fixed;
-min-width: 30%;
-text-align: center;
-border: 3px outset white;
-border-collapse: collapse;
-margin-bottom: 20px;
-margin-left: 2%;
-margin-right:auto;
-}
-
-table.driverrecords caption {
-padding-bottom: 10px;
-padding-top: 10px;
-font-style: italic;
-text-align: center;
-background-color: rgba(255, 139, 139, 0.5);
-border: 3px outset white;
-}
-table.driverrecords tr{
-padding-top: 2px;
-padding-bottom: 2px;
-
-text-align: center;
-}
-table.driverrecords td{
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
   }
-  table.driverrecords th{
- background-color: #1a2a1e;
- color: #fdffff;
- padding-left: 10px;
- padding-right: 10px;
-    }
-
-table.driverrecords tr:nth-child(even) {
-  background-color: rgba(90, 98, 91, 0.864)
-}
-.news{
-  padding-left: 2%;
-}
-
-.statfilter{
-  display: flex;
+  .raceimage
+  {
+    height:6vw;
+  }
+  
+  .bigstatfilter {
     width: 80%;
-    padding-bottom: -200px;
-    padding-top: 3pc;
+    padding-bottom: 3%;
+    padding-top:2pc;
     align-items: center;
     margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -40px;
-}
-
-.newsimage{
-align-content: center;
-padding-top: 2%;
-padding-left: 2%;
-max-width: 75%;
-height: auto;
-}
-
-table#shortcalendar{
-  table-layout:fixed;
-  width:85%;
-  text-align: center;
-  border: 3px solid rgb(43, 75, 52);
-  border-collapse: collapse;
-  font-weight: bold;
-  box-shadow:10px 10px 5px grey;
-  margin-left: auto;
   margin-right: auto;
-margin-bottom: 5%;
-
   }
   
-  table#shortcalendar caption {
-  padding-bottom: 10px;
-  padding-top: 10px;
-  font-style: italic;
-  text-align: center;
-  background-color: rgba(255, 139, 139, 0.5);
-
+  .twitchembed
+  {
+    padding:10px;
   }
-  table#shortcalendar tr{
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-align: center;
-  }
-  table#shortcalendar td{
-margin-left: 1%;
-padding-left: 5px;
-padding-right: 5px;
-  }
-
-  table#shortcalendar tr:nth-child(even) {
-    background-color: rgba(90, 156, 108, 0.507)
-  }
-  .topnav .icon {
-    display: none;
-  }
-
-  .raceinfo {
-    max-width: 90%;
-    min-width: 80%;
-    text-align: center;
-    margin-top: 2pc;
+  
+  .rowrace {
+    display: -webkit-flex;
+    display: flex;
+    width: 80%;
+    padding-bottom: 3%;
+    padding-top:2pc;
     margin-left: auto;
-    margin-right: auto;
-    padding: 1pc;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-table#timeline {
-    table-layout: fixed;
-    width: 90%;
-    border-radius: 10px;
-    border-collapse: collapse;
-    border: 2px solid rgb(255, 255, 255);
-    margin-top: 5%;
-    margin-bottom: 5%;
+  margin-right: auto;
+  }
+  
+  .rowraceresult {
+    display: -webkit-flex;
+    display: flex;
+    padding-bottom: 3%;
     margin-left: auto;
-    margin-right: auto;
-    align-content: center;
-    text-align: center;
-    
-}
-
-.champtableimage {height: 65px;}
-
-table#timeline colgroup {
-  width: 100%;
-}
-
-table#timeline th {
-    border-bottom: 2px solid rgb(255, 255, 255);
-    background-color: rgba(43, 75, 52, 0.5);
-    border-radius: 12px;
-    min-width: 35px;
-    padding: 5px
-    
-;
-}
-
-table#timeline td {
-    background-color: rgba(43, 75, 52, 0.5);
-    padding: 5px;
-    border-radius: 12px;
-    min-width: 35px;
-
-}
-.tyre{
-  padding-left: 1pc;
-}
-
-table#timeline caption {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-style: italic;
-    border-top: 2px solid rgb(255, 255, 255);
-    border-left: 2px solid rgb(255, 255, 255);
-    border-right: 2px solid white;
-    background-color: rgba(12, 22, 13, 0.5);
-
-}
-
-table#timeline tr:nth-child(2) {
-    font-weight: bold;
-}
-
-table#timeline col:nth-child(even) {
-    background-color: rgba(90, 156, 108, 0.5);
-}
-
-
-.timeline {
-  overflow-x:auto;
-
-}
-
-table#champtable {
-    table-layout: fixed;
-    max-width: 80%;
-    min-width: 40%;
-    border-collapse: collapse;
+  margin-right: auto;
+  justify-content: space-evenly;
+  }
+  .rowchampionship {
+    display: -webkit-flex;
+    display: flex;
     margin-left: auto;
-    margin-right: auto;
-    font-weight: bold;
+  margin-right: auto;
+  justify-content: space-evenly;
+  flex-direction: column;
+  }
+  
+  
+  .driverlist {
+  
+    border-bottom-right-radius: 10px;
+    padding-left: 2px;
+    border-right: black 1px solid;
+    border-bottom: black 1px solid;
+    display: flex;
+    display: block;
+    width: 150px;
+    margin-bottom: 15px;
+    padding-bottom:5px;
+    font-family: 'f1reg';
+    padding-right: 5px;
+  }
+  .raceBackground{
+    padding-top:1px;
+  }
+  
+  .robsreview{
+   font-size:0.8vw; 
+   font-family:'f1reg';
+  }
+  
+  .column.side {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: rgb(0,0,0,0.85);
-
-}
-
-table#champtable th {
-padding:8px;
-}
-
-table#champtable td {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-
-}
-
-table#champtable td :nth-child(0){
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
-  background-color: #ffff007a;
-  text-align: center;
-  padding-right: 5px;
-    padding-left: 5px;
-}
-
-
-table#champtable caption {
-    font-size: 24pt;
-    background-color: rgb(0,0,0,0.85);
-    border-bottom: 1px solid #b62f2f;
-padding: 5px;
-
-}
-
-
-
-
-
-* {
-    box-sizing: border-box;
-}
-
-.columntable{
-  float: left;
-  width: 50%;
-  text-align: center;
-  padding-bottom: 5%;
-
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.supergrid{
-  overflow-x: auto;
-}
-.careergrid{
-  overflow-x: auto;
-}
-.constable{
-  overflow-x: auto;
-}
-
-table#supergrid {
-  max-width: 82%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 8pt;
-  border-collapse: collapse;
-  background-color: rgb(0,0,0,0.85);
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-
-  
-}
-table#careergrid {
-  max-width: 82%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 8pt;
-  border-collapse: collapse;
-  background-color: rgb(0,0,0,0.85);
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-}
-
-table#supergrid th {
-
-  padding-bottom: 2px;
-  padding-top: 2px;
-  text-align: center;
-}
-table#careergrid th {
-
-  padding-bottom: 2px;
-  padding-top: 2px;
-  text-align: center;
-}
-
-table#supergrid td {
-  text-align: center;
-  height: 25px;
-  border-bottom: 1px solid #3e3c3cc9;
-   
-}
-table#careergrid td {
-  text-align: center;
-  height: 25px;
-  border-bottom: 1px solid #3e3c3cc9;
-   
-}
-
-table#supergrid td:nth-child(5) {
-  color:grey;
-}
-table#supergrid td:nth-child(1) {
-  color: rgb(255, 255, 255);
-          border-radius: 10px;
-          background-color: #ffff007a;
-          text-align: center;
-          padding-right: 5px;
-            padding-left: 5px;
-}
-table#supergrid td:nth-child(2) {
-          text-align: left;
-
-            padding-left: 15px;
-}
-table#careergrid td:nth-child(6)
-{
-  color: #ffff007a
-}
-
-
-table#careergrid tr {
-  border-left:  1px solid white;
-   
-}
-
-
-table#careergrid col {
-  border-top:  1px solid white;
-   
-}
-
-table#supergrid caption {
-
-  font-size: 24pt;
-  border-bottom: 2px #b62f2f solid;
-
-  padding: 5px;
-
-  background-color: rgb(0,0,0,0.85);
-
-}
-table#careergrid caption {
-
-  font-size: 24pt;
-color:rgb(0, 0, 0);
-  padding-bottom: 5px;
-  padding-top: 5px;
-
-
-}
-.grid{
-width: 35px;
-
-}
-.icongrid{
-margin-bottom: -4px;
-height: 25px;
-
-}
-.iconseasonlist{
-  margin-bottom: -4px;
-  height: 25px;
-  margin-right: -20px;
-    margin-left: 20px;
+    margin-bottom:2pc;
+      border-top-right-radius: 10px;
+      border-right: 10px solid #b62f2f;
+      border-top: 10px solid #b62f2f;
+      border-spacing: 3px;
+      padding: 2pc;
+     
   }
-.realperf{
-  margin-bottom: -3px;
-  height: 15px;
-  margin-left: -15px;
-  margin-right: 5px;
-  }
-.logogrid{
-height: 22px;
-    padding-top: 2px;
-    padding-right: 10px;
-    padding-left: 5px;
-}
-.races{
-width: 35px;
-
-
-}
-.points{
-  width: 50px;
-
-  color: rgb(255, 255, 255);
-}
-.drivername{
-  width:120px;
-
-}
-.diff{
-  width: 30px;
-
-  color: rgb(160, 157, 157);
-  font-weight: lighter;
-  font-size: x-small;
-}
-
-
-
-
-.newstype{
-font-weight: bold;
-text-decoration: underline rgb(43, 75, 52) 4px;
-}
-
-
-table#list {
-  table-layout: fixed;
-  max-width: 90%;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2pc;
-  font-weight: bold;
-  background-color: rgb(0,0,0,0.85);
-  font-size: 10pt;
-
-}
-
-table#list th {
-padding:8px;
-font-size: 12pt;
-
-}
-
-table#list td {
-
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: 'f1reg';
-  font-size: 10pt;
-  padding-top: 5px;
-  padding-bottom: 5px;
- }
-
- table#list td :nth-child(1){
-  font-family: 'f1bold';
- }
-
-table#list caption {
-
-  font-size: 24pt;
-  border-bottom: 1px solid #b62f2f;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  background-color: rgb(0,0,0,0.85);
-
-}
-
-
-
-table#seasonlist {
-  table-layout: fixed;
-  max-width: 90%;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2pc;
-  font-weight: bold;
-  background-color: rgb(0,0,0,0.85);
-
-
-}
-
-table#seasonlist th {
-  padding: 8px;
-  font-size: 10pt;
-
-}
-
-table#seasonlist td {
-  padding-left: 10px;
-  padding-right: 10px;
-font-family:'f1reg';
-  font-size: 10pt;
-  padding-top: 5px;
-  padding-bottom: 5px;
- }
-
-table#seasonlist caption {
-
-  font-size: 24pt;
-border-bottom: 1px solid #b62f2f;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  background-color: rgb(0,0,0,0.85);
-
-}
-
-table#seasonlist td:nth-child(7){
-  color:gold;
-}
-
-
-
-
-              table#calendar {
-                table-layout: fixed;
-                max-width: 90%;
-                border-collapse: collapse;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 40px;
-                margin-bottom: 40px;
-                background-color: rgb(0,0,0,0.85);
-                overflow-x: auto;
-       
-            
-            }
-            
-            table#calendar th {
-
-                padding:8px;
-                font-size: 10pt;
-
-            }
-            
-            table#calendar td {
-
-                padding-left: 10px;
-                padding-right: 10px;
-                font-family: 'f1reg';
-                font-size: 10pt;
-               
-            
-            }
-
-            table#calendar caption {
-
-                font-size: 24pt;
-                background-color: rgb(0,0,0,0.85);
-                padding-bottom: 5px;
-                padding-top: 5px;
-                border-bottom: 2px #b62f2f solid;
-
-          
-            
-            }
-            
-
-            .calendar {
-                text-align: center;
-                padding-bottom: 5%;
-                overflow-x: auto;
-            
-            }
-            .overflow
-            {
-              overflow-x: auto;
-            }
-
-            .racewinner {
-              
-              margin-left: auto;
-              margin-right: auto;
-              max-width: 85%;
-              
-            
-          }
-
-          .champwinner {
-              
-            margin-left: auto;
-            margin-right: auto;
-            max-width: fit-content;
-
-          
-        }
-          .driverinfo {
-            text-align: center;
-                       padding-top: 10px;
-                       margin-bottom: 20px;
-                       margin-top: 20px;
-                       margin-left: 150px;
-                       margin-right: 150px;
-                       background-color: rgba(34, 61, 33, 0.5);
-                       border-radius: 15px 50px;
-                       border-style: outset;
-                   }
-                   .biotable{
-                    text-align: center;
   
-                }
-
-              table#biotable{
-                  margin-top: 10px;
-                  table-layout: fixed;
-                  width: 100%;
-                  margin-left: auto;
-                  margin-right: auto;
-                  text-align: left;
-                  
-              }
-  
-              table#biotable caption {
-                  padding-bottom: 10px;
-                  padding-top: 10px;
-                  font-size: 30px;
-              }
-              table#biotable td{
-                  padding-top: 2px;
-                  padding-bottom: 2px;
-                  font-family: 'f1reg';
-              }
-
-              .tracktable{
-                margin-bottom:2pc;
-                background: #e4e4e4cc;
-                  border-radius: 10px;
-                  border: 1px solid #a2a9b1;
-                  border-spacing: 3px;
-                  padding: 2pc;
-                  width: fit-content;
-                  margin-left: auto;
-                  margin-right: auto;
-
-            }
-            .tracktablerace{
-              margin-bottom: 2pc;
-              background: #e4e4e4cc;
-              border-radius: 10px;
-              border: 1px solid #a2a9b1;
-              border-spacing: 3px;
-              padding: 3vw;
-              width: 26vw;
-              height: 30vw;
-              margin-top: 50px;
-              margin-right: auto;
-              font-size: 1vw;
-
-          }
-
-              table#tracktable{
-                margin-top: 10px;
-                table-layout: fixed;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: left;
-            }
-            table#tracktable td{
-                font-family: 'f1reg';
-          }
-
-            table#tracktable caption {
-                padding-bottom: 10px;
-                padding-top: 10px;
-                font-size: 30px;
-            }
-
-            table#tracktablerace {
-                table-layout: fixed;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: left;
-                color:black;
-            }
-
-            .wrapper {
-              position: relative;
-              padding-bottom: 56.25%; /* 16:9 */
-              padding-top: 25px;
-              height: 0;
-          }
-          .wrapper iframe {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-          }
-             
-
-                table#tracktablerace caption {
-                  padding-bottom: 10px;
-                  padding-top: 10px;
-
-            }
-            table#tracktable td{
-                padding-top: 2px;
-                padding-bottom: 2px;
-            }
-            table#tracktablerace td{
-              padding:5px;
-              padding-left:20px;
-          }
-
-
-            table#tracktable th{
-              padding-right: 10px;
-          }
-            .stats{
-              background-color: #e4e4e4c2;
-            }
-
-            .statschamp{
-              background-color: #2a060652;
-              padding-top: 10px;
-            }
-
-
-          .StatsTable{
-            overflow-x: scroll;
-          }
-          table#StatsTable{
-            margin-top: 10px;
-            table-layout: auto;
-            max-width: 95%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-            
-        }
-
-        table#StatsTable caption {
-            padding-bottom: 10px;
-            padding-top: 10px;
-            font-size: 30px;
-        }
-        table#StatsTable td{
-            padding-top: 2px;
-            padding-bottom: 2px;
-            padding-left: 5px;
-            background-color: #e4e4e4cc;
-            font-family: 'f1reg';
-        }
-
-        table#StatsTable td :nth-child(1){
-          font-family: 'f1bold'
-        }
-
-        table#StatsTable th{
-            background-color:#bab5b5;
-            font-weight: bold;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-
-        table#StatsTable tr:nth-child(even){
-            background-color: #a7b1ba;
-    
-        }
-            
-      
-
-
-              table#drivertimeline {
-                  table-layout: fixed;
-                  width: 98%;
-                  border-radius: 10px;
-                  border-collapse: collapse;
-                  margin-bottom: 40px;
-                  margin-left: 5px;
-                  margin-right: 5px;
-                  border: 2px solid rgb(255, 255, 255);
-      
-      
-      
-              }
-      
-              table#drivertimeline th {
-                  border-bottom: 2px solid rgb(255, 255, 255);
-                  background-color: rgba(114, 211, 122, 0.5);
-                  border-radius: 12px;
-                  width: 35px;
-      ;
-              }
-      
-              table#drivertimeline td {
-                  background-color: rgba(114, 211, 122, 0.5);
-                  padding-top: 4px;
-                  border-radius: 12px;
-                  width: 35px;
-                  padding-bottom: 4px;
-              }
-      
-              table#drivertimeline caption {
-                  padding-bottom: 10px;
-                  padding-top: 10px;
-                  font-style: italic;
-                  border-top: 2px solid rgb(255, 255, 255);
-                  border-left: 2px solid rgb(255, 255, 255);
-                  border-right: 2px solid white;
-      
-              }
-      
-              table#drivertimeline tr:nth-child(2) {
-                  font-weight: bold;
-              }
-      
-              table#drivertimeline col:nth-child(even) {
-                  background-color: rgba(114, 211, 119, 0.5);
-              }
-      
-      
-              .drivertimeline {
-                  text-align: center;
-                  background-color: rgba(34, 61, 33, 0.5);
-                  margin-right: 20px;
-                  margin-left: 20px;
-                  margin-top: 40px;
-                  border-radius: 15px 50px;
-                  border-style: outset;
-      
-              }
-              h2.drivertimeline{padding-top: 20px;}        
-  
-          h2.racewinner {
-              padding-top: 5px;
-              border-style: outset;
-              background-color: rgb(15, 26, 18);
-              border-radius: 100px;
-
-          }
-
-
-          h2.champwinner {
-            padding-top: 5px;
-            border-style: outset;
-            background-color: rgb(140, 103, 40);
-            border-radius: 100px;
-            padding-left: 100px;
-            padding-right: 100px;
-
-        }
-          h3.racewinner {
-            padding-top: 5px;
-            border-style: outset;
-            background-color: rgb(32, 44, 36);
-            width: 300px;
-            border-radius: 100px;
-
-        }
-  
-          h2.racewin {
-              margin-top: -12px;
-          }
-          h3.racewin {
-            margin-top: -12px;
-        }
-
-
-          h4.racewinner {
-            padding-top: 5px;
-            border-style: outset;
-            background-color: rgba(43, 75, 52, 0.5);
-
-        }
-  
-          
-          .raceresults {
-            table-layout: fixed;
-            max-width: 80%;
-            min-width: 60%;
-            border-collapse: collapse;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5px;
-            font-weight: bold;
-            text-align: center;
-            background-color: rgb(0,0,0,0.85);
-            font-size: 0.75vw;
-            
-
-        }
-
-        .raceresults th {
-
-            padding: 8px;
-            width: max-content;
-            text-align: left;
-        }
-
-        .raceresults td {
-            
-            padding-right: 8px;
-            padding-left: 8px;
-            height: 30px;
-            width: max-content;
-            vertical-align: middle;
-            text-align: left;
-        }
-        .raceresults td:nth-child(1) {
-          color: rgb(255, 255, 255);
-          border-radius: 10px;
-          background-color: #ffff007a;
-          text-align: center;
-          padding-right: 5px;
-            padding-left: 5px;
-      }
-
-      .raceresults td:nth-child(2) {
-        width:30px
-      }
-
-        .raceresults caption {
-
-            font-size: 24pt;
-            background-color: rgb(0,0,0,0.85);
-            padding-bottom: 5px;
-            padding-top: 5px;
-            border-bottom: 2px #b62f2f solid;
-
-        }
-
-        .column{
-          float: left;
-          width: 50%;
-          text-align: center;
-          padding: 1%;
-        }
-
-
-        .columnraceresult{
-          float:left;
-          width:37.5%;
-        }
-        .columnqualyresult{
-          float:left;
-          width:25%;
-        }
-
-        blockquote.twitter-timeline {
-          display: inline-block;
-          font-family: 'exo';
-          font-size: 12px;
-          font-weight: bold;
-          line-height: 16px;
-          border-color: #eee #ddd #bbb;
-          border-style: solid;
-          border-width: 8px;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-          margin: 10px 5px;
-          padding: 0 16px 16px 16px;
-          max-width: 468px;
-        }
-        
-        blockquote.twitter-timeline p {
-          font-size: 16px;
-          font-weight: normal;
-          line-height: 20px;
-        }
-        
-        blockquote.twitter-timeline a {
-          color: inherit;
-          font-weight: normal;
-          text-decoration: none;
-          outline: 0 none;
-        }
-        
-        blockquote.twitter-timeline a:hover,
-        blockquote.twitter-timeline a:focus {
-          text-decoration: underline;
-        }
-        .sponsor
-      {
-        border: 4px solid rgb(88, 20, 20);
-        padding-left: 5px;
-        padding-right: 5px;
-        border-radius: 5px;
-        background-color: rgb(238, 202, 202);
-        color: rgb(0, 0, 0);
-      }
-      .fastestlap{
-        border: 3px;
-        border-color: rgb(79, 8, 79);
-        border-style: solid;
-        padding: 3px;
-        border-radius: 50%;
-      }
-      .bioquote{
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-        font-family: 'f1reg';
-      }
-      .quote{
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-        font-style: italic;
-      }
-      .videowrapper
-{
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-  width:80%;
-}
-  .videowrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-/* external css: flickity.css */
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
-.gallery {
-  background: #EEE;
-}
-
-.gallery-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
-}
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
-  
-
-/* ==========================================================================
-   Your custom CSS styles for smartphones and screens smaller than 800 px
-   ========================================================================== */
-
-   @media screen and ( max-width: 800px ) { 
-    .row { flex-direction: column; width: 100%;}
-    .timeline {display: none;}
-    .calendar {font-size: 6pt; overflow-x: auto; min-width: 0;}
-    .supergrid{font-size: 6pt;}
-    .column.middle {padding-left: 1px;}
-    table#supergrid td {font-size: 6pt;}
-    table#supergrid th {font-size: 7pt;}
-    table#calendar td {font-size: 6pt;}
-    table#calendar th {font-size: 7pt;}
-    table#list td {font-size: 6pt;}
-    table#list th {font-size: 7pt;}
-    .raceresults td {font-size: 6pt;}
-    .raceresults th {font-size: 7pt;}
-    .collapse {display: none;}
-    .robsreview {font-size: 8pt;}
-    .banner{
-      width:350px;
-    }
-    .bigstatsfiltertable td {display: table-row}
-    .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
-    .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
-
-    .champtableimage {height: 35px;}
-
-    .raceimage
-{
-  height:20vw
-}
-.firstcolumn {
-  width: 30%;
-  padding-bottom: 10px;
-  
-}
-
-.secondcolumn {
-  flex:1 0 0%;
-  padding-bottom: 10px;
-  float: none;
-  margin-top: -1px;
-}
-    .tracktablerace{
-      margin-bottom:2pc;
-      background: #e4e4e4cc;
-        border-radius: 10px;
-        border: 1px solid #a2a9b1;
-        border-spacing: 3px;
-        padding: 2pc;
-        width: fit-content;
-        margin-top:50px;
-        margin-right: auto;
-        height:fit-content;
-        font-size: initial;
-
-  }
-    table.driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
-    .rowrace {
-      display: flex;
-      width: 80%;
-      padding-bottom: 3%;
-      padding-top:2pc;
-      margin-left: auto;
-    margin-right: auto;
+  .column.middle {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-
-    }
-    .rowraceresult {
-      display: flex;
-      width: 80%;
-      padding-bottom: 3%;
-      margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-    overflow-x: auto;
-    }
+    padding-left: 100px;
   }
-
-    @media screen and ( max-width: 800px ) { 
-      
-        .topnav.responsive {position: relative;}
-        .topnav.responsive a.icon {
-         position: absolute;
-         right: 0;
-         top: 0;
-        }
+  
+  .firstcolumn {
+    width: 30%;
+    padding: 0 10px 0 0;
+    float: left;
+    border-right: 10px solid #b62f2f;
+    border-top: 10px solid #b62f2f;
+    border-top-right-radius: 10px;
+    padding-top: 3vw;
+    padding-right: 3vw;
+  }
+  
+  .secondcolumn {
+    flex: 1 0 0%;
+    padding: 0 10px 0 0;
+  }
+  
+  
+  
+     .topnav {
+    overflow: hidden;
+    background-color: rgb(43, 75, 52);
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(69, 121, 83);
+    color: rgb(255, 255, 255);
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav-right {
+    float: right;
+    background-color: rgb(18, 14, 34)
+  }
+  
+  .left {
+    display:block
+  
+  }
+  
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+    }
+  
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
     
-        .topnav.responsive a {
-         float: none;
-         display: block;
-         text-align: left;
-        }
-    
-        .topnav.responsive div {
-          float: none;
-          display:contents;
-          text-align: left;
-         }
-         .topnav.responsive .dropdown{
-         float: none;
-         text-align: left;
-         }
-
-        .topnav div:not(:first-child) {display: none;}
-        .topnav {
-          overflow: hidden;
-          background-color: rgb(1, 39, 3);
-          padding: 0%
-      
-      }
-        .topnav a.icon {
-          float: right;
-          display: block;
-          padding-bottom: 33px;
-          
-        }
-     .dropdown .dropbtn {
+    .dropdown .dropbtn {
       font-size: 14px;
       border: none;
       outline: none;
       color: white;
       padding: 14px 16px;
-      
+      background-color: rgb(43, 75, 52);
       font-family: inherit;
       margin: 0;
-      pointer-events: none;
     }
-
-    .columntable{
-      width: 100%;
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgb(90, 156, 108);
     }
-    .column{
-      width: 100%;
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(90, 156, 108);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
     }
-    .tracktable{
-      margin-bottom:2pc;
-      background: #e4e4e4cc;
-        border-radius: 10px;
-        border: 1px solid #a2a9b1;
-        border-spacing: 3px;
-        width: 98%;
-        margin-left: auto;
-        margin-right: auto;
-
+    
+    .dropdown-content a {
+      float: none;
+      color: rgb(255, 255, 255);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      background-color: rgb(116 146 124) ;
+    }
+  
+    .firstletter {
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 20px;
+      border: none;
+      font-size: 30px;
+  
+    }
+  
+  @media screen and ( min-width: 800px ) {
+      .dropdown-content a:hover {
+          background-color: rgb(43, 75, 52);
+      }
+  
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
   }
-
+  
+  
+  
+    header
+    {
+      background: black;
+              width: 100%;
+              padding-top: 1%;
+              }
+  
+  
+    hr.solid {
+      border-top: 5px solid rgb(43, 75, 52);
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    hr.dashed{
+      border-top: 3px dashed rgb((43, 75, 52));
+    }
+    body{
+    font-family: 'f1bold';
+    }
+    html, body{
+      background-color: #e3e9e3;
+    }
+    .block{
+      display: block;
+      text-decoration: none;
+  padding-right: 5%;
+  padding-left: 5%;
+      
+    }
+    a {
+      color:inherit;
+      text-decoration: none, 
+    }
+    a:hover{
+      color: rgb((43, 75, 52));
+    }
+    article{
+          box-shadow:3px 3px 1.5px rgb(43, 75, 52);
+      background-color: rgba(90, 156, 108, 0.212);
+      border-radius: 5% 5%;
+      padding: 1%;
+      margin-bottom: 5%;
+      align-content: center;
+      text-align: center;
+      
+    }
+    
+    .newsarticle{
+  background-color: rgba(90, 156, 108, 0.212);
+  
+  padding: 2%;
+  margin-bottom: 5%;
+  
+  
   }
-
-table#nolayout {
-    table-layout: fixed;
-    max-width: 80%;
-    border-collapse: collapse;
-    padding: 5px;
-    font-weight: bold;
+    h4{
+      text-decoration: none;
+    }
+    #header-right {
+      float: right;
+      text-align: center;
+  }
+  
+  .banner{
+    width:55vw;
+  }
+  
+  .h2wiki{
+    margin-left: 2pc;
+    padding-top: 2pc;
     text-align: center;
-
-}
-
-    table#nolayout th {
-        border-bottom: 2px rgb(255, 255, 255) solid;
-        background-color: rgb(15, 26, 18);
-        ;
-        padding: 10px;
-        width: max-content
-    }
-
-    table#nolayout td {
-        padding-right: 5px;
-        padding-left: 5px;
-        height: 30px;
-        width: max-content;
-        vertical-align: middle;
-    }
-
-   table#nolayout td:nth-child(1) {
-
-      background-color: #ffffff00;
-
   }
-
-
-.result-driver-tyres {
-    width: 18px;
-    height: 18px;
-    padding-right: 2px;
-}
-
-    .result-driver-tyres div {
-        width: 18px;
-        height: 18px;
-        padding-top: 5px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        margin-left: 5px;
+  
+  #powerranking{
+    width: 50%;
+    background-color: rgb(4 4 4 / 66%);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 400px;
+    margin-bottom: 400px;
+  }
+  
+  #powerranking td{
+    padding:15px;
+  }
+  
+  
+  .wiki{
+    text-align: left;
+    padding-bottom: 5%;
+  
+  }
+  .wikia{
+    display: flex;
+    text-align: left;
+  }
+  
+  
+  ul.wikilist{
+    list-style-type: none;
+    padding-top: 5px;
+    display: inline-grid;
+    flex-direction: row;
+  }
+  
+  
+  ul.wikilist > li{
+    display:inline-block;
+  }
+  
+  
+  li{
+    display: inline;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid grey;
+  }
+  
+  .driverrecords{
+    text-align: center;
+  
+  }
+  img.bio{border: 3px solid rgb(0, 0, 0);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;}
+  
+  img.table{
+    width: auto ;
+    max-width: 100% ;
+    height: auto ;
+  }
+  
+  
+  table.driverrecords{
+  table-layout: fixed;
+  min-width: 30%;
+  text-align: center;
+  border: 3px outset white;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-left: 2%;
+  margin-right:auto;
+  }
+  
+  table.driverrecords caption {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-style: italic;
+  text-align: center;
+  background-color: rgba(255, 139, 139, 0.5);
+  border: 3px outset white;
+  }
+  table.driverrecords tr{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  
+  text-align: center;
+  }
+  table.driverrecords td{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
     }
-
-.result-driver-tyres-S {
-    background-image: url('../images/s.png')
-}
-
-.result-driver-tyres-M {
-    background-image: url('../images/m.png')
-}
-
-.result-driver-tyres-H {
-    background-image: url('../images/h.png')
-}
-
-.result-driver-tyres-I {
-    background-image: url('../images/i.png')
-}
-
-.result-driver-tyres-W {
-    background-image: url('../images/w.png')
-}
-
-
-/* ==========================================================================
-   Helper classesnav
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/* Clearfix
- * Adding a 'clearfix' class will allow parent elements to contain a floated child element
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
+    table.driverrecords th{
+   background-color: #1a2a1e;
+   color: #fdffff;
+   padding-left: 10px;
+   padding-right: 10px;
+      }
+  
+  table.driverrecords tr:nth-child(even) {
+    background-color: rgba(90, 98, 91, 0.864)
+  }
+  .news{
+    padding-left: 2%;
+  }
+  
+  .statfilter{
+    display: flex;
+      width: 80%;
+      padding-bottom: -200px;
+      padding-top: 3pc;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -40px;
+  }
+  
+  .newsimage{
+  align-content: center;
+  padding-top: 2%;
+  padding-left: 2%;
+  max-width: 75%;
+  height: auto;
+  }
+  
+  table#shortcalendar{
+    table-layout:fixed;
+    width:85%;
+    text-align: center;
+    border: 3px solid rgb(43, 75, 52);
+    border-collapse: collapse;
+    font-weight: bold;
+    box-shadow:10px 10px 5px grey;
+    margin-left: auto;
+    margin-right: auto;
+  margin-bottom: 5%;
+  
+    }
+    
+    table#shortcalendar caption {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-style: italic;
+    text-align: center;
+    background-color: rgba(255, 139, 139, 0.5);
+  
+    }
+    table#shortcalendar tr{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    }
+    table#shortcalendar td{
+  margin-left: 1%;
+  padding-left: 5px;
+  padding-right: 5px;
+    }
+  
+    table#shortcalendar tr:nth-child(even) {
+      background-color: rgba(90, 156, 108, 0.507)
+    }
+    .topnav .icon {
+      display: none;
+    }
+  
+    .raceinfo {
+      max-width: 90%;
+      min-width: 80%;
+      text-align: center;
+      margin-top: 2pc;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1pc;
+  }
+  
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  
+  table#timeline {
+      table-layout: fixed;
+      width: 90%;
+      border-radius: 10px;
+      border-collapse: collapse;
+      border: 2px solid rgb(255, 255, 255);
+      margin-top: 5%;
+      margin-bottom: 5%;
+      margin-left: auto;
+      margin-right: auto;
+      align-content: center;
+      text-align: center;
+      
+  }
+  
+  .champtableimage {height: 65px;}
+  
+  table#timeline colgroup {
+    width: 100%;
+  }
+  
+  table#timeline th {
+      border-bottom: 2px solid rgb(255, 255, 255);
+      background-color: rgba(43, 75, 52, 0.5);
+      border-radius: 12px;
+      min-width: 35px;
+      padding: 5px
+      
+  ;
+  }
+  
+  table#timeline td {
+      background-color: rgba(43, 75, 52, 0.5);
+      padding: 5px;
+      border-radius: 12px;
+      min-width: 35px;
+  
+  }
+  .tyre{
+    padding-left: 1pc;
+  }
+  
+  table#timeline caption {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-style: italic;
+      border-top: 2px solid rgb(255, 255, 255);
+      border-left: 2px solid rgb(255, 255, 255);
+      border-right: 2px solid white;
+      background-color: rgba(12, 22, 13, 0.5);
+  
+  }
+  
+  table#timeline tr:nth-child(2) {
+      font-weight: bold;
+  }
+  
+  table#timeline col:nth-child(even) {
+      background-color: rgba(90, 156, 108, 0.5);
+  }
+  
+  
+  .timeline {
+    overflow-x:auto;
+  
+  }
+  
+  table#champtable {
+      table-layout: fixed;
+      max-width: 80%;
+      min-width: 40%;
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      background-color: rgb(0,0,0,0.85);
+  
+  }
+  
+  table#champtable th {
+  padding:8px;
+  }
+  
+  table#champtable td {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+  
+  }
+  
+  table#champtable td :nth-child(0){
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: #ffff007a;
+    text-align: center;
+    padding-right: 5px;
+      padding-left: 5px;
+  }
+  
+  
+  table#champtable caption {
+      font-size: 24pt;
+      background-color: rgb(0,0,0,0.85);
+      border-bottom: 1px solid #b62f2f;
+  padding: 5px;
+  
+  }
+  
+  
+  
+  
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  .columntable{
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 5%;
+  
+  }
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  .supergrid{
+    overflow-x: auto;
+  }
+  .careergrid{
+    overflow-x: auto;
+  }
+  .constable{
+    overflow-x: auto;
+  }
+  
+  table#supergrid {
+    max-width: 82%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 8pt;
+    border-collapse: collapse;
+    background-color: rgb(0,0,0,0.85);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+  }
+  table#careergrid {
+    max-width: 82%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 8pt;
+    border-collapse: collapse;
+    background-color: rgb(0,0,0,0.85);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+  }
+  
+  table#supergrid th {
+  
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+  }
+  table#careergrid th {
+  
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+  }
+  
+  table#supergrid td {
+    text-align: center;
+    height: 25px;
+    border-bottom: 1px solid #3e3c3cc9;
+     
+  }
+  table#careergrid td {
+    text-align: center;
+    height: 25px;
+    border-bottom: 1px solid #3e3c3cc9;
+     
+  }
+  
+  table#supergrid td:nth-child(5) {
+    color:grey;
+  }
+  table#supergrid td:nth-child(1) {
+    color: rgb(255, 255, 255);
+            border-radius: 10px;
+            background-color: #ffff007a;
+            text-align: center;
+            padding-right: 5px;
+              padding-left: 5px;
+  }
+  table#supergrid td:nth-child(2) {
+            text-align: left;
+  
+              padding-left: 15px;
+  }
+  table#careergrid td:nth-child(6)
+  {
+    color: #ffff007a
+  }
+  
+  
+  table#careergrid tr {
+    border-left:  1px solid white;
+     
+  }
+  
+  
+  table#careergrid col {
+    border-top:  1px solid white;
+     
+  }
+  
+  table#supergrid caption {
+  
+    font-size: 24pt;
+    border-bottom: 2px #b62f2f solid;
+  
+    padding: 5px;
+  
+    background-color: rgb(0,0,0,0.85);
+  
+  }
+  table#careergrid caption {
+  
+    font-size: 24pt;
+  color:rgb(0, 0, 0);
+    padding-bottom: 5px;
+    padding-top: 5px;
+  
+  
+  }
+  .grid{
+  width: 35px;
+  
+  }
+  .icongrid{
+  margin-bottom: -4px;
+  height: 25px;
+  
+  }
+  .iconseasonlist{
+    margin-bottom: -4px;
+    height: 25px;
+    margin-right: -20px;
+      margin-left: 20px;
+    }
+  .realperf{
+    margin-bottom: -3px;
+    height: 15px;
+    margin-left: -15px;
+    margin-right: 5px;
+    }
+  .logogrid{
+  height: 22px;
+      padding-top: 2px;
+      padding-right: 10px;
+      padding-left: 5px;
+  }
+  .races{
+  width: 35px;
+  
+  
+  }
+  .points{
+    width: 50px;
+  
+    color: rgb(255, 255, 255);
+  }
+  .drivername{
+    width:120px;
+  
+  }
+  .diff{
+    width: 30px;
+  
+    color: rgb(160, 157, 157);
+    font-weight: lighter;
+    font-size: x-small;
+  }
+  
+  
+  
+  
+  .newstype{
+  font-weight: bold;
+  text-decoration: underline rgb(43, 75, 52) 4px;
+  }
+  
+  
+  table#list {
+    table-layout: fixed;
+    max-width: 90%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2pc;
+    font-weight: bold;
+    background-color: rgb(0,0,0,0.85);
+    font-size: 10pt;
+  
+  }
+  
+  table#list th {
+  padding:8px;
+  font-size: 12pt;
+  
+  }
+  
+  table#list td {
+  
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'f1reg';
+    font-size: 10pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+   }
+  
+   table#list td :nth-child(1){
+    font-family: 'f1bold';
+   }
+  
+  table#list caption {
+  
+    font-size: 24pt;
+    border-bottom: 1px solid #b62f2f;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: rgb(0,0,0,0.85);
+  
+  }
+  
+  
+  
+  table#seasonlist {
+    table-layout: fixed;
+    max-width: 90%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2pc;
+    font-weight: bold;
+    background-color: rgb(0,0,0,0.85);
+  
+  
+  }
+  
+  table#seasonlist th {
+    padding: 8px;
+    font-size: 10pt;
+  
+  }
+  
+  table#seasonlist td {
+    padding-left: 10px;
+    padding-right: 10px;
+  font-family:'f1reg';
+    font-size: 10pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+   }
+  
+  table#seasonlist caption {
+  
+    font-size: 24pt;
+  border-bottom: 1px solid #b62f2f;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: rgb(0,0,0,0.85);
+  
+  }
+  
+  table#seasonlist td:nth-child(7){
+    color:gold;
+  }
+  
+  
+  
+  
+                table#calendar {
+                  table-layout: fixed;
+                  max-width: 90%;
+                  border-collapse: collapse;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-top: 40px;
+                  margin-bottom: 40px;
+                  background-color: rgb(0,0,0,0.85);
+                  overflow-x: auto;
+         
+              
+              }
+              
+              table#calendar th {
+  
+                  padding:8px;
+                  font-size: 10pt;
+  
+              }
+              
+              table#calendar td {
+  
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  font-family: 'f1reg';
+                  font-size: 10pt;
+                 
+              
+              }
+  
+              table#calendar caption {
+  
+                  font-size: 24pt;
+                  background-color: rgb(0,0,0,0.85);
+                  padding-bottom: 5px;
+                  padding-top: 5px;
+                  border-bottom: 2px #b62f2f solid;
+  
+            
+              
+              }
+              
+  
+              .calendar {
+                  text-align: center;
+                  padding-bottom: 5%;
+                  overflow-x: auto;
+              
+              }
+              .overflow
+              {
+                overflow-x: auto;
+              }
+  
+              .racewinner {
+                
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 85%;
+                
+              
+            }
+  
+            .champwinner {
+                
+              margin-left: auto;
+              margin-right: auto;
+              max-width: fit-content;
+  
+            
+          }
+            .driverinfo {
+              text-align: center;
+                         padding-top: 10px;
+                         margin-bottom: 20px;
+                         margin-top: 20px;
+                         margin-left: 150px;
+                         margin-right: 150px;
+                         background-color: rgba(34, 61, 33, 0.5);
+                         border-radius: 15px 50px;
+                         border-style: outset;
+                     }
+                     .biotable{
+                      text-align: center;
+    
+                  }
+  
+                table#biotable{
+                    margin-top: 10px;
+                    table-layout: fixed;
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: left;
+                    
+                }
+    
+                table#biotable caption {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    font-size: 30px;
+                }
+                table#biotable td{
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    font-family: 'f1reg';
+                }
+  
+                .tracktable{
+                  margin-bottom:2pc;
+                  background: #e4e4e4cc;
+                    border-radius: 10px;
+                    border: 1px solid #a2a9b1;
+                    border-spacing: 3px;
+                    padding: 2pc;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+  
+              }
+              .tracktablerace{
+                margin-bottom: 2pc;
+                background: #e4e4e4cc;
+                border-radius: 10px;
+                border: 1px solid #a2a9b1;
+                border-spacing: 3px;
+                padding: 3vw;
+                width: 26vw;
+                height: 30vw;
+                margin-top: 50px;
+                margin-right: auto;
+                font-size: 1vw;
+  
+            }
+  
+                table#tracktable{
+                  margin-top: 10px;
+                  table-layout: fixed;
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: left;
+              }
+              table#tracktable td{
+                  font-family: 'f1reg';
+            }
+  
+              table#tracktable caption {
+                  padding-bottom: 10px;
+                  padding-top: 10px;
+                  font-size: 30px;
+              }
+  
+              table#tracktablerace {
+                  table-layout: fixed;
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: left;
+                  color:black;
+              }
+  
+              .wrapper {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                padding-top: 25px;
+                height: 0;
+            }
+            .wrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+               
+  
+                  table#tracktablerace caption {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+  
+              }
+              table#tracktable td{
+                  padding-top: 2px;
+                  padding-bottom: 2px;
+              }
+              table#tracktablerace td{
+                padding:5px;
+                padding-left:20px;
+            }
+  
+  
+              table#tracktable th{
+                padding-right: 10px;
+            }
+              .stats{
+                background-color: #e4e4e4c2;
+              }
+  
+              .statschamp{
+                background-color: #2a060652;
+                padding-top: 10px;
+              }
+  
+  
+            .StatsTable{
+              overflow-x: scroll;
+            }
+            table#StatsTable{
+              margin-top: 10px;
+              table-layout: auto;
+              max-width: 95%;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: left;
+              
+          }
+  
+          table#StatsTable caption {
+              padding-bottom: 10px;
+              padding-top: 10px;
+              font-size: 30px;
+          }
+          table#StatsTable td{
+              padding-top: 2px;
+              padding-bottom: 2px;
+              padding-left: 5px;
+              background-color: #e4e4e4cc;
+              font-family: 'f1reg';
+          }
+  
+          table#StatsTable td :nth-child(1){
+            font-family: 'f1bold'
+          }
+  
+          table#StatsTable th{
+              background-color:#bab5b5;
+              font-weight: bold;
+              padding-top: 4px;
+              padding-bottom: 4px;
+              padding-left: 5px;
+              padding-right: 5px;
+          }
+  
+          table#StatsTable tr:nth-child(even){
+              background-color: #a7b1ba;
+      
+          }
+              
+        
+  
+  
+                table#drivertimeline {
+                    table-layout: fixed;
+                    width: 98%;
+                    border-radius: 10px;
+                    border-collapse: collapse;
+                    margin-bottom: 40px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    border: 2px solid rgb(255, 255, 255);
+        
+        
+        
+                }
+        
+                table#drivertimeline th {
+                    border-bottom: 2px solid rgb(255, 255, 255);
+                    background-color: rgba(114, 211, 122, 0.5);
+                    border-radius: 12px;
+                    width: 35px;
+        ;
+                }
+        
+                table#drivertimeline td {
+                    background-color: rgba(114, 211, 122, 0.5);
+                    padding-top: 4px;
+                    border-radius: 12px;
+                    width: 35px;
+                    padding-bottom: 4px;
+                }
+        
+                table#drivertimeline caption {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    font-style: italic;
+                    border-top: 2px solid rgb(255, 255, 255);
+                    border-left: 2px solid rgb(255, 255, 255);
+                    border-right: 2px solid white;
+        
+                }
+        
+                table#drivertimeline tr:nth-child(2) {
+                    font-weight: bold;
+                }
+        
+                table#drivertimeline col:nth-child(even) {
+                    background-color: rgba(114, 211, 119, 0.5);
+                }
+        
+        
+                .drivertimeline {
+                    text-align: center;
+                    background-color: rgba(34, 61, 33, 0.5);
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    margin-top: 40px;
+                    border-radius: 15px 50px;
+                    border-style: outset;
+        
+                }
+                h2.drivertimeline{padding-top: 20px;}        
+    
+            h2.racewinner {
+                padding-top: 5px;
+                border-style: outset;
+                background-color: rgb(15, 26, 18);
+                border-radius: 100px;
+  
+            }
+  
+  
+            h2.champwinner {
+              padding-top: 5px;
+              border-style: outset;
+              background-color: rgb(140, 103, 40);
+              border-radius: 100px;
+              padding-left: 100px;
+              padding-right: 100px;
+  
+          }
+            h3.racewinner {
+              padding-top: 5px;
+              border-style: outset;
+              background-color: rgb(32, 44, 36);
+              width: 300px;
+              border-radius: 100px;
+  
+          }
+    
+            h2.racewin {
+                margin-top: -12px;
+            }
+            h3.racewin {
+              margin-top: -12px;
+          }
+  
+  
+            h4.racewinner {
+              padding-top: 5px;
+              border-style: outset;
+              background-color: rgba(43, 75, 52, 0.5);
+  
+          }
+    
+            
+            .raceresults {
+              table-layout: fixed;
+              max-width: 80%;
+              min-width: 60%;
+              border-collapse: collapse;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 5px;
+              font-weight: bold;
+              text-align: center;
+              background-color: rgb(0,0,0,0.85);
+              font-size: 0.75vw;
+              
+  
+          }
+  
+          .raceresults th {
+  
+              padding: 8px;
+              width: max-content;
+              text-align: left;
+          }
+  
+          .raceresults td {
+              
+              padding-right: 8px;
+              padding-left: 8px;
+              height: 30px;
+              width: max-content;
+              vertical-align: middle;
+              text-align: left;
+          }
+          .raceresults td:nth-child(1) {
+            color: rgb(255, 255, 255);
+            border-radius: 10px;
+            background-color: #ffff007a;
+            text-align: center;
+            padding-right: 5px;
+              padding-left: 5px;
+        }
+  
+        .raceresults td:nth-child(2) {
+          width:30px
+        }
+  
+          .raceresults caption {
+  
+              font-size: 24pt;
+              background-color: rgb(0,0,0,0.85);
+              padding-bottom: 5px;
+              padding-top: 5px;
+              border-bottom: 2px #b62f2f solid;
+  
+          }
+  
+          .column{
+            float: left;
+            width: 50%;
+            text-align: center;
+            padding: 1%;
+          }
+  
+  
+          .columnraceresult{
+            float:left;
+            width:37.5%;
+          }
+          .columnqualyresult{
+            float:left;
+            width:25%;
+          }
+  
+          blockquote.twitter-timeline {
+            display: inline-block;
+            font-family: 'exo';
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 16px;
+            border-color: #eee #ddd #bbb;
+            border-style: solid;
+            border-width: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            margin: 10px 5px;
+            padding: 0 16px 16px 16px;
+            max-width: 468px;
+          }
+          
+          blockquote.twitter-timeline p {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 20px;
+          }
+          
+          blockquote.twitter-timeline a {
+            color: inherit;
+            font-weight: normal;
+            text-decoration: none;
+            outline: 0 none;
+          }
+          
+          blockquote.twitter-timeline a:hover,
+          blockquote.twitter-timeline a:focus {
+            text-decoration: underline;
+          }
+          .sponsor
+        {
+          border: 4px solid rgb(88, 20, 20);
+          padding-left: 5px;
+          padding-right: 5px;
+          border-radius: 5px;
+          background-color: rgb(238, 202, 202);
+          color: rgb(0, 0, 0);
+        }
+        .fastestlap{
+          border: 3px;
+          border-color: rgb(79, 8, 79);
+          border-style: solid;
+          padding: 3px;
+          border-radius: 50%;
+        }
+        .bioquote{
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: left;
+          font-family: 'f1reg';
+        }
+        .quote{
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+          font-style: italic;
+        }
+        .videowrapper
+  {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    width:80%;
+  }
+    .videowrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+  /* external css: flickity.css */
+  
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  
+  .gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+    
+  
+  /* ==========================================================================
+     Your custom CSS styles for smartphones and screens smaller than 800 px
+     ========================================================================== */
+  
+     @media screen and ( max-width: 800px ) { 
+      .row { flex-direction: column; width: 100%;}
+      .timeline {display: none;}
+      .calendar {font-size: 6pt; overflow-x: auto; min-width: 0;}
+      .supergrid{font-size: 6pt;}
+      .column.middle {padding-left: 1px;}
+      table#supergrid td {font-size: 6pt;}
+      table#supergrid th {font-size: 7pt;}
+      table#calendar td {font-size: 6pt;}
+      table#calendar th {font-size: 7pt;}
+      table#list td {font-size: 6pt;}
+      table#list th {font-size: 7pt;}
+      .raceresults td {font-size: 6pt;}
+      .raceresults th {font-size: 7pt;}
+      .collapse {display: none;}
+      .robsreview {font-size: 8pt;}
+      .banner{
+        width:350px;
+      }
+      .bigstatsfiltertable td {display: table-row}
+      .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+      .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+      .topnav a:not(:first-child) {display: none;}
+      .topnav div:not(:first-child) {display: none;}
+      .champtableimage {height: 35px;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+        padding-bottom: 32px;
+        
+      }
+      .raceimage
+  {
+    height:20vw
+  }
+  .firstcolumn {
+    width: 30%;
+    padding-bottom: 10px;
+    
+  }
+  
+  .secondcolumn {
+    flex:1 0 0%;
+    padding-bottom: 10px;
+    float: none;
+    margin-top: -1px;
+  }
+      .tracktablerace{
+        margin-bottom:2pc;
+        background: #e4e4e4cc;
+          border-radius: 10px;
+          border: 1px solid #a2a9b1;
+          border-spacing: 3px;
+          padding: 2pc;
+          width: fit-content;
+          margin-top:50px;
+          margin-right: auto;
+          height:fit-content;
+          font-size: initial;
+  
+    }
+      table.driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
+      .rowrace {
+        display: flex;
+        width: 80%;
+        padding-bottom: 3%;
+        padding-top:2pc;
+        margin-left: auto;
+      margin-right: auto;
+      flex-direction: column;
+  
+      }
+      .rowraceresult {
+        display: flex;
+        width: 80%;
+        padding-bottom: 3%;
+        margin-left: auto;
+      margin-right: auto;
+      flex-direction: column;
+      overflow-x: auto;
+      }
+    }
+  
+      @media screen and ( max-width: 800px ) { 
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+       position: absolute;
+       right: 0;
+       top: 0;
+      }
+  
+      .topnav.responsive a {
+       float: none;
+       display: block;
+       text-align: left;
+      }q
+  
+      .topnav.responsive div {
+        float: none;
+        display:contents;
+        text-align: left;
+       }
+       .topnav.responsive .dropdown{
+       float: none;
+       text-align: left;
+       }
+       .dropdown .dropbtn {
+        font-size: 14px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        
+        font-family: inherit;
+        margin: 0;
+        pointer-events: none;
+      }
+  
+      .columntable{
+        width: 100%;
+      }
+      .column{
+        width: 100%;
+      }
+      .tracktable{
+        margin-bottom:2pc;
+        background: #e4e4e4cc;
+          border-radius: 10px;
+          border: 1px solid #a2a9b1;
+          border-spacing: 3px;
+          width: 98%;
+          margin-left: auto;
+          margin-right: auto;
+  
+    }
+  
+    }
+  
+  table#nolayout {
+      table-layout: fixed;
+      max-width: 80%;
+      border-collapse: collapse;
+      padding: 5px;
+      font-weight: bold;
+      text-align: center;
+  
+  }
+  
+      table#nolayout th {
+          border-bottom: 2px rgb(255, 255, 255) solid;
+          background-color: rgb(15, 26, 18);
+          ;
+          padding: 10px;
+          width: max-content
+      }
+  
+      table#nolayout td {
+          padding-right: 5px;
+          padding-left: 5px;
+          height: 30px;
+          width: max-content;
+          vertical-align: middle;
+      }
+  
+     table#nolayout td:nth-child(1) {
+  
+        background-color: #ffffff00;
+  
+    }
+  
+  
+  .result-driver-tyres {
+      width: 18px;
+      height: 18px;
+      padding-right: 2px;
+  }
+  
+      .result-driver-tyres div {
+          width: 18px;
+          height: 18px;
+          padding-top: 5px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          margin-left: 5px;
+      }
+  
+  .result-driver-tyres-S {
+      background-image: url('../images/s.png')
+  }
+  
+  .result-driver-tyres-M {
+      background-image: url('../images/m.png')
+  }
+  
+  .result-driver-tyres-H {
+      background-image: url('../images/h.png')
+  }
+  
+  .result-driver-tyres-I {
+      background-image: url('../images/i.png')
+  }
+  
+  .result-driver-tyres-W {
+      background-image: url('../images/w.png')
+  }
+  
+  
+  /* ==========================================================================
+     Helper classesnav
+     ========================================================================== */
+  
+  .hidden {
+      display: none !important;
+      visibility: hidden;
+  }
+  
+  /* Clearfix
+   * Adding a 'clearfix' class will allow parent elements to contain a floated child element
+   */
+  
+  .clearfix:before,
+  .clearfix:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+  
+  .clearfix:after {
+      clear: both;
+  }
+  
+  /*
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  
+  .clearfix {
+      *zoom: 1;
+  }
