@@ -1497,6 +1497,11 @@
       .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
       .topnav a:not(:first-child) {display: none;}
       .topnav div:not(:first-child) {display: none;}
+      .topnav {
+        overflow: hidden;
+        background-color: rgb(1, 39, 3);
+        padding: 0%
+    }
       .champtableimage {height: 35px;}
       .topnav a.icon {
         float: right;
