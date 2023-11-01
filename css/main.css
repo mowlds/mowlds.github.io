@@ -264,7 +264,7 @@
   
     }
   
-  @media screen and ( min-width: 800px ) {
+  @media screen and ( min-width: 500px ) {
       .dropdown-content a:hover {
           background-color: rgb(43, 75, 52);
       }
