@@ -1574,7 +1574,7 @@ table#seasonlist td:nth-child(7){
          float: none;
          text-align: left;
          }
-           .topnav a:not(:first-child) {display: none;}
+
         .topnav div:not(:first-child) {display: none;}
         .topnav {
           overflow: hidden;
