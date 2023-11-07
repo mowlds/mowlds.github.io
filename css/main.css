@@ -626,6 +626,7 @@
   }
   .trumpstable th:nth-child(2){
     padding-right: 15px;
+    text-align: right;
   }
 
 
