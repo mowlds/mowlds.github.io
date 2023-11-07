@@ -606,12 +606,19 @@
   
   }
 
+
+
+  .trumps{
+    padding-top: 3vw;
+  }
+  
   .trumpstable{
     width: 350px;
     background-color: #b62f2f;
     font-family: 'f1bold';
     color: white;
     font-style: italic;
+
   }
 
 
