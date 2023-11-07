@@ -659,10 +659,13 @@ margin-left:-100px;
     padding-bottom: 5px;
     background-color: #b62f2f;
   }
-  .trumpstable tr:last-child td{
+  .trumpstable tr:last-child td:nth-child(1){
     border-bottom-left-radius:10px;
+  }
+  .trumpstable tr:last-child td:nth-child(2){
     border-bottom-right-radius:10px;
   }
+
 
 
   table#champtable {
