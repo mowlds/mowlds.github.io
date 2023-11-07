@@ -1612,7 +1612,7 @@ margin-left:-100px;
       flex-direction: column;
       overflow-x: auto;
       }
-    }
+    
     .trumpsimage{
       margin-left:-1px;
       height:80px
@@ -1620,7 +1620,7 @@ margin-left:-100px;
         .trumpstable{
           width:300px;
         }
-  
+      }
       @media screen and ( max-width: 800px ) { 
       .topnav.responsive {position: relative;}
       .topnav.responsive a.icon {
