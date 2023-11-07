@@ -623,13 +623,16 @@
 
   }
 
-
+  .trumpsimage{
+margin-left:-100px;
+  }
   .trumpstable th{
     font-size: larger;
     font-style: italic;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
+    border-radius: 10px;
   }
   .trumpstable th:nth-child(1){
     padding-left: 15px;
