@@ -614,7 +614,7 @@
 
   .trumpstable{
     width: 350px;
-    background-color: #b62f2f;
+
     font-family: 'f1bold';
     color: white;
     font-style: italic;
@@ -630,6 +630,9 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
+  }
+  .trumpstable td{
+    background-color: #b62f2f;
   }
   .trumpstable th:nth-child(1){
     padding-left: 15px;
