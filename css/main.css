@@ -614,7 +614,7 @@
 
   .trumpstable{
     width: 350px;
-    background-color: #b62f2f;
+    background-color: #000000;
     font-family: 'f1bold';
     color: white;
     font-style: italic;
@@ -657,6 +657,7 @@ margin-left:-100px;
   .trumpstable td{
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color: #b62f2f;
   }
 
 
