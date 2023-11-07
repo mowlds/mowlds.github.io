@@ -611,13 +611,15 @@
   .trumps{
     padding-top: 3vw;
   }
-  
+
   .trumpstable{
     width: 350px;
     background-color: #b62f2f;
     font-family: 'f1bold';
     color: white;
     font-style: italic;
+    border-radius: 15px;
+    border: black 3px solid;
 
   }
 
@@ -625,7 +627,6 @@
   .trumpstable th{
     font-size: larger;
     font-style: italic;
-    background-color: rgb(0 0 0);
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: left;
@@ -636,6 +637,9 @@
   .trumpstable th:nth-child(2){
     padding-right: 15px;
     text-align: right;
+  }
+  .trumpstable tr:nth-child(1){
+    background-color: black;
   }
 
 
