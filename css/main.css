@@ -177,7 +177,7 @@
   
      .topnav {
     overflow: hidden;
-    background-color: rgb(43, 75, 52);
+    background-color: #b62f2f ;
   }
   
   .topnav a {
@@ -190,12 +190,12 @@
   }
   
   .topnav a:hover {
-    background-color: rgb(69, 121, 83);
+    background-color: rgb(87, 27, 27);
     color: rgb(255, 255, 255);
   }
   
   .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #b62f2f;
     color: white;
   }
   
@@ -227,19 +227,19 @@
       outline: none;
       color: white;
       padding: 14px 16px;
-      background-color: rgb(43, 75, 52);
+      background-color: #b62f2f;
       font-family: inherit;
       margin: 0;
     }
     
     .navbar a:hover, .dropdown:hover .dropbtn {
-      background-color: rgb(90, 156, 108);
+      background-color: rgb(87, 27, 27)
     }
     
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: rgb(90, 156, 108);
+      background-color: #b54949;
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
@@ -664,6 +664,26 @@
   .trumpstable tr:last-child td:nth-child(2){
     border-bottom-right-radius:10px;
   }
+  .underline{
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+    margin-top: -2px;
+ }
+ 
+ 
+ .underline::after {
+    content:'';
+    width:100%;
+    position: absolute;
+    left:0;
+    bottom:-1px;
+    height: 3px;
+    background: #30e8bf;
+    background: -webkit-linear-gradient(to right, #30e8bf, #ff8235);
+    background: linear-gradient(to right, #30e8bf, #ff8235);
+ }
 
 
 
