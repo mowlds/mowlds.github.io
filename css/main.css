@@ -252,7 +252,7 @@
       text-decoration: none;
       display: block;
       text-align: left;
-      background-color: rgb(116 146 124) ;
+      background-color: #b66060; ;
     }
   
     .firstletter {
@@ -266,7 +266,7 @@
   
   @media screen and ( min-width: 500px ) {
       .dropdown-content a:hover {
-          background-color: rgb(43, 75, 52);
+          background-color: rgb(94, 21, 21);;
       }
   
       .dropdown:hover .dropdown-content {
@@ -311,7 +311,7 @@
       text-decoration: none, 
     }
     a:hover{
-      color: rgb((43, 75, 52));
+      color: rgb(43, 75, 52);
     }
     article{
           box-shadow:3px 3px 1.5px rgb(43, 75, 52);
