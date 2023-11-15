@@ -609,7 +609,12 @@
 
 
   .trumps{
-    padding-top: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin-top: 5vw;
+    background-color: #7c47012b;
   }
 
   .trumpstable{
