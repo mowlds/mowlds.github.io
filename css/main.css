@@ -618,7 +618,7 @@
   }
 
   .trumpstable{
-    width: 350px;
+    width: 23vw;
     background-color: #000000;
     font-family: 'f1bold';
     color: white;
@@ -1649,7 +1649,7 @@
       height:80px
         }
         .trumpstable{
-          width:300px;
+          width:70vw;
         }
       }
       @media screen and ( max-width: 800px ) { 
