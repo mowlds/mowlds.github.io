@@ -32,6 +32,14 @@ namespace mowlds.github.io.DAL
         public string DriverQuote { get; set; }
         public string DriverImage { get; set; }
         public string TwitchName { get; set; }
+        public string KnownFor { get; set; }
+        public Nullable<int> Pace { get; set; }
+        public Nullable<int> Strategy { get; set; }
+        public Nullable<int> Luck { get; set; }
+        public Nullable<int> Snakeyness { get; set; }
+        public Nullable<int> Chat { get; set; }
+        public Nullable<int> Headsgone { get; set; }
+        public Nullable<int> BoxOffice { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DriverTeam> DriverTeam { get; set; }

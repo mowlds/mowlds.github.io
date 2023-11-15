@@ -75,39 +75,43 @@
                     </tr>
                 </table>
             </div>
-                <!-- <div class="trumps">
+            <div class="trumps">
                     <img class="trumpsimage" src="../images/toptrumps.png">
         <table class="trumpstable">
             <tr>
+                <th>Known for</th>
+                <th>@Html.DisplayFor(driverItem => Model.Driver.KnownFor)</th>
+            </tr>
+            <tr>
                 <th>BOX OFFICE RATING</th>
-                <th>81</th>
+                <th>@Html.DisplayFor(driverItem => Model.Driver.BoxOffice)</th>
             </tr>
             <tr>
               <td>PACE</td>
-              <td>0</td>
+              <th>@Html.DisplayFor(driverItem => Model.Driver.Pace)</th>
           </tr>
           <tr>
               <td>STRATEGY</td>
-              <td>1</td>
+              <th>@Html.DisplayFor(driverItem => Model.Driver.Strategy)</th>
           </tr>
           <tr>
               <td>SNAKEYNESS</td>
-              <td>2</td>
+              <th>@Html.DisplayFor(driverItem => Model.Driver.Snakeyness)</th>
           </tr>
           <tr>
               <td>LUCK</td>
-              <td>0</td>
+              <th>@Html.DisplayFor(driverItem => Model.Driver.Luck)</th>
           </tr>
           <tr>
             <td>CHAT</td>
-            <td>11</td>
+            <th>@Html.DisplayFor(driverItem => Model.Driver.Chat)</th>
         </tr>
           <tr>
             <td>HEADSGONE</td>
-            <td>85</td>
+            <th>@Html.DisplayFor(driverItem => Model.Driver.Headsgone)</th>
         </tr>
             </table>
-     </div>-->
+        </div>
         </div>
         <div class="column middle">
             <div class="bioquote">@Html.Raw(Model.Driver.Bio)</div></br>

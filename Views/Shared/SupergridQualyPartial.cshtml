@@ -77,7 +77,8 @@
                         }
 
                         string postionLink = String.Format("../../images/numbers/{0}{1}.png", result, dr.HasFastestLap ? "fl" : "");
-                        <td><img class="icongrid" src=@postionLink></td>
+                        string racelink = string.Format("DriverResult?race={0}", race.ID.ToString());
+                        <td><a href=~/@racelink><img class="icongrid" src=@postionLink></a></td>
                         hasvalue = true;
                     }
                 }

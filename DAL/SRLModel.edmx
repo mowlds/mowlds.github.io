@@ -18,7 +18,15 @@
           <Property Name="Bio" Type="text" />
           <Property Name="DriverQuote" Type="text" />
           <Property Name="DriverImage" Type="text" />
-          <Property Name="TwitchName" Type="nchar" MaxLength="250" />
+          <Property Name="TwitchName" Type="varchar" MaxLength="250" />
+          <Property Name="KnownFor" Type="nchar" MaxLength="100" />
+          <Property Name="Pace" Type="int" />
+          <Property Name="Strategy" Type="int" />
+          <Property Name="Luck" Type="int" />
+          <Property Name="Snakeyness" Type="int" />
+          <Property Name="Chat" Type="int" />
+          <Property Name="Headsgone" Type="int" />
+          <Property Name="BoxOffice" Type="int" />
         </EntityType>
         <EntityType Name="DriverResult">
           <Key>
@@ -53,7 +61,7 @@
           <Property Name="Tyre8" Type="nchar" MaxLength="2" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view '8431_SRL.dbo.DriverTeam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DriverTeam">
           <Key>
             <PropertyRef Name="Driver" />
@@ -354,7 +362,15 @@ warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key de
           <NavigationProperty Name="DriverTeam" Relationship="Self.Driver_to_DriverTeam" FromRole="Driver" ToRole="DriverTeam" />
           <NavigationProperty Name="DriverResult" Relationship="Self.FK_Driver_DriverResult" FromRole="Driver" ToRole="DriverResult" />
           <NavigationProperty Name="RaceLaps" Relationship="Self.Lead_Driver_to_RaceLaps" FromRole="Driver" ToRole="RaceLaps" />
-          <Property Name="TwitchName" Type="String" FixedLength="true" Nullable="true" MaxLength="250" />
+          <Property Name="TwitchName" Type="String" FixedLength="false" Nullable="true" MaxLength="250" Unicode="false" />
+          <Property Name="KnownFor" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="Pace" Type="Int32" />
+          <Property Name="Strategy" Type="Int32" />
+          <Property Name="Luck" Type="Int32" />
+          <Property Name="Snakeyness" Type="Int32" />
+          <Property Name="Chat" Type="Int32" />
+          <Property Name="Headsgone" Type="Int32" />
+          <Property Name="BoxOffice" Type="Int32" />
         </EntityType>
         <EntityType Name="DriverResult">
           <Key>
@@ -690,6 +706,14 @@ warning 6002: The table/view 'SRL.dbo.DriverTeam' does not have a primary key de
           <EntitySetMapping Name="Driver">
             <EntityTypeMapping TypeName="SRLModel.Driver">
               <MappingFragment StoreEntitySet="Driver">
+                <ScalarProperty Name="BoxOffice" ColumnName="BoxOffice" />
+                <ScalarProperty Name="Headsgone" ColumnName="Headsgone" />
+                <ScalarProperty Name="Chat" ColumnName="Chat" />
+                <ScalarProperty Name="Snakeyness" ColumnName="Snakeyness" />
+                <ScalarProperty Name="Luck" ColumnName="Luck" />
+                <ScalarProperty Name="Strategy" ColumnName="Strategy" />
+                <ScalarProperty Name="Pace" ColumnName="Pace" />
+                <ScalarProperty Name="KnownFor" ColumnName="KnownFor" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ForumName" ColumnName="ForumName" />
