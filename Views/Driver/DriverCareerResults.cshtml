@@ -42,7 +42,12 @@
             {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => supergrid.season.Year)
+            @{string linkvalue = string.Format("../Season/season?season={0}", supergrid.season.ID.ToString());
+            }
+
+            @{string parameterValue = supergrid.season.Year.ToString();
+            }
+            <a href=@linkvalue>@parameterValue</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => supergrid.season.Number)
