@@ -1413,6 +1413,7 @@
             text-align: center;
             padding-right: 5px;
               padding-left: 5px;
+              border-bottom: #000000 1px solid;
         }
   
         .raceresults td:nth-child(2) {
