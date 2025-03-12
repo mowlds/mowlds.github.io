@@ -823,9 +823,9 @@
     color:grey;
   }
   table#supergrid td:nth-child(1) {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
             border-radius: 5px;
-            background-color: #bfbf08;
+            background-color: #f3f314;
             text-align: center;
             padding-right: 5px;
               padding-left: 5px;
