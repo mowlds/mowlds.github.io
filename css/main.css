@@ -138,6 +138,10 @@
    font-size:1em; 
    font-family:'f1reg';
   }
+  .homearticle{
+    font-size:1em; 
+    font-family:'f1reg';
+   }
   
   .column.side {
     -webkit-flex: 1;
