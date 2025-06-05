@@ -28,13 +28,13 @@
   .wikiparent{
     padding-top:  20px;
     padding-bottom: 200px;
-    background-color: #e3e9e3;
+    background-color: #FAEBD7;
     color: black;
   }
   .homeparent{
     padding-top:  20px;
     padding-bottom: 200px;
-    background-color: #e3e9e3;
+    background-color: #FAEBD7;
   }
   .wikiparentrace{
     padding-top:  20px;
@@ -309,7 +309,7 @@
     font-family: 'f1bold';
     }
     html, body{
-      background-color: #e3e9e3;
+      background-color: #FAEBD7;
     }
     .block{
       display: block;
