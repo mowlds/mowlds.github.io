@@ -1,41 +1,65 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rules</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/html5-boilerplate.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/html5-boilerplate.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&amp;family=Orbitron:wght@700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
         body {
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../../images/stewards.jpg');
-            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
             font-family: 'exo';
             color: white;
             margin: 10px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
-<body style="font-family: 'f1reg'">
+<body style="font-family: f1reg;">
     <header>
-        <img src="images/SRL.png" alt="SRL Logo" style="height:75px;width:auto;padding-top: 30px;" class="center">
-        <h2 style="text-align: center;font-family:'f1reg';">THE SERIOUS RACING LEAGUE</h2>
-        <div id="nav-placeholder"></div>
+        <img src="images/SRL.png" alt="SRL Logo" style="height:75px; width:auto; padding-top:30px;" class="center" />
+        <h2 style="text-align:center; font-family:'f1reg';">THE SERIOUS RACING LEAGUE</h2>
+        <div id="nav-placeholder">
+            <div class="topnav" id="topnav">
+                <a href="http://www.seriousracingleague.com">Home</a>
+                <a href="/Season/season?season=30">Current Season</a>
+                <a href="/rules.html">Rules</a>
+                <a href="/refund.html">Refunds</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Wiki <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="/Season">Seasons</a>
+                        <a href="/Races">Races</a>
+                        <a href="/Driver">Drivers</a>
+                        <a href="/Team">Teams</a>
+                        <a href="/Track">Tracks</a>
+                    </div>
+                </div>
+                <a href="/Stats">Stats</a>
+                <a href="/live">LIVE</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+                <div class="topnav-right">
+                    <a href="/golf/home.html">Serious Golfing Association</a>
+                    <a href="/poker/PokerHome.html">World Serious of Poker</a>
+                </div>
+            </div>
+        </div>
         <script>
             $(function () {
                 $("#nav-placeholder").load("/nav.html");
             });
-        </script>
-        <script>
             function myFunction() {
                 var x = document.getElementById("topnav");
                 if (x.className === "topnav") {
@@ -48,117 +72,133 @@
     </header>
 
     <div class="wikiparent">
-        <div style="margin:5%">
-            <h2 style="text-align: center;">SRL RULES AND DRIVING REGULATIONS</h2>
-
+        <div style="margin:5%;">
+            <h2 style="font-style: normal; text-align: center;">SRL RULES AND DRIVING REGULATIONS</h2>
+            <br />
             <h2>Race Day Schedule</h2>
-            <p><strong>Confirmation</strong> – In the event of grids potentially exceeding 20 the deadline for confirmation is 23.59 on the Saturday or Tuesday before race day...</p>
-            <p><strong>Raceday Schedule</strong> – On a raceday within the calendar, a lobby will be created...</p>
+            <p><strong>Confirmation</strong> - In the event of grids potentially exceeding 20 the deadline for confirmation of your participation is 23.59 on the Saturday or Tuesday before race day. regardless, partipcation can be confirmed either on the thread on the SI forums or within the discord with regular SRL racers given priority, confirmation is strongly encouraged for fairness for all potential racers</p>
+            <p><strong>Raceday Schedule</strong> - On a raceday within the calendar, a lobby will be created for anybody to join around 9pm where 3 lap practice races with qualifying will begin. at no earlier than 9.45pm and pending waiting on any confirmed latecomers, a full event will be set up. Drivers are expected to be in the correctly assigned car prior to the event launching.</p>
+            <br />
 
             <h2>Driving Regulations</h2>
 
             <h3>General Conduct</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Fair Play</strong>: Intentional crashing, blocking, or race manipulation is grounds for disciplinary action.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Clean Racing</strong>: Reckless driving will be penalised.</li>
+                <li style="display:block;"> <strong>Fair Play</strong>: Intentional crashing, blocking, or race manipulation (e.g. causing safety cars) is grounds for severe disciplinary action.</li>
+                <li style="display:block;"> <strong>Clean Racing</strong>: Racing incidents will happen, but reckless driving will be penalised.</li>
             </ul>
 
             <h3>Race Etiquette</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Track Limits</strong>: In-game track limits apply. No stewards overrides.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Rejoining Safely</strong>: Must rejoin safely after going off-track.</li>
-                <li style="display:block; margin-bottom:0.5em;">Reset to track allowed only if stuck. Causing damage will be penalized.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Blue Flags</strong>: Yield to faster cars. No impeding.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Yellow Flags</strong>: Slow down and do not overtake unless safe.</li>
+                <li style="display:block;"><strong>Track Limits</strong>: The in-game track limits system is adhered to. The stewards will not overturn in game penalties awarded by the game.</li>
+                <li style="display:block;"><strong>Rejoining Safely</strong>: After leaving the track, you must rejoin only when it’s safe to do so. Dangerous rejoins may lead to penalties.</li>
+                <li style="display:block;">Reset to track should only be used in circumstances where you are stuck. Any time loss or damage caused to other drivers through the use of reset to track will be punished via the penalty points system.</li>
+                <li style="display:block;"><strong>Blue Flags</strong>: Lapped cars must yield to faster cars without impeding them. The in-game blue flag system is adhered to, however the stewards are able to hand out additional penalties if the lapped car causes excessive time loss or damage when being lapped.</li>
+                <li style="display:block;"><strong>Yellow Flags</strong>: Drivers must slow appropriately and not overtake under yellow flag conditions unless the car ahead is off-track or ghosted.</li>
             </ul>
 
             <h3>Qualifying Rules</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Impedance</strong>: Blocking is prohibited.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Out/In Laps</strong>: Must yield to flying laps.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Retiring</strong>: Retire off racing line safely.</li>
+                <li style="display:block;"><strong>Impedance</strong>: Blocking another driver on a flying lap is strictly prohibited.</li>
+                <li style="display:block;"><strong>Out/In Laps</strong>: Drivers on out-laps or in-laps must yield to those on flying laps.</li>
+                <li style="display:block;"><strong>Retiring</strong>: If retiring in qualifying, do so safely off the racing line and outside of blind corners.</li>
             </ul>
 
             <h3>Overtaking and Defending</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Racing Room</strong>: Leave space for others.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Defensive Moves</strong>: Only one move allowed per straight.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Dive Bombs</strong>: Must be clean or will be penalised.</li>
+                <li style="display:block;"><strong>Racing Room</strong>: Leave space when racing other drivers. Forcing another driver off the track is not allowed.</li>
+                <li style="display:block;"><strong>Defensive Moves</strong>: Only one defensive move per straight is permitted. No weaving.</li>
+                <li style="display:block;"><strong>Dive Bombs</strong>: Late lunges that result in contact or a loss of control will be penalised unless clean and controlled.</li>
             </ul>
 
             <h3>Starts and Safety Cars</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Race Starts</strong>: No false starts.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Safety Car</strong>: No overtaking unless instructed.</li>
-                <li style="display:block; margin-bottom:0.5em;">Maintain gaps, avoid erratic driving.</li>
-                <li style="display:block; margin-bottom:0.5em;">No strategic manipulation of safety cars.</li>
+                <li style="display:block;"><strong>Race Starts</strong>: No intentional false starts.</li>
+                <li style="display:block;"><strong>Safety Car</strong>:</li>
+                <li style="display:block;">No overtaking unless instructed.</li>
+                <li style="display:block;">Maintain a consistent gap and avoid erratic braking.</li>
+                <li style="display:block;">Drivers may not cause unnecessary safety cars for strategic gain.</li>
             </ul>
 
             <h3>Penalties and Stewarding</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Incident Reports</strong>: Must be submitted within 24 hours with video evidence.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Stewards Panel</strong>: 3 impartial stewards review incidents.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Penalty Types</strong>:</li>
-                <li style="display:block; margin-bottom:0.5em;">Time penalties</li>
-                <li style="display:block; margin-bottom:0.5em;">Qualifying bans</li>
-                <li style="display:block; margin-bottom:0.5em;">Race bans or suspensions</li>
+                <li style="display:block;"><strong>Incident Reports</strong>: Drivers may submit reports with video evidence within 24 hours of the race.</li>
+                <li style="display:block;"><strong>Stewards Panel</strong>: All incidents will be reviewed by 3 impartial stewards, selected at random post race. Decisions are final.</li>
+                <li style="display:block;"><strong>Penalty Types</strong>:</li>
+                <li style="display:block;">Time penalties</li>
+                <li style="display:block;">Qualifying bans</li>
+                <li style="display:block;">Race bans or suspensions</li>
             </ul>
 
             <h3>Connection and Technical Issues</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Lagging/Glitching Cars</strong>: Fix issues before returning.</li>
+                <li style="display:block;"><strong>Lagging/Glitching Cars</strong>: If your connection is unstable, you may be asked to leave and fix it before returning.</li>
             </ul>
 
             <h3>Car Setup and Assists</h3>
             <ul>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Custom Setups</strong>: Allowed.</li>
-                <li style="display:block; margin-bottom:0.5em;"><strong>Parc Fermé</strong>: Must follow in-game regulations.</li>
+                <li style="display:block;"><strong>Custom Setups</strong>: Allowed.</li>
+                <li style="display:block;"><strong>Parc Fermé</strong>: Setup changes must follow in-game Parc Fermé regulations.</li>
             </ul>
 
+            <br />
             <h2>Mass Disconnections</h2>
-            <p><strong><em>Within Opening 25% of racing laps</em></strong><br>- If 20%+ drivers disconnect, restart the race. Use original grid and weather.</p>
-            <p><strong><em>After 25% of racing laps</em></strong><br>- Use red flag rules and restart if needed. Half or full points may be awarded based on distance covered. PS5/4 prioritized if crossplay is the issue.</p>
+            <p><strong><em>Within Opening 25% of racing laps</em></strong><br />- In the event of a mass disconnection or problems with the lobby where 20% or greater drivers being disconnected within the opening 5 laps, the race will be abandoned and the event restarted immediately, In the event of an immediate re-race, the - - weather will match the original race conditions but we will set the grid up manually as per the original grid.</p>
+            <p><br /><em><strong>After 25% of racing laps have been completed</strong></em><br />- Where 20% or greater drivers are affected, the race will be stopped and deemed as a red flag scenario and restarted with a standing start with the order determined by the positions immediately prior to the first disconnection event happening<br />- If the disconnection event occurs during the period of a safety car or virtual safety car, then the order will be taken from immediately prior to the safety car coming out<br />- Any cars that have DNF’d or been disqualified will not be allowed to restart the race<br />- Where the completed laps total at the point of red flag is between 25% completed laps and 50% race distance then a 35% distance race will be used for restart purposes<br />- Where the completed laps total at the point of red flag is between 50% and 75% race distance then a 25% distance race will be used for restart purposes<br />- If we have completed 75% or more of race distance, half points will be awarded as per race positions at that point and no re-run of the race will be required.<br />- if we have completed 90% or more of race distance, full points will be awarded as per race positions at that point and no re-run of the race will be required.<br />- If 20% of drivers that are still in the race (ie. not DNF or DSQ) are unable to rejoin the new lobby then the race will be abandoned and a will be rescheduled at the earliest opportunity<br />- If Crossplay is found to be the cause of the connection issues then a restart without crossplay will be chosen with the the PS5/4 being the priority console, anyone on an alternative console will be shunned and embarrased<br /> <br /></p>
 
             <h2>Point Scoring</h2>
-            <p>Real-life F1 point system: 25-18-15-12-10-8-6-4-2-1<br>No points for fastest lap (F1 2025).<br>Tiebreaks go to most wins → poles → fastest laps.</p>
-
+            <br />
+            The league will follow the real life points scoring system awarding 25-18-15-12-10-8-6-4-2-1 points to the top 10 drivers.<br />
+            as of f1 2025 no points are awarded for whoever sets the fastest lap<br />
+            At the end of the season, if 2 drivers are tied then the driver with the most wins will be awarded the higher spot. Should the 2 drivers also be tied on this then the driver with the most poles will be awarded the higher spot and should we still have a tie here then the driver with the most fastest laps will be awarded the higher spot.<br />
+            <br />
+            <br />
             <h2>Settings</h2>
-            <p><strong>SESSION OPTIONS:</strong><br>
-            Maximum Players: 20<br>
-            Practice Type: NONE<br>
-            Qualifying: SHORT<br>
-            Sprint: OFF<br>
-            Race Distance: 50%<br>
-            Starting Grid: QUALIFYING<br>
-            Weather: DYNAMIC<br>
-            Forecast: APPROXIMATE<br>
-            Start Time: OFFICIAL<br></p>
-
-            <p><strong>RACE SETTINGS:</strong><br>
-            Car Performance: EQUAL<br>
-            Parc Fermé: ON<br>
-            Collisions: ON<br>
-            Damage: REDUCED<br>
-            Damage Rate: STANDARD<br>
-            Safety Car: REDUCED<br>
-            Red Flags: INCREASED<br>
-            Corner Cutting: STRICT<br>
-            Formation Lap: OFF<br>
-            Race Starts: MANUAL<br>
-            Pit Stops: IMMERSIVE<br>
-            Safety Car Experience: IMMERSIVE<br>
-            Low Fuel Mode: HARD<br></p>
-
-            <p><strong>ASSIST RESTRICTIONS:</strong><br>
-            Steering Assist: OFF<br>
-            Braking Assist: OFF<br>
-            ABS: PERSONAL<br>
-            TC: PERSONAL<br>
-            Auto Gearbox: PERSONAL<br>
-            Pit Assist: ON<br>
-            Racing Line: PERSONAL<br></p>
-
-            <p><strong>NOTE:</strong> If anything is unclear, ask. Drivers are responsible for knowing the rules. Mistakes or suggestions are welcome.</p>
+            <br />
+            <strong>SESSION OPTIONS:-</strong>
+            <br />
+            <br />
+            Maximum Players: 20<br />
+            Practice Type: NONE<br />
+            Qualifying: SHORT QUALIFYING<br />
+            Sprint Distance: OFF (NO SPRINTS)<br />
+            Race Distance: 50% (aka LONG)<br />
+            Starting Grid: QUALIFYING<br />
+            Quick Weather: DYNAMIC<br />
+            Forecast Accuracy: APPROXIMATE <br />
+            Session Start Time: OFFICIAL / REALISTIC<br />
+            <br />
+            <strong>RACE SETTINGS:-</strong>
+            <br />
+            <br />
+            Car Performance: EQUAL PERFORMANCE<br />
+            Parc Fermé Rules: ON<br />
+            Collisions: ON<br />
+            Car Damage: REDUCED<br />
+            Car Damage Rate: STANDARD<br />
+            Safety Car: REDUCED<br />
+            Red Flags: INCREASED<br />
+            Corner Cutting: STRICT <br />
+            Formation Lap: OFF<br />
+            Race Starts: MANUAL<br />
+            Pit Stop Experience: IMMERSIVE<br />
+            Safety Car Experience: IMMERSIVE<br />
+            Low Fuel Mode: HARD<br />
+            <br />
+            <strong>ASSIST RESTRICTIONS:-</strong>
+            <br />
+            <br />
+            Steering Assist: OFF<br />
+            Braking Assist: OFF<br />
+            Anti-Lock Brakes: PERSONAL PREFERENCE<br />
+            Traction Control: PERSONAL PREFERENCE<br />
+            Automatic Gearbox: PERSONAL PREFERENCE<br />
+            Pit Assist: ON <br />
+            Dynamic Racing Line: PERSONAL PREFERENCE<br />
+            <br />
+            IF ANYTHING DESCRIBED HERE ISN'T CLEAR, PLEASE ASK FOR CLARIFICATION - IT IS THE DRIVERS RESPONSIBILITY TO ENSURE THEY UNDERSTAND THE RULES AND IGNORANCE IS NOT A DEFENCE.<br />
+            <br />
+            IF ANYONE KNOWS OF ANYTHING THAT MAY HAVE BEEN MISSED, OR ANYTHING THAT I'VE GOT WRONG, PLEASE SAY SO - WE NEED TO MAKE SURE THAT EVERYTHING IS IN THIS POST
         </div>
     </div>
 </body>
