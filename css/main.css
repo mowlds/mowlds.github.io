@@ -34,7 +34,7 @@
   .homeparent{
     padding-top:  20px;
     padding-bottom: 200px;
-    background-color: #FAEBD7;
+    background-color: #f9f0e4;
   }
   .wikiparentrace{
     padding-top:  20px;
@@ -151,9 +151,9 @@
     flex: 1;
     text-align: center;
     margin-bottom:2pc;
-      border-top-right-radius: 10px;
-      border-right: 10px solid #b62f2f;
-      border-top: 10px solid #b62f2f;
+      border-top-right-radius: 30px;
+      border-right: 5px solid #b62f2f;
+      border-top: 5px solid #b62f2f;
       border-spacing: 3px;
       padding: 2pc;
      
