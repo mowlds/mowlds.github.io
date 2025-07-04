@@ -37,15 +37,16 @@ namespace mowlds.github.io.Controllers
             var previousRace = 0;
             var nextRace = 0;
 
+
             while (previousRace == 0 || nextRace == 0)
             {
-                if (allRaces.Where(r=> r.ID == race-counter).Any() && previousRace == 0)
+                if (allRaces.Where(r=> r.Race == race-counter).Any() && previousRace == 0)
                 {
-                    previousRace = allRaces.Where(r => r.ID == race - counter).First().ID;
+                    previousRace = allRaces.Where(r => r.Race == race - counter).First().Race;
                 }
-                if (allRaces.Where(r => r.ID == race + counter).Any() && nextRace == 0)
+                if (allRaces.Where(r => r.Race == race + counter).Any() && nextRace == 0)
                 {
-                    nextRace = allRaces.Where(r => r.ID == race + counter).First().ID;
+                    nextRace = allRaces.Where(r => r.Race == race + counter).First().Race;
                 }
                 counter++;
             }

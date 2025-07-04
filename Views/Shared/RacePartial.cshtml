@@ -17,6 +17,9 @@
 
                 </th>
                 <th>
+
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Driver1.Name)
                 </th>
                 <th>
@@ -43,7 +46,7 @@
         <tbody>
             @foreach (var item in Model.Where(grandprix => grandprix.SessionType == 3))
             {
-                var style = String.Empty;   
+                var style = String.Empty;
                 if (item.HasFastestLap)
                 {
                     style = "background-color: #79149aed";
@@ -71,6 +74,11 @@
                         @gained;
                         @:</span>
                     }
+                </td>
+                <td>
+                    @{string colour = string.IsNullOrEmpty(item.Driver1.Colour) ? string.Empty : item.Driver1.Colour.Trim();
+                    }
+                    <span style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; color:@colour"> @Html.DisplayFor(modelItem => item.Driver1.DriverNumber).ToString().PadLeft(2)</span> &nbsp;
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Driver1.Name)

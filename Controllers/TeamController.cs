@@ -57,7 +57,7 @@ namespace mowlds.github.io.Controllers
             teamModel.Wins = teamModel.DriverResults.Where(dr => dr.FinalPosition == 1 && dr.SessionType == 3).Count();
             teamModel.TotalRaces = teamModel.DriverResults.Where(dr => dr.SessionType == 3).GroupBy(dr => dr.Race).Count();
             teamModel.DNFs = teamModel.DriverResults.Where(dr => dr.SessionType == 3 && dr.HasDNF).Count();
-            teamModel.FirstRace = teamModel.DriverResults.OrderBy(dr => dr.Race1.RaceDate).First().Race1;
+            teamModel.FirstRace = teamModel.DriverResults.OrderBy(dr => dr.Race1.RaceDate).Any() ? teamModel.DriverResults.OrderBy(dr => dr.Race1.RaceDate).First().Race1 : null;
 
             return View(teamModel);
         }

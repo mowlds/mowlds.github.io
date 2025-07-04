@@ -1274,6 +1274,9 @@
     <Content Include="fonts\Formula1-Regular.ttf" />
     <Content Include="fonts\slim_joe-webfont.woff" />
     <Content Include="fonts\slim_joe-webfont.woff2" />
+    <Content Include="fonts\KHInterference-Bold.otf" />
+    <Content Include="fonts\KHInterference-Light.otf" />
+    <Content Include="fonts\KHInterference-Regular.otf" />
     <None Include="Properties\PublishProfiles\seriousracingleague.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

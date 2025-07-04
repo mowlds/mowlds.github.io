@@ -9,6 +9,11 @@
     font-family: "f1reg";
     src: url(/fonts/Formula1-Regular.ttf)
   }
+
+@font-face {
+    font-family: "f1numbers";
+    src: url(/fonts/KHInterference-Bold.otf);
+} 
   main{
   background-color: rgb(188, 219, 197)
   }
