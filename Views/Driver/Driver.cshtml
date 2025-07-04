@@ -21,7 +21,7 @@
                 <table id="biotable">
                     @{string colour = string.IsNullOrEmpty(Model.Driver.Colour) ? string.Empty : Model.Driver.Colour.Trim();
                     }
-                    <caption style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; color:@colour"> @Html.DisplayFor(driver => Model.Driver.DriverNumber)</caption>
+                    <div style="background-color:black;"><caption style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; color:@colour"> @Html.DisplayFor(driver => Model.Driver.DriverNumber)</caption></div>
                     <caption style="font-weight: bolder ;">@Html.DisplayFor(driver => Model.Driver.Name)</caption>
                     <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;">SRL World Championship career</th>
                     <tr>
