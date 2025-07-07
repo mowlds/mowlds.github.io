@@ -719,7 +719,7 @@
       text-align: center;
       margin-top: 40px;
       margin-bottom: 40px;
-      background-color: rgb(0,0,0,0.85);
+      background-color: #141a1f;
   
   }
   
@@ -747,7 +747,7 @@
   
   table#champtable caption {
       font-size: 24pt;
-      background-color: rgb(0,0,0,0.85);
+      background-color: #141a1f;
       border-bottom: 1px solid #b62f2f;
   padding: 5px;
   
@@ -789,7 +789,7 @@
     margin-bottom: 40px;
     font-size: 8pt;
     border-collapse: collapse;
-    background-color: rgb(0,0,0,0.85);
+    background-color: #141a1f;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
@@ -802,7 +802,7 @@
     margin-bottom: 40px;
     font-size: 8pt;
     border-collapse: collapse;
-    background-color: rgb(0,0,0,0.85);
+    background-color: #141a1f;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
@@ -875,7 +875,7 @@
   
     padding: 5px;
   
-    background-color: rgb(0,0,0,0.85);
+    background-color: #141a1f;
   
   }
   table#careergrid caption {
@@ -954,7 +954,7 @@
     margin-right: auto;
     margin-top: 2pc;
     font-weight: bold;
-    background-color: rgb(0,0,0,0.85);
+    background-color: #141a1f;
     font-size: 10pt;
   
   }
@@ -985,7 +985,7 @@
     border-bottom: 1px solid #b62f2f;
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: rgb(0,0,0,0.85);
+    background-color: #141a1f;
   
   }
   
@@ -999,7 +999,7 @@
     margin-right: auto;
     margin-top: 2pc;
     font-weight: bold;
-    background-color: rgb(0,0,0,0.85);
+    background-color: #141a1f;
   
   
   }
@@ -1025,7 +1025,7 @@
   border-bottom: 1px solid #b62f2f;
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: rgb(0,0,0,0.85);
+    background-color: #141a1f;
   
   }
   
@@ -1044,7 +1044,7 @@
                   margin-right: auto;
                   margin-top: 40px;
                   margin-bottom: 40px;
-                  background-color: rgb(0,0,0,0.85);
+                  background-color: #141a1f;
                   overflow-x: auto;
          
               
@@ -1070,7 +1070,7 @@
               table#calendar caption {
   
                   font-size: 24pt;
-                  background-color: rgb(0,0,0,0.85);
+                  background-color: #141a1f;
                   padding-bottom: 5px;
                   padding-top: 5px;
                   border-bottom: 2px #b62f2f solid;
@@ -1401,7 +1401,7 @@
               padding: 5px;
               font-weight: bold;
               text-align: center;
-              background-color: rgb(0,0,0,0.85);
+              background-color: #141a1f;
               font-size: 0.75vw;
               
   
@@ -1440,7 +1440,7 @@
           .raceresults caption {
   
               font-size: 24pt;
-              background-color: rgb(0,0,0,0.85);
+              background-color: #141a1f;
               padding-bottom: 5px;
               padding-top: 5px;
               border-bottom: 2px #b62f2f solid;
