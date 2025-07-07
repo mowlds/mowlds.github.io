@@ -1599,6 +1599,9 @@
       .banner{
         width:350px;
       }
+      .doghouse{
+        width:350px;
+      }
       .bigstatsfiltertable td {display: table-row}
       .wiki { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
       .driverrecords { flex-direction: column; width: 90%; margin-left: auto; margin-right: auto;}
