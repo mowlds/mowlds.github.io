@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "f1numbers";
-    src: url(/fonts/KHInterference-Bold.otf)
+    src: url(/fonts/KHInterference-Bold.ttf)
 } 
   main{
   background-color: rgb(188, 219, 197)
