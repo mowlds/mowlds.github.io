@@ -49,6 +49,11 @@ namespace mowlds.github.io.Controllers
                     nextRace = allRaces.Where(r => r.Race == race + counter).First().Race;
                 }
                 counter++;
+                if (counter > 10)
+                {
+                    //CDB: while terminator, no further races found, just add one.
+                    nextRace = (int)race+1;
+                }
             }
 
             var sRLContext = allRaces.

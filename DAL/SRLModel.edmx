@@ -20,13 +20,13 @@
           <Property Name="DriverImage" Type="text" />
           <Property Name="TwitchName" Type="varchar" MaxLength="250" />
           <Property Name="KnownFor" Type="nchar" MaxLength="100" />
-          <Property Name="Pace" Type="int" />
-          <Property Name="Strategy" Type="int" />
-          <Property Name="Luck" Type="int" />
-          <Property Name="Snakeyness" Type="int" />
-          <Property Name="Chat" Type="int" />
-          <Property Name="Headsgone" Type="int" />
-          <Property Name="BoxOffice" Type="int" />
+          <Property Name="Pace" Type="int" Nullable="true" />
+          <Property Name="Strategy" Type="int" Nullable="true" />
+          <Property Name="Luck" Type="int" Nullable="true" />
+          <Property Name="Snakeyness" Type="int" Nullable="true" />
+          <Property Name="Chat" Type="int" Nullable="true" />
+          <Property Name="Headsgone" Type="int" Nullable="true" />
+          <Property Name="BoxOffice" Type="int" Nullable="true" />
         </EntityType>
         <EntityType Name="DriverResult">
           <Key>
@@ -364,13 +364,13 @@ warning 6002: The table/view '8431_SRL.dbo.DriverTeam' does not have a primary k
           <NavigationProperty Name="RaceLaps" Relationship="Self.Lead_Driver_to_RaceLaps" FromRole="Driver" ToRole="RaceLaps" />
           <Property Name="TwitchName" Type="String" FixedLength="false" Nullable="true" MaxLength="250" Unicode="false" />
           <Property Name="KnownFor" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-          <Property Name="Pace" Type="Int32" />
-          <Property Name="Strategy" Type="Int32" />
-          <Property Name="Luck" Type="Int32" />
-          <Property Name="Snakeyness" Type="Int32" />
-          <Property Name="Chat" Type="Int32" />
-          <Property Name="Headsgone" Type="Int32" />
-          <Property Name="BoxOffice" Type="Int32" />
+          <Property Name="Pace" Type="Int32" Nullable="true" />
+          <Property Name="Strategy" Type="Int32" Nullable="true" />
+          <Property Name="Luck" Type="Int32" Nullable="true" />
+          <Property Name="Snakeyness" Type="Int32" Nullable="true" />
+          <Property Name="Chat" Type="Int32" Nullable="true" />
+          <Property Name="Headsgone" Type="Int32" Nullable="true"/>
+          <Property Name="BoxOffice" Type="Int32" Nullable="true" />
         </EntityType>
         <EntityType Name="DriverResult">
           <Key>
