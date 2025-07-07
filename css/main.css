@@ -1393,7 +1393,7 @@
             
             .raceresults {
               table-layout: fixed;
-              max-width: 80%;
+
               min-width: 60%;
               border-collapse: collapse;
               margin-left: auto;
@@ -1402,7 +1402,7 @@
               font-weight: bold;
               text-align: center;
               background-color: #141a1f;
-              font-size: 0.75vw;
+              font-size: 0.75rem;
               
   
           }
