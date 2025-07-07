@@ -1436,6 +1436,9 @@
         .raceresults td:nth-child(2) {
           width:30px
         }
+         .raceresults td:nth-child(3) {
+          padding-top:10px
+        }
   
           .raceresults caption {
   
