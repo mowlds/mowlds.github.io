@@ -78,7 +78,7 @@
                 <td>
                     @{string colour = string.IsNullOrEmpty(item.Driver1.Colour) ? string.Empty : item.Driver1.Colour.Trim();
                     }
-                    <span style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; color:@colour"> @Html.DisplayFor(modelItem => item.Driver1.DriverNumber).ToString().PadLeft(2)</span> &nbsp;
+                    <span style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; font-size: 1rem; color:@colour"> @Html.DisplayFor(modelItem => item.Driver1.DriverNumber).ToString().PadLeft(2)</span> &nbsp;
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Driver1.Name)
