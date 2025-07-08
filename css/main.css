@@ -1442,6 +1442,9 @@
             .raceresults th:nth-child(4) {
           padding-left: 0px;
         }
+              .raceresults td:nth-child(4) {
+          padding-left: 0px;
+        }
   
           .raceresults caption {
   
