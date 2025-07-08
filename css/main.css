@@ -634,7 +634,7 @@
   }
 
   .trumpstable{
-    width: 23vw;
+
     background-color: #000000;
     font-family: 'f1bold';
     color: white;
@@ -1131,6 +1131,7 @@
                     margin-left: auto;
                     margin-right: auto;
                     text-align: left;
+                    font-size: 0.8rem;
                     
                 }
     
@@ -1165,7 +1166,7 @@
     border-spacing: 3px;
     padding: 3rem;
     width: 25rem;
-    height: 25rem;
+    height: 28rem;
     margin-top: 50px;
     margin-right: auto;
     font-size: 1rem;
