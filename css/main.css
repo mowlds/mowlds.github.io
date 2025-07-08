@@ -70,7 +70,7 @@
   }
   .raceimage
   {
-    height:6vw;
+    height:5rem;
   }
   
   .bigstatfilter {
@@ -1158,17 +1158,17 @@
   
               }
               .tracktablerace{
-                margin-bottom: 2pc;
-                background: #e4e4e4cc;
-                border-radius: 10px;
-                border: 1px solid #a2a9b1;
-                border-spacing: 3px;
-                padding: 3vw;
-                width: 26vw;
-                height: 30vw;
-                margin-top: 50px;
-                margin-right: auto;
-                font-size: 1vw;
+    margin-bottom: 2pc;
+    background: #e4e4e4cc;
+    border-radius: 10px;
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    padding: 3rem;
+    width: 25rem;
+    height: 25rem;
+    margin-top: 50px;
+    margin-right: auto;
+    font-size: 1rem;
   
             }
   
@@ -1630,10 +1630,7 @@
         display: block;
         padding-bottom: 32px;
       }
-      .raceimage
-  {
-    height:20vw
-  }
+
   .firstcolumn {
     width: 30%;
     padding-bottom: 10px;
