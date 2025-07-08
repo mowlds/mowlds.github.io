@@ -147,7 +147,7 @@
     font-size:1em; 
     font-family:'f1reg';
     color:black;
-    padding-bottom: 2vw;
+    padding-bottom: 2rem;
    }
   
   .column.side {
@@ -314,7 +314,7 @@
     font-family: 'f1bold';
     }
     html, body{
-      background-color: #FAEBD7;
+
     }
     .block{
       display: block;
@@ -625,12 +625,13 @@
 
 
   .trumps{
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border: 3px solid black;
     border-radius: 15px;
-    margin-top: 5vw;
+    margin-top: 5rem;
     background-color: #7c47012b;
+    width: 23rem;
   }
 
   .trumpstable{
@@ -1684,7 +1685,7 @@
       height:80px
         }
         .trumpstable{
-          width:70vw;
+          width:300px;
         }
       }
       @media screen and ( max-width: 800px ) { 
