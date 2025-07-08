@@ -1436,8 +1436,8 @@
         .raceresults td:nth-child(2) {
           width:30px
         }
-         .raceresults td:nth-child(4) {
-          padding-left: 0px;
+         .raceresults td:nth-child(3) {
+          padding-left: 15px;
         }
             .raceresults th:nth-child(4) {
           padding-left: 0px;
