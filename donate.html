@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rules</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/html5-boilerplate.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&amp;family=Orbitron:wght@700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../../images/stewards.jpg');
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+            font-family: 'exo';
+            color: white;
+            margin: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body style="font-family: f1reg;">
+    <header>
+        <img src="images/SRL.png" alt="SRL Logo" style="height:75px; width:auto; padding-top:30px;" class="center" />
+        <h2 style="text-align:center; font-family:'f1reg';">THE SERIOUS RACING LEAGUE</h2>
+        <div id="nav-placeholder">
+            <div class="topnav" id="topnav">
+                <a href="http://www.seriousracingleague.com">Home</a>
+                <a href="/Season/season?season=30">Current Season</a>
+                <a href="/rules.html">Rules</a>
+                <a href="/refund.html">Refunds</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Wiki <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="/Season">Seasons</a>
+                        <a href="/Races">Races</a>
+                        <a href="/Driver">Drivers</a>
+                        <a href="/Team">Teams</a>
+                        <a href="/Track">Tracks</a>
+                    </div>
+                </div>
+                <a href="/Stats">Stats</a>
+                <a href="/live">LIVE</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+                <div class="topnav-right">
+                    <a href="/golf/home.html">Serious Golfing Association</a>
+                    <a href="/poker/PokerHome.html">World Serious of Poker</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("/nav.html");
+            });
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </header>
+
+    <div class="wikiparent">
+        <div style="margin:5%;">
+            <h2 style="font-style: normal; text-align: center;">HOW TO DONATE</h2>
+            <br />
+
+<h2>Coming Soon</h2>
+
+          </div>
+    </div>
+</body>
+</html>
