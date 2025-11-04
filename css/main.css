@@ -419,14 +419,10 @@
 
 ul.wikilist > li.driverlist a  {
 display: block;
-color:white;
+color:rgb(255, 255, 255);
 }
 
-  ul.wikilist > li.driverlist:hover a {
-  background-color: #b62f2f;
-  color: #000000;
-  border-radius: 4px;
-}
+
 
 .ul.wikilist > li.driverlist {
   transition: box-shadow 0.3s ease;
