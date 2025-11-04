@@ -1672,6 +1672,10 @@ color:rgb(0, 0, 0);
   
 width:90%;
 }
+
+  ul.wikilist{
+width:100%
+  }
   
   .secondcolumn {
     flex:1 0 0%;
