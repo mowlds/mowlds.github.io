@@ -410,8 +410,8 @@
     display:inline-block;
   }
 
-  ul.wikilist > li a:hover {
-  background-color: #f0f0f0;
+  ul.wikilist > li:hover {
+  background-color: #ffffff;
   color: #0077cc;
   border-radius: 4px;
 }
