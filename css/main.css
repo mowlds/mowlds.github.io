@@ -125,16 +125,21 @@
   
     border-bottom-right-radius: 10px;
     padding-left: 2px;
+    padding-top: 10px;
     border-right: black 1px solid;
     border-bottom: black 1px solid;
     display: flex;
     display: block;
-    width: 150px;
+    width: 18vw;
     margin-bottom: 15px;
-    padding-bottom:5px;
+    padding-bottom: 5px;
     font-family: 'f1reg';
     padding-right: 5px;
-  }
+    background-color: #d7d7d79c;
+    border-top-left-radius: 10px;
+    padding-left: 5px;
+}
+  
   .raceBackground{
     padding-top:1px;
   }
@@ -404,6 +409,13 @@
   ul.wikilist > li{
     display:inline-block;
   }
+
+  ul.wikilist > li a:hover {
+  background-color: #f0f0f0;
+  color: #0077cc;
+  border-radius: 4px;
+}
+
   
   
   li{
