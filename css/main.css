@@ -1851,6 +1851,20 @@ width:100%
   .result-driver-tyres-W {
       background-image: url('../images/w.png')
   }
+
+    .result-driver-tyres-SS {
+      background-image: url('../images/ss.png')
+  }
+
+      .result-driver-tyres-US {
+      background-image: url('../images/us.png')
+  }
+  
+      .result-driver-tyres-HS {
+      background-image: url('../images/hs.png')
+  }
+  
+  
   
   
   /* ==========================================================================
