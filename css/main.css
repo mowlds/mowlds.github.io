@@ -414,12 +414,15 @@
   background-color: #b62f2f;
   color: #ffffff;
   border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
   ul.wikilist > li.driverlist:hover a  {
+  color: #000000;
+}
 
-  color: #4b81dd;
-
+.nav-list li.driverlist {
+  transition: box-shadow 0.3s ease;
 }
 
   
