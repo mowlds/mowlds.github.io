@@ -417,6 +417,11 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.504);
 }
 
+  ul.wikilist > li.driverlist:hover a {
+  color: #ffffff;
+
+}
+
 ul.wikilist > li.driverlist a  {
 display: block;
 color:rgb(0, 0, 0);
