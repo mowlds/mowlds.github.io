@@ -410,7 +410,7 @@
     display:inline-block;
   }
 
-  ul.wikilist > li:not(.firstletter) li:hover {
+  ul.wikilist > li.driverlist:hover  {
   background-color: #ffffff;
   color: #0077cc;
   border-radius: 4px;
