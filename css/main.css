@@ -411,8 +411,8 @@
   }
 
   ul.wikilist > li.driverlist:hover  {
-  background-color: #ffffff;
-  color: #0077cc;
+  background-color: #b62f2f;
+  color: #ffffff;
   border-radius: 4px;
 }
 
