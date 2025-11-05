@@ -6,122 +6,86 @@
 }
 
 <div class="overflow">
-<table id="seasonlist" style="text-align: center;">
-    <caption>List Of Seasons</caption>
-    <thead>
-        <tr>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Year)
-            </th>
-            <th>
-                Season
-            </th>
-            <th>
-            Performance
-            </th>
-            <th>
-                OSQ
-            </th>
-            <th>
-                # of Races
-            </th>
-            <th>
+    <table id="seasonlist" style="text-align: center;">
+        <caption>List Of Seasons</caption>
+        <thead>
+            <tr>
 
-            </th>
-            <th>
-                Champion
-            </th>
-            
-        </tr>
-    </thead>
-@{
-    // Step 1: Precompute total appearances per champion
-    var championTotals = new Dictionary<string, int>();
-    foreach (var item in Model)
-    {
-        string name = item.Champion != null ? item.Champion.ToString() : "Unknown";
-        if (championTotals.ContainsKey(name))
-        {
-            championTotals[name]++;
-        }
-        else
-        {
-            championTotals[name] = 1;
-        }
-    }
+                <th>
+                    @Html.DisplayNameFor(model => model.Year)
+                </th>
+                <th>
+                    Season
+                </th>
+                <th>
+                    Performance
+                </th>
+                <th>
+                    OSQ
+                </th>
+                <th>
+                    # of Races
+                </th>
+                <th>
 
-    // Step 2: Track how many times we've seen each champion so far
-    var championSeenSoFar = new Dictionary<string, int>();
-}
+                </th>
+                <th>
+                    Champion
+                </th>
 
-<tbody>
-    @foreach (var item in Model)
-    {
-        string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Number)
+                    </td>
+                    <td style="align-content: center">
+                        @if (item.isrealperformance)
+                        {
+                            <img class="realperf" src="~/images/realperf.png">
+                        }
+                        else
+                        {
+                            <img class="realperf" src="~/images/equal.png">
+                        }
+                    </td>
+                    <td style="align-content: center">
+                        @if (item.isoneshotqualy.Value)
+                        {
+                            <img class="realperf" src="~/images/box_checked.png">
+                        }
+                        else
+                        {
+                            <img class="realperf" src="~/images/box_unchecked.png">
+                        }
+                    </td>
+                    <td>
+                        @{string linkvalue = string.Format("Season/season?season={0}", item.ID.ToString());
+                        }
 
-        // Increment seen count
-        if (championSeenSoFar.ContainsKey(championName))
-        {
-            championSeenSoFar[championName]++;
-        }
-        else
-        {
-            championSeenSoFar[championName] = 1;
-        }
-
-        // Calculate reverse count
-        int reverseCount = championTotals[championName] - championSeenSoFar[championName] + 1;
-
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.Year)</td>
-            <td>@Html.DisplayFor(modelItem => item.Number)</td>
-            <td style="align-content: center">
-                @if (item.isrealperformance)
-                {
-                    <img class="realperf" src="~/images/realperf.png" />
-                }
-                else
-                {
-                    <img class="realperf" src="~/images/equal.png" />
-                }
-            </td>
-            <td style="align-content: center">
-                @if (item.isoneshotqualy.HasValue && item.isoneshotqualy.Value)
-                {
-                    <img class="realperf" src="~/images/box_checked.png" />
-                }
-                else
-                {
-                    <img class="realperf" src="~/images/box_unchecked.png" />
-                }
-            </td>
-            <td>
-                <a href="Season/season?season=@item.ID">@item.Race.Count() races</a>
-            </td>
-            <td>
-                <img class="iconseasonlist" src="~/images/champtrophy.png" />
-            </td>
-<td>
-    @if (championName != "Unknown")
-    {
-        @:@championName (@reverseCount)
-    }
-    else
-    {
-        @:@championName
-    }
-</td>
-
-
-
-        </tr>
-    }
-</tbody>
-
-
-
-</table>
+                        @{string parameterValue = item.Race.Count().ToString();
+                        }
+                        <a href=@linkvalue>@parameterValue races</a>
+                    </td>
+                    <td>
+                        <img class="iconseasonlist" src="~/images/champtrophy.png">
+                    </td>
+                    <td>
+                        @if (item.Champion != "---")
+                        { 
+                            @:@Html.DisplayFor(modelItem => item.Champion) (@Html.DisplayFor(modelItem => item.NumberOfTitles))
+                        }
+                    </td>
+                </tr>
+                            }
+        </tbody>
+    </table>
 </div>
 
 

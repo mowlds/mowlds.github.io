@@ -50,6 +50,8 @@ namespace mowlds.github.io.Controllers
                 sc.Champion = currentSeason == sc.ID ? "---": GetChampion(sc.ID);
                 seasonChampion.Add(sc);
             }
+
+            seasonChampion = GetNumberOfTitles(seasonChampion);
             return View(seasonChampion);
         }
 
@@ -76,6 +78,29 @@ namespace mowlds.github.io.Controllers
             }
 
             return champion;
+        }
+
+        private List<SeasonChampionModel> GetNumberOfTitles(List<SeasonChampionModel> lst)
+        {
+            lst.Reverse(); //list is descending, we want to turn it around.
+
+            Dictionary<string, int> championsDict = new Dictionary<string, int>();
+            foreach (SeasonChampionModel scm in lst)
+            {
+                if (championsDict.ContainsKey(scm.Champion))
+                {
+                    championsDict[scm.Champion] = championsDict[scm.Champion] + 1;
+                }
+                else
+                {
+                    championsDict.Add(scm.Champion, 1); //new add always on 1
+                }
+
+                scm.NumberOfTitles = championsDict[scm.Champion];
+            }
+
+            lst.Reverse(); //reverse again.
+            return lst;
         }
 
         [Route("SeasonOverview")]
