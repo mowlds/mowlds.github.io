@@ -212,8 +212,11 @@
   }
   
   .topnav a:hover {
-    background-color: rgb(87, 27, 27);
-    color: rgb(255, 255, 255);
+  background-color: rgb(87, 27, 27);
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid #00ffcc;
+  transition: all 0.3s ease;
+
   }
   
   .topnav a.active {
