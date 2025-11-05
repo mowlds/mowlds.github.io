@@ -84,7 +84,7 @@
             </td>
             <td>
                 @{
-                    string linkvalue = $"Season/season?season={item.ID}";
+                    string linkvalue = string.Format();"Season/season?season={item.ID}";
                     string parameterValue = item.Race.Count().ToString();
                 }
                 <a href="@linkvalue">@parameterValue races</a>
