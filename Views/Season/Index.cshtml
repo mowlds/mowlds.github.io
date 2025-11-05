@@ -102,9 +102,17 @@
             <td>
                 <img class="iconseasonlist" src="~/images/champtrophy.png" />
             </td>
-            <td>
-                @championName (@reverseCount)
-            </td>
+<td>
+    @if (championName != "Unknown")
+    {
+        @championName (@reverseCount)
+    }
+    else
+    {
+        @championName
+    }
+</td>
+
         </tr>
     }
 </tbody>
