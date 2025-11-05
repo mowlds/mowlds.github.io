@@ -35,20 +35,12 @@
             
         </tr>
     </thead>
-    @{
-    var championCounts = new Dictionary<string, int>();
-}
-
-@{
-    var championCounts = new Dictionary<string, int>();
-}
-
-<tbody>
 @{
     // Declare championCounts once at the top
     var championCounts = new Dictionary<string, int>();
 }
 
+<tbody>
     @foreach (var item in Model)
     {
         // Use classic null check for C# 5 compatibility
@@ -101,6 +93,7 @@
         </tr>
     }
 </tbody>
+
 
 
 </table>
