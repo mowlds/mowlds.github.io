@@ -38,7 +38,10 @@
     <tbody>
         @foreach (var item in Model)
         {
-string championName = item.Champion?.ToString() ?? "Unknown";
+@{
+    string championName = item.Champion?.ToString() ?? "Unknown";
+}
+
 
         if (championCounts.ContainsKey(championName))
         {
