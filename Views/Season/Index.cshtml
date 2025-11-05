@@ -39,23 +39,25 @@
     var championCounts = new Dictionary<string, int>();
 }
 
+@{
+    var championCounts = new Dictionary<string, int>();
+}
+
 <tbody>
     @foreach (var item in Model)
     {
-        @{ // Razor code block starts here
-            string championName = item.Champion?.ToString() ?? "Unknown";
+        string championName = item.Champion?.ToString() ?? "Unknown";
 
-            if (championCounts.ContainsKey(championName))
-            {
-                championCounts[championName]++;
-            }
-            else
-            {
-                championCounts[championName] = 1;
-            }
-
-            int count = championCounts[championName];
+        if (championCounts.ContainsKey(championName))
+        {
+            championCounts[championName]++;
         }
+        else
+        {
+            championCounts[championName] = 1;
+        }
+
+        int count = championCounts[championName];
 
         <tr>
             <td>@Html.DisplayFor(modelItem => item.Year)</td>
