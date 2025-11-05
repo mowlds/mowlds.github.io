@@ -36,26 +36,33 @@
         </tr>
     </thead>
 @{
-    // Declare championCounts once at the top
+    // Step 1: Build championCounts dictionary
     var championCounts = new Dictionary<string, int>();
-}
-
-<tbody>
-    @foreach (var item in Model)
+    foreach (var item in Model)
     {
-        // Use classic null check for C# 5 compatibility
-        string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
-
-        // Update count without redeclaring championCounts
-        if (championCounts.ContainsKey(championName))
+        string name = item.Champion != null ? item.Champion.ToString() : "Unknown";
+        if (championCounts.ContainsKey(name))
         {
-            championCounts[championName]++;
+            championCounts[name]++;
         }
         else
         {
-            championCounts[championName] = 1;
+            championCounts[name] = 1;
         }
+    }
 
+    // Step 2: Sort Model by champion count descending
+    var sortedModel = Model.OrderByDescending(item =>
+    {
+        string name = item.Champion != null ? item.Champion.ToString() : "Unknown";
+        return championCounts[name];
+    }).ToList();
+}
+
+<tbody>
+    @foreach (var item in sortedModel)
+    {
+        string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
         int count = championCounts[championName];
 
         <tr>
