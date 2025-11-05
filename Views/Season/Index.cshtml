@@ -45,21 +45,21 @@
 
 <tbody>
 @foreach (var item in Model)
+@foreach (var item in Model)
 {
-    @{ // Razor code block starts here
-        string championName = item.Champion?.ToString() ?? "Unknown";
+    // ✅ Just write C# directly — no need for @{ ... }
+    string championName = item.Champion?.ToString() ?? "Unknown";
 
-        if (championCounts.ContainsKey(championName))
-        {
-            championCounts[championName]++;
-        }
-        else
-        {
-            championCounts[championName] = 1;
-        }
-
-        int count = championCounts[championName];
+    if (championCounts.ContainsKey(championName))
+    {
+        championCounts[championName]++;
     }
+    else
+    {
+        championCounts[championName] = 1;
+    }
+
+    int count = championCounts[championName];
 
     <tr>
         <td>@Html.DisplayFor(modelItem => item.Year)</td>
@@ -85,10 +85,8 @@
             }
         </td>
         <td>
-            @{
-                string linkvalue = string.Format("Season/season?season={0}", item.ID);
-                string parameterValue = item.Race.Count().ToString();
-            }
+            string linkvalue = string.Format("Season/season?season={0}", item.ID);
+            string parameterValue = item.Race.Count().ToString();
             <a href="@linkvalue">@parameterValue races</a>
         </td>
         <td>
