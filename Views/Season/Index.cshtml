@@ -45,14 +45,16 @@
 
 <tbody>
 @{
+    // Declare championCounts once at the top
     var championCounts = new Dictionary<string, int>();
 }
 
-<tbody>
     @foreach (var item in Model)
     {
+        // Use classic null check for C# 5 compatibility
         string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
 
+        // Update count without redeclaring championCounts
         if (championCounts.ContainsKey(championName))
         {
             championCounts[championName]++;
@@ -100,7 +102,6 @@
     }
 </tbody>
 
-</tbody>
 
 </table>
 </div>
