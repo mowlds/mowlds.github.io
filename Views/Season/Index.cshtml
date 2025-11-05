@@ -36,34 +36,42 @@
         </tr>
     </thead>
 @{
-    // Step 1: Build championCounts dictionary
-    var championCounts = new Dictionary<string, int>();
+    // Step 1: Precompute total appearances per champion
+    var championTotals = new Dictionary<string, int>();
     foreach (var item in Model)
     {
         string name = item.Champion != null ? item.Champion.ToString() : "Unknown";
-        if (championCounts.ContainsKey(name))
+        if (championTotals.ContainsKey(name))
         {
-            championCounts[name]++;
+            championTotals[name]++;
         }
         else
         {
-            championCounts[name] = 1;
+            championTotals[name] = 1;
         }
     }
 
-    // Step 2: Sort Model by champion count descending
-    var sortedModel = Model.OrderByDescending(item =>
-    {
-        string name = item.Champion != null ? item.Champion.ToString() : "Unknown";
-        return championCounts[name];
-    }).ToList();
+    // Step 2: Track how many times we've seen each champion so far
+    var championSeenSoFar = new Dictionary<string, int>();
 }
 
 <tbody>
-    @foreach (var item in sortedModel)
+    @foreach (var item in Model)
     {
         string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
-        int count = championCounts[championName];
+
+        // Increment seen count
+        if (championSeenSoFar.ContainsKey(championName))
+        {
+            championSeenSoFar[championName]++;
+        }
+        else
+        {
+            championSeenSoFar[championName] = 1;
+        }
+
+        // Calculate reverse count
+        int reverseCount = championTotals[championName] - championSeenSoFar[championName] + 1;
 
         <tr>
             <td>@Html.DisplayFor(modelItem => item.Year)</td>
@@ -95,7 +103,7 @@
                 <img class="iconseasonlist" src="~/images/champtrophy.png" />
             </td>
             <td>
-                @championName (@count)
+                @championName (@reverseCount)
             </td>
         </tr>
     }
