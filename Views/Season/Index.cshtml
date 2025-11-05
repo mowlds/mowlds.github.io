@@ -45,7 +45,8 @@
 
 <tbody>
     @foreach (var item in Model)
-    {
+{
+    { // Razor code block starts here
         string championName = item.Champion?.ToString() ?? "Unknown";
 
         if (championCounts.ContainsKey(championName))
@@ -58,44 +59,47 @@
         }
 
         int count = championCounts[championName];
+    }
 
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.Year)</td>
-            <td>@Html.DisplayFor(modelItem => item.Number)</td>
-            <td style="align-content: center">
-                @if (item.isrealperformance)
-                {
-                    <img class="realperf" src="~/images/realperf.png" />
-                }
-                else
-                {
-                    <img class="realperf" src="~/images/equal.png" />
-                }
-            </td>
-            <td style="align-content: center">
-                @if (item.isoneshotqualy.HasValue && item.isoneshotqualy.Value)
-                {
-                    <img class="realperf" src="~/images/box_checked.png" />
-                }
-                else
-                {
-                    <img class="realperf" src="~/images/box_unchecked.png" />
-                }
-            </td>
-            <td>
-                @{
-                    string linkvalue = string.Format();"Season/season?season={item.ID}";
-                    string parameterValue = item.Race.Count().ToString();
-                }
-                <a href="@linkvalue">@parameterValue races</a>
-            </td>
-            <td>
-                <img class="iconseasonlist" src="~/images/champtrophy.png" />
-            </td>
-            <td>
-                @championName (@count)
-            </td>
-        </tr>
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Year)</td>
+        <td>@Html.DisplayFor(modelItem => item.Number)</td>
+        <td style="align-content: center">
+            @if (item.isrealperformance)
+            {
+                <img class="realperf" src="~/images/realperf.png" />
+            }
+            else
+            {
+                <img class="realperf" src="~/images/equal.png" />
+            }
+        </td>
+        <td style="align-content: center">
+            @if (item.isoneshotqualy.HasValue && item.isoneshotqualy.Value)
+            {
+                <img class="realperf" src="~/images/box_checked.png" />
+            }
+            else
+            {
+                <img class="realperf" src="~/images/box_unchecked.png" />
+            }
+        </td>
+        <td>
+            @{
+                string linkvalue = string.Format("Season/season?season={0}", item.ID);
+                string parameterValue = item.Race.Count().ToString();
+            }
+            <a href="@linkvalue">@parameterValue races</a>
+        </td>
+        <td>
+            <img class="iconseasonlist" src="~/images/champtrophy.png" />
+        </td>
+        <td>
+            @championName (@count)
+        </td>
+    </tr>
+}
+
     }
 </tbody>
 
