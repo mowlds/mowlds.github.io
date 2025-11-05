@@ -1082,7 +1082,7 @@ color:rgb(0, 0, 0);
   }
 
    table#seasonlist tr:has(a:hover) {
-    background-color: #f0f8ff; /* Light blue highlight */
+    background-color: #061523;
   }
 
   

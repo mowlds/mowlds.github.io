@@ -87,5 +87,16 @@
         </tbody>
     </table>
 </div>
+<script>
+  document.querySelectorAll("#myTable tr").forEach(row => {
+    row.addEventListener("click", () => {
+      const link = row.querySelector("a");
+      if (link) {
+        window.location = link.href;
+      }
+    });
+  });
+</script>
+
 
 
