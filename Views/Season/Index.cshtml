@@ -89,7 +89,11 @@ string championName = item.Champion?.ToString() ?? "Unknown";
                 <img class="iconseasonlist" src="~/images/champtrophy.png">
             </td>
             <td>
-                @championName (@championCounts[championName])
+                @{
+    var count = championCounts[championName];
+}
+@championName (@count)
+
 
             </td>
         </tr>
