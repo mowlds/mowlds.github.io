@@ -1082,7 +1082,8 @@ color:rgb(0, 0, 0);
   }
 
    table#seasonlist tr:has(a:hover) {
-    background-color: #061523;
+    background-color: #0e263c;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   
