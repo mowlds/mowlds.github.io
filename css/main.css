@@ -214,7 +214,7 @@
   .topnav a:hover {
   background-color: rgb(87, 27, 27);
   color: rgb(255, 255, 255);
-  border-bottom: 2px solid #00ffcc;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.504);
   transition: all 0.3s ease;
 
   }
