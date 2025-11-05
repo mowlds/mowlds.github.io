@@ -44,59 +44,62 @@
 }
 
 <tbody>
-@foreach (var item in Model)
-{
-    // ✅ Just write C# directly — no need for @{ ... }
-    string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
-
-
-    if (championCounts.ContainsKey(championName))
-    {
-        championCounts[championName]++;
-    }
-    else
-    {
-        championCounts[championName] = 1;
-    }
-
-    int count = championCounts[championName];
-
-    <tr>
-        <td>@Html.DisplayFor(modelItem => item.Year)</td>
-        <td>@Html.DisplayFor(modelItem => item.Number)</td>
-        <td style="align-content: center">
-            @if (item.isrealperformance)
-            {
-                <img class="realperf" src="~/images/realperf.png" />
-            }
-            else
-            {
-                <img class="realperf" src="~/images/equal.png" />
-            }
-        </td>
-        <td style="align-content: center">
-            @if (item.isoneshotqualy.HasValue && item.isoneshotqualy.Value)
-            {
-                <img class="realperf" src="~/images/box_checked.png" />
-            }
-            else
-            {
-                <img class="realperf" src="~/images/box_unchecked.png" />
-            }
-        </td>
-        <td>
-            string linkvalue = string.Format("Season/season?season={0}", item.ID);
-            string parameterValue = item.Race.Count().ToString();
-            <a href="@linkvalue">@parameterValue races</a>
-        </td>
-        <td>
-            <img class="iconseasonlist" src="~/images/champtrophy.png" />
-        </td>
-        <td>
-            @championName (@count)
-        </td>
-    </tr>
+@{
+    var championCounts = new Dictionary<string, int>();
 }
+
+<tbody>
+    @foreach (var item in Model)
+    {
+        string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
+
+        if (championCounts.ContainsKey(championName))
+        {
+            championCounts[championName]++;
+        }
+        else
+        {
+            championCounts[championName] = 1;
+        }
+
+        int count = championCounts[championName];
+
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Year)</td>
+            <td>@Html.DisplayFor(modelItem => item.Number)</td>
+            <td style="align-content: center">
+                @if (item.isrealperformance)
+                {
+                    <img class="realperf" src="~/images/realperf.png" />
+                }
+                else
+                {
+                    <img class="realperf" src="~/images/equal.png" />
+                }
+            </td>
+            <td style="align-content: center">
+                @if (item.isoneshotqualy.HasValue && item.isoneshotqualy.Value)
+                {
+                    <img class="realperf" src="~/images/box_checked.png" />
+                }
+                else
+                {
+                    <img class="realperf" src="~/images/box_unchecked.png" />
+                }
+            </td>
+            <td>
+                <a href="Season/season?season=@item.ID">@item.Race.Count() races</a>
+            </td>
+            <td>
+                <img class="iconseasonlist" src="~/images/champtrophy.png" />
+            </td>
+            <td>
+                @championName (@count)
+            </td>
+        </tr>
+    }
+</tbody>
+
 </tbody>
 
 </table>
