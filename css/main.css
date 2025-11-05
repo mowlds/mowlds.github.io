@@ -244,6 +244,8 @@
     .dropdown {
       float: left;
       overflow: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
     }
     
     .dropdown .dropbtn {
@@ -255,6 +257,8 @@
       background-color: #b62f2f;
       font-family: inherit;
       margin: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
     }
     
     .navbar a:hover, .dropdown:hover .dropbtn {
