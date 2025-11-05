@@ -47,7 +47,8 @@
 @foreach (var item in Model)
 {
     // ✅ Just write C# directly — no need for @{ ... }
-    string championName = item.Champion?.ToString() ?? "Unknown";
+    string championName = item.Champion != null ? item.Champion.ToString() : "Unknown";
+
 
     if (championCounts.ContainsKey(championName))
     {
