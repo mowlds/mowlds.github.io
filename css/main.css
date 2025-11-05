@@ -1080,6 +1080,11 @@ color:rgb(0, 0, 0);
   table#seasonlist td:nth-child(7){
     color:gold;
   }
+
+   table#seasonlist tr:has(a:hover) {
+    background-color: #f0f8ff; /* Light blue highlight */
+  }
+
   
   
   
