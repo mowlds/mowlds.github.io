@@ -44,9 +44,9 @@
 }
 
 <tbody>
-    @foreach (var item in Model)
+@foreach (var item in Model)
 {
-    { // Razor code block starts here
+    @{ // Razor code block starts here
         string championName = item.Champion?.ToString() ?? "Unknown";
 
         if (championCounts.ContainsKey(championName))
@@ -99,8 +99,6 @@
         </td>
     </tr>
 }
-
-    }
 </tbody>
 
 </table>
