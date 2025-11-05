@@ -1143,10 +1143,18 @@ color:rgb(0, 0, 0);
                   padding-bottom: 5px;
                   padding-top: 5px;
                   border-bottom: 2px #b62f2f solid;
-  
             
               
               }
+                 table#calendar tr:has(a:hover) {
+    background-color: #0e263c;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: #ffffff;
+  }
+     table#calendar a:hover {
+
+    color: #ffffff;
+  }
               
   
               .calendar {
