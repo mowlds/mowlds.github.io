@@ -1794,6 +1794,7 @@ width:100%
         float: none;
         display: contents;
         text-align: left;
+        visibility: visible;
        }
        .topnav.responsive .dropdown{
        float: none;
