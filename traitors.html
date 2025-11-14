@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Traitors Voting Grid</title>
+<style>
+  :root{
+    --bg:#0f1724;
+    --panel:#0b1220;
+    --muted:#9aa6b2;
+    --accent:#7c5cff;
+    --good:#16a34a;
+    --bad:#ef4444;
+    --cell:#0e1622;
+    --glass: rgba(255,255,255,0.03);
+    --table-radius:10px;
+    --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  /* Page */
+  html,body{
+    height:100%;
+    margin:0;
+    font-family:var(--font-sans);
+    background:linear-gradient(180deg,#071024 0%, #081827 60%);
+    color:#e6eef6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:1100px;
+    margin:32px auto;
+    padding:20px;
+  }
+
+  h3{
+    margin:0 0 12px 0;
+    font-weight:600;
+    color:#e9f0ff;
+  }
+  p.lead{
+    margin:0 0 18px 0;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+
+  /* Table container */
+  .votes-panel{
+    background:linear-gradient(180deg,var(--panel), #07111b);
+    border-radius:var(--table-radius);
+    padding:14px;
+    box-shadow: 0 6px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+    overflow:auto;
+  }
+
+  /* Table */
+  table.votes{
+    border-collapse:collapse;
+    width:100%;
+    min-width:760px;
+    table-layout:fixed;
+  }
+
+  /* Sticky header */
+  thead th{
+    position:sticky;
+    top:0;
+    background:linear-gradient(180deg, rgba(12,18,30,0.95), rgba(6,10,16,0.92));
+    backdrop-filter: blur(4px);
+    z-index:3;
+    padding:10px 12px;
+    text-align:left;
+    font-size:0.9rem;
+    color: #dfe9ff;
+    border-bottom:1px solid rgba(255,255,255,0.04);
+  }
+
+  thead th.round{
+    text-align:center;
+  }
+
+  tbody tr{
+    border-bottom:1px solid rgba(255,255,255,0.02);
+    transition:background 160ms ease;
+  }
+
+  tbody tr:hover{
+    background: linear-gradient(90deg, rgba(255,255,255,0.015), transparent);
+  }
+
+  td{
+    padding:10px 12px;
+    font-size:0.92rem;
+    color:#cfe6ff;
+    vertical-align:middle;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  td.name{
+    width:220px;
+    font-weight:600;
+    color:#fff;
+  }
+
+  /* Vote cell */
+  .vote{
+    display:inline-flex;
+    gap:8px;
+    align-items:center;
+    justify-content:flex-start;
+  }
+
+  .badge{
+    display:inline-block;
+    padding:6px 9px;
+    border-radius:999px;
+    font-size:0.86rem;
+    font-weight:600;
+    color:#071124;
+    background:var(--glass);
+    min-width:64px;
+    text-align:center;
+    box-shadow: 0 2px 6px rgba(2,6,23,0.6);
+  }
+
+  /* vote states */
+  .badge.vote-player{ background:linear-gradient(90deg,#e6f0ff,#cfe0ff); color:#07132a; }
+  .badge.bye{ background:linear-gradient(90deg,#ffd6d6,#ffb3b3); color:#450b0b; box-shadow:0 2px 10px rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.12); }
+  .badge.abstain{ background:linear-gradient(90deg,#f0f0f0,#ededed); color:#333; opacity:0.85; font-weight:700; }
+  .badge.blank{ background:transparent; color:var(--muted); font-weight:600; padding:6px 8px; min-width:48px; border:1px dashed rgba(255,255,255,0.03); }
+  .badge.dead{ background:linear-gradient(90deg,#310303,#761717); color:#f7f7f7; }
+  .badge.nope{display: none;}
+
+  /* small extra metadata */
+  .meta{
+    display:block;
+    font-size:0.75rem;
+    color:var(--muted);
+    margin-top:6px;
+    font-weight:500;
+  }
+
+  /* Column for totals / reveal */
+  td.totals{
+    width:96px;
+    text-align:center;
+    font-weight:700;
+    color:#fff;
+  }
+
+  .reveal{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:0.85rem;
+    background:linear-gradient(90deg,#7c5cff,#5b3bff);
+    color:white;
+    box-shadow:0 4px 14px rgba(92,51,255,0.18);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width:780px){
+    .wrap{ padding:12px; margin:18px; }
+    td.name{ width:160px; font-size:0.95rem; }
+    .badge{ min-width:56px; padding:5px 8px; font-size:0.82rem; }
+    thead th, td{ padding:8px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+ <img src="/images/traitors.png"
+
+  <div class="votes-panel">
+    <table class="votes" aria-label="Traitors voting grid">
+      <thead>
+        <tr>
+          <th>Contestant</th>
+          <th class="round">Day 1</th>
+          <th class="round">Day 2</th>
+          <th class="round">Day 3</th>
+          <th class="round">Day 4</th>
+          <th class="round">Day 5</th>
+          <th class="round">Reveal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">Amber</td>
+          <td><span class="vote"><span class="badge bye">Ry</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Port</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Hom</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="nope"></span></td>
+        </tr>
+
+        <tr>
+          <td class="name">Bully</td>
+          <td><span class="vote"><span class="badge vote-player">Hom</span></span></td>
+          <td><span class="vote"><span class="badge bye">Maxey</span></span></td>
+          <td><span class="vote"><span class="badge bye">Stefarno</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="nope"></span></td>
+        </tr>
+
+        <tr>
+          <td class="name">CJ</td>
+          <td><span class="vote"><span class="badge vote-player">Jehrome</span></span></td>
+          <td><span class="vote"><span class="badge dead">R.I.P</span></span></td>
+          <td><span class="vote"><span class="badge nope"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="reveal">Faithful</span></td>
+        </tr>
+
+        <tr>
+          <td class="name">Hom</td>
+          <td><span class="vote"><span class="badge vote-player">Maxey</span></span></td>
+          <td><span class="vote"><span class="badge bye">Maxey</span></span></td>
+          <td><span class="vote"><span class="badge bye">Stefarno</span></span></td>
+          <td><span class="vote"><span class="badge dead">R.I.P</span></span></td>
+          <td><span class="vote"><span class="badge nope"></span></span></td>
+          <td class="totals"><span class="reveal">Faithful</span></td>
+        </tr>
+
+         <tr>
+          <td class="name">Jehrome</td>
+          <td><span class="vote"><span class="badge bye">Ry</span></span></td>
+          <td><span class="vote"><span class="badge bye">Maxey</span></span></td>
+          <td><span class="vote"><span class="badge bye">Stefarno</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="nope"></span></td>
+        </tr>
+
+         <tr>
+          <td class="name">Maxey</td>
+          <td><span class="vote"><span class="badge vote-player">Amber</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Port</span></span></td>
+          <td><span class="vote"><span class="badge nope"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="reveal">Faithful</span></td>
+        </tr>
+
+         <tr>
+          <td class="name">Nick</td>
+          <td><span class="vote"><span class="badge dead">R.I.P</span></span></td>
+          <td><span class="vote"><span class="badge nope"></span></span></td>
+          <td><span class="vote"><span class="badge nope"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="reveal">Faithful</span></td>
+        </tr>
+
+         <tr>
+          <td class="name">Port</td>
+          <td><span class="vote"><span class="badge vote-player">Wiggins</span></span></td>
+          <td><span class="vote"><span class="badge bye">Maxey</span></span></td>
+          <td><span class="vote"><span class="badge bye">Stefarno</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="nope"></span></td>
+        </tr>
+
+         <tr>
+          <td class="name">Rob</td>
+          <td><span class="vote"><span class="badge vote-player">CJ</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Port</span></span></td>
+          <td><span class="vote"><span class="badge bye">Stefarno</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="nope"></span></td>
+        </tr>
+
+                 <tr>
+          <td class="name">Ry</td>
+          <td><span class="vote"><span class="badge abstain">No Vote</span></span></td>
+          <td><span class="vote"><span class="badge nope"></span></span></td>
+          <td><span class="vote"><span class="badge nope"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="reveal">Faithful</span></td>
+        </tr>
+
+                 <tr>
+          <td class="name">Sunny</td>
+          <td><span class="vote"><span class="badge vote-player">Bully</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Wiggins</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Bully</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="nope"></span></td>
+        </tr>
+
+                 <tr>
+          <td class="name">Stefarno</td>
+          <td><span class="vote"><span class="badge vote-player">CJ</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Port</span></span></td>
+          <td><span class="vote"><span class="badge vote-player">Hom</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="reveal">Faithful</span></td>
+        </tr>
+
+                 <tr>
+          <td class="name">Wiggins</td>
+          <td><span class="vote"><span class="badge vote-player">Stefarno</span></span></td>
+          <td><span class="vote"><span class="badge bye">Maxey</span></span></td>
+          <td><span class="vote"><span class="badge dead">R.I.P</span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td><span class="vote"><span class="badge vote-player"></span></span></td>
+          <td class="totals"><span class="reveal">Faithful</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
