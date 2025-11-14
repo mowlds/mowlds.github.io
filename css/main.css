@@ -260,10 +260,28 @@
       transition: opacity 0.3s ease, transform 0.3s ease;
 
     }
+
+        .dropdownright .dropbtnright {
+      font-size: 14px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: #362fb6;
+      font-family: inherit;
+      margin: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
+    }
     
     .navbar a:hover, .dropdown:hover .dropbtn {
       background-color: rgb(87, 27, 27)
     }
+
+      .navbar a:hover, .dropdownright:hover .dropbtnright {
+      background-color: rgb(11, 24, 70)
+    }
+    
     
 .dropdown-content {
   opacity: 0;
@@ -1801,6 +1819,16 @@ width:100%
        text-align: left;
        }
        .dropdown .dropbtn {
+        font-size: 14px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        font-family: inherit;
+        margin: 0;
+        pointer-events: none;
+      }
+             .dropdownright .dropbtnright {
         font-size: 14px;
         border: none;
         outline: none;
