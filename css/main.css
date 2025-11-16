@@ -1835,6 +1835,10 @@ width:100%
        float: none;
        text-align: left;
        }
+              .topnav.responsive .dropdownright{
+       float: none;
+       text-align: left;
+       }
        .dropdown .dropbtn {
         font-size: 14px;
         border: none;
