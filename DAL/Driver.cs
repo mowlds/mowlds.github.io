@@ -28,6 +28,7 @@ namespace mowlds.github.io.DAL
         public string PSNName { get; set; }
         public Nullable<int> DriverNumber { get; set; }
         public string Colour { get; set; }
+        public string fontstroke { get; set; }
         public string Bio { get; set; }
         public string DriverQuote { get; set; }
         public string DriverImage { get; set; }
