@@ -15,6 +15,7 @@
           <Property Name="PSNName" Type="nchar" MaxLength="30" />
           <Property Name="DriverNumber" Type="int" />
           <Property Name="Colour" Type="nchar" MaxLength="30" />
+          <Property Name="Fontstroke" Type="nchar" MaxLength="30"></Property>
           <Property Name="Bio" Type="text" />
           <Property Name="DriverQuote" Type="text" />
           <Property Name="DriverImage" Type="text" />
@@ -356,6 +357,7 @@ warning 6002: The table/view '8431_SRL.dbo.DriverTeam' does not have a primary k
           <Property Name="PSNName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
           <Property Name="DriverNumber" Type="Int32" />
           <Property Name="Colour" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Fontstroke" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
           <Property Name="Bio" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="DriverQuote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="DriverImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -720,6 +722,7 @@ warning 6002: The table/view '8431_SRL.dbo.DriverTeam' does not have a primary k
                 <ScalarProperty Name="PSNName" ColumnName="PSNName" />
                 <ScalarProperty Name="DriverNumber" ColumnName="DriverNumber" />
                 <ScalarProperty Name="Colour" ColumnName="Colour" />
+                <ScalarProperty Name="Fontstroke" ColumnName="Fontstroke" />
                 <ScalarProperty Name="Bio" ColumnName="Bio" />
                 <ScalarProperty Name="DriverQuote" ColumnName="DriverQuote" />
                 <ScalarProperty Name="DriverImage" ColumnName="DriverImage" />
