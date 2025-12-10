@@ -17,16 +17,18 @@
         <div class="column side">
             <img class="bio" src="@Html.DisplayFor(modelitem => Model.Driver.DriverImage)" height="250px">
             <div class="quote">"@Html.DisplayFor(driver => Model.Driver.DriverQuote)"</div>
-            <div class="biotable">
-                <table id="biotable">
-                    @{string colour = string.IsNullOrEmpty(Model.Driver.Colour) ? string.Empty : Model.Driver.Colour.Trim();
+            <div style="padding-top:30px" class="biotable">
+               @{string colour = string.IsNullOrEmpty(Model.Driver.Colour) ? string.Empty : Model.Driver.Colour.Trim();
                      string fontstroke = string.IsNullOrEmpty(Model.Driver.Fontstroke) ? string.Empty : Model.Driver.Fontstroke.Trim();
 
                     }
+               
+                 
 
-                    <caption style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; color:@colour; width: 80px; margin-left: auto; margin-right: auto; background-color: #171e24f2; border-radius: 60px; border: solid @colour 5px; line-height: 1.5; vertical-align: middle; font-size: 2rem; padding-top: 15px; padding-right:5px;-webkit-text-stroke: 0.02rem @fontstroke;
-"> @Html.DisplayFor(driver => Model.Driver.DriverNumber)</caption>
-                    <caption style="font-weight: bolder ;">@Html.DisplayFor(driver => Model.Driver.Name)</caption>
+                    <span style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; color:@colour; width: 80px; margin-left: auto; margin-right: auto; background-color: #171e24f2; border-radius: 60px; border: solid @colour 5px; line-height: 1.5; vertical-align: middle; font-size: 2rem; padding-top: 15px; padding-right:5px;-webkit-text-stroke: 0.02rem @fontstroke;
+"> @Html.DisplayFor(driver => Model.Driver.DriverNumber)</span>
+                    <span style="font-weight: bolder ;">@Html.DisplayFor(driver => Model.Driver.Name)</span>
+                     <table id="biotable">
                     <th colspan="2" class="infobox-header" style="background-color: #bab5b5;text-align: center;">SRL World Championship career</th>
                     <tr>
                         <th>First Race</th>
