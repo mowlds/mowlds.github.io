@@ -39,6 +39,12 @@
                         @Html.DisplayFor(modelItem => item.FinalPosition)
                     </td>
                     <td>
+                    @{string colour = string.IsNullOrEmpty(item.Driver1.Colour) ? string.Empty : item.Driver1.Colour.Trim();
+                    string fontstroke = string.IsNullOrEmpty(item.Driver1.Fontstroke) ? string.Empty : item.Driver1.Fontstroke.Trim();
+                    }
+                    <span style="font-weight: bolder; font-style: italic; font-family: 'f1numbers'; font-size: 1rem; color:@colour;-webkit-text-stroke: 0.2px @fontstroke;"> @Html.DisplayFor(modelItem => item.Driver1.DriverNumber).ToString().PadLeft(2)</span> &nbsp;
+                </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Driver1.Name)
                     </td>
                     <td style="text-align:center;">
