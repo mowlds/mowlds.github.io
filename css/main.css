@@ -354,7 +354,7 @@
   
     header
     {
-      background: black;
+      background: #141a1f;;
               width: 100%;
               padding-top: 1%;
               }
@@ -803,7 +803,7 @@ color:rgb(0, 0, 0);
       text-align: center;
       margin-top: 40px;
       margin-bottom: 40px;
-      background-color: #141a1f;
+      background-color: #141a1fe2;
   
   }
   
@@ -831,7 +831,7 @@ color:rgb(0, 0, 0);
   
   table#champtable caption {
       font-size: 24pt;
-      background-color: #141a1f;
+      background-color: #141a1fe2;
       border-bottom: 1px solid #b62f2f;
   padding: 5px;
   
@@ -873,7 +873,7 @@ color:rgb(0, 0, 0);
     margin-bottom: 40px;
     font-size: 8pt;
     border-collapse: collapse;
-    background-color: #141a1f;
+    background-color: #141a1fe2;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
@@ -886,7 +886,7 @@ color:rgb(0, 0, 0);
     margin-bottom: 40px;
     font-size: 8pt;
     border-collapse: collapse;
-    background-color: #141a1f;
+    background-color: #141a1fe2;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
@@ -959,7 +959,7 @@ color:rgb(0, 0, 0);
   
     padding: 5px;
   
-    background-color: #141a1f;
+    background-color: #141a1fe2;
   
   }
   table#careergrid caption {
@@ -1038,7 +1038,7 @@ color:rgb(0, 0, 0);
     margin-right: auto;
     margin-top: 2pc;
     font-weight: bold;
-    background-color: #141a1f;
+    background-color: #141a1fe2;
     font-size: 10pt;
   
   }
@@ -1069,7 +1069,7 @@ color:rgb(0, 0, 0);
     border-bottom: 1px solid #b62f2f;
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: #141a1f;
+    background-color: #141a1fe2;
   
   }
 
@@ -1093,7 +1093,7 @@ color:rgb(0, 0, 0);
     margin-right: auto;
     margin-top: 2pc;
     font-weight: bold;
-    background-color: #141a1f;
+    background-color: #141a1fe2;
   
   
   }
@@ -1119,7 +1119,7 @@ color:rgb(0, 0, 0);
   border-bottom: 1px solid #b62f2f;
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: #141a1f;
+    background-color: #141a1fe2;
   
   }
   
@@ -1149,7 +1149,7 @@ color:rgb(0, 0, 0);
                   margin-right: auto;
                   margin-top: 40px;
                   margin-bottom: 40px;
-                  background-color: #141a1f;
+                  background-color: #141a1fe2;
                   overflow-x: auto;
          
               
@@ -1175,7 +1175,7 @@ color:rgb(0, 0, 0);
               table#calendar caption {
   
                   font-size: 24pt;
-                  background-color: #141a1f;
+                  background-color: #141a1fe2;
                   padding-bottom: 5px;
                   padding-top: 5px;
                   border-bottom: 2px #b62f2f solid;
@@ -1515,7 +1515,7 @@ color:rgb(0, 0, 0);
               padding: 5px;
               font-weight: bold;
               text-align: center;
-              background-color: #141a1f;
+              background-color: #141a1fe2;
               font-size: 0.75rem;
               
   
@@ -1563,7 +1563,7 @@ color:rgb(0, 0, 0);
           .raceresults caption {
   
               font-size: 24pt;
-              background-color: #141a1f;
+              background-color: #141a1fe2;
               padding-bottom: 5px;
               padding-top: 5px;
               border-bottom: 2px #b62f2f solid;

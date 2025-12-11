@@ -710,7 +710,7 @@ table#calendar {
   margin-right: auto;
   margin-top: 40px;
   margin-bottom: 40px;
-  background-color: #141a1f;
+  background-color: #141a1fe2;
   color: white;
 
 
@@ -737,7 +737,7 @@ table#calendar td {
 table#calendar caption {
 
   font-size: 24pt;
-  background-color: #141a1f;
+  background-color: #141a1fe2;
   padding-bottom: 5px;
   padding-top: 5px;
   border-bottom: 2px #b62f2f solid;
