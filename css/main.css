@@ -1273,16 +1273,19 @@ color:rgb(0, 0, 0);
               }
               .tracktablerace{
     margin-bottom: 2pc;
-    background: #e4e4e4cc;
+
     border-radius: 10px;
-    border: 1px solid #a2a9b1;
-    border-spacing: 3px;
-    padding: 3rem;
-    width: 25rem;
+
     height: 32rem;
     margin-top: 50px;
     margin-right: auto;
-    font-size: 1rem;
+
+    background-color: #141a1fa3;
+    padding-top: 3rem;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: fit-content;
   
             }
   
