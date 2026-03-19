@@ -70,7 +70,7 @@
   }
   .raceimage
   {
-    height:5rem;
+    height:2rem;
   }
   
   .bigstatfilter {
@@ -1273,18 +1273,15 @@ color:rgb(0, 0, 0);
               }
               .tracktablerace{
     margin-bottom: 2pc;
-
     border-radius: 10px;
-
-    height: 32rem;
+    height: fit-content;
     margin-top: 50px;
     margin-right: auto;
-
     background-color: #141a1fa3;
     padding-top: 3rem;
-
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 3rem;
     width: fit-content;
   
             }
@@ -1311,7 +1308,7 @@ color:rgb(0, 0, 0);
                   margin-left: auto;
                   margin-right: auto;
                   text-align: left;
-                  color:black;
+                  color:rgb(255, 255, 255);
               }
   
               .wrapper {
