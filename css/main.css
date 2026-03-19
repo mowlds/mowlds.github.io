@@ -20,7 +20,7 @@
   
   
   body {
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../images/srlhq.jpg');
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../images/srlbackground.png');
       color: white;
   }
   .footer {
