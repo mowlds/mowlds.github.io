@@ -1295,7 +1295,7 @@ color:rgb(0, 0, 0);
               }
               table#tracktable td{
                   font-family: 'f1reg';
-                  border-bottom: 1px solid #3e3c3cc9;
+                  
             }
   
               table#tracktable caption {
@@ -1310,6 +1310,10 @@ color:rgb(0, 0, 0);
                   margin-right: auto;
                   text-align: left;
                   color:rgb(255, 255, 255);
+              }
+
+              table#tracktablerace td{
+                border-bottom: 1px solid #3e3c3cc9;
               }
   
               .wrapper {
