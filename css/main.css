@@ -33,9 +33,7 @@
   .wikiparent{
     padding-top:  20px;
     padding-bottom: 200px;
-    background-color: #e9e9e9;
-    color: black;
-  }
+
   .homeparent{
     padding-top:  20px;
     padding-bottom: 200px;
@@ -126,8 +124,8 @@
     border-bottom-right-radius: 10px;
     padding-left: 2px;
     padding-top: 10px;
-    border-right: black 1px solid;
-    border-bottom: black 1px solid;
+    border-right: rgb(255, 255, 255) 1px solid;
+    border-bottom: rgb(255, 255, 255) 1px solid;
     display: flex;
     display: block;
     width: 18vw;
@@ -135,7 +133,7 @@
     padding-bottom: 5px;
     font-family: 'f1reg';
     padding-right: 5px;
-    background-color: #d7d7d79c;
+    background-color: #141a1fd6;
     border-top-left-radius: 10px;
     padding-left: 5px;
 }
