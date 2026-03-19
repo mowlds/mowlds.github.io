@@ -1313,7 +1313,11 @@ color:rgb(0, 0, 0);
               }
 
               table#tracktablerace td{
-                border-bottom: 1px solid #3e3c3cc9;
+                border-bottom: 1px solid #585454
+              }
+
+              table#tracktablerace th{
+                border-bottom: 1px solid #585454
               }
   
               .wrapper {
