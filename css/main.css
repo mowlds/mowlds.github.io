@@ -1277,7 +1277,7 @@ color:rgb(0, 0, 0);
     height: fit-content;
     margin-top: 50px;
     margin-right: auto;
-    background-color: #141a1fa3;
+    background-color: #141a1f54;
     padding-top: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1295,6 +1295,7 @@ color:rgb(0, 0, 0);
               }
               table#tracktable td{
                   font-family: 'f1reg';
+                  border-bottom: 1px solid #3e3c3cc9;
             }
   
               table#tracktable caption {
