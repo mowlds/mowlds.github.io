@@ -965,7 +965,7 @@ color:rgb(255, 255, 255);
   table#careergrid caption {
   
     font-size: 24pt;
-  color:rgb(0, 0, 0);
+
     padding-bottom: 5px;
     padding-top: 5px;
   
@@ -1384,6 +1384,7 @@ color:rgb(255, 255, 255);
               padding-bottom: 10px;
               padding-top: 10px;
               font-size: 30px;
+              color:white;
           }
           table#StatsTable td{
               padding-top: 2px;
