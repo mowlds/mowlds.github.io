@@ -22,7 +22,7 @@
   body {
       background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/srlbackground.png');
       color: white;
-      background-size:cover;
+      background-size:contain;
   }
   .footer {
     background-color: #141a1f;
