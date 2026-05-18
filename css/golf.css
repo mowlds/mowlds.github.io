@@ -521,9 +521,11 @@ background-color: rgb(180, 162, 162);
 width: 10%;
 }  table.score td:nth-child(2){
 background-color: rgba(78, 1, 1, 0.8);
+width:40%;
 
 } table.score td:nth-child(3){
   background-color: rgba(18, 14, 34, 0.8);
+  width:40%;
 
   }
   table.score td:nth-child(4){
